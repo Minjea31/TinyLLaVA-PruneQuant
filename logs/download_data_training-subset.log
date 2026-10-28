@@ -1,0 +1,715 @@
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000403253.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000424289.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000088210.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000397034.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000092813.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000065769.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000143578.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000470999.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000375001.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000442197.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000326092.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000013616.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+ERROR:root:Download attempt 1 failed: https://s3.amazonaws.com/images.cocodataset.org/train2017/000000347243.jpg
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 1423, in getresponse
+    response.begin()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 330, in begin
+    version, status, reason = self._read_status()
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/http/client.py", line 299, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_data.py", line 48, in fetch
+    with session().get(url, headers=headers, stream=True, timeout=(10,120)) as r:
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

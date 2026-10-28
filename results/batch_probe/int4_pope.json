@@ -1,0 +1,318 @@
+{
+  "time": "2026-10-28T05:00:03.868103+00:00",
+  "benchmark": "pope_first_samples",
+  "samples": 16,
+  "precision": "int4-all",
+  "checkpoint_sha256": "0a1040b0823731c793a84e78e6fd95ba7ff172d50936e82357c8b0e9523addf4",
+  "max_new_tokens": 32,
+  "do_sample": false,
+  "padding_side": "left",
+  "runs": {
+    "1": {
+      "batch_size": 1,
+      "sample_count": 16,
+      "seconds": 10.611066088999905,
+      "samples_per_second": 1.5078598008720916,
+      "mean_batch_seconds": 0.6631916305624941,
+      "peak_allocated_gib": 1.0192227363586426,
+      "peak_reserved_gib": 1.3984375,
+      "observed_device_memory_mib": 1707,
+      "exact_saved_batch1_answers": 16,
+      "metrics": {
+        "random": {
+          "count": 16,
+          "accuracy": 0.625,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "yes_ratio": 0.125,
+          "tp": 2,
+          "tn": 8,
+          "fp": 0,
+          "fn": 6
+        }
+      },
+      "reference_metrics": {
+        "random": {
+          "count": 16,
+          "accuracy": 0.625,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "yes_ratio": 0.125,
+          "tp": 2,
+          "tn": 8,
+          "fp": 0,
+          "fn": 6
+        }
+      },
+      "predictions": [
+        {
+          "question_id": "random_1",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no snowboard in the image. The scene depicts a person riding a skateboard in a patterned, checkered pattern",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_2",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no car in the image. The main focus is on the person riding a skateboard.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_3",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no person in the image. It is a computer-generated image of a person standing in a room.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_4",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no sandwich in the image. The image features a person riding a skateboard.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_5",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there are no skis in the image. The main focus is on the person riding a skateboard.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_6",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no couch in the image. The main focus is on the two people standing in the room.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_7",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no truck in the image. The main focus is on the people and the umbrella.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_8",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no pizza in the image. The image features a woman and a child standing under an umbrella.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_9",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is a person in the image, and they are holding an umbrella.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_10",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no sink in the image.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_11",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is an umbrella in the image. It is open and providing shade.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_12",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no cell phone in the image.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_13",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no person in the image. It is a scene of a car and a truck in a parking lot.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_14",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no sheep in the image. The image features a group of vehicles, including cars and trucks, parked in a parking lot",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_15",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no bicycle in the image.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_16",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no broccoli in the image. The image features a car, a truck, and a bus.",
+          "label": "no",
+          "category": "random"
+        }
+      ]
+    },
+    "4": {
+      "batch_size": 4,
+      "sample_count": 16,
+      "seconds": 5.524226604999967,
+      "samples_per_second": 2.8963330333912136,
+      "mean_batch_seconds": 1.3810566512499918,
+      "peak_allocated_gib": 1.424450397491455,
+      "peak_reserved_gib": 2.140625,
+      "observed_device_memory_mib": 2467,
+      "exact_saved_batch1_answers": 16,
+      "metrics": {
+        "random": {
+          "count": 16,
+          "accuracy": 0.625,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "yes_ratio": 0.125,
+          "tp": 2,
+          "tn": 8,
+          "fp": 0,
+          "fn": 6
+        }
+      },
+      "reference_metrics": {
+        "random": {
+          "count": 16,
+          "accuracy": 0.625,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "yes_ratio": 0.125,
+          "tp": 2,
+          "tn": 8,
+          "fp": 0,
+          "fn": 6
+        }
+      },
+      "predictions": [
+        {
+          "question_id": "random_1",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no snowboard in the image. The scene depicts a person riding a skateboard in a patterned, checkered pattern",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_2",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no car in the image. The main focus is on the person riding a skateboard.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_3",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no person in the image. It is a computer-generated image of a person standing in a room.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_4",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no sandwich in the image. The image features a person riding a skateboard.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_5",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there are no skis in the image. The main focus is on the person riding a skateboard.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_6",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no couch in the image. The main focus is on the two people standing in the room.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_7",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no truck in the image. The main focus is on the people and the umbrella.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_8",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no pizza in the image. The image features a woman and a child standing under an umbrella.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_9",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is a person in the image, and they are holding an umbrella.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_10",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no sink in the image.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_11",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is an umbrella in the image. It is open and providing shade.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_12",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no cell phone in the image.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_13",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no person in the image. It is a scene of a car and a truck in a parking lot.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_14",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no sheep in the image. The image features a group of vehicles, including cars and trucks, parked in a parking lot",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_15",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no bicycle in the image.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_16",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no broccoli in the image. The image features a car, a truck, and a bus.",
+          "label": "no",
+          "category": "random"
+        }
+      ]
+    }
+  }
+}

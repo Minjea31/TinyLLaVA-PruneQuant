@@ -1,0 +1,24 @@
+{
+  "time": "2026-10-27T11:08:58.376458+00:00",
+  "status": "cpu_load_passed",
+  "parameters": 1504353824,
+  "dtype": "torch.float16",
+  "context": 2048,
+  "vision_local": "/home/a/TinyLLaVA-PruneQuant/model/TinyLLaVA-1.5B-SigLIP",
+  "tokenizer_vocab": 32000,
+  "fp16_inference": "not_tested_on_cpu",
+  "image_path": "/home/a/TinyLLaVA-PruneQuant/data/train/llava/coco/train2017/000000372428.jpg",
+  "image_sha256": "4fd9cf8592e842a7241d24e61b69f72aaa5bf9a28b45cd7af9a517d5f2936246",
+  "question": "Describe the image briefly.",
+  "image_shape": [
+    1,
+    3,
+    384,
+    384
+  ],
+  "finite": true,
+  "input_shape": [
+    1,
+    49
+  ]
+}

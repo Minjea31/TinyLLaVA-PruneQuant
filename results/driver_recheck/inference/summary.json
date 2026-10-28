@@ -1,0 +1,30 @@
+{
+  "time": "2026-10-27T11:53:01.467470+00:00",
+  "status": "complete",
+  "conditions": {
+    "benchmark": "smoke",
+    "source_sha256": "4fd9cf8592e842a7241d24e61b69f72aaa5bf9a28b45cd7af9a517d5f2936246",
+    "count": 1,
+    "limit": 0,
+    "seed": 2026,
+    "model_revisions": {
+      "TinyLLaVA-1.5B": "e1fe174363732086223af5ca9dab6f4309f66278",
+      "TinyLLaVA-1.5B-SigLIP": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081"
+    },
+    "dtype": "float16",
+    "do_sample": false,
+    "num_beams": 1,
+    "conv_mode": "v1",
+    "max_new_tokens": 8,
+    "warmup": 0,
+    "torch": "2.1.2+cu121",
+    "cuda": "12.1"
+  },
+  "metrics": null,
+  "mean_seconds": 0.6878608789999987,
+  "median_seconds": 0.6878608789999987,
+  "peak_allocated_bytes": 3214262272,
+  "peak_reserved_bytes": 3441426432,
+  "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU",
+  "measurement": "generation including vision/projector/prefill/decode; preprocessing and model load excluded"
+}

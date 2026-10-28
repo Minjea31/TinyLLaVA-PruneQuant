@@ -1,0 +1,6 @@
+Oct 28 13:33:06 a kernel: PM: suspend entry (s2idle)
+Oct 28 13:33:29 a kernel: PM: suspend exit
+Oct 28 13:33:30 a kernel: NVRM: GPU at PCI:0000:01:00: GPU-0ff8e928-bc4c-12e9-08c6-355cbd75bf73
+Oct 28 13:33:30 a kernel: NVRM: Xid (PCI:0000:01:00): 31, pid=979, name=modprobe, channel 0x01000006, intr 00000000. MMU Fault: ENGINE CE2_PBDMA0 HUBCLIENT_ESC faulted @ 0x1_21010000. Fault is of type FAULT_PDE ACCESS_TYPE_VIRT_READ
+Oct 28 13:33:30 a kernel: NVRM: nvGpuOpsReportFatalError: uvm encountered global fatal error 0x60, requiring os reboot to recover.
+Oct 28 13:33:30 a kernel: NVRM: Xid (PCI:0000:01:00): 154, GPU recovery action changed from 0x0 (None) to 0x2 (Node Reboot Required)

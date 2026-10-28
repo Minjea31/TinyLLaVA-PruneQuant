@@ -1,0 +1,28 @@
+{
+  "environment": "/home/a/anaconda3/envs/LLAVA",
+  "model": "model/TinyLLaVA-1.5B",
+  "vision_encoder": "model/TinyLLaVA-1.5B-SigLIP",
+  "official_runtime": "third_party/TinyLLaVA_Factory_legacy",
+  "calibration": "data/calibration/calibration.json",
+  "calibration_image_root": ".",
+  "training_image_root": "data/train/llava",
+  "llava_pretrain_image_root": "data/train/llava/llava_pretrain/images",
+  "sharegpt4v_image_root": "data/train/sharegpt4v",
+  "baseline": {
+    "dtype": "float16",
+    "batch_size": 8,
+    "padding_side": "left",
+    "conv_mode": "v1",
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 32,
+    "context_length": 2048,
+    "seed": 2026,
+    "warmup": 1
+  },
+  "megatrain": {
+    "status": "not_directly_compatible",
+    "training_enabled": false,
+    "review": "docs/megatrain.md"
+  }
+}

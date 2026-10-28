@@ -1,0 +1,55 @@
+{
+  "time": "2026-10-27T11:03:40.434366+00:00",
+  "seed": 2026,
+  "count": 512,
+  "sources": {
+    "llava": {
+      "annotation": "data/train/annotations/blip_laion_cc_sbu_558k.json",
+      "sha256": "fe0a999808f30dba5067297a1283d0937a0f519101298ad639d178d8564dfcd6"
+    },
+    "sharegpt4v": {
+      "annotation": "data/train/annotations/share-captioner_coco_lcs_sam_1246k_1107.json",
+      "sha256": "5c5f0f4ee58d7b7467f9e49eb5b17f930890a8a0c18a4e2a5be6b15714ef8b3c"
+    },
+    "llava_sft": {
+      "annotation": "data/train/annotations/llava_sft_coco1024.json",
+      "sha256": "eed8f11d36935c0a63c00597d971b241807615db42a1d3254b2314e13cd2b81a"
+    }
+  },
+  "scanned": {
+    "llava": 558128,
+    "sharegpt4v": 1246901,
+    "llava_sft": 1024
+  },
+  "eligible": {
+    "llava": 558128,
+    "sharegpt4v": 559152,
+    "llava_sft": 1024
+  },
+  "strata": {
+    "llava/length_bin_0": 558123,
+    "llava/length_bin_1": 5,
+    "sharegpt4v/length_bin_2": 390424,
+    "sharegpt4v/length_bin_3": 155613,
+    "sharegpt4v/length_bin_1": 13115,
+    "llava_sft/length_bin_2": 409,
+    "llava_sft/length_bin_3": 468,
+    "llava_sft/length_bin_1": 52,
+    "llava_sft/length_bin_0": 95
+  },
+  "selected_sources": {
+    "llava_sft": 247,
+    "sharegpt4v": 195,
+    "llava": 70
+  },
+  "selected_bins": {
+    "0": 130,
+    "3": 130,
+    "1": 122,
+    "2": 130
+  },
+  "rejected": {},
+  "policy": "Streaming reservoir per source and character bin (<=256, <=512, <=1024, >1024), round-robin strata, unique image SHA256; exclude evaluation SHA256.",
+  "eval_overlap": 0,
+  "sha256": "e2dc858532f91b72cbb7e011ca90b914c9c8dc19d6b51d18a703e5055a190c8e"
+}

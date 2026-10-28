@@ -1,0 +1,15 @@
+{
+  "time": "2026-10-28T06:12:30.451318+00:00",
+  "status": "fp16_batch8_verified",
+  "batch_size": 8,
+  "old_batch1_evaluation_results_removed": true,
+  "finetuning_steps": 0,
+  "fp16": {
+    "pope": "complete",
+    "scienceqa": "complete",
+    "verified_predictions": 11017,
+    "verification": "results/baseline/verification.json"
+  },
+  "int4_batch8": "pending",
+  "baseline_command": "bash scripts/eval_fp16_all.sh"
+}

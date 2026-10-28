@@ -1,0 +1,130 @@
+{
+  "time": "2026-10-27T11:54:59.163912+00:00",
+  "status": "passed",
+  "requested_steps": 4,
+  "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU, 595.99.02, 8192 MiB",
+  "torch": "2.1.2+cu121",
+  "cuda": "12.1",
+  "data": {
+    "source": "data/train/annotations/llava_sft_coco1024.json",
+    "source_sha256": "eed8f11d36935c0a63c00597d971b241807615db42a1d3254b2314e13cd2b81a",
+    "count": 2,
+    "samples": [
+      {
+        "id": "000000203336",
+        "image": "data/train/llava/coco/train2017/000000203336.jpg",
+        "image_sha256": "7e70f2305a3cae78a71ca1d58c69bc905242efc0c41d946375df51e56a3df729",
+        "text_tokens": 138,
+        "expanded_tokens": 866,
+        "supervised_tokens": 84,
+        "conversations": [
+          {
+            "from": "human",
+            "value": "<image>\nWhat might the man be curious about or interested in?"
+          },
+          {
+            "from": "gpt",
+            "value": "The man in the shirt and tie appears to be curious about or interested in the content on the wall partition, which has various photos. He could be intrigued by the pictures, trying to understand the context, admiring the artistic value, or even recognize someone or something familiar in them. As he looks around the partition, it suggests his desire to explore and engage with the displayed content further."
+          }
+        ]
+      },
+      {
+        "id": "000000447093",
+        "image": "data/train/llava/coco/train2017/000000447093.jpg",
+        "image_sha256": "ade42332d88ef74fc9ad613925676cffd68059511de0fd90301994eb99aba3d3",
+        "text_tokens": 133,
+        "expanded_tokens": 861,
+        "supervised_tokens": 74,
+        "conversations": [
+          {
+            "from": "human",
+            "value": "<image>\nWhat unusual interaction between the horse and the car can be seen in this photo?"
+          },
+          {
+            "from": "gpt",
+            "value": "The unusual interaction in this picture is that a large horse is sticking its head into the open window of a car, instead of just standing in the field. This is not a common occurrence, as horses typically would not engage directly with vehicles in this manner. The scene creates an interesting and unexpected moment for the occupants of the car and onlookers."
+          }
+        ]
+      }
+    ]
+  },
+  "mode": "fp16_base_fp32_lora_and_projector_frozen_vision",
+  "batch_size": 1,
+  "sequence_limit": 1024,
+  "image_patches": 729,
+  "seed": 2026,
+  "gradient_checkpointing": true,
+  "learning_rate": 0.0001,
+  "trainable_parameters": {
+    "llm_lora": 1126400,
+    "projector": 6557696
+  },
+  "full_model_finetuning_tested": false,
+  "megatrain_tested": false,
+  "initial_losses": [
+    1.50613534450531,
+    1.2405710220336914
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "sample": 0,
+      "loss": 1.5064353942871094,
+      "grad_norms": {
+        "llm_lora": 0.668798235056733,
+        "projector": 1.4084022928118982
+      },
+      "seconds": 0.7366122409999889
+    },
+    {
+      "step": 2,
+      "sample": 1,
+      "loss": 1.2395364046096802,
+      "grad_norms": {
+        "llm_lora": 0.6806835640469361,
+        "projector": 1.311567370888556
+      },
+      "seconds": 0.6096198230000027
+    },
+    {
+      "step": 3,
+      "sample": 0,
+      "loss": 1.2632511854171753,
+      "grad_norms": {
+        "llm_lora": 0.629818586161913,
+        "projector": 0.970110576353151
+      },
+      "seconds": 0.639304248999963
+    },
+    {
+      "step": 4,
+      "sample": 1,
+      "loss": 1.0658543109893799,
+      "grad_norms": {
+        "llm_lora": 0.6320568770289282,
+        "projector": 1.0392936300065663
+      },
+      "seconds": 0.6165846990000432
+    }
+  ],
+  "final_losses": [
+    1.1164510250091553,
+    0.9811480641365051
+  ],
+  "loss_decreased_on_each_sample": true,
+  "updated_tensors": {
+    "llm_lora": {
+      "changed": 88,
+      "total": 88
+    },
+    "projector": {
+      "changed": 4,
+      "total": 4
+    }
+  },
+  "peak_allocated_gib": 3.3265528678894043,
+  "peak_reserved_gib": 3.447265625,
+  "checkpoint": "results/driver_recheck/training/checkpoint",
+  "elapsed_seconds": 9.059687050000036,
+  "finished_at": "2026-10-27T11:55:08.223617+00:00"
+}

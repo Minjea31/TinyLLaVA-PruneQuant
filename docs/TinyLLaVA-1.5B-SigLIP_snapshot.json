@@ -1,0 +1,43 @@
+{
+  "repo": "bczhou/TinyLLaVA-1.5B-SigLIP",
+  "revision": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081",
+  "verified_at": "2026-10-27T11:06:24.035126+00:00",
+  "bytes": 1591182888,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 1519,
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "lfs_sha256": null,
+      "mtime_ns": 1793096115100292728
+    },
+    {
+      "path": "README.md",
+      "bytes": 28,
+      "sha256": "98b45ea81164d1e1a1dd82255207053b15cd6c69d922a1c5cf3387ce604d4b74",
+      "lfs_sha256": null,
+      "mtime_ns": 1793096115584282586
+    },
+    {
+      "path": "config.json",
+      "bytes": 444,
+      "sha256": "cf317561d9f905cc06f98da7f326ba00911ca5587476458d71b15f05103724a8",
+      "lfs_sha256": null,
+      "mtime_ns": 1793096115309288348
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 795546816,
+      "sha256": "6d1ec2f27a931c342276c03715bd2e0b4494888a1309c3e74eaa94dc0a89ae7a",
+      "lfs_sha256": "6d1ec2f27a931c342276c03715bd2e0b4494888a1309c3e74eaa94dc0a89ae7a",
+      "mtime_ns": 1793099049812289020
+    },
+    {
+      "path": "pytorch_model.bin",
+      "bytes": 795634081,
+      "sha256": "fa9f7822a7b4dc4d1af3587945a034df8a55286f2d57c5c62e35c9a4c142cbec",
+      "lfs_sha256": "fa9f7822a7b4dc4d1af3587945a034df8a55286f2d57c5c62e35c9a4c142cbec",
+      "mtime_ns": 1793099087370083523
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"epoch": 1, "batch_offset": 2, "global_step": 3, "attempted_updates": 3, "loss_scale": 128.0, "loss": 0.419324591755867, "microbatches": 2, "updated": true, "grad_norms": {"vision": 1.6775272447162886, "projector": 0.4805364264336551, "llm": 6.491878953765921}, "seconds": 11.616077683000185, "peak_allocated_gib": 3.2901172637939453}

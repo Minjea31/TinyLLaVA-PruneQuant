@@ -1,0 +1,4 @@
+INFO:root:Annotation complete: /home/a/TinyLLaVA-PruneQuant/data/train/annotations/blip_laion_cc_sbu_558k.json
+INFO:root:Annotation complete: /home/a/TinyLLaVA-PruneQuant/data/train/annotations/llava_v1_5_mix665k.json
+INFO:root:Annotation complete: /home/a/TinyLLaVA-PruneQuant/data/train/annotations/share-captioner_coco_lcs_sam_1246k_1107.json
+INFO:root:Annotation complete: /home/a/TinyLLaVA-PruneQuant/data/train/annotations/sharegpt4v_mix665k_cap23k_coco-ap9k_lcs3k_sam9k_div2k.json

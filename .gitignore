@@ -1,0 +1,18 @@
+# Datasets
+/data/
+
+# Original, quantized and training checkpoints
+/model/*
+!/model/README.md
+!/model/model_study/
+**/checkpoint/
+**/checkpoint-*/
+**/checkpoints/
+/results/full_training/**/final/
+
+# Model weights and serialized training state
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt

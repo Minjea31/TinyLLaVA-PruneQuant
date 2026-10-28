@@ -1,0 +1,1 @@
+{"question_id": "smoke", "image": "/home/a/TinyLLaVA-PruneQuant/data/train/llava/coco/train2017/000000372428.jpg", "question": "Describe the image briefly.", "text": "The image captures a serene scene", "seconds": 0.6878608789999987, "preprocess_seconds": 0.02283561200002282, "peak_allocated_bytes": 3214262272, "peak_reserved_bytes": 3441426432, "generated_tokens": 9}

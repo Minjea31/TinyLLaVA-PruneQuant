@@ -1,0 +1,142 @@
+{
+  "time": "2026-10-27T11:11:55.156267+00:00",
+  "models": {
+    "TinyLLaVA-1.5B": {
+      "revision": "e1fe174363732086223af5ca9dab6f4309f66278",
+      "bytes": 6018727700,
+      "files": 12
+    },
+    "TinyLLaVA-1.5B-SigLIP": {
+      "revision": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081",
+      "bytes": 1591182888,
+      "files": 5
+    }
+  },
+  "verified_download_bytes": 39390196176,
+  "data_receipts": 1535,
+  "workspace_bytes": {
+    "model": 7613243777,
+    "data": 59801992883,
+    "third_party": 61066132,
+    "docs": 945349,
+    "scripts": 170261,
+    "logs": 389238,
+    "results": 567
+  },
+  "disk": {
+    "total": 509003399168,
+    "used": 240261935104,
+    "free": 242810286080
+  },
+  "local_load": {
+    "time": "2026-10-27T11:08:58.376458+00:00",
+    "status": "cpu_load_passed",
+    "parameters": 1504353824,
+    "dtype": "torch.float16",
+    "context": 2048,
+    "vision_local": "/home/a/TinyLLaVA-PruneQuant/model/TinyLLaVA-1.5B-SigLIP",
+    "tokenizer_vocab": 32000,
+    "fp16_inference": "not_tested_on_cpu",
+    "image_path": "/home/a/TinyLLaVA-PruneQuant/data/train/llava/coco/train2017/000000372428.jpg",
+    "image_sha256": "4fd9cf8592e842a7241d24e61b69f72aaa5bf9a28b45cd7af9a517d5f2936246",
+    "question": "Describe the image briefly.",
+    "image_shape": [
+      1,
+      3,
+      384,
+      384
+    ],
+    "finite": true,
+    "input_shape": [
+      1,
+      49
+    ]
+  },
+  "calibration": {
+    "time": "2026-10-27T11:03:40.434366+00:00",
+    "seed": 2026,
+    "count": 512,
+    "sources": {
+      "llava": {
+        "annotation": "data/train/annotations/blip_laion_cc_sbu_558k.json",
+        "sha256": "fe0a999808f30dba5067297a1283d0937a0f519101298ad639d178d8564dfcd6"
+      },
+      "sharegpt4v": {
+        "annotation": "data/train/annotations/share-captioner_coco_lcs_sam_1246k_1107.json",
+        "sha256": "5c5f0f4ee58d7b7467f9e49eb5b17f930890a8a0c18a4e2a5be6b15714ef8b3c"
+      },
+      "llava_sft": {
+        "annotation": "data/train/annotations/llava_sft_coco1024.json",
+        "sha256": "eed8f11d36935c0a63c00597d971b241807615db42a1d3254b2314e13cd2b81a"
+      }
+    },
+    "scanned": {
+      "llava": 558128,
+      "sharegpt4v": 1246901,
+      "llava_sft": 1024
+    },
+    "eligible": {
+      "llava": 558128,
+      "sharegpt4v": 559152,
+      "llava_sft": 1024
+    },
+    "strata": {
+      "llava/length_bin_0": 558123,
+      "llava/length_bin_1": 5,
+      "sharegpt4v/length_bin_2": 390424,
+      "sharegpt4v/length_bin_3": 155613,
+      "sharegpt4v/length_bin_1": 13115,
+      "llava_sft/length_bin_2": 409,
+      "llava_sft/length_bin_3": 468,
+      "llava_sft/length_bin_1": 52,
+      "llava_sft/length_bin_0": 95
+    },
+    "selected_sources": {
+      "llava_sft": 247,
+      "sharegpt4v": 195,
+      "llava": 70
+    },
+    "selected_bins": {
+      "0": 130,
+      "3": 130,
+      "1": 122,
+      "2": 130
+    },
+    "rejected": {},
+    "policy": "Streaming reservoir per source and character bin (<=256, <=512, <=1024, >1024), round-robin strata, unique image SHA256; exclude evaluation SHA256.",
+    "eval_overlap": 0,
+    "sha256": "e2dc858532f91b72cbb7e011ca90b914c9c8dc19d6b51d18a703e5055a190c8e"
+  },
+  "baseline": {
+    "time": "2026-10-27T11:09:00.660990+00:00",
+    "status": "blocked_gpu",
+    "reason": "GPU evaluation requires healthy nvidia-smi and CUDA; see docs/environment.json and docs/system.md",
+    "nvidia_smi": "Failed to initialize NVML: Driver/library version mismatch\nNVML library version: 595.99",
+    "cuda_available": true,
+    "fp16_baseline_completed": false
+  },
+  "gpu": "evaluation deferred: host NVML 595.99 vs loaded kernel module 595.91.07; host CUDA metadata works, VRAM 8222998528 bytes",
+  "unfinished": [
+    "GPU FP16 generation/benchmark scores and peak inference VRAM",
+    "Full ShareGPT4V SAM/WebData images and full 665K SFT image coverage",
+    "TextVQA/GQA/VQAv2/MME/MM-Vet/MMMU adapters and full benchmark execution",
+    "MegaTrain TinyLLaVA adapter and forward/backward: not directly compatible"
+  ],
+  "repositories": {
+    "MegaTrain": {
+      "commit": "9d88c6898d83da6a92705ebe1a16872a4bea0d3b",
+      "remote": "https://github.com/DLYuanGod/MegaTrain.git",
+      "status": ""
+    },
+    "TinyLLaVA_Factory": {
+      "commit": "6c57c267383837d5fdbf1f8b943f2c00b680cefc",
+      "remote": "https://github.com/TinyLLaVA/TinyLLaVA_Factory.git",
+      "status": ""
+    },
+    "TinyLLaVA_Factory_legacy": {
+      "commit": "2d2105fc7d44781464e7f503986bbfac270a8e22",
+      "remote": "https://github.com/TinyLLaVA/TinyLLaVA_Factory.git",
+      "status": ""
+    }
+  }
+}

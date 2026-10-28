@@ -1,0 +1,77 @@
+{
+  "time": "2026-10-28T05:50:31.248276+00:00",
+  "status": "complete",
+  "conditions": {
+    "benchmark": "pope",
+    "source_sha256": "9a1f5ae9b2f980e2d1b7228fd72d3080c1f4c40e22180f074018566d1c786861",
+    "count": 9000,
+    "limit": 0,
+    "seed": 2026,
+    "model_revisions": {
+      "TinyLLaVA-1.5B": "e1fe174363732086223af5ca9dab6f4309f66278",
+      "TinyLLaVA-1.5B-SigLIP": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081"
+    },
+    "dtype": "float16",
+    "do_sample": false,
+    "num_beams": 1,
+    "conv_mode": "v1",
+    "max_new_tokens": 32,
+    "warmup": 1,
+    "batch_size": 8,
+    "padding_side": "left",
+    "reuse_identical_inputs": false,
+    "torch": "2.1.2+cu121",
+    "cuda": "12.1"
+  },
+  "metrics": {
+    "adversarial": {
+      "count": 3000,
+      "accuracy": 0.8283333333333334,
+      "precision": 0.7961515333734215,
+      "recall": 0.8826666666666667,
+      "f1": 0.8371798925071134,
+      "yes_ratio": 0.5543333333333333,
+      "tp": 1324,
+      "tn": 1161,
+      "fp": 339,
+      "fn": 176
+    },
+    "popular": {
+      "count": 3000,
+      "accuracy": 0.866,
+      "precision": 0.8541935483870968,
+      "recall": 0.8826666666666667,
+      "f1": 0.8681967213114754,
+      "yes_ratio": 0.5166666666666667,
+      "tp": 1324,
+      "tn": 1274,
+      "fp": 226,
+      "fn": 176
+    },
+    "random": {
+      "count": 3000,
+      "accuracy": 0.9046666666666666,
+      "precision": 0.9227019498607242,
+      "recall": 0.8833333333333333,
+      "f1": 0.9025885558583105,
+      "yes_ratio": 0.4786666666666667,
+      "tp": 1325,
+      "tn": 1389,
+      "fp": 111,
+      "fn": 175
+    }
+  },
+  "mean_seconds": 0.2305955080996667,
+  "median_seconds": 0.23152515725001876,
+  "peak_allocated_bytes": 4441017344,
+  "peak_reserved_bytes": 6616514560,
+  "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU",
+  "generation_seconds": 2075.3595728970004,
+  "fresh_samples_per_second": 4.3365979165898825,
+  "measurement": "per-item seconds = batch generation seconds / actual batch size; includes vision/projector/prefill/decode; preprocessing, model load and warmup excluded",
+  "execution": {
+    "unique_input_count": 5127,
+    "fresh_generation_count": 9000,
+    "reused_prediction_count": 0
+  }
+}

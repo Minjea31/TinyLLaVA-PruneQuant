@@ -1,0 +1,183 @@
+{
+  "time": "2026-10-27T11:08:54.546117+00:00",
+  "python": "3.10.21 (main, Aug 27 2026, 14:42:07) [GCC 14.3.0]",
+  "executable": "/home/a/anaconda3/envs/LLAVA/bin/python",
+  "prefix": "/home/a/anaconda3/envs/LLAVA",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "os_release": {
+    "NAME": "Ubuntu",
+    "ID": "ubuntu",
+    "PRETTY_NAME": "Ubuntu 22.04.5 LTS",
+    "VERSION_ID": "22.04",
+    "VERSION": "22.04.5 LTS (Jammy Jellyfish)",
+    "VERSION_CODENAME": "jammy",
+    "ID_LIKE": "debian",
+    "HOME_URL": "https://www.ubuntu.com/",
+    "SUPPORT_URL": "https://help.ubuntu.com/",
+    "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+    "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+    "UBUNTU_CODENAME": "jammy"
+  },
+  "kernel": "6.8.0-138-generic",
+  "ram": {
+    "total": 33340506112,
+    "available": 26655428608,
+    "percent": 20.1,
+    "used": 6685077504,
+    "free": 4845838336,
+    "active": 10879782912,
+    "inactive": 13961318400,
+    "buffers": 333971456,
+    "cached": 23009730560,
+    "shared": 1267896320,
+    "slab": 2352652288
+  },
+  "swap": {
+    "total": 2147479552,
+    "used": 524288,
+    "free": 2146955264,
+    "percent": 0.0,
+    "sin": 0,
+    "sout": 352256
+  },
+  "disk": {
+    "total": 509003399168,
+    "used": 240249036800,
+    "free": 242823184384
+  },
+  "conda_prefix": "/home/a/anaconda3/envs/LLAVA",
+  "inherited_pythonpath": "/home/a/TinyLLaVA-PruneQuant/third_party/TinyLLaVA_Factory_legacy:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages",
+  "packages": {
+    "torch": "2.1.2",
+    "torchvision": "0.16.2",
+    "transformers": "4.37.2",
+    "tokenizers": "0.15.1",
+    "accelerate": "0.21.0",
+    "peft": "0.4.0",
+    "huggingface_hub": "0.36.2",
+    "hf-transfer": "0.1.9",
+    "hf-xet": "1.4.2",
+    "safetensors": "0.7.0",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0",
+    "bitsandbytes": "0.45.5",
+    "timm": "0.6.13",
+    "sentencepiece": "0.1.99",
+    "datasets": null,
+    "deepspeed": null,
+    "flash-attn": null,
+    "psutil": "7.2.2"
+  },
+  "imports": {
+    "torch": {
+      "status": "ok",
+      "file": "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/torch/__init__.py"
+    },
+    "torchvision": {
+      "status": "ok",
+      "file": "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/torchvision/__init__.py"
+    },
+    "transformers": {
+      "status": "ok",
+      "file": "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/transformers/__init__.py"
+    },
+    "accelerate": {
+      "status": "ok",
+      "file": "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/accelerate/__init__.py"
+    },
+    "peft": {
+      "status": "ok",
+      "file": "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/peft/__init__.py"
+    },
+    "timm": {
+      "status": "ok",
+      "file": "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/timm/__init__.py"
+    },
+    "huggingface_hub": {
+      "status": "ok",
+      "file": "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/huggingface_hub/__init__.py"
+    }
+  },
+  "cuda": {
+    "torch_cuda": "12.1",
+    "available": true,
+    "count": 1,
+    "gpus": [
+      {
+        "name": "NVIDIA GeForce RTX 3070 Laptop GPU",
+        "bytes": 8222998528,
+        "capability": [
+          8,
+          6
+        ]
+      }
+    ]
+  },
+  "nvidia_smi": {
+    "returncode": 18,
+    "output": "Failed to initialize NVML: Driver/library version mismatch\nNVML library version: 595.99"
+  },
+  "lspci": {
+    "returncode": 0,
+    "output": "00:00.0 Host bridge [0600]: Intel Corporation 11th Gen Core Processor Host Bridge/DRAM Registers [8086:9a36] (rev 05)\n00:01.0 PCI bridge [0604]: Intel Corporation 11th Gen Core Processor PCIe Controller #1 [8086:9a01] (rev 05)\n00:02.0 VGA compatible controller [0300]: Intel Corporation TigerLake-H GT1 [UHD Graphics] [8086:9a60] (rev 01)\n00:04.0 Signal processing controller [1180]: Intel Corporation TigerLake-LP Dynamic Tuning Processor Participant [8086:9a03] (rev 05)\n00:06.0 PCI bridge [0604]: Intel Corporation 11th Gen Core Processor PCIe Controller #0 [8086:9a0f] (rev 05)\n00:07.0 PCI bridge [0604]: Intel Corporation Tiger Lake-H Thunderbolt 4 PCI Express Root Port #1 [8086:9a2d] (rev 05)\n00:07.3 PCI bridge [0604]: Intel Corporation Tiger Lake-H Thunderbolt 4 PCI Express Root Port #3 [8086:9a31] (rev 05)\n00:08.0 System peripheral [0880]: Intel Corporation GNA Scoring Accelerator module [8086:9a11] (rev 05)\n00:0a.0 Signal processing controller [1180]: Intel Corporation Tigerlake Telemetry Aggregator Driver [8086:9a0d] (rev 01)\n00:0d.0 USB controller [0c03]: Intel Corporation Tiger Lake-H Thunderbolt 4 USB Controller [8086:9a17] (rev 05)\n00:0d.2 USB controller [0c03]: Intel Corporation Tiger Lake-H Thunderbolt 4 NHI #0 [8086:9a1f] (rev 05)\n00:0d.3 USB controller [0c03]: Intel Corporation Tiger Lake-H Thunderbolt 4 NHI #1 [8086:9a21] (rev 05)\n00:14.0 USB controller [0c03]: Intel Corporation Tiger Lake-H USB 3.2 Gen 2x1 xHCI Host Controller [8086:43ed] (rev 11)\n00:14.2 RAM memory [0500]: Intel Corporation Tiger Lake-H Shared SRAM [8086:43ef] (rev 11)\n00:15.0 Serial bus controller [0c80]: Intel Corporation Tiger Lake-H Serial IO I2C Controller #0 [8086:43e8] (rev 11)\n00:16.0 Communication controller [0780]: Intel Corporation Tiger Lake-H Management Engine Interface [8086:43e0] (rev 11)\n00:1c.0 PCI bridge [0604]: Intel Corporation Tiger Lake-H PCI Express Root Port #5 [8086:43bc] (rev 11)\n00:1c.6 PCI bridge [0604]: Intel Corporation Device [8086:43be] (rev 11)\n00:1d.0 PCI bridge [0604]: Intel Corporation Tiger Lake-H PCI Express Root Port #9 [8086:43b0] (rev 11)\n00:1d.4 PCI bridge [0604]: Intel Corporation Device [8086:43b4] (rev 11)\n00:1f.0 ISA bridge [0601]: Intel Corporation Tiger Lake-H LPC/eSPI Controller [8086:438b] (rev 11)\n00:1f.3 Multimedia audio controller [0401]: Intel Corporation Tiger Lake-H HD Audio Controller [8086:43c8] (rev 11)\n00:1f.4 SMBus [0c05]: Intel Corporation Tiger Lake-H SMBus Controller [8086:43a3] (rev 11)\n00:1f.5 Serial bus controller [0c80]: Intel Corporation Tiger Lake-H SPI Controller [8086:43a4] (rev 11)\n01:00.0 VGA compatible controller [0300]: NVIDIA Corporation GA104M [GeForce RTX 3070 Mobile / Max-Q] [10de:249d] (rev a1)\n01:00.1 Audio device [0403]: NVIDIA Corporation GA104 High Definition Audio Controller [10de:228b] (rev a1)\n02:00.0 Non-Volatile memory controller [0108]: Micron Technology Inc Device [1344:5407]\n59:00.0 Ethernet controller [0200]: Realtek Semiconductor Co., Ltd. Killer E3000 2.5GbE Controller [10ec:3000] (rev 06)\n5a:00.0 Unassigned class [ff00]: Realtek Semiconductor Co., Ltd. RTS5260 PCI Express Card Reader [10ec:5260] (rev 01)\n5c:00.0 Network controller [0280]: Intel Corporation Wi-Fi 6 AX210/AX211/AX411 160MHz [8086:2725] (rev 1a)"
+  },
+  "nvcc": {
+    "returncode": 0,
+    "output": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2021 NVIDIA Corporation\nBuilt on Thu_Nov_18_09:45:30_PST_2021\nCuda compilation tools, release 11.5, V11.5.119\nBuild cuda_11.5.r11.5/compiler.30672275_0"
+  },
+  "modinfo": {
+    "returncode": 0,
+    "output": "filename:       /lib/modules/6.8.0-138-generic/updates/dkms/nvidia.ko\nimport_ns:      DMA_BUF\nalias:          char-major-195-*\ndescription:    NVIDIA core GPU kernel module\nversion:        595.99.02\nsupported:      external\nlicense:        Dual MIT/GPL\nfirmware:       nvidia/595.99.02/gsp_tu10x.bin\nfirmware:       nvidia/595.99.02/gsp_ga10x.bin\nsoftdep:        pre: ecdh_generic,ecdsa_generic\nsrcversion:     8922C59D9393EC0E1BF44DA\nalias:          of:N*T*Cnvidia,tegra264-displayC*\nalias:          of:N*T*Cnvidia,tegra264-display\nalias:          of:N*T*Cnvidia,tegra234-displayC*\nalias:          of:N*T*Cnvidia,tegra234-display\nalias:          pci:v000010DEd*sv*sd*bc06sc80i00*\nalias:          pci:v000010DEd*sv*sd*bc03sc02i00*\nalias:          pci:v000010DEd*sv*sd*bc03sc00i00*\ndepends:        ecc\nretpoline:      Y\nname:           nvidia\nvermagic:       6.8.0-138-generic SMP preempt mod_unload modversions \nsig_id:         PKCS#7\nsigner:         a Secure Boot Module Signature key\nsig_key:        2B:82:FC:4C:92:07:D8:E2:90:E1:07:CF:3A:E0:D0:8A:D7:AB:D1:98\nsig_hashalgo:   sha512\nsignature:      36:C6:87:EB:C7:9D:93:9D:92:48:6F:DC:20:42:71:65:D7:8E:3F:1B:\n\t\t7F:CD:94:86:8E:48:47:DB:3E:CB:D5:8F:97:73:A2:10:5C:A8:0C:D9:\n\t\tD0:A6:B0:0F:A1:F3:83:37:9B:D4:C3:DB:9C:C3:94:80:EE:EC:C9:62:\n\t\t78:47:49:2D:27:74:1C:08:FB:B6:27:DA:B0:1E:E0:27:95:77:4D:12:\n\t\t0F:5D:A8:7B:C6:38:87:89:4E:C0:66:56:C9:45:EF:7F:43:69:9D:5C:\n\t\t5F:DC:04:61:DE:28:13:00:AD:FB:54:2C:32:5D:70:EF:E1:F0:30:07:\n\t\t48:AB:92:5B:D8:2D:73:37:E8:D5:0A:84:A3:C3:E5:09:59:B9:DE:B9:\n\t\t82:C9:EF:04:52:D0:94:EC:15:D5:E9:41:B2:69:10:31:09:DF:28:4B:\n\t\t6D:F1:69:43:05:23:F7:8E:F3:73:34:97:75:40:1F:60:91:9F:54:8E:\n\t\t66:F4:9D:22:39:D6:77:C1:AB:38:A1:0C:61:3E:CD:05:4A:60:A0:E6:\n\t\t8C:CD:F4:4E:41:1C:0A:76:E4:44:D4:E4:9E:E8:13:95:71:E2:ED:5B:\n\t\t6F:08:2F:54:C2:10:67:2C:C9:FC:CA:0E:C9:D0:E9:86:BE:9C:5A:D0:\n\t\t5D:5F:FE:CC:9E:E3:36:9E:9F:35:B1:8A:0D:E1:7C:F8\nparm:           NvSwitchRegDwords:NvSwitch regkey (charp)\nparm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)\nparm:           NVreg_ResmanDebugLevel:int\nparm:           NVreg_RmLogonRC:int\nparm:           NVreg_ModifyDeviceFiles:int\nparm:           NVreg_DeviceFileUID:int\nparm:           NVreg_DeviceFileGID:int\nparm:           NVreg_DeviceFileMode:int\nparm:           NVreg_InitializeSystemMemoryAllocations:int\nparm:           NVreg_UsePageAttributeTable:int\nparm:           NVreg_EnablePCIeGen3:int\nparm:           NVreg_EnableMSI:int\nparm:           NVreg_EnableStreamMemOPs:int\nparm:           NVreg_RestrictProfilingToAdminUsers:int\nparm:           NVreg_PreserveVideoMemoryAllocations:int\nparm:           NVreg_EnableS0ixPowerManagement:int\nparm:           NVreg_S0ixPowerManagementVideoMemoryThreshold:int\nparm:           NVreg_DynamicPowerManagement:int\nparm:           NVreg_DynamicPowerManagementVideoMemoryThreshold:int\nparm:           NVreg_EnableGpuFirmware:int\nparm:           NVreg_EnableGpuFirmwareLogs:int\nparm:           NVreg_OpenRmEnableUnsupportedGpus:int\nparm:           NVreg_EnableUserNUMAManagement:int\nparm:           NVreg_MemoryPoolSize:int\nparm:           NVreg_KMallocHeapMaxSize:int\nparm:           NVreg_VMallocHeapMaxSize:int\nparm:           NVreg_IgnoreMMIOCheck:int\nparm:           NVreg_NvLinkDisable:int\nparm:           NVreg_EnablePCIERelaxedOrderingMode:int\nparm:           NVreg_RegisterPCIDriver:int\nparm:           NVreg_RegisterPlatformDeviceDriver:int\nparm:           NVreg_EnableResizableBar:int\nparm:           NVreg_EnableDbgBreakpoint:int\nparm:           NVreg_TegraGpuPgMask:int\nparm:           NVreg_EnableNonblockingOpen:int\nparm:           NVreg_ExcludeAllGpus:int\nparm:           NVreg_GpuInitOnProbe:int\nparm:           NVreg_CoherentGPUMemoryMode:charp\nparm:           NVreg_RegistryDwords:charp\nparm:           NVreg_RegistryDwordsPerDevice:charp\nparm:           NVreg_RmMsg:charp\nparm:           NVreg_GpuBlacklist:charp\nparm:           NVreg_TemporaryFilePath:charp\nparm:           NVreg_ExcludedGpus:charp\nparm:           NVreg_DmaRemapPeerMmio:int\nparm:           NVreg_RmNvlinkBandwidth:charp\nparm:           NVreg_RmNvlinkBandwidthLinkCount:int\nparm:           NVreg_ImexChannelCount:int\nparm:           NVreg_CreateImexChannel0:int\nparm:           NVreg_EnableSystemMemoryPools:int\nparm:           NVreg_UseKernelSuspendNotifiers:int\nparm:           rm_firmware_active:charp"
+  },
+  "pip_check": {
+    "returncode": 0,
+    "output": "No broken requirements found."
+  },
+  "/proc/driver/nvidia/version": "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  595.91.07  Release Build  (dvs-builder@U22-I3-B08-02-2)  Wed Jul 29 03:01:16 UTC 2026\nGCC version:  gcc version 12.3.0 (Ubuntu 12.3.0-1ubuntu1~22.04.3) \n",
+  "/proc/driver/nvidia/gpus/0000:01:00.0/information": "Model: \t\t NVIDIA GeForce RTX 3070 Laptop GPU\nIRQ:   \t\t 219\nGPU UUID: \t GPU-0ff8e928-bc4c-12e9-08c6-355cbd75bf73\nVideo BIOS: \t 94.04.52.00.09\nBus Type: \t PCIe\nDMA Size: \t 47 bits\nDMA Mask: \t 0x7fffffffffff\nBus Location: \t 0000:01:00.0\nDevice Minor: \t 0\nGPU Firmware: \t 595.91.07\nGPU Excluded:\t No\n",
+  "nvml_library": "/usr/lib/x86_64-linux-gnu/libnvidia-ml.so.595.99.02",
+  "repositories": {
+    "MegaTrain": {
+      "commit": {
+        "returncode": 0,
+        "output": "9d88c6898d83da6a92705ebe1a16872a4bea0d3b"
+      },
+      "remote": {
+        "returncode": 0,
+        "output": "https://github.com/DLYuanGod/MegaTrain.git"
+      },
+      "status": {
+        "returncode": 0,
+        "output": ""
+      }
+    },
+    "TinyLLaVA_Factory": {
+      "commit": {
+        "returncode": 0,
+        "output": "6c57c267383837d5fdbf1f8b943f2c00b680cefc"
+      },
+      "remote": {
+        "returncode": 0,
+        "output": "https://github.com/TinyLLaVA/TinyLLaVA_Factory.git"
+      },
+      "status": {
+        "returncode": 0,
+        "output": ""
+      }
+    },
+    "TinyLLaVA_Factory_legacy": {
+      "commit": {
+        "returncode": 0,
+        "output": "2d2105fc7d44781464e7f503986bbfac270a8e22"
+      },
+      "remote": {
+        "returncode": 0,
+        "output": "https://github.com/TinyLLaVA/TinyLLaVA_Factory.git"
+      },
+      "status": {
+        "returncode": 0,
+        "output": ""
+      }
+    }
+  }
+}

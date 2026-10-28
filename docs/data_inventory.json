@@ -1,0 +1,170 @@
+{
+  "time": "2026-10-27T10:59:40.017465+00:00",
+  "training": {
+    "blip_laion_cc_sbu_558k.json": {
+      "status": "ready",
+      "counts": {
+        "records": 558128,
+        "image_records": 558128,
+        "linked_image_records": 558128
+      },
+      "missing_by_prefix": {},
+      "revision": "70f9d1e5e1a697fe35830875cfc7de1dd590d727",
+      "sha256": "fe0a999808f30dba5067297a1283d0937a0f519101298ad639d178d8564dfcd6",
+      "bytes": 180506011
+    },
+    "llava_v1_5_mix665k.json": {
+      "status": "partial_images",
+      "counts": {
+        "records": 665298,
+        "image_records": 624610,
+        "linked_image_records": 4235,
+        "text_only": 40688
+      },
+      "missing_by_prefix": {
+        "coco": 359865,
+        "vg": 86417,
+        "gqa": 72140,
+        "ocr_vqa": 80000,
+        "textvqa": 21953
+      },
+      "revision": "9d451dc7629cfe0469f6ae4432b765cd603d5fcb",
+      "sha256": "ce959ce6e23073ee1cd1a8a2ef1c633768c10d4174327b8b2dc7113b91af6cf8",
+      "bytes": 1029887963
+    },
+    "share-captioner_coco_lcs_sam_1246k_1107.json": {
+      "status": "partial_images",
+      "counts": {
+        "records": 1246901,
+        "image_records": 1246901,
+        "linked_image_records": 559152
+      },
+      "missing_by_prefix": {
+        "sam": 570486,
+        "coco": 117263
+      },
+      "revision": "55d02b0bc53a2754095a14110dda6daedd95671d",
+      "sha256": "5c5f0f4ee58d7b7467f9e49eb5b17f930890a8a0c18a4e2a5be6b15714ef8b3c",
+      "bytes": 1492479912
+    },
+    "sharegpt4v_mix665k_cap23k_coco-ap9k_lcs3k_sam9k_div2k.json": {
+      "status": "partial_images",
+      "counts": {
+        "records": 665058,
+        "image_records": 624370,
+        "linked_image_records": 7036,
+        "text_only": 40688
+      },
+      "missing_by_prefix": {
+        "coco": 345824,
+        "sam": 9000,
+        "wikiart": 500,
+        "share_textvqa": 500,
+        "web-celebrity": 500,
+        "web-landmark": 500,
+        "vg": 86417,
+        "gqa": 72140,
+        "ocr_vqa": 80000,
+        "textvqa": 21953
+      },
+      "revision": "55d02b0bc53a2754095a14110dda6daedd95671d",
+      "sha256": "61b43cc69b38c642105fe60ea732d96f57b4c8a18d51eb2379746ccebfa9e11e",
+      "bytes": 1230418359
+    }
+  },
+  "evaluation": {
+    "pope": {
+      "status": "ready",
+      "source": "RUCAIBox/POPE",
+      "revision": "08d957b917e5a378a2f99d35b6293c536a66298b",
+      "categories": {
+        "random": 3000,
+        "popular": 3000,
+        "adversarial": 3000
+      },
+      "questions": 9000,
+      "images": 500,
+      "split": "COCO val2014 POPE",
+      "questions_sha256": "9a1f5ae9b2f980e2d1b7228fd72d3080c1f4c40e22180f074018566d1c786861"
+    },
+    "scienceqa": {
+      "status": "ready",
+      "source": "lupantech/ScienceQA",
+      "revision": "2cbf8318e07b9ece895bb2ae605e71e38d623264",
+      "split": "test",
+      "questions": 4241,
+      "image_questions": 2017,
+      "protocol": "local CQM letter-only (report separately from official LLaVA eval.zip CQM-A)",
+      "questions_sha256": "a69b77e77eac324f3977a2df1cb2f168bdf435f3745fb4ec9d3cf89cf720910c"
+    },
+    "training_subset": {
+      "status": "ready",
+      "seed": 2026,
+      "source_sha256": "ce959ce6e23073ee1cd1a8a2ef1c633768c10d4174327b8b2dc7113b91af6cf8",
+      "source": "LLaVA-v1.5 SFT / COCO train2017",
+      "excluded_pope_ids": 500
+    }
+  },
+  "calibration": {
+    "calibration": {
+      "time": "2026-10-27T11:03:40.434366+00:00",
+      "seed": 2026,
+      "count": 512,
+      "sources": {
+        "llava": {
+          "annotation": "data/train/annotations/blip_laion_cc_sbu_558k.json",
+          "sha256": "fe0a999808f30dba5067297a1283d0937a0f519101298ad639d178d8564dfcd6"
+        },
+        "sharegpt4v": {
+          "annotation": "data/train/annotations/share-captioner_coco_lcs_sam_1246k_1107.json",
+          "sha256": "5c5f0f4ee58d7b7467f9e49eb5b17f930890a8a0c18a4e2a5be6b15714ef8b3c"
+        },
+        "llava_sft": {
+          "annotation": "data/train/annotations/llava_sft_coco1024.json",
+          "sha256": "eed8f11d36935c0a63c00597d971b241807615db42a1d3254b2314e13cd2b81a"
+        }
+      },
+      "scanned": {
+        "llava": 558128,
+        "sharegpt4v": 1246901,
+        "llava_sft": 1024
+      },
+      "eligible": {
+        "llava": 558128,
+        "sharegpt4v": 559152,
+        "llava_sft": 1024
+      },
+      "strata": {
+        "llava/length_bin_0": 558123,
+        "llava/length_bin_1": 5,
+        "sharegpt4v/length_bin_2": 390424,
+        "sharegpt4v/length_bin_3": 155613,
+        "sharegpt4v/length_bin_1": 13115,
+        "llava_sft/length_bin_2": 409,
+        "llava_sft/length_bin_3": 468,
+        "llava_sft/length_bin_1": 52,
+        "llava_sft/length_bin_0": 95
+      },
+      "selected_sources": {
+        "llava_sft": 247,
+        "sharegpt4v": 195,
+        "llava": 70
+      },
+      "selected_bins": {
+        "0": 130,
+        "3": 130,
+        "1": 122,
+        "2": 130
+      },
+      "rejected": {},
+      "policy": "Streaming reservoir per source and character bin (<=256, <=512, <=1024, >1024), round-robin strata, unique image SHA256; exclude evaluation SHA256.",
+      "eval_overlap": 0,
+      "sha256": "e2dc858532f91b72cbb7e011ca90b914c9c8dc19d6b51d18a703e5055a190c8e"
+    },
+    "verification": {
+      "valid_images": 512,
+      "unique_hashes": 512,
+      "status": "passed"
+    }
+  }
+}

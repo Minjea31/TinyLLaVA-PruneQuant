@@ -1,0 +1,19 @@
+{
+  "model_path": "/home/a/TinyLLaVA-PruneQuant/model/TinyLLaVA-1.5B",
+  "data_path": "/home/a/TinyLLaVA-PruneQuant/data/train/annotations/llava_sft_coco1024.json",
+  "image_folder": "/home/a/TinyLLaVA-PruneQuant/data/train/llava",
+  "output": "/home/a/TinyLLaVA-PruneQuant/results/full_training/validation_full_2steps",
+  "resume_from": null,
+  "epochs": 1,
+  "max_steps": 2,
+  "max_samples": 4,
+  "max_length": 1024,
+  "gradient_accumulation": 2,
+  "learning_rate": 1e-05,
+  "vision_learning_rate": 1e-06,
+  "weight_decay": 0.0,
+  "loss_scale": 128.0,
+  "save_every": 0,
+  "cpu_threads": 4,
+  "seed": 2026
+}

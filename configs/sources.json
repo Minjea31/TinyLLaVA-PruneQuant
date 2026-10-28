@@ -1,0 +1,28 @@
+{
+  "models": {
+    "bczhou/TinyLLaVA-1.5B": "e1fe174363732086223af5ca9dab6f4309f66278",
+    "bczhou/TinyLLaVA-1.5B-SigLIP": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081"
+  },
+  "datasets": {
+    "liuhaotian/LLaVA-Pretrain": "70f9d1e5e1a697fe35830875cfc7de1dd590d727",
+    "liuhaotian/LLaVA-Instruct-150K": "9d451dc7629cfe0469f6ae4432b765cd603d5fcb",
+    "Lin-Chen/ShareGPT4V": "55d02b0bc53a2754095a14110dda6daedd95671d"
+  },
+  "repositories": {
+    "MegaTrain": {
+      "commit": "9d88c6898d83da6a92705ebe1a16872a4bea0d3b",
+      "remote": "https://github.com/DLYuanGod/MegaTrain.git",
+      "status": ""
+    },
+    "TinyLLaVA_Factory": {
+      "commit": "6c57c267383837d5fdbf1f8b943f2c00b680cefc",
+      "remote": "https://github.com/TinyLLaVA/TinyLLaVA_Factory.git",
+      "status": ""
+    },
+    "TinyLLaVA_Factory_legacy": {
+      "commit": "2d2105fc7d44781464e7f503986bbfac270a8e22",
+      "remote": "https://github.com/TinyLLaVA/TinyLLaVA_Factory.git",
+      "status": ""
+    }
+  }
+}

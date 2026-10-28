@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "precision": "fp16",
+  "batch_size": 8,
+  "selection": "8 longest ScienceQA prompts by original tokenizer length",
+  "expanded_lengths": [
+    1302,
+    1229,
+    1119,
+    1119,
+    1118,
+    1118,
+    1116,
+    1116
+  ],
+  "max_new_tokens": 32,
+  "seconds": 1.8724854179999966,
+  "peak_allocated_gib": 4.998699188232422,
+  "peak_reserved_gib": 6.0625,
+  "decoded": [
+    "B",
+    "B",
+    "B",
+    "B",
+    "A",
+    "B",
+    "B",
+    "A"
+  ],
+  "question_ids": [
+    "8732",
+    "16126",
+    "15576",
+    "16506",
+    "10244",
+    "19659",
+    "5",
+    "3153"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "checkpoint": "/home/a/TinyLLaVA-PruneQuant/results/full_training/validation_full_resume/final",
+  "matched_parameter_tensors": 626,
+  "matched_parameters": 1504353824,
+  "cursor": {
+    "epoch": 1,
+    "batch_offset": 2,
+    "global_step": 3,
+    "attempted_updates": 3,
+    "loss_scale": 128.0
+  },
+  "vision_path": "/home/a/TinyLLaVA-PruneQuant/results/full_training/validation_full_resume/final/vision_encoder-SigLIP",
+  "reloaded_image_loss": 0.5828772187232971,
+  "status": "passed"
+}

@@ -1,0 +1,19 @@
+# Reused versions, not a request to upgrade the existing LLAVA environment.
+torch==2.1.2
+torchvision==0.16.2
+transformers==4.37.2
+tokenizers==0.15.1
+accelerate==0.21.0
+peft==0.4.0
+numpy==1.26.4
+sentencepiece==0.1.99
+einops==0.6.1
+einops-exts==0.0.4
+timm==0.6.13
+huggingface-hub==0.36.2
+safetensors==0.7.0
+Pillow==10.4.0
+requests==2.33.0
+psutil==7.2.2
+shortuuid==1.0.13
+hf-transfer==0.1.9

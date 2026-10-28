@@ -1,0 +1,30 @@
+{
+  "benchmark": "scienceqa",
+  "source_sha256": "a69b77e77eac324f3977a2df1cb2f168bdf435f3745fb4ec9d3cf89cf720910c",
+  "count": 2017,
+  "limit": 0,
+  "seed": 2026,
+  "model_revisions": {
+    "TinyLLaVA-1.5B": "e1fe174363732086223af5ca9dab6f4309f66278",
+    "TinyLLaVA-1.5B-SigLIP": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081"
+  },
+  "dtype": "int4",
+  "do_sample": false,
+  "num_beams": 1,
+  "conv_mode": "v1",
+  "max_new_tokens": 32,
+  "warmup": 1,
+  "batch_size": 8,
+  "padding_side": "left",
+  "reuse_identical_inputs": false,
+  "torch": "2.1.2+cu121",
+  "cuda": "12.1",
+  "activation_dtype": "float16",
+  "quantization_format": "W4A16",
+  "quantization_method": "RTN",
+  "quantization_version": "uniform_symmetric_int4_rtn_all_parameters_v1",
+  "quant_group_size": 128,
+  "quant_backend": "triton",
+  "quantization_scope": "all_model_parameters",
+  "finetuning_steps": 0
+}

@@ -1,0 +1,6670 @@
+{
+  "time": "2026-10-27T11:04:40.296525+00:00",
+  "path": "model/TinyLLaVA-1.5B",
+  "config": {
+    "_name_or_path": "TinyLLaVA-1.5B",
+    "architectures": [
+      "TinyLlavaLlamaForCausalLM"
+    ],
+    "attention_bias": false,
+    "attention_dropout": 0.0,
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "freeze_mm_mlp_adapter": false,
+    "hidden_act": "silu",
+    "hidden_size": 2048,
+    "image_aspect_ratio": "pad",
+    "initializer_range": 0.02,
+    "intermediate_size": 5632,
+    "max_position_embeddings": 2048,
+    "mm_hidden_size": 1152,
+    "mm_projector_lr": null,
+    "mm_projector_type": "mlp2x_gelu",
+    "mm_use_im_patch_token": false,
+    "mm_use_im_start_end": false,
+    "mm_vision_select_feature": "patch",
+    "mm_vision_select_layer": -2,
+    "mm_vision_tower": "bczhou/TinyLLaVA-1.5B-SigLIP",
+    "model_type": "tinyllava",
+    "num_attention_heads": 32,
+    "num_hidden_layers": 22,
+    "num_key_value_heads": 4,
+    "pad_token": "<unk>",
+    "pad_token_id": 0,
+    "pretraining_tp": 1,
+    "rms_norm_eps": 1e-05,
+    "rope_scaling": null,
+    "rope_theta": 10000.0,
+    "tie_word_embeddings": false,
+    "tokenizer_model_max_length": 2048,
+    "tokenizer_padding_side": "right",
+    "torch_dtype": "float16",
+    "transformers_version": "4.37.2",
+    "tune_embed_tokens": false,
+    "tune_entire_model": false,
+    "tune_mm_mlp_adapter": false,
+    "tune_vision_tower": false,
+    "use_cache": true,
+    "use_mm_proj": true,
+    "vocab_size": 32000
+  },
+  "parameters": {
+    "llm": 1100048384,
+    "vision": 397747744,
+    "projector": 6557696
+  },
+  "total_parameters": 1504353824,
+  "dtypes": {
+    "F32": 1504353824
+  },
+  "tensor_bytes": 6017415296,
+  "tensors": 626,
+  "files": [
+    "model-00001-of-00002.safetensors",
+    "model-00002-of-00002.safetensors"
+  ],
+  "header_index_validation": "passed",
+  "tensor_shapes": {
+    "model.embed_tokens.weight": {
+      "dtype": "F32",
+      "shape": [
+        32000,
+        2048
+      ],
+      "data_offsets": [
+        0,
+        262144000
+      ]
+    },
+    "model.layers.0.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        262144000,
+        262152192
+      ]
+    },
+    "model.layers.0.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        262152192,
+        308289536
+      ]
+    },
+    "model.layers.0.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        308289536,
+        354426880
+      ]
+    },
+    "model.layers.0.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        354426880,
+        400564224
+      ]
+    },
+    "model.layers.0.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        400564224,
+        400572416
+      ]
+    },
+    "model.layers.0.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        400572416,
+        402669568
+      ]
+    },
+    "model.layers.0.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        402669568,
+        419446784
+      ]
+    },
+    "model.layers.0.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        419446784,
+        436224000
+      ]
+    },
+    "model.layers.0.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        436224000,
+        438321152
+      ]
+    },
+    "model.layers.1.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        438321152,
+        438329344
+      ]
+    },
+    "model.layers.1.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        438329344,
+        484466688
+      ]
+    },
+    "model.layers.1.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        484466688,
+        530604032
+      ]
+    },
+    "model.layers.1.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        530604032,
+        576741376
+      ]
+    },
+    "model.layers.1.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        576741376,
+        576749568
+      ]
+    },
+    "model.layers.1.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        576749568,
+        578846720
+      ]
+    },
+    "model.layers.1.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        578846720,
+        595623936
+      ]
+    },
+    "model.layers.1.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        595623936,
+        612401152
+      ]
+    },
+    "model.layers.1.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        612401152,
+        614498304
+      ]
+    },
+    "model.layers.10.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        614498304,
+        614506496
+      ]
+    },
+    "model.layers.10.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        614506496,
+        660643840
+      ]
+    },
+    "model.layers.10.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        660643840,
+        706781184
+      ]
+    },
+    "model.layers.10.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        706781184,
+        752918528
+      ]
+    },
+    "model.layers.10.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        752918528,
+        752926720
+      ]
+    },
+    "model.layers.10.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        752926720,
+        755023872
+      ]
+    },
+    "model.layers.10.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        755023872,
+        771801088
+      ]
+    },
+    "model.layers.10.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        771801088,
+        788578304
+      ]
+    },
+    "model.layers.10.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        788578304,
+        790675456
+      ]
+    },
+    "model.layers.11.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        790675456,
+        790683648
+      ]
+    },
+    "model.layers.11.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        790683648,
+        836820992
+      ]
+    },
+    "model.layers.11.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        836820992,
+        882958336
+      ]
+    },
+    "model.layers.11.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        882958336,
+        929095680
+      ]
+    },
+    "model.layers.11.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        929095680,
+        929103872
+      ]
+    },
+    "model.layers.11.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        929103872,
+        931201024
+      ]
+    },
+    "model.layers.11.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        931201024,
+        947978240
+      ]
+    },
+    "model.layers.11.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        947978240,
+        964755456
+      ]
+    },
+    "model.layers.11.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        964755456,
+        966852608
+      ]
+    },
+    "model.layers.12.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        966852608,
+        966860800
+      ]
+    },
+    "model.layers.12.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        966860800,
+        1012998144
+      ]
+    },
+    "model.layers.12.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1012998144,
+        1059135488
+      ]
+    },
+    "model.layers.12.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1059135488,
+        1105272832
+      ]
+    },
+    "model.layers.12.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        1105272832,
+        1105281024
+      ]
+    },
+    "model.layers.12.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        1105281024,
+        1107378176
+      ]
+    },
+    "model.layers.12.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        1107378176,
+        1124155392
+      ]
+    },
+    "model.layers.12.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        1124155392,
+        1140932608
+      ]
+    },
+    "model.layers.12.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        1140932608,
+        1143029760
+      ]
+    },
+    "model.layers.13.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        1143029760,
+        1143037952
+      ]
+    },
+    "model.layers.13.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        1143037952,
+        1189175296
+      ]
+    },
+    "model.layers.13.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1189175296,
+        1235312640
+      ]
+    },
+    "model.layers.13.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1235312640,
+        1281449984
+      ]
+    },
+    "model.layers.13.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        1281449984,
+        1281458176
+      ]
+    },
+    "model.layers.13.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        1281458176,
+        1283555328
+      ]
+    },
+    "model.layers.13.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        1283555328,
+        1300332544
+      ]
+    },
+    "model.layers.13.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        1300332544,
+        1317109760
+      ]
+    },
+    "model.layers.13.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        1317109760,
+        1319206912
+      ]
+    },
+    "model.layers.14.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        1319206912,
+        1319215104
+      ]
+    },
+    "model.layers.14.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        1319215104,
+        1365352448
+      ]
+    },
+    "model.layers.14.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1365352448,
+        1411489792
+      ]
+    },
+    "model.layers.14.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1411489792,
+        1457627136
+      ]
+    },
+    "model.layers.14.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        1457627136,
+        1457635328
+      ]
+    },
+    "model.layers.14.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        1457635328,
+        1459732480
+      ]
+    },
+    "model.layers.14.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        1459732480,
+        1476509696
+      ]
+    },
+    "model.layers.14.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        1476509696,
+        1493286912
+      ]
+    },
+    "model.layers.14.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        1493286912,
+        1495384064
+      ]
+    },
+    "model.layers.15.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        1495384064,
+        1495392256
+      ]
+    },
+    "model.layers.15.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        1495392256,
+        1541529600
+      ]
+    },
+    "model.layers.15.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1541529600,
+        1587666944
+      ]
+    },
+    "model.layers.15.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1587666944,
+        1633804288
+      ]
+    },
+    "model.layers.15.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        1633804288,
+        1633812480
+      ]
+    },
+    "model.layers.15.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        1633812480,
+        1635909632
+      ]
+    },
+    "model.layers.15.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        1635909632,
+        1652686848
+      ]
+    },
+    "model.layers.15.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        1652686848,
+        1669464064
+      ]
+    },
+    "model.layers.15.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        1669464064,
+        1671561216
+      ]
+    },
+    "model.layers.16.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        1671561216,
+        1671569408
+      ]
+    },
+    "model.layers.16.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        1671569408,
+        1717706752
+      ]
+    },
+    "model.layers.16.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1717706752,
+        1763844096
+      ]
+    },
+    "model.layers.16.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1763844096,
+        1809981440
+      ]
+    },
+    "model.layers.16.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        1809981440,
+        1809989632
+      ]
+    },
+    "model.layers.16.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        1809989632,
+        1812086784
+      ]
+    },
+    "model.layers.16.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        1812086784,
+        1828864000
+      ]
+    },
+    "model.layers.16.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        1828864000,
+        1845641216
+      ]
+    },
+    "model.layers.16.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        1845641216,
+        1847738368
+      ]
+    },
+    "model.layers.17.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        1847738368,
+        1847746560
+      ]
+    },
+    "model.layers.17.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        1847746560,
+        1893883904
+      ]
+    },
+    "model.layers.17.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1893883904,
+        1940021248
+      ]
+    },
+    "model.layers.17.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        1940021248,
+        1986158592
+      ]
+    },
+    "model.layers.17.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        1986158592,
+        1986166784
+      ]
+    },
+    "model.layers.17.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        1986166784,
+        1988263936
+      ]
+    },
+    "model.layers.17.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        1988263936,
+        2005041152
+      ]
+    },
+    "model.layers.17.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        2005041152,
+        2021818368
+      ]
+    },
+    "model.layers.17.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        2021818368,
+        2023915520
+      ]
+    },
+    "model.layers.18.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        2023915520,
+        2023923712
+      ]
+    },
+    "model.layers.18.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        2023923712,
+        2070061056
+      ]
+    },
+    "model.layers.18.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2070061056,
+        2116198400
+      ]
+    },
+    "model.layers.18.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2116198400,
+        2162335744
+      ]
+    },
+    "model.layers.18.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        2162335744,
+        2162343936
+      ]
+    },
+    "model.layers.18.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        2162343936,
+        2164441088
+      ]
+    },
+    "model.layers.18.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        2164441088,
+        2181218304
+      ]
+    },
+    "model.layers.18.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        2181218304,
+        2197995520
+      ]
+    },
+    "model.layers.18.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        2197995520,
+        2200092672
+      ]
+    },
+    "model.layers.19.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        2200092672,
+        2200100864
+      ]
+    },
+    "model.layers.19.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        2200100864,
+        2246238208
+      ]
+    },
+    "model.layers.19.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2246238208,
+        2292375552
+      ]
+    },
+    "model.layers.19.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2292375552,
+        2338512896
+      ]
+    },
+    "model.layers.19.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        2338512896,
+        2338521088
+      ]
+    },
+    "model.layers.19.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        2338521088,
+        2340618240
+      ]
+    },
+    "model.layers.19.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        2340618240,
+        2357395456
+      ]
+    },
+    "model.layers.19.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        2357395456,
+        2374172672
+      ]
+    },
+    "model.layers.19.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        2374172672,
+        2376269824
+      ]
+    },
+    "model.layers.2.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        2376269824,
+        2376278016
+      ]
+    },
+    "model.layers.2.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        2376278016,
+        2422415360
+      ]
+    },
+    "model.layers.2.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2422415360,
+        2468552704
+      ]
+    },
+    "model.layers.2.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2468552704,
+        2514690048
+      ]
+    },
+    "model.layers.2.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        2514690048,
+        2514698240
+      ]
+    },
+    "model.layers.2.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        2514698240,
+        2516795392
+      ]
+    },
+    "model.layers.2.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        2516795392,
+        2533572608
+      ]
+    },
+    "model.layers.2.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        2533572608,
+        2550349824
+      ]
+    },
+    "model.layers.2.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        2550349824,
+        2552446976
+      ]
+    },
+    "model.layers.20.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        2552446976,
+        2552455168
+      ]
+    },
+    "model.layers.20.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        2552455168,
+        2598592512
+      ]
+    },
+    "model.layers.20.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2598592512,
+        2644729856
+      ]
+    },
+    "model.layers.20.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2644729856,
+        2690867200
+      ]
+    },
+    "model.layers.20.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        2690867200,
+        2690875392
+      ]
+    },
+    "model.layers.20.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        2690875392,
+        2692972544
+      ]
+    },
+    "model.layers.20.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        2692972544,
+        2709749760
+      ]
+    },
+    "model.layers.20.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        2709749760,
+        2726526976
+      ]
+    },
+    "model.layers.20.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        2726526976,
+        2728624128
+      ]
+    },
+    "model.layers.21.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        2728624128,
+        2728632320
+      ]
+    },
+    "model.layers.21.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        2728632320,
+        2774769664
+      ]
+    },
+    "model.layers.21.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2774769664,
+        2820907008
+      ]
+    },
+    "model.layers.21.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2820907008,
+        2867044352
+      ]
+    },
+    "model.layers.21.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        2867044352,
+        2867052544
+      ]
+    },
+    "model.layers.21.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        2867052544,
+        2869149696
+      ]
+    },
+    "model.layers.21.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        2869149696,
+        2885926912
+      ]
+    },
+    "model.layers.21.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        2885926912,
+        2902704128
+      ]
+    },
+    "model.layers.21.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        2902704128,
+        2904801280
+      ]
+    },
+    "model.layers.3.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        2904801280,
+        2904809472
+      ]
+    },
+    "model.layers.3.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        2904809472,
+        2950946816
+      ]
+    },
+    "model.layers.3.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2950946816,
+        2997084160
+      ]
+    },
+    "model.layers.3.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        2997084160,
+        3043221504
+      ]
+    },
+    "model.layers.3.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3043221504,
+        3043229696
+      ]
+    },
+    "model.layers.3.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3043229696,
+        3045326848
+      ]
+    },
+    "model.layers.3.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3045326848,
+        3062104064
+      ]
+    },
+    "model.layers.3.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3062104064,
+        3078881280
+      ]
+    },
+    "model.layers.3.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3078881280,
+        3080978432
+      ]
+    },
+    "model.layers.4.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3080978432,
+        3080986624
+      ]
+    },
+    "model.layers.4.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        3080986624,
+        3127123968
+      ]
+    },
+    "model.layers.4.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        3127123968,
+        3173261312
+      ]
+    },
+    "model.layers.4.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        3173261312,
+        3219398656
+      ]
+    },
+    "model.layers.4.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3219398656,
+        3219406848
+      ]
+    },
+    "model.layers.4.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3219406848,
+        3221504000
+      ]
+    },
+    "model.layers.4.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3221504000,
+        3238281216
+      ]
+    },
+    "model.layers.4.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3238281216,
+        3255058432
+      ]
+    },
+    "model.layers.4.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3255058432,
+        3257155584
+      ]
+    },
+    "model.layers.5.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3257155584,
+        3257163776
+      ]
+    },
+    "model.layers.5.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        3257163776,
+        3303301120
+      ]
+    },
+    "model.layers.5.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        3303301120,
+        3349438464
+      ]
+    },
+    "model.layers.5.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        3349438464,
+        3395575808
+      ]
+    },
+    "model.layers.5.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3395575808,
+        3395584000
+      ]
+    },
+    "model.layers.5.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3395584000,
+        3397681152
+      ]
+    },
+    "model.layers.5.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3397681152,
+        3414458368
+      ]
+    },
+    "model.layers.5.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3414458368,
+        3431235584
+      ]
+    },
+    "model.layers.5.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3431235584,
+        3433332736
+      ]
+    },
+    "model.layers.6.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3433332736,
+        3433340928
+      ]
+    },
+    "model.layers.6.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        3433340928,
+        3479478272
+      ]
+    },
+    "model.layers.6.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        3479478272,
+        3525615616
+      ]
+    },
+    "model.layers.6.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        3525615616,
+        3571752960
+      ]
+    },
+    "model.layers.6.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3571752960,
+        3571761152
+      ]
+    },
+    "model.layers.6.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3571761152,
+        3573858304
+      ]
+    },
+    "model.layers.6.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3573858304,
+        3590635520
+      ]
+    },
+    "model.layers.6.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3590635520,
+        3607412736
+      ]
+    },
+    "model.layers.6.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3607412736,
+        3609509888
+      ]
+    },
+    "model.layers.7.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3609509888,
+        3609518080
+      ]
+    },
+    "model.layers.7.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        3609518080,
+        3655655424
+      ]
+    },
+    "model.layers.7.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        3655655424,
+        3701792768
+      ]
+    },
+    "model.layers.7.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        3701792768,
+        3747930112
+      ]
+    },
+    "model.layers.7.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3747930112,
+        3747938304
+      ]
+    },
+    "model.layers.7.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3747938304,
+        3750035456
+      ]
+    },
+    "model.layers.7.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3750035456,
+        3766812672
+      ]
+    },
+    "model.layers.7.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3766812672,
+        3783589888
+      ]
+    },
+    "model.layers.7.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3783589888,
+        3785687040
+      ]
+    },
+    "model.layers.8.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3785687040,
+        3785695232
+      ]
+    },
+    "model.layers.8.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        3785695232,
+        3831832576
+      ]
+    },
+    "model.layers.8.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        3831832576,
+        3877969920
+      ]
+    },
+    "model.layers.8.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        3877969920,
+        3924107264
+      ]
+    },
+    "model.layers.8.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3924107264,
+        3924115456
+      ]
+    },
+    "model.layers.8.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3924115456,
+        3926212608
+      ]
+    },
+    "model.layers.8.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3926212608,
+        3942989824
+      ]
+    },
+    "model.layers.8.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        3942989824,
+        3959767040
+      ]
+    },
+    "model.layers.8.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        3959767040,
+        3961864192
+      ]
+    },
+    "model.layers.9.input_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        3961864192,
+        3961872384
+      ]
+    },
+    "model.layers.9.mlp.down_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        5632
+      ],
+      "data_offsets": [
+        3961872384,
+        4008009728
+      ]
+    },
+    "model.layers.9.mlp.gate_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        4008009728,
+        4054147072
+      ]
+    },
+    "model.layers.9.mlp.up_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        5632,
+        2048
+      ],
+      "data_offsets": [
+        4054147072,
+        4100284416
+      ]
+    },
+    "model.layers.9.post_attention_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        4100284416,
+        4100292608
+      ]
+    },
+    "model.layers.9.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        4100292608,
+        4102389760
+      ]
+    },
+    "model.layers.9.self_attn.o_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        4102389760,
+        4119166976
+      ]
+    },
+    "model.layers.9.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        4119166976,
+        4135944192
+      ]
+    },
+    "model.layers.9.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        256,
+        2048
+      ],
+      "data_offsets": [
+        4135944192,
+        4138041344
+      ]
+    },
+    "model.norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        4138041344,
+        4138049536
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.embeddings.patch_embedding.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4138049536,
+        4138054144
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.embeddings.patch_embedding.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        3,
+        14,
+        14
+      ],
+      "data_offsets": [
+        4138054144,
+        4140763648
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.embeddings.position_embedding.weight": {
+      "dtype": "F32",
+      "shape": [
+        729,
+        1152
+      ],
+      "data_offsets": [
+        4140763648,
+        4144122880
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4144122880,
+        4144127488
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4144127488,
+        4144132096
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4144132096,
+        4144136704
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4144136704,
+        4144141312
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4144141312,
+        4144158528
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4144158528,
+        4163991360
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4163991360,
+        4163995968
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4163995968,
+        4183828800
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4183828800,
+        4183833408
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4183833408,
+        4189141824
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4189141824,
+        4189146432
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4189146432,
+        4194454848
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4194454848,
+        4194459456
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4194459456,
+        4199767872
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4199767872,
+        4199772480
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4199772480,
+        4205080896
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4205080896,
+        4205085504
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4205085504,
+        4205090112
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4205090112,
+        4205094720
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4205094720,
+        4205099328
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4205099328,
+        4205116544
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4205116544,
+        4224949376
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4224949376,
+        4224953984
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4224953984,
+        4244786816
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4244786816,
+        4244791424
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4244791424,
+        4250099840
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4250099840,
+        4250104448
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4250104448,
+        4255412864
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4255412864,
+        4255417472
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4255417472,
+        4260725888
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4260725888,
+        4260730496
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4260730496,
+        4266038912
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4266038912,
+        4266043520
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4266043520,
+        4266048128
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4266048128,
+        4266052736
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4266052736,
+        4266057344
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4266057344,
+        4266074560
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4266074560,
+        4285907392
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4285907392,
+        4285912000
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4285912000,
+        4305744832
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4305744832,
+        4305749440
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4305749440,
+        4311057856
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4311057856,
+        4311062464
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4311062464,
+        4316370880
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4316370880,
+        4316375488
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4316375488,
+        4321683904
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4321683904,
+        4321688512
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4321688512,
+        4326996928
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4326996928,
+        4327001536
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4327001536,
+        4327006144
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4327006144,
+        4327010752
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4327010752,
+        4327015360
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4327015360,
+        4327032576
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4327032576,
+        4346865408
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4346865408,
+        4346870016
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4346870016,
+        4366702848
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4366702848,
+        4366707456
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4366707456,
+        4372015872
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4372015872,
+        4372020480
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4372020480,
+        4377328896
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4377328896,
+        4377333504
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4377333504,
+        4382641920
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4382641920,
+        4382646528
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4382646528,
+        4387954944
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4387954944,
+        4387959552
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4387959552,
+        4387964160
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4387964160,
+        4387968768
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4387968768,
+        4387973376
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4387973376,
+        4387990592
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4387990592,
+        4407823424
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4407823424,
+        4407828032
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4407828032,
+        4427660864
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4427660864,
+        4427665472
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4427665472,
+        4432973888
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4432973888,
+        4432978496
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4432978496,
+        4438286912
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4438286912,
+        4438291520
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4438291520,
+        4443599936
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4443599936,
+        4443604544
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4443604544,
+        4448912960
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4448912960,
+        4448917568
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4448917568,
+        4448922176
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4448922176,
+        4448926784
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4448926784,
+        4448931392
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4448931392,
+        4448948608
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4448948608,
+        4468781440
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4468781440,
+        4468786048
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4468786048,
+        4488618880
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4488618880,
+        4488623488
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4488623488,
+        4493931904
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4493931904,
+        4493936512
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4493936512,
+        4499244928
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4499244928,
+        4499249536
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4499249536,
+        4504557952
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4504557952,
+        4504562560
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4504562560,
+        4509870976
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4509870976,
+        4509875584
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4509875584,
+        4509880192
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4509880192,
+        4509884800
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4509884800,
+        4509889408
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4509889408,
+        4509906624
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4509906624,
+        4529739456
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4529739456,
+        4529744064
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4529744064,
+        4549576896
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4549576896,
+        4549581504
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4549581504,
+        4554889920
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4554889920,
+        4554894528
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4554894528,
+        4560202944
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4560202944,
+        4560207552
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4560207552,
+        4565515968
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4565515968,
+        4565520576
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4565520576,
+        4570828992
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4570828992,
+        4570833600
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4570833600,
+        4570838208
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4570838208,
+        4570842816
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4570842816,
+        4570847424
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4570847424,
+        4570864640
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4570864640,
+        4590697472
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4590697472,
+        4590702080
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4590702080,
+        4610534912
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4610534912,
+        4610539520
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4610539520,
+        4615847936
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4615847936,
+        4615852544
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4615852544,
+        4621160960
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4621160960,
+        4621165568
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4621165568,
+        4626473984
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4626473984,
+        4626478592
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4626478592,
+        4631787008
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4631787008,
+        4631791616
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4631791616,
+        4631796224
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4631796224,
+        4631800832
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4631800832,
+        4631805440
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4631805440,
+        4631822656
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4631822656,
+        4651655488
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4651655488,
+        4651660096
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4651660096,
+        4671492928
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4671492928,
+        4671497536
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4671497536,
+        4676805952
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4676805952,
+        4676810560
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4676810560,
+        4682118976
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4682118976,
+        4682123584
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4682123584,
+        4687432000
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4687432000,
+        4687436608
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4687436608,
+        4692745024
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4692745024,
+        4692749632
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4692749632,
+        4692754240
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4692754240,
+        4692758848
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4692758848,
+        4692763456
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4692763456,
+        4692780672
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4692780672,
+        4712613504
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4712613504,
+        4712618112
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4712618112,
+        4732450944
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4732450944,
+        4732455552
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4732455552,
+        4737763968
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4737763968,
+        4737768576
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4737768576,
+        4743076992
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4743076992,
+        4743081600
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4743081600,
+        4748390016
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4748390016,
+        4748394624
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4748394624,
+        4753703040
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4753703040,
+        4753707648
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4753707648,
+        4753712256
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4753712256,
+        4753716864
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4753716864,
+        4753721472
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4753721472,
+        4753738688
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4753738688,
+        4773571520
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4773571520,
+        4773576128
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4773576128,
+        4793408960
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4793408960,
+        4793413568
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4793413568,
+        4798721984
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4798721984,
+        4798726592
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4798726592,
+        4804035008
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4804035008,
+        4804039616
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4804039616,
+        4809348032
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4809348032,
+        4809352640
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4809352640,
+        4814661056
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4814661056,
+        4814665664
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4814665664,
+        4814670272
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4814670272,
+        4814674880
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4814674880,
+        4814679488
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4814679488,
+        4814696704
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4814696704,
+        4834529536
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4834529536,
+        4834534144
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4834534144,
+        4854366976
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4854366976,
+        4854371584
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4854371584,
+        4859680000
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4859680000,
+        4859684608
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4859684608,
+        4864993024
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4864993024,
+        4864997632
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4864997632,
+        4870306048
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4870306048,
+        4870310656
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4870310656,
+        4875619072
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4875619072,
+        4875623680
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4875623680,
+        4875628288
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4875628288,
+        4875632896
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4875632896,
+        4875637504
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4875637504,
+        4875654720
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4875654720,
+        4895487552
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4895487552,
+        4895492160
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4895492160,
+        4915324992
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4915324992,
+        4915329600
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4915329600,
+        4920638016
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4920638016,
+        4920642624
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4920642624,
+        4925951040
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4925951040,
+        4925955648
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4925955648,
+        4931264064
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4931264064,
+        4931268672
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4931268672,
+        4936577088
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4936577088,
+        4936581696
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4936581696,
+        4936586304
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4936586304,
+        4936590912
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4936590912,
+        4936595520
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        4936595520,
+        4936612736
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        4936612736,
+        4956445568
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4956445568,
+        4956450176
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        4956450176,
+        4976283008
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4976283008,
+        4976287616
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4976287616,
+        4981596032
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4981596032,
+        4981600640
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4981600640,
+        4986909056
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4986909056,
+        4986913664
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4986913664,
+        4992222080
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        4992222080,
+        4992226688
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        4992226688,
+        4997535104
+      ]
+    },
+    "lm_head.weight": {
+      "dtype": "F32",
+      "shape": [
+        32000,
+        2048
+      ],
+      "data_offsets": [
+        0,
+        262144000
+      ]
+    },
+    "model.mm_projector.0.bias": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        262144000,
+        262152192
+      ]
+    },
+    "model.mm_projector.0.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        1152
+      ],
+      "data_offsets": [
+        262152192,
+        271589376
+      ]
+    },
+    "model.mm_projector.2.bias": {
+      "dtype": "F32",
+      "shape": [
+        2048
+      ],
+      "data_offsets": [
+        271589376,
+        271597568
+      ]
+    },
+    "model.mm_projector.2.weight": {
+      "dtype": "F32",
+      "shape": [
+        2048,
+        2048
+      ],
+      "data_offsets": [
+        271597568,
+        288374784
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        288374784,
+        288379392
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        288379392,
+        288384000
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        288384000,
+        288388608
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        288388608,
+        288393216
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        288393216,
+        288410432
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        288410432,
+        308243264
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        308243264,
+        308247872
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        308247872,
+        328080704
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        328080704,
+        328085312
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        328085312,
+        333393728
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        333393728,
+        333398336
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        333398336,
+        338706752
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        338706752,
+        338711360
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        338711360,
+        344019776
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        344019776,
+        344024384
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        344024384,
+        349332800
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        349332800,
+        349337408
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        349337408,
+        349342016
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        349342016,
+        349346624
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        349346624,
+        349351232
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        349351232,
+        349368448
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        349368448,
+        369201280
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        369201280,
+        369205888
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        369205888,
+        389038720
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        389038720,
+        389043328
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        389043328,
+        394351744
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        394351744,
+        394356352
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        394356352,
+        399664768
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        399664768,
+        399669376
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        399669376,
+        404977792
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        404977792,
+        404982400
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        404982400,
+        410290816
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        410290816,
+        410295424
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        410295424,
+        410300032
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        410300032,
+        410304640
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        410304640,
+        410309248
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        410309248,
+        410326464
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        410326464,
+        430159296
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        430159296,
+        430163904
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        430163904,
+        449996736
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        449996736,
+        450001344
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        450001344,
+        455309760
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        455309760,
+        455314368
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        455314368,
+        460622784
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        460622784,
+        460627392
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        460627392,
+        465935808
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        465935808,
+        465940416
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        465940416,
+        471248832
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        471248832,
+        471253440
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        471253440,
+        471258048
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        471258048,
+        471262656
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        471262656,
+        471267264
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        471267264,
+        471284480
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        471284480,
+        491117312
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        491117312,
+        491121920
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        491121920,
+        510954752
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        510954752,
+        510959360
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        510959360,
+        516267776
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        516267776,
+        516272384
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        516272384,
+        521580800
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        521580800,
+        521585408
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        521585408,
+        526893824
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        526893824,
+        526898432
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        526898432,
+        532206848
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        532206848,
+        532211456
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        532211456,
+        532216064
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        532216064,
+        532220672
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        532220672,
+        532225280
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        532225280,
+        532242496
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        532242496,
+        552075328
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        552075328,
+        552079936
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        552079936,
+        571912768
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        571912768,
+        571917376
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        571917376,
+        577225792
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        577225792,
+        577230400
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        577230400,
+        582538816
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        582538816,
+        582543424
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        582543424,
+        587851840
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        587851840,
+        587856448
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        587856448,
+        593164864
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        593164864,
+        593169472
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        593169472,
+        593174080
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        593174080,
+        593178688
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        593178688,
+        593183296
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        593183296,
+        593200512
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        593200512,
+        613033344
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        613033344,
+        613037952
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        613037952,
+        632870784
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        632870784,
+        632875392
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        632875392,
+        638183808
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        638183808,
+        638188416
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        638188416,
+        643496832
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        643496832,
+        643501440
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        643501440,
+        648809856
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        648809856,
+        648814464
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        648814464,
+        654122880
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        654122880,
+        654127488
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        654127488,
+        654132096
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        654132096,
+        654136704
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        654136704,
+        654141312
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        654141312,
+        654158528
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        654158528,
+        673991360
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        673991360,
+        673995968
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        673995968,
+        693828800
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        693828800,
+        693833408
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        693833408,
+        699141824
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        699141824,
+        699146432
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        699146432,
+        704454848
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        704454848,
+        704459456
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        704459456,
+        709767872
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        709767872,
+        709772480
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        709772480,
+        715080896
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        715080896,
+        715085504
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        715085504,
+        715090112
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        715090112,
+        715094720
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        715094720,
+        715099328
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        715099328,
+        715116544
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        715116544,
+        734949376
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        734949376,
+        734953984
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        734953984,
+        754786816
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        754786816,
+        754791424
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        754791424,
+        760099840
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        760099840,
+        760104448
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        760104448,
+        765412864
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        765412864,
+        765417472
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        765417472,
+        770725888
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        770725888,
+        770730496
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        770730496,
+        776038912
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        776038912,
+        776043520
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        776043520,
+        776048128
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        776048128,
+        776052736
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        776052736,
+        776057344
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        776057344,
+        776074560
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        776074560,
+        795907392
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        795907392,
+        795912000
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        795912000,
+        815744832
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        815744832,
+        815749440
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        815749440,
+        821057856
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        821057856,
+        821062464
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        821062464,
+        826370880
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        826370880,
+        826375488
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        826375488,
+        831683904
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        831683904,
+        831688512
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        831688512,
+        836996928
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        836996928,
+        837001536
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        837001536,
+        837006144
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        837006144,
+        837010752
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        837010752,
+        837015360
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        837015360,
+        837032576
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        837032576,
+        856865408
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        856865408,
+        856870016
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        856870016,
+        876702848
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        876702848,
+        876707456
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        876707456,
+        882015872
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        882015872,
+        882020480
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        882020480,
+        887328896
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        887328896,
+        887333504
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        887333504,
+        892641920
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        892641920,
+        892646528
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        892646528,
+        897954944
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        897954944,
+        897959552
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        897959552,
+        897964160
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        897964160,
+        897968768
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        897968768,
+        897973376
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        897973376,
+        897990592
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        897990592,
+        917823424
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        917823424,
+        917828032
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        917828032,
+        937660864
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        937660864,
+        937665472
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        937665472,
+        942973888
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        942973888,
+        942978496
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        942978496,
+        948286912
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        948286912,
+        948291520
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        948291520,
+        953599936
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        953599936,
+        953604544
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        953604544,
+        958912960
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.layer_norm1.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        958912960,
+        958917568
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.layer_norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        958917568,
+        958922176
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.layer_norm2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        958922176,
+        958926784
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.layer_norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        958926784,
+        958931392
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc1.bias": {
+      "dtype": "F32",
+      "shape": [
+        4304
+      ],
+      "data_offsets": [
+        958931392,
+        958948608
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc1.weight": {
+      "dtype": "F32",
+      "shape": [
+        4304,
+        1152
+      ],
+      "data_offsets": [
+        958948608,
+        978781440
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc2.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        978781440,
+        978786048
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc2.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        4304
+      ],
+      "data_offsets": [
+        978786048,
+        998618880
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.k_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        998618880,
+        998623488
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.k_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        998623488,
+        1003931904
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.out_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        1003931904,
+        1003936512
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.out_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        1003936512,
+        1009244928
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.q_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        1009244928,
+        1009249536
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.q_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        1009249536,
+        1014557952
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.v_proj.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        1014557952,
+        1014562560
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.v_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152,
+        1152
+      ],
+      "data_offsets": [
+        1014562560,
+        1019870976
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.post_layernorm.bias": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        1019870976,
+        1019875584
+      ]
+    },
+    "model.vision_tower.vision_tower.vision_model.post_layernorm.weight": {
+      "dtype": "F32",
+      "shape": [
+        1152
+      ],
+      "data_offsets": [
+        1019875584,
+        1019880192
+      ]
+    }
+  },
+  "training_run_identifiers": [
+    "./checkpoints/tiny-llava-tinyllama-sharegpt4v-unlock-vit-from-12-siglip-TinyLlama-1.1B-Chat-v1.0-siglip-so400m-patch14-384-finetune",
+    "tiny-llava-tinyllama-sharegpt4v-unlock-vit-from-12-siglip-finetune-TinyLlama-1.1B-Chat-v1.0-siglip-so400m-patch14-384"
+  ],
+  "trainer_state": {
+    "best_metric": null,
+    "best_model_checkpoint": null,
+    "epoch": 1.0,
+    "eval_steps": 500,
+    "global_step": 5196,
+    "is_hyper_param_search": false,
+    "is_local_process_zero": true,
+    "is_world_process_zero": true,
+    "logging_steps": 1.0,
+    "max_steps": 5196,
+    "num_input_tokens_seen": 0,
+    "num_train_epochs": 1,
+    "save_steps": 5000,
+    "total_flos": 4324938674405376.0,
+    "train_batch_size": 8,
+    "trial_name": null,
+    "trial_params": null
+  }
+}

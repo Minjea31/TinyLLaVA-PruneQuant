@@ -1,0 +1,42 @@
+{
+  "source": "/home/a/TinyLLaVA-PruneQuant/data/train/annotations/llava_sft_coco1024.json",
+  "source_sha256": "eed8f11d36935c0a63c00597d971b241807615db42a1d3254b2314e13cd2b81a",
+  "image_folder": "/home/a/TinyLLaVA-PruneQuant/data/train/llava",
+  "original_records": 1024,
+  "selected_records": 4,
+  "skipped": {
+    "too_long": 13
+  },
+  "max_length": 1024,
+  "samples": [
+    {
+      "index": 0,
+      "id": "000000073916",
+      "image": "coco/train2017/000000073916.jpg",
+      "image_sha256": "c52c120d300408f990a3992e43c689df6cf20e0c31472fc0a92c87a243a16afc",
+      "expanded_tokens": 944
+    },
+    {
+      "index": 4,
+      "id": "000000543573",
+      "image": "coco/train2017/000000543573.jpg",
+      "image_sha256": "b5fcdf2bc7e322a22c433c72d37bedc0dd4936adfad10dd35ddafeb975cd50b2",
+      "expanded_tokens": 994
+    },
+    {
+      "index": 10,
+      "id": "000000203336",
+      "image": "coco/train2017/000000203336.jpg",
+      "image_sha256": "7e70f2305a3cae78a71ca1d58c69bc905242efc0c41d946375df51e56a3df729",
+      "expanded_tokens": 866
+    },
+    {
+      "index": 16,
+      "id": "000000447093",
+      "image": "coco/train2017/000000447093.jpg",
+      "image_sha256": "ade42332d88ef74fc9ad613925676cffd68059511de0fd90301994eb99aba3d3",
+      "expanded_tokens": 861
+    }
+  ],
+  "fingerprint": "d4007a098d15f874a00b751d0a1d5e5dd8c414d0908e65af47718235ad3ce812"
+}

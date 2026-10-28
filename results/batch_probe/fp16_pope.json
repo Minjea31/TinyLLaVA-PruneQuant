@@ -1,0 +1,474 @@
+{
+  "time": "2026-10-28T05:02:12.393568+00:00",
+  "benchmark": "pope_first_samples",
+  "samples": 16,
+  "precision": "fp16",
+  "model_revisions": {
+    "TinyLLaVA-1.5B": "e1fe174363732086223af5ca9dab6f4309f66278",
+    "TinyLLaVA-1.5B-SigLIP": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081"
+  },
+  "max_new_tokens": 32,
+  "do_sample": false,
+  "padding_side": "left",
+  "runs": {
+    "1": {
+      "batch_size": 1,
+      "sample_count": 16,
+      "seconds": 6.885082570000009,
+      "samples_per_second": 2.323864650471429,
+      "mean_batch_seconds": 0.43031766062500054,
+      "peak_allocated_gib": 2.994749069213867,
+      "peak_reserved_gib": 3.205078125,
+      "observed_device_memory_mib": 3557,
+      "exact_saved_batch1_answers": 16,
+      "metrics": {
+        "random": {
+          "count": 16,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "yes_ratio": 0.5,
+          "tp": 8,
+          "tn": 8,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "reference_metrics": {
+        "random": {
+          "count": 16,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "yes_ratio": 0.5,
+          "tp": 8,
+          "tn": 8,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "predictions": [
+        {
+          "question_id": "random_1",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "Yes, there is a snowboard in the image, and it is being used by a person who is snowboarding down the snowy slope.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_2",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no car in the image. The image shows a person snowboarding down a snow-covered slope.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_3",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "Yes, there is a person in the image, who is snowboarding down a snowy slope.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_4",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no sandwich in the image. The image features a person snowboarding down a snow-covered slope.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_5",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "Yes, there is a skis in the image, and the person is riding on them while snowboarding down the snow-covered slope.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_6",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no couch in the image. The image features a person snowboarding down a snow-covered slope.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_7",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is a truck in the image, and it is parked near the two children under the umbrella.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_8",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no pizza in the image. The image features a woman and a child holding an umbrella while walking down a street.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_9",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is a person in the image, a woman, and a child.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_10",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no sink in the image. The image features a woman and a child standing in the rain, holding an umbrella.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_11",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is an umbrella in the image, and it is being held by a woman and a child.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_12",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no cell phone in the image.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_13",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "Yes, there is a person in the image, who is riding a bike.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_14",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no sheep in the image. The image features a group of buses and a van, as well as a few palm trees.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_15",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "Yes, there is a bicycle in the image, parked near the buses and the street.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_16",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no broccoli in the image. The image features a bus stop with a red and white bus, a white van, and a red",
+          "label": "no",
+          "category": "random"
+        }
+      ]
+    },
+    "4": {
+      "batch_size": 4,
+      "sample_count": 16,
+      "seconds": 4.470355198999982,
+      "samples_per_second": 3.5791339362874783,
+      "mean_batch_seconds": 1.1175887997499956,
+      "peak_allocated_gib": 3.4855446815490723,
+      "peak_reserved_gib": 4.16796875,
+      "observed_device_memory_mib": 4543,
+      "exact_saved_batch1_answers": 15,
+      "metrics": {
+        "random": {
+          "count": 16,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "yes_ratio": 0.5,
+          "tp": 8,
+          "tn": 8,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "reference_metrics": {
+        "random": {
+          "count": 16,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "yes_ratio": 0.5,
+          "tp": 8,
+          "tn": 8,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "predictions": [
+        {
+          "question_id": "random_1",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "Yes, there is a snowboard in the image, and it is being used by a person who is snowboarding down the snowy slope.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_2",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no car in the image. The image shows a person snowboarding down a snow-covered slope.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_3",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "Yes, there is a person in the image, who is snowboarding down a snowy slope.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_4",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no sandwich in the image. The image features a person snowboarding down a snow-covered slope.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_5",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "Yes, there is a skis in the image, and the person is riding on them while snowboarding down the snow-covered slope.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_6",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no couch in the image. The image features a person snowboarding down a snow-covered slope.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_7",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is a truck in the image, and it is parked near the two children under the umbrella.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_8",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no pizza in the image. The image features a woman and a child holding an umbrella, and they are standing on a wet",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_9",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is a person in the image, a woman, and a child.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_10",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no sink in the image. The image features a woman and a child standing in the rain, holding an umbrella.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_11",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is an umbrella in the image, and it is being held by a woman and a child.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_12",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no cell phone in the image.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_13",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "Yes, there is a person in the image, who is riding a bike.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_14",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no sheep in the image. The image features a group of buses and a van, as well as a few palm trees.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_15",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "Yes, there is a bicycle in the image, parked near the buses and the street.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_16",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no broccoli in the image. The image features a bus stop with a red and white bus, a white van, and a red",
+          "label": "no",
+          "category": "random"
+        }
+      ]
+    },
+    "8": {
+      "batch_size": 8,
+      "sample_count": 16,
+      "seconds": 3.7866702669999768,
+      "samples_per_second": 4.225348095247845,
+      "mean_batch_seconds": 1.8933351334999884,
+      "peak_allocated_gib": 4.134650230407715,
+      "peak_reserved_gib": 6.162109375,
+      "observed_device_memory_mib": 6585,
+      "exact_saved_batch1_answers": 14,
+      "metrics": {
+        "random": {
+          "count": 16,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "yes_ratio": 0.5,
+          "tp": 8,
+          "tn": 8,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "reference_metrics": {
+        "random": {
+          "count": 16,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "yes_ratio": 0.5,
+          "tp": 8,
+          "tn": 8,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "predictions": [
+        {
+          "question_id": "random_1",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "Yes, there is a snowboard in the image, and it is being used by a person who is snowboarding down the snowy slope.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_2",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no car in the image. The image shows a person snowboarding down a snow-covered slope.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_3",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "Yes, there is a person in the image, who is snowboarding down a snowy slope.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_4",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no sandwich in the image. The image features a person snowboarding down a snow-covered slope.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_5",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "Yes, there is a skis in the image, and the person is riding on them while snowboarding down the snow-covered slope.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_6",
+          "image": "COCO_val2014_000000310196.jpg",
+          "text": "No, there is no couch in the image. The image features a person snowboarding down a snow-covered slope.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_7",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is a truck in the image, and it is parked near the two children under the umbrella.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_8",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no pizza in the image. The image features a woman and a child holding an umbrella, and they are standing on a wet",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_9",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is a person in the image, a woman, and a child.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_10",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no sink in the image. The image features a woman and a child standing in the rain, holding an umbrella.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_11",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "Yes, there is an umbrella in the image, and it is being held by a woman and a child.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_12",
+          "image": "COCO_val2014_000000210789.jpg",
+          "text": "No, there is no cell phone in the image.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_13",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "Yes, there is a person in the image, who is riding a bike.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_14",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no sheep in the image. The image features a group of buses and a van, as well as a few palm trees.",
+          "label": "no",
+          "category": "random"
+        },
+        {
+          "question_id": "random_15",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "Yes, there is a bicycle in the image, and it is being ridden by a person.",
+          "label": "yes",
+          "category": "random"
+        },
+        {
+          "question_id": "random_16",
+          "image": "COCO_val2014_000000429109.jpg",
+          "text": "No, there is no broccoli in the image. The image features a bus stop with a red and white bus, a white van, and a red",
+          "label": "no",
+          "category": "random"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "time": "2026-10-27T10:21:31.619482+00:00",
+  "status": "not_directly_compatible",
+  "runtime_smoke_test": "not_run",
+  "checkpoint_model_type": "tinyllava",
+  "checkpoint_architectures": [
+    "TinyLlavaLlamaForCausalLM"
+  ],
+  "evidence": {
+    "_discover_model_components": {
+      "path": "third_party/MegaTrain/infinity/model/cpu_master.py",
+      "line": 60,
+      "end_line": 264
+    },
+    "_process_vision": {
+      "path": "third_party/MegaTrain/infinity/model/cpu_master.py",
+      "line": 1005,
+      "end_line": 1053
+    },
+    "_merge_vision_embeddings": {
+      "path": "third_party/MegaTrain/infinity/model/cpu_master.py",
+      "line": 1055,
+      "end_line": 1089
+    },
+    "get_parameters": {
+      "path": "third_party/MegaTrain/infinity/model/cpu_master.py",
+      "line": 1939,
+      "end_line": 1978
+    }
+  },
+  "blockers": [
+    "Checkpoint legacy tinyllava type is not an HF llava AutoModel; explicit class registration and local loader required.",
+    "Legacy attributes are model.vision_tower and model.mm_projector; Factory main uses connector. Neither matches current generic projector discovery.",
+    "Legacy image sentinel -200 requires expansion into 729 image embeddings plus corresponding labels, masks and positions; generic fixed-size replacement is not equivalent.",
+    "Vision encoder and projector run under torch.no_grad(): end-to-end vision/projector training is not implemented in this path.",
+    "Chained boolean indexing merged[img_mask][:n_use] writes into a temporary tensor; image merge requires correctness testing and correction.",
+    "requirements.txt requests Transformers >=5.0.0, conflicting with checkpoint runtime 4.37.2.",
+    "GPU unavailable; CUDA extensions not built. RAM/VRAM operation has not been verified."
+  ],
+  "conclusion": "Keep inference/evaluation in official TinyLLaVA. Do not present a TinyLLaVA MegaTrain training config as executable."
+}

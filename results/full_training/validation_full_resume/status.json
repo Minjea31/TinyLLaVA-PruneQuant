@@ -1,0 +1,53 @@
+{
+  "time": "2026-10-28T01:29:33.169243+00:00",
+  "status": "complete",
+  "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU",
+  "torch": "2.1.2+cu121",
+  "cuda": "12.1",
+  "mode": "full_sft_cpu_fp32_adafactor_gpu_fp16",
+  "trainable_parameters": {
+    "llm": 1100048384,
+    "vision": 397747744,
+    "projector": 6557696
+  },
+  "inactive_legacy_parameters": [
+    "model.vision_tower.vision_tower.vision_model.post_layernorm.weight",
+    "model.vision_tower.vision_tower.vision_model.post_layernorm.bias"
+  ],
+  "selected_records": 4,
+  "data_fingerprint": "d4007a098d15f874a00b751d0a1d5e5dd8c414d0908e65af47718235ad3ce812",
+  "cursor": {
+    "epoch": 1,
+    "batch_offset": 2,
+    "global_step": 3,
+    "attempted_updates": 3,
+    "loss_scale": 128.0
+  },
+  "last_update": {
+    "epoch": 1,
+    "batch_offset": 2,
+    "global_step": 3,
+    "attempted_updates": 3,
+    "loss_scale": 128.0,
+    "loss": 0.419324591755867,
+    "microbatches": 2,
+    "updated": true,
+    "grad_norms": {
+      "vision": 1.6775272447162886,
+      "projector": 0.4805364264336551,
+      "llm": 6.491878953765921
+    },
+    "seconds": 11.616077683000185,
+    "peak_allocated_gib": 3.2901172637939453
+  },
+  "elapsed_seconds": 25.941466797004978,
+  "peak_allocated_gib": 3.2901172637939453,
+  "peak_reserved_gib": 3.5546875,
+  "updated_probe_elements": {
+    "vision": 1086,
+    "projector": 2017,
+    "llm": 299
+  },
+  "checkpoint": "/home/a/TinyLLaVA-PruneQuant/results/full_training/validation_full_resume/final",
+  "finished_at": "2026-10-28T01:29:59.110704+00:00"
+}

@@ -1,0 +1,115 @@
+INFO:root:bczhou/TinyLLaVA-1.5B @ e1fe174363732086223af5ca9dab6f4309f66278: 6018727700 bytes, missing 6018727700
+INFO:root:bczhou/TinyLLaVA-1.5B-SigLIP @ 0a95c431e2c8636d003f5db08adf9ea7dc3b6081: 1591182888 bytes, missing 1591182888
+INFO:root:bczhou/TinyLLaVA-1.5B-SigLIP @ 0a95c431e2c8636d003f5db08adf9ea7dc3b6081: 1591182888 bytes, missing 1591180897
+INFO:root:bczhou/TinyLLaVA-1.5B-SigLIP @ 0a95c431e2c8636d003f5db08adf9ea7dc3b6081: 1591182888 bytes, missing 1591180897
+INFO:root:bczhou/TinyLLaVA-1.5B-SigLIP @ 0a95c431e2c8636d003f5db08adf9ea7dc3b6081: 1591182888 bytes, missing 1591180897
+ERROR:root:Snapshot download failed for bczhou/TinyLLaVA-1.5B-SigLIP; rerun to resume
+Traceback (most recent call last):
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 399, in http_get
+    import hf_transfer  # type: ignore[no-redef]
+ModuleNotFoundError: No module named 'hf_transfer'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_model.py", line 51, in <module>
+    try: download(repo, args.revision)
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_model.py", line 24, in download
+    snapshot_download(repo, revision=info.sha, local_dir=dest, max_workers=3)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/huggingface_hub/_snapshot_download.py", line 330, in snapshot_download
+    _inner_hf_hub_download(file)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 994, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1304, in _hf_hub_download_to_local_dir
+    _download_to_tmp_and_move(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1742, in _download_to_tmp_and_move
+    http_get(
+  File "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 401, in http_get
+    raise ValueError(
+ValueError: Fast download using 'hf_transfer' is enabled (HF_HUB_ENABLE_HF_TRANSFER=1) but 'hf_transfer' package is not available in your environment. Try `pip install hf_transfer`.
+INFO:root:bczhou/TinyLLaVA-1.5B-SigLIP @ 0a95c431e2c8636d003f5db08adf9ea7dc3b6081: 1591182888 bytes, missing 1591180897
+INFO:root:bczhou/TinyLLaVA-1.5B @ e1fe174363732086223af5ca9dab6f4309f66278: 6018727700 bytes, missing 4997593368
+INFO:root:bczhou/TinyLLaVA-1.5B @ e1fe174363732086223af5ca9dab6f4309f66278: 6018727700 bytes, missing 4997593368
+INFO:root:bczhou/TinyLLaVA-1.5B @ e1fe174363732086223af5ca9dab6f4309f66278: 6018727700 bytes, missing 4997593368
+INFO:root:bczhou/TinyLLaVA-1.5B-SigLIP @ 0a95c431e2c8636d003f5db08adf9ea7dc3b6081: 1591182888 bytes, missing 1591180897
+INFO:root:Archive ranges: 130/596 (21.8%)
+INFO:root:Archive ranges: 140/596 (23.5%)
+INFO:root:Archive ranges: 10/95 (10.5%)
+INFO:root:Archive ranges: 150/596 (25.2%)
+INFO:root:Archive ranges: 160/596 (26.8%)
+INFO:root:Archive ranges: 20/95 (21.1%)
+INFO:root:Archive ranges: 170/596 (28.5%)
+INFO:root:Archive ranges: 180/596 (30.2%)
+INFO:root:Archive ranges: 30/95 (31.6%)
+INFO:root:Archive ranges: 190/596 (31.9%)
+INFO:root:Archive ranges: 200/596 (33.6%)
+INFO:root:Archive ranges: 40/95 (42.1%)
+INFO:root:Archive ranges: 210/596 (35.2%)
+INFO:root:Archive ranges: 220/596 (36.9%)
+INFO:root:Archive ranges: 230/596 (38.6%)
+INFO:root:Archive ranges: 50/95 (52.6%)
+INFO:root:Archive ranges: 240/596 (40.3%)
+INFO:root:Archive ranges: 250/596 (41.9%)
+INFO:root:Archive ranges: 260/596 (43.6%)
+INFO:root:Archive ranges: 60/95 (63.2%)
+INFO:root:Archive ranges: 270/596 (45.3%)
+INFO:root:Archive ranges: 280/596 (47.0%)
+INFO:root:Archive ranges: 290/596 (48.7%)
+INFO:root:Archive ranges: 70/95 (73.7%)
+INFO:root:Archive ranges: 300/596 (50.3%)
+INFO:root:Archive ranges: 310/596 (52.0%)
+INFO:root:Archive ranges: 320/596 (53.7%)
+INFO:root:Archive ranges: 330/596 (55.4%)
+INFO:root:Archive ranges: 80/95 (84.2%)
+INFO:root:Archive ranges: 340/596 (57.0%)
+INFO:root:Archive ranges: 350/596 (58.7%)
+INFO:root:Archive ranges: 360/596 (60.4%)
+INFO:root:Archive ranges: 370/596 (62.1%)
+INFO:root:Archive ranges: 380/596 (63.8%)
+INFO:root:Archive ranges: 390/596 (65.4%)
+INFO:root:Archive ranges: 400/596 (67.1%)
+INFO:root:Archive ranges: 410/596 (68.8%)
+INFO:root:Archive ranges: 90/95 (94.7%)
+INFO:root:Archive ranges: 420/596 (70.5%)
+INFO:root:Archive ranges: 430/596 (72.1%)
+WARNING:root:Range 17 retry 1: ChunkedEncodingError
+INFO:root:Archive ranges: 440/596 (73.8%)
+INFO:root:Archive ranges: 450/596 (75.5%)
+INFO:root:Archive ranges: 460/596 (77.2%)
+INFO:root:Archive ranges: 470/596 (78.9%)
+INFO:root:Archive ranges: 480/596 (80.5%)
+INFO:root:Archive ranges: 490/596 (82.2%)
+INFO:root:Archive ranges: 500/596 (83.9%)
+INFO:root:Archive ranges: 510/596 (85.6%)
+INFO:root:Archive ranges: 520/596 (87.2%)
+INFO:root:Archive ranges: 530/596 (88.9%)
+INFO:root:Archive ranges: 540/596 (90.6%)
+INFO:root:Archive ranges: 550/596 (92.3%)
+INFO:root:Archive ranges: 560/596 (94.0%)
+INFO:root:Archive ranges: 570/596 (95.6%)
+INFO:root:Archive ranges: 580/596 (97.3%)
+INFO:root:Archive ranges: 590/596 (99.0%)
+INFO:root:bczhou/TinyLLaVA-1.5B-SigLIP @ 0a95c431e2c8636d003f5db08adf9ea7dc3b6081: 1591182888 bytes, missing 795634081
+INFO:root:Archive ranges: 80/95 (84.2%)
+INFO:root:Archive ranges: 90/95 (94.7%)
+INFO:root:Archive ranges: 80/95 (84.2%)
+INFO:root:Archive ranges: 90/95 (94.7%)
+ERROR:root:Snapshot download failed for bczhou/TinyLLaVA-1.5B-SigLIP; rerun to resume
+Traceback (most recent call last):
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_model.py", line 158, in <module>
+    p.add_argument(
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/download_model.py", line 74, in download
+    if not entry.lfs or entry.size < 100 * 1024**2 or target.exists():
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/segmented_download.py", line 204, in transfer
+    logging.warning(
+  File "/home/a/TinyLLaVA-PruneQuant/scripts/common.py", line 37, in sha256
+    with open(path, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/a/TinyLLaVA-PruneQuant/model/TinyLLaVA-1.5B-SigLIP/.cache/parallel/pytorch_model.bin.ranged-partial'
+INFO:root:bczhou/TinyLLaVA-1.5B @ e1fe174363732086223af5ca9dab6f4309f66278: 6018727700 bytes, missing 0
+INFO:root:bczhou/TinyLLaVA-1.5B-SigLIP @ 0a95c431e2c8636d003f5db08adf9ea7dc3b6081: 1591182888 bytes, missing 0
