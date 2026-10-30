@@ -1,0 +1,2055 @@
+{
+  "metrics": {
+    "all": {
+      "examples": 8,
+      "tokens": 209,
+      "kl": 0.4846628326922655,
+      "nll": 1.440532609820366,
+      "reference_nll": 0.9512049516779371,
+      "nll_delta": 0.4893276281654835,
+      "argmax_agreement": 0.7596354186534882
+    }
+  },
+  "examples": [
+    {
+      "id": "llava_sft:000000025241",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.1955079883337021,
+      "nll": 0.8699437975883484,
+      "reference_nll": 0.6753731966018677,
+      "nll_delta": 0.1945706307888031,
+      "argmax_agreement": 0.84375
+    },
+    {
+      "id": "llava_sft:000000068300",
+      "fold": "holdout",
+      "tokens": 2,
+      "kl": 0.8493115305900574,
+      "nll": 0.8941577076911926,
+      "reference_nll": 0.0068125114776194096,
+      "nll_delta": 0.8873451948165894,
+      "argmax_agreement": 0.5
+    },
+    {
+      "id": "sharegpt4v:004111233",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.5419977307319641,
+      "nll": 1.0984495878219604,
+      "reference_nll": 0.37300390005111694,
+      "nll_delta": 0.7254456877708435,
+      "argmax_agreement": 0.75
+    },
+    {
+      "id": "sharegpt4v:001832591",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.7683531641960144,
+      "nll": 1.0982134342193604,
+      "reference_nll": 0.4527808129787445,
+      "nll_delta": 0.6454326510429382,
+      "argmax_agreement": 0.8125
+    },
+    {
+      "id": "llava_sft:000000304587",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.22128084301948547,
+      "nll": 1.132786512374878,
+      "reference_nll": 1.007419228553772,
+      "nll_delta": 0.12536728382110596,
+      "argmax_agreement": 0.90625
+    },
+    {
+      "id": "llava:002471561",
+      "fold": "holdout",
+      "tokens": 15,
+      "kl": 0.48087936639785767,
+      "nll": 3.955310344696045,
+      "reference_nll": 3.3492345809936523,
+      "nll_delta": 0.6060755252838135,
+      "argmax_agreement": 0.7333333492279053
+    },
+    {
+      "id": "llava_sft:000000340139",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.21817845106124878,
+      "nll": 1.4690396785736084,
+      "reference_nll": 1.0694820880889893,
+      "nll_delta": 0.39955753087997437,
+      "argmax_agreement": 0.84375
+    },
+    {
+      "id": "sharegpt4v:001612463",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.6017935872077942,
+      "nll": 1.0063598155975342,
+      "reference_nll": 0.6755332946777344,
+      "nll_delta": 0.3308265209197998,
+      "argmax_agreement": 0.6875
+    }
+  ],
+  "minimum_unclamped_token_kl": 0.0,
+  "variant": "none",
+  "quantization": {
+    "format": "kl_separate_weight_activation_fp16_exceptions_v1",
+    "variant": "none",
+    "finetuning_steps": 0,
+    "fp16_weight_layers": [],
+    "fp16_activation_layers": [],
+    "weighted_layer_count": 314,
+    "weighted_layer_precision_counts": {
+      "W4A4": 314
+    },
+    "native_layer_count": 314,
+    "weighted_layers": [
+      {
+        "name": "model.layers.0.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.0.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.0.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.0.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.0.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.0.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.0.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.1.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.1.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.1.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.1.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.1.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.1.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.1.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.2.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.2.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.2.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.2.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.2.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.2.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.2.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.3.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.3.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.3.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.3.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.3.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.3.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.3.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.4.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.4.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.4.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.4.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.4.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.4.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.4.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.5.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.5.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.5.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.5.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.5.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.5.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.5.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.6.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.6.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.6.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.6.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.6.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.6.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.6.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.7.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.7.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.7.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.7.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.7.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.7.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.7.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.8.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.8.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.8.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.8.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.8.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.8.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.8.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.9.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.9.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.9.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.9.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.9.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.9.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.9.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.10.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.10.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.10.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.10.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.10.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.10.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.10.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.11.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.11.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.11.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.11.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.11.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.11.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.11.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.12.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.12.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.12.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.12.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.12.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.12.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.12.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.13.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.13.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.13.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.13.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.13.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.13.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.13.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.14.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.14.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.14.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.14.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.14.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.14.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.14.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.15.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.15.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.15.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.15.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.15.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.15.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.15.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.16.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.16.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.16.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.16.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.16.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.16.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.16.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.17.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.17.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.17.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.17.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.17.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.17.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.17.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.18.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.18.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.18.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.18.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.18.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.18.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.18.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.19.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.19.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.19.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.19.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.19.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.19.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.19.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.20.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.20.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.20.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.20.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.20.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.20.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.20.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.21.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.21.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.21.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.21.self_attn.o_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.21.mlp.gate_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.21.mlp.up_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.layers.21.mlp.down_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.embeddings.patch_embedding",
+        "kind": "conv2d",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.k_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.v_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.q_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.out_proj",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc1",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.mm_projector.0",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "model.mm_projector.2",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      },
+      {
+        "name": "lm_head",
+        "kind": "linear",
+        "precision": "W4A4",
+        "backend": "cuda_wmma_s4"
+      }
+    ],
+    "fp16_parameter_values": 0,
+    "fp16_weight_source": "public FP16 model captured before RTN conversion",
+    "fp16_parameter_sha256": {},
+    "remaining_weight_source": "unchanged original packed RTN INT4 checkpoint",
+    "W16A4_compute": "dynamic A4 QDQ then FP16 GEMM with original FP16 weight",
+    "W4A16_compute": "packed W4 dequantization then FP16 GEMM with original activation",
+    "W4A4_compute": "native signed INT4 multiply / INT32 accumulation",
+    "other_operations": "original attention QK/PV, Softmax, RoPE and non-GEMM arithmetic",
+    "kernel": {
+      "cubin": "/home/a/TinyLLaVA-PruneQuant/model/.cache/int4_cuda/039b410c2201d919e89a/int4_gemm.cubin",
+      "architecture": "sm_86",
+      "source_sha256": "22a9ea81003b108d3d137bafab9d491fc762f176727e701c5ed92e6790234155",
+      "backend": "cuda_wmma_s4",
+      "multiply": "signed_int4",
+      "accumulator": "int32",
+      "dequantized_operand_gemm": false,
+      "performance_tuned": false,
+      "imma_instructions": [
+        "/*09b0*/                   IMMA.8832.S4.S4 R24, R24.ROW, R29.COL, R26 ;           /* 0x0000001d18187237 */",
+        "/*0a70*/                   IMMA.8832.S4.S4 R2, R28.ROW, R31.COL, R2 ;           /* 0x0000001f1c027237 */",
+        "/*0a80*/                   IMMA.8832.S4.S4 R2, R29.ROW, R30.COL, R2 ;           /* 0x0000001e1d027237 */",
+        "/*0a90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+        "/*0aa0*/                   IMMA.8832.S4.S4 R2, R8.ROW, R11.COL, R2 ;            /* 0x0000000b08027237 */",
+        "/*0d20*/                   IMMA.8832.S4.S4 R24, R34.ROW, R35.COL, R24 ;           /* 0x0000002322187237 */",
+        "/*0d30*/                   IMMA.8832.S4.S4 R24, R26.ROW, R37.COL, R24 ;           /* 0x000000251a187237 */",
+        "/*0d40*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R24 ;           /* 0x0000001f1c1a7237 */",
+        "/*0d90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+        "/*0f80*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+        "/*1130*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+        "/*12d0*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */"
+      ],
+      "imma_by_kernel": {
+        "raw_int4_gemm": [
+          "/*0a70*/                   IMMA.8832.S4.S4 R2, R28.ROW, R31.COL, R2 ;           /* 0x0000001f1c027237 */",
+          "/*0a80*/                   IMMA.8832.S4.S4 R2, R29.ROW, R30.COL, R2 ;           /* 0x0000001e1d027237 */",
+          "/*0a90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+          "/*0aa0*/                   IMMA.8832.S4.S4 R2, R8.ROW, R11.COL, R2 ;            /* 0x0000000b08027237 */",
+          "/*0d90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */"
+        ],
+        "scaled_int4_gemm": [
+          "/*09b0*/                   IMMA.8832.S4.S4 R24, R24.ROW, R29.COL, R26 ;           /* 0x0000001d18187237 */",
+          "/*0d20*/                   IMMA.8832.S4.S4 R24, R34.ROW, R35.COL, R24 ;           /* 0x0000002322187237 */",
+          "/*0d30*/                   IMMA.8832.S4.S4 R24, R26.ROW, R37.COL, R24 ;           /* 0x000000251a187237 */",
+          "/*0d40*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R24 ;           /* 0x0000001f1c1a7237 */",
+          "/*0f80*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+          "/*1130*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+          "/*12d0*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */"
+        ]
+      }
+    }
+  },
+  "checkpoint_sha256": "0a1040b0823731c793a84e78e6fd95ba7ff172d50936e82357c8b0e9523addf4",
+  "execution": {
+    "native": {
+      "current_process_total_calls": 314,
+      "current_process_called_layers": 314,
+      "native_layer_count": 314
+    },
+    "exceptions": {}
+  },
+  "diagnostic_seconds": 3.90909151599044
+}

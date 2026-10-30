@@ -1,0 +1,4083 @@
+{
+  "status": "complete",
+  "selection": "top W4A4 leaf targets by discovery KL",
+  "kernel": {
+    "cubin": "/home/a/TinyLLaVA-PruneQuant/model/.cache/int4_cuda/039b410c2201d919e89a/int4_gemm.cubin",
+    "architecture": "sm_86",
+    "source_sha256": "22a9ea81003b108d3d137bafab9d491fc762f176727e701c5ed92e6790234155",
+    "backend": "cuda_wmma_s4",
+    "multiply": "signed_int4",
+    "accumulator": "int32",
+    "dequantized_operand_gemm": false,
+    "performance_tuned": false,
+    "imma_instructions": [
+      "/*09b0*/                   IMMA.8832.S4.S4 R24, R24.ROW, R29.COL, R26 ;           /* 0x0000001d18187237 */",
+      "/*0a70*/                   IMMA.8832.S4.S4 R2, R28.ROW, R31.COL, R2 ;           /* 0x0000001f1c027237 */",
+      "/*0a80*/                   IMMA.8832.S4.S4 R2, R29.ROW, R30.COL, R2 ;           /* 0x0000001e1d027237 */",
+      "/*0a90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+      "/*0aa0*/                   IMMA.8832.S4.S4 R2, R8.ROW, R11.COL, R2 ;            /* 0x0000000b08027237 */",
+      "/*0d20*/                   IMMA.8832.S4.S4 R24, R34.ROW, R35.COL, R24 ;           /* 0x0000002322187237 */",
+      "/*0d30*/                   IMMA.8832.S4.S4 R24, R26.ROW, R37.COL, R24 ;           /* 0x000000251a187237 */",
+      "/*0d40*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R24 ;           /* 0x0000001f1c1a7237 */",
+      "/*0d90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+      "/*0f80*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+      "/*1130*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+      "/*12d0*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */"
+    ],
+    "imma_by_kernel": {
+      "raw_int4_gemm": [
+        "/*0a70*/                   IMMA.8832.S4.S4 R2, R28.ROW, R31.COL, R2 ;           /* 0x0000001f1c027237 */",
+        "/*0a80*/                   IMMA.8832.S4.S4 R2, R29.ROW, R30.COL, R2 ;           /* 0x0000001e1d027237 */",
+        "/*0a90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+        "/*0aa0*/                   IMMA.8832.S4.S4 R2, R8.ROW, R11.COL, R2 ;            /* 0x0000000b08027237 */",
+        "/*0d90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */"
+      ],
+      "scaled_int4_gemm": [
+        "/*09b0*/                   IMMA.8832.S4.S4 R24, R24.ROW, R29.COL, R26 ;           /* 0x0000001d18187237 */",
+        "/*0d20*/                   IMMA.8832.S4.S4 R24, R34.ROW, R35.COL, R24 ;           /* 0x0000002322187237 */",
+        "/*0d30*/                   IMMA.8832.S4.S4 R24, R26.ROW, R37.COL, R24 ;           /* 0x000000251a187237 */",
+        "/*0d40*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R24 ;           /* 0x0000001f1c1a7237 */",
+        "/*0f80*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+        "/*1130*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+        "/*12d0*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */"
+      ]
+    }
+  },
+  "results": [
+    {
+      "name": "lm_head",
+      "qdq_metrics": {
+        "all": {
+          "examples": 128,
+          "tokens": 3369,
+          "kl": 0.023736663663086688,
+          "nll": 1.0928346863356637,
+          "reference_nll": 1.074272907291288,
+          "nll_delta": 0.01856177412400939,
+          "argmax_agreement": 0.9376227459870279
+        },
+        "discovery": {
+          "examples": 64,
+          "tokens": 1683,
+          "kl": 0.023802529867452904,
+          "nll": 1.0853583067801083,
+          "reference_nll": 1.063966970036745,
+          "nll_delta": 0.021391339089859684,
+          "argmax_agreement": 0.9368410296738148
+        },
+        "confirmation": {
+          "examples": 64,
+          "tokens": 1686,
+          "kl": 0.02367079745872047,
+          "nll": 1.1003110658912192,
+          "reference_nll": 1.084578844545831,
+          "nll_delta": 0.015732209158159094,
+          "argmax_agreement": 0.938404462300241
+        }
+      },
+      "native_metrics": {
+        "all": {
+          "examples": 128,
+          "tokens": 3369,
+          "kl": 0.02373535760457912,
+          "nll": 1.0928347658891653,
+          "reference_nll": 1.074272907291288,
+          "nll_delta": 0.01856184957023288,
+          "argmax_agreement": 0.9378668866120279
+        },
+        "discovery": {
+          "examples": 64,
+          "tokens": 1683,
+          "kl": 0.02380185392689782,
+          "nll": 1.0853544967794733,
+          "reference_nll": 1.063966970036745,
+          "nll_delta": 0.021387522722761787,
+          "argmax_agreement": 0.9373293109238148
+        },
+        "confirmation": {
+          "examples": 64,
+          "tokens": 1686,
+          "kl": 0.023668861282260423,
+          "nll": 1.1003150349988573,
+          "reference_nll": 1.084578844545831,
+          "nll_delta": 0.015736176417703973,
+          "argmax_agreement": 0.938404462300241
+        }
+      },
+      "native_calls": 16,
+      "examples": [
+        {
+          "id": "sharegpt4v:000628429",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.028731130063533783,
+          "nll": 0.7926186323165894,
+          "reference_nll": 0.7618227005004883,
+          "nll_delta": 0.030795913189649582,
+          "argmax_agreement": 0.875
+        },
+        {
+          "id": "llava:003346072",
+          "fold": "discovery",
+          "tokens": 22,
+          "kl": 0.021599432453513145,
+          "nll": 1.7999553680419922,
+          "reference_nll": 1.8224408626556396,
+          "nll_delta": -0.022485380992293358,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000140067",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.04601394012570381,
+          "nll": 1.9059171676635742,
+          "reference_nll": 1.8216581344604492,
+          "nll_delta": 0.0842590481042862,
+          "argmax_agreement": 0.84375
+        },
+        {
+          "id": "sharegpt4v:002607643",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.010362895205616951,
+          "nll": 0.19663117825984955,
+          "reference_nll": 0.17515045404434204,
+          "nll_delta": 0.021480724215507507,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000227587",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.01634983718395233,
+          "nll": 0.4704735279083252,
+          "reference_nll": 0.4778323173522949,
+          "nll_delta": -0.007358817383646965,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000221313",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.041540540754795074,
+          "nll": 1.009135365486145,
+          "reference_nll": 1.00337553024292,
+          "nll_delta": 0.005759837105870247,
+          "argmax_agreement": 0.875
+        },
+        {
+          "id": "llava_sft:000000326092",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.03406204283237457,
+          "nll": 1.2201652526855469,
+          "reference_nll": 1.1602956056594849,
+          "nll_delta": 0.059869665652513504,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000111636",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.02148256078362465,
+          "nll": 1.3726038932800293,
+          "reference_nll": 1.4301074743270874,
+          "nll_delta": -0.05750352889299393,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:001153707",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.04393792152404785,
+          "nll": 0.5901393294334412,
+          "reference_nll": 0.5226377844810486,
+          "nll_delta": 0.067501500248909,
+          "argmax_agreement": 0.8125
+        },
+        {
+          "id": "llava_sft:000000101738",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.028451969847083092,
+          "nll": 0.8460537195205688,
+          "reference_nll": 0.8608155250549316,
+          "nll_delta": -0.014761846512556076,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:001467400",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.01768328808248043,
+          "nll": 0.5994235277175903,
+          "reference_nll": 0.5973966121673584,
+          "nll_delta": 0.002026936039328575,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:004757038",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.011730772443115711,
+          "nll": 0.7300940752029419,
+          "reference_nll": 0.7124738097190857,
+          "nll_delta": 0.017620285972952843,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:004938336",
+          "fold": "confirmation",
+          "tokens": 15,
+          "kl": 0.058526765555143356,
+          "nll": 3.5350430011749268,
+          "reference_nll": 3.470113754272461,
+          "nll_delta": 0.06492896378040314,
+          "argmax_agreement": 0.8666667342185974
+        },
+        {
+          "id": "llava_sft:000000521982",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0350826196372509,
+          "nll": 0.9528924226760864,
+          "reference_nll": 0.9195857644081116,
+          "nll_delta": 0.03330664336681366,
+          "argmax_agreement": 0.84375
+        },
+        {
+          "id": "llava_sft:000000149268",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.000173441250808537,
+          "nll": 0.0027965144254267216,
+          "reference_nll": 0.0020702602341771126,
+          "nll_delta": 0.000726254191249609,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000396010",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.017746562138199806,
+          "nll": 0.4648820757865906,
+          "reference_nll": 0.4376431703567505,
+          "nll_delta": 0.027238883078098297,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:001054931",
+          "fold": "discovery",
+          "tokens": 13,
+          "kl": 0.06541503965854645,
+          "nll": 3.6396098136901855,
+          "reference_nll": 3.6962130069732666,
+          "nll_delta": -0.05660290643572807,
+          "argmax_agreement": 0.8461538553237915
+        },
+        {
+          "id": "llava_sft:000000334588",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.017574410885572433,
+          "nll": 1.0342791080474854,
+          "reference_nll": 1.0393067598342896,
+          "nll_delta": -0.005027598701417446,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000522856",
+          "fold": "discovery",
+          "tokens": 23,
+          "kl": 0.03544711321592331,
+          "nll": 0.36522313952445984,
+          "reference_nll": 0.3363679051399231,
+          "nll_delta": 0.02885524183511734,
+          "argmax_agreement": 0.8260869979858398
+        },
+        {
+          "id": "llava_sft:000000426839",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.02449837327003479,
+          "nll": 1.6030349731445312,
+          "reference_nll": 1.5608341693878174,
+          "nll_delta": 0.04220079258084297,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "sharegpt4v:004318977",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.016974452883005142,
+          "nll": 0.3886806070804596,
+          "reference_nll": 0.37819719314575195,
+          "nll_delta": 0.010483430698513985,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000454755",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.019816145300865173,
+          "nll": 0.8218951225280762,
+          "reference_nll": 0.8080745339393616,
+          "nll_delta": 0.013820655643939972,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava:001290910",
+          "fold": "discovery",
+          "tokens": 7,
+          "kl": 0.048499349504709244,
+          "nll": 6.45396614074707,
+          "reference_nll": 6.458024501800537,
+          "nll_delta": -0.004058225080370903,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:003617549",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.01872062124311924,
+          "nll": 0.37793856859207153,
+          "reference_nll": 0.3858378529548645,
+          "nll_delta": -0.0078993309289217,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000514666",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.014283746480941772,
+          "nll": 0.3748604655265808,
+          "reference_nll": 0.3826715350151062,
+          "nll_delta": -0.00781108345836401,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:000882315",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.03346239775419235,
+          "nll": 0.6616460084915161,
+          "reference_nll": 0.6496096849441528,
+          "nll_delta": 0.012036293745040894,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:000830520",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.023672014474868774,
+          "nll": 0.6207466125488281,
+          "reference_nll": 0.608142614364624,
+          "nll_delta": 0.012603864073753357,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:001359574",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.032789044082164764,
+          "nll": 0.7562824487686157,
+          "reference_nll": 0.6566019654273987,
+          "nll_delta": 0.09968044608831406,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:000863382",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.01715001091361046,
+          "nll": 0.32788437604904175,
+          "reference_nll": 0.3039821982383728,
+          "nll_delta": 0.02390219084918499,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000254861",
+          "fold": "discovery",
+          "tokens": 9,
+          "kl": 0.006296361796557903,
+          "nll": 0.10951416939496994,
+          "reference_nll": 0.0918002799153328,
+          "nll_delta": 0.017713896930217743,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:001431886",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.023701831698417664,
+          "nll": 0.5763165950775146,
+          "reference_nll": 0.5266748666763306,
+          "nll_delta": 0.04964178428053856,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000148815",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.02639313042163849,
+          "nll": 0.6941957473754883,
+          "reference_nll": 0.6362470388412476,
+          "nll_delta": 0.057948678731918335,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "sharegpt4v:003617684",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.029981663450598717,
+          "nll": 0.5987111330032349,
+          "reference_nll": 0.5556376576423645,
+          "nll_delta": 0.04307343438267708,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:004310276",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.030249690636992455,
+          "nll": 0.44675999879837036,
+          "reference_nll": 0.3831058740615845,
+          "nll_delta": 0.0636540874838829,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000578131",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.005929980892688036,
+          "nll": 0.04537162929773331,
+          "reference_nll": 0.026527108624577522,
+          "nll_delta": 0.018844520673155785,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000141759",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.019169669598340988,
+          "nll": 0.8596777319908142,
+          "reference_nll": 0.8304691314697266,
+          "nll_delta": 0.02920858934521675,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000392458",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.026389390230178833,
+          "nll": 2.077648878097534,
+          "reference_nll": 1.9655888080596924,
+          "nll_delta": 0.1120600476861,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:006474919",
+          "fold": "discovery",
+          "tokens": 16,
+          "kl": 0.015661735087633133,
+          "nll": 1.7790031433105469,
+          "reference_nll": 1.6407232284545898,
+          "nll_delta": 0.13827994465827942,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:006232055",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.03496437147259712,
+          "nll": 0.44627124071121216,
+          "reference_nll": 0.39014190435409546,
+          "nll_delta": 0.0561293363571167,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:002320902",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.020958973094820976,
+          "nll": 0.4719846248626709,
+          "reference_nll": 0.4941347539424896,
+          "nll_delta": -0.022150106728076935,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "sharegpt4v:002020337",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.018101796507835388,
+          "nll": 0.5662876963615417,
+          "reference_nll": 0.5368734002113342,
+          "nll_delta": 0.029414251446723938,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000331203",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.010601956397294998,
+          "nll": 0.9772394895553589,
+          "reference_nll": 0.9404340982437134,
+          "nll_delta": 0.03680542856454849,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000578368",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.030464908108115196,
+          "nll": 0.5005383491516113,
+          "reference_nll": 0.5440577268600464,
+          "nll_delta": -0.04351937770843506,
+          "argmax_agreement": 0.875
+        },
+        {
+          "id": "sharegpt4v:000833518",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.025713276118040085,
+          "nll": 0.5379582643508911,
+          "reference_nll": 0.4588690996170044,
+          "nll_delta": 0.0790891945362091,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000019967",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.02735554799437523,
+          "nll": 0.925133466720581,
+          "reference_nll": 0.9103716611862183,
+          "nll_delta": 0.014761794358491898,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000535519",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.0038551047910004854,
+          "nll": 0.02134985849261284,
+          "reference_nll": 0.035665057599544525,
+          "nll_delta": -0.014315199106931686,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000394627",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.028137177228927612,
+          "nll": 0.7941989898681641,
+          "reference_nll": 0.7448992729187012,
+          "nll_delta": 0.04929972440004349,
+          "argmax_agreement": 0.875
+        },
+        {
+          "id": "sharegpt4v:000420778",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.011847325600683689,
+          "nll": 0.3995600938796997,
+          "reference_nll": 0.4147512912750244,
+          "nll_delta": -0.015191224403679371,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000524775",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 0.027331309393048286,
+          "nll": 0.3674359619617462,
+          "reference_nll": 0.5163918137550354,
+          "nll_delta": -0.14895585179328918,
+          "argmax_agreement": 0.5
+        },
+        {
+          "id": "llava_sft:000000251205",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.01792200654745102,
+          "nll": 0.8319602012634277,
+          "reference_nll": 0.798757016658783,
+          "nll_delta": 0.03320314735174179,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000080013",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.00315367104485631,
+          "nll": 0.8190773725509644,
+          "reference_nll": 0.91102534532547,
+          "nll_delta": -0.09194797277450562,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:005876758",
+          "fold": "discovery",
+          "tokens": 15,
+          "kl": 0.055568523705005646,
+          "nll": 3.7530479431152344,
+          "reference_nll": 3.6268393993377686,
+          "nll_delta": 0.12620852887630463,
+          "argmax_agreement": 0.9333333969116211
+        },
+        {
+          "id": "llava_sft:000000369735",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0380159392952919,
+          "nll": 2.3268203735351562,
+          "reference_nll": 2.3301758766174316,
+          "nll_delta": -0.0033557601273059845,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000169226",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 0.0005821741069667041,
+          "nll": 0.0014472530456259847,
+          "reference_nll": 0.0028307074680924416,
+          "nll_delta": -0.0013834544224664569,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000412764",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.01281969528645277,
+          "nll": 0.4051334857940674,
+          "reference_nll": 0.3983497619628906,
+          "nll_delta": 0.006783715449273586,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000005277",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.02363826334476471,
+          "nll": 0.7881648540496826,
+          "reference_nll": 0.7673690319061279,
+          "nll_delta": 0.02079583704471588,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:000103215",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.019191773608326912,
+          "nll": 0.665073037147522,
+          "reference_nll": 0.6533607244491577,
+          "nll_delta": 0.011712377890944481,
+          "argmax_agreement": 0.84375
+        },
+        {
+          "id": "sharegpt4v:004958414",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.02807859145104885,
+          "nll": 1.030692458152771,
+          "reference_nll": 0.9841833710670471,
+          "nll_delta": 0.04650912061333656,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000295124",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 0.0003086574433837086,
+          "nll": 0.004893489647656679,
+          "reference_nll": 0.004835168831050396,
+          "nll_delta": 5.832081660628319e-05,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:004262884",
+          "fold": "confirmation",
+          "tokens": 17,
+          "kl": 0.045239854604005814,
+          "nll": 3.0201897621154785,
+          "reference_nll": 3.0802509784698486,
+          "nll_delta": -0.06006113067269325,
+          "argmax_agreement": 0.7647058963775635
+        },
+        {
+          "id": "sharegpt4v:001202727",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.019459936767816544,
+          "nll": 0.765291690826416,
+          "reference_nll": 0.784611165523529,
+          "nll_delta": -0.019319424405694008,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:001921135",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.033089302480220795,
+          "nll": 0.551925003528595,
+          "reference_nll": 0.5112518072128296,
+          "nll_delta": 0.04067317396402359,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava:002430209",
+          "fold": "confirmation",
+          "tokens": 30,
+          "kl": 0.023318279534578323,
+          "nll": 1.2856336832046509,
+          "reference_nll": 1.2743605375289917,
+          "nll_delta": 0.011272942647337914,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:003021967",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.01847446896135807,
+          "nll": 0.4425124526023865,
+          "reference_nll": 0.44215965270996094,
+          "nll_delta": 0.00035278499126434326,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:004400443",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.021568847820162773,
+          "nll": 0.602681040763855,
+          "reference_nll": 0.573683500289917,
+          "nll_delta": 0.02899756468832493,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000319126",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.017059611156582832,
+          "nll": 0.721626877784729,
+          "reference_nll": 0.6757369637489319,
+          "nll_delta": 0.045889921486377716,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:002124573",
+          "fold": "discovery",
+          "tokens": 23,
+          "kl": 0.07783960551023483,
+          "nll": 3.8279805183410645,
+          "reference_nll": 3.694775104522705,
+          "nll_delta": 0.13320514559745789,
+          "argmax_agreement": 0.782608687877655
+        },
+        {
+          "id": "llava:002768986",
+          "fold": "confirmation",
+          "tokens": 7,
+          "kl": 0.02068440616130829,
+          "nll": 3.8788461685180664,
+          "reference_nll": 3.8592045307159424,
+          "nll_delta": 0.019641906023025513,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000247971",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.036472298204898834,
+          "nll": 1.0555613040924072,
+          "reference_nll": 1.089185118675232,
+          "nll_delta": -0.0336238332092762,
+          "argmax_agreement": 0.8125
+        },
+        {
+          "id": "llava_sft:000000308473",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.02433628961443901,
+          "nll": 0.7929527759552002,
+          "reference_nll": 0.7381287813186646,
+          "nll_delta": 0.05482400208711624,
+          "argmax_agreement": 0.875
+        },
+        {
+          "id": "sharegpt4v:002955464",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.024764511734247208,
+          "nll": 0.6705588102340698,
+          "reference_nll": 0.6286801099777222,
+          "nll_delta": 0.04187868908047676,
+          "argmax_agreement": 0.875
+        },
+        {
+          "id": "sharegpt4v:003802406",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.016664179041981697,
+          "nll": 0.2992367744445801,
+          "reference_nll": 0.28466057777404785,
+          "nll_delta": 0.014576203189790249,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000887210",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.02157854475080967,
+          "nll": 0.48700839281082153,
+          "reference_nll": 0.4903887212276459,
+          "nll_delta": -0.0033803130500018597,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000096101",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.028304345905780792,
+          "nll": 0.9026004076004028,
+          "reference_nll": 0.8833726644515991,
+          "nll_delta": 0.0192277729511261,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000357896",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.031516604125499725,
+          "nll": 1.0040712356567383,
+          "reference_nll": 0.9825716614723206,
+          "nll_delta": 0.02149946056306362,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000158702",
+          "fold": "confirmation",
+          "tokens": 19,
+          "kl": 0.008410430513322353,
+          "nll": 0.6570299863815308,
+          "reference_nll": 0.7128621935844421,
+          "nll_delta": -0.05583221837878227,
+          "argmax_agreement": 0.8947368264198303
+        },
+        {
+          "id": "sharegpt4v:002441645",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.030748678371310234,
+          "nll": 0.6163432598114014,
+          "reference_nll": 0.5669143199920654,
+          "nll_delta": 0.04942901059985161,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000269550",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0211741104722023,
+          "nll": 2.2999022006988525,
+          "reference_nll": 2.2675533294677734,
+          "nll_delta": 0.03234875574707985,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:002819210",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.016726775094866753,
+          "nll": 0.5734258890151978,
+          "reference_nll": 0.5268670320510864,
+          "nll_delta": 0.04655880108475685,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:003325436",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.017510192468762398,
+          "nll": 0.32672250270843506,
+          "reference_nll": 0.2945512533187866,
+          "nll_delta": 0.032171282917261124,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000315111",
+          "fold": "discovery",
+          "tokens": 30,
+          "kl": 0.0064881774596869946,
+          "nll": 0.08630547672510147,
+          "reference_nll": 0.07901383191347122,
+          "nll_delta": 0.0072916531935334206,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:001747501",
+          "fold": "confirmation",
+          "tokens": 18,
+          "kl": 0.03621310740709305,
+          "nll": 3.580249786376953,
+          "reference_nll": 3.5386838912963867,
+          "nll_delta": 0.041565995663404465,
+          "argmax_agreement": 0.8333333134651184
+        },
+        {
+          "id": "llava_sft:000000480745",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.013884350657463074,
+          "nll": 0.8405489325523376,
+          "reference_nll": 0.8395735025405884,
+          "nll_delta": 0.0009754709899425507,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava:000088342",
+          "fold": "confirmation",
+          "tokens": 12,
+          "kl": 0.03683651238679886,
+          "nll": 6.329390525817871,
+          "reference_nll": 6.319528579711914,
+          "nll_delta": 0.009861390106379986,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:002657576",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008378304541110992,
+          "nll": 0.8776690363883972,
+          "reference_nll": 0.9118388891220093,
+          "nll_delta": -0.03416977822780609,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000212671",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008855361491441727,
+          "nll": 0.3023856282234192,
+          "reference_nll": 0.3429226577281952,
+          "nll_delta": -0.04053701460361481,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000397034",
+          "fold": "discovery",
+          "tokens": 22,
+          "kl": 0.0070283678360283375,
+          "nll": 0.064213328063488,
+          "reference_nll": 0.06870440393686295,
+          "nll_delta": -0.00449106702581048,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000276597",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.03487420827150345,
+          "nll": 1.6743125915527344,
+          "reference_nll": 1.5970278978347778,
+          "nll_delta": 0.07728469371795654,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:001377835",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.02799794264137745,
+          "nll": 0.2762112021446228,
+          "reference_nll": 0.27960386872291565,
+          "nll_delta": -0.0033926479518413544,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava:005085086",
+          "fold": "confirmation",
+          "tokens": 27,
+          "kl": 0.0699988603591919,
+          "nll": 3.53631329536438,
+          "reference_nll": 3.5915348529815674,
+          "nll_delta": -0.05522127449512482,
+          "argmax_agreement": 0.8518518805503845
+        },
+        {
+          "id": "llava:005817268",
+          "fold": "discovery",
+          "tokens": 10,
+          "kl": 0.024092501029372215,
+          "nll": 3.2836225032806396,
+          "reference_nll": 3.2375760078430176,
+          "nll_delta": 0.04604647681117058,
+          "argmax_agreement": 0.9000000357627869
+        },
+        {
+          "id": "llava:002772434",
+          "fold": "discovery",
+          "tokens": 14,
+          "kl": 0.02786802500486374,
+          "nll": 3.806947708129883,
+          "reference_nll": 3.781273126602173,
+          "nll_delta": 0.02567443996667862,
+          "argmax_agreement": 0.8571429252624512
+        },
+        {
+          "id": "llava_sft:000000269738",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.028584886342287064,
+          "nll": 0.7042556405067444,
+          "reference_nll": 0.6767202615737915,
+          "nll_delta": 0.027535375207662582,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava:003084745",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.01976185478270054,
+          "nll": 1.6946494579315186,
+          "reference_nll": 1.6317718029022217,
+          "nll_delta": 0.06287766247987747,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000019226",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 2.4380398826906458e-05,
+          "nll": 0.001171886338852346,
+          "reference_nll": 0.0010032724821940064,
+          "nll_delta": 0.0001686138566583395,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:001217462",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.01947038434445858,
+          "nll": 0.45876544713974,
+          "reference_nll": 0.4503026008605957,
+          "nll_delta": 0.00846283882856369,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000027674",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.01527160033583641,
+          "nll": 0.4530261754989624,
+          "reference_nll": 0.39466023445129395,
+          "nll_delta": 0.05836595967411995,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:001712297",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.009847825393080711,
+          "nll": 0.22778257727622986,
+          "reference_nll": 0.21984955668449402,
+          "nll_delta": 0.0079329963773489,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000267224",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.001945408876053989,
+          "nll": 0.07070530951023102,
+          "reference_nll": 0.06436822563409805,
+          "nll_delta": 0.006337083876132965,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000344920",
+          "fold": "discovery",
+          "tokens": 13,
+          "kl": 0.0040902853943407536,
+          "nll": 0.046831805258989334,
+          "reference_nll": 0.05020739510655403,
+          "nll_delta": -0.0033755896147340536,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000312800",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.052566513419151306,
+          "nll": 1.5523512363433838,
+          "reference_nll": 1.4966281652450562,
+          "nll_delta": 0.05572297424077988,
+          "argmax_agreement": 0.84375
+        },
+        {
+          "id": "sharegpt4v:001289731",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.03482171148061752,
+          "nll": 0.7162851691246033,
+          "reference_nll": 0.6683338284492493,
+          "nll_delta": 0.04795128107070923,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000085144",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 0.00017078091332223266,
+          "nll": 0.001427459646947682,
+          "reference_nll": 0.0009045762126334012,
+          "nll_delta": 0.0005228834343142807,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:001353345",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.026735957711935043,
+          "nll": 0.6883231401443481,
+          "reference_nll": 0.6526023149490356,
+          "nll_delta": 0.0357208177447319,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000440401",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.018542837351560593,
+          "nll": 1.32941734790802,
+          "reference_nll": 1.3674918413162231,
+          "nll_delta": -0.03807458281517029,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava:004499734",
+          "fold": "confirmation",
+          "tokens": 12,
+          "kl": 0.03560608625411987,
+          "nll": 3.7672011852264404,
+          "reference_nll": 3.6418094635009766,
+          "nll_delta": 0.12539152801036835,
+          "argmax_agreement": 0.75
+        },
+        {
+          "id": "llava:000414854",
+          "fold": "discovery",
+          "tokens": 16,
+          "kl": 0.039314962923526764,
+          "nll": 3.4598782062530518,
+          "reference_nll": 3.5249080657958984,
+          "nll_delta": -0.06502988934516907,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:003056104",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.004049320239573717,
+          "nll": 1.1190128326416016,
+          "reference_nll": 1.1218831539154053,
+          "nll_delta": -0.0028702598065137863,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000227248",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.03719959035515785,
+          "nll": 0.9731230735778809,
+          "reference_nll": 0.9485370516777039,
+          "nll_delta": 0.02458595484495163,
+          "argmax_agreement": 0.8125
+        },
+        {
+          "id": "llava_sft:000000158087",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.015301420353353024,
+          "nll": 0.37632304430007935,
+          "reference_nll": 0.38958415389060974,
+          "nll_delta": -0.013261111453175545,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000359115",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 0.0033743823878467083,
+          "nll": 0.03367402032017708,
+          "reference_nll": 0.021090779453516006,
+          "nll_delta": 0.012583240866661072,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:002243301",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0197147186845541,
+          "nll": 0.47684377431869507,
+          "reference_nll": 0.4627760052680969,
+          "nll_delta": 0.014067740179598331,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:003000287",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.020458832383155823,
+          "nll": 0.5130435228347778,
+          "reference_nll": 0.5293172597885132,
+          "nll_delta": -0.01627378910779953,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000363336",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008178054355084896,
+          "nll": 0.3629719316959381,
+          "reference_nll": 0.35190311074256897,
+          "nll_delta": 0.011068816296756268,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:002545221",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.017990276217460632,
+          "nll": 0.31670641899108887,
+          "reference_nll": 0.285179078578949,
+          "nll_delta": 0.031527332961559296,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000428881",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.001288186525925994,
+          "nll": 0.010252617299556732,
+          "reference_nll": 0.005758968647569418,
+          "nll_delta": 0.004493648651987314,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000043099",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.027587736025452614,
+          "nll": 0.6445851922035217,
+          "reference_nll": 0.5869688987731934,
+          "nll_delta": 0.05761627107858658,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:000960480",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.01698385365307331,
+          "nll": 0.3787060081958771,
+          "reference_nll": 0.40041202306747437,
+          "nll_delta": -0.021706029772758484,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000550448",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.02625885047018528,
+          "nll": 0.9833884835243225,
+          "reference_nll": 1.004960060119629,
+          "nll_delta": -0.02157161384820938,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000350585",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.031770650297403336,
+          "nll": 1.1329271793365479,
+          "reference_nll": 1.1308873891830444,
+          "nll_delta": 0.0020398469641804695,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000059024",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.023142162710428238,
+          "nll": 0.7601484060287476,
+          "reference_nll": 0.6951949596405029,
+          "nll_delta": 0.06495337188243866,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:002967384",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.023925676941871643,
+          "nll": 1.0448461771011353,
+          "reference_nll": 0.9985189437866211,
+          "nll_delta": 0.04632722586393356,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000059142",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.028708625584840775,
+          "nll": 0.9698799848556519,
+          "reference_nll": 0.9475815296173096,
+          "nll_delta": 0.022298453375697136,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "sharegpt4v:002589639",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.029697656631469727,
+          "nll": 0.46492213010787964,
+          "reference_nll": 0.3722589313983917,
+          "nll_delta": 0.0926632285118103,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:000686533",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.022491374984383583,
+          "nll": 0.4674193561077118,
+          "reference_nll": 0.4775570034980774,
+          "nll_delta": -0.010137616656720638,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:003703867",
+          "fold": "confirmation",
+          "tokens": 11,
+          "kl": 0.0316849946975708,
+          "nll": 4.9345269203186035,
+          "reference_nll": 4.8969621658325195,
+          "nll_delta": 0.03756483271718025,
+          "argmax_agreement": 0.9090909361839294
+        },
+        {
+          "id": "sharegpt4v:000759048",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.020205797627568245,
+          "nll": 0.43023738265037537,
+          "reference_nll": 0.3928425908088684,
+          "nll_delta": 0.03739479184150696,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000336991",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.039738208055496216,
+          "nll": 1.1406288146972656,
+          "reference_nll": 1.1357707977294922,
+          "nll_delta": 0.004857953637838364,
+          "argmax_agreement": 0.90625
+        }
+      ],
+      "minimum_unclamped_token_kl": -9.389344768351293e-08
+    },
+    {
+      "name": "model.layers.2.mlp.down_proj",
+      "qdq_metrics": {
+        "all": {
+          "examples": 128,
+          "tokens": 3369,
+          "kl": 0.009446401845803365,
+          "nll": 1.07838975585355,
+          "reference_nll": 1.074272907291288,
+          "nll_delta": 0.004116835542845365,
+          "argmax_agreement": 0.9653881755657494
+        },
+        "discovery": {
+          "examples": 64,
+          "tokens": 1683,
+          "kl": 0.009065262196138235,
+          "nll": 1.0618863249137576,
+          "reference_nll": 1.063966970036745,
+          "nll_delta": -0.0020806580869248137,
+          "argmax_agreement": 0.9608990745618939
+        },
+        "confirmation": {
+          "examples": 64,
+          "tokens": 1686,
+          "kl": 0.009827541495468495,
+          "nll": 1.0948931867933425,
+          "reference_nll": 1.084578844545831,
+          "nll_delta": 0.010314329172615544,
+          "argmax_agreement": 0.9698772765696049
+        }
+      },
+      "native_metrics": {
+        "all": {
+          "examples": 128,
+          "tokens": 3369,
+          "kl": 0.009422916669752368,
+          "nll": 1.0784090696947715,
+          "reference_nll": 1.074272907291288,
+          "nll_delta": 0.004136156368076627,
+          "argmax_agreement": 0.9653881755657494
+        },
+        "discovery": {
+          "examples": 64,
+          "tokens": 1683,
+          "kl": 0.00903690458901707,
+          "nll": 1.0618649043108235,
+          "reference_nll": 1.063966970036745,
+          "nll_delta": -0.0021020748190494487,
+          "argmax_agreement": 0.9608990745618939
+        },
+        "confirmation": {
+          "examples": 64,
+          "tokens": 1686,
+          "kl": 0.009808928750487667,
+          "nll": 1.0949532350787194,
+          "reference_nll": 1.084578844545831,
+          "nll_delta": 0.010374387555202702,
+          "argmax_agreement": 0.9698772765696049
+        }
+      },
+      "native_calls": 16,
+      "examples": [
+        {
+          "id": "sharegpt4v:000628429",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.01143665425479412,
+          "nll": 0.7575361132621765,
+          "reference_nll": 0.7618227005004883,
+          "nll_delta": -0.004286599345505238,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:003346072",
+          "fold": "discovery",
+          "tokens": 22,
+          "kl": 0.03463238477706909,
+          "nll": 1.7813440561294556,
+          "reference_nll": 1.8224408626556396,
+          "nll_delta": -0.04109672084450722,
+          "argmax_agreement": 0.9090909361839294
+        },
+        {
+          "id": "llava_sft:000000140067",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.02368849702179432,
+          "nll": 1.87034273147583,
+          "reference_nll": 1.8216581344604492,
+          "nll_delta": 0.04868462309241295,
+          "argmax_agreement": 0.84375
+        },
+        {
+          "id": "sharegpt4v:002607643",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.004958891309797764,
+          "nll": 0.17730313539505005,
+          "reference_nll": 0.17515045404434204,
+          "nll_delta": 0.002152684610337019,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000227587",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.00628045154735446,
+          "nll": 0.5086181163787842,
+          "reference_nll": 0.4778323173522949,
+          "nll_delta": 0.030785761773586273,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000221313",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0061993906274437904,
+          "nll": 0.98273766040802,
+          "reference_nll": 1.00337553024292,
+          "nll_delta": -0.02063792012631893,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000326092",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.009259616956114769,
+          "nll": 1.1685853004455566,
+          "reference_nll": 1.1602956056594849,
+          "nll_delta": 0.008289684541523457,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000111636",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005446542985737324,
+          "nll": 1.4681565761566162,
+          "reference_nll": 1.4301074743270874,
+          "nll_delta": 0.03804899379611015,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "sharegpt4v:001153707",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.008335533551871777,
+          "nll": 0.5455920696258545,
+          "reference_nll": 0.5226377844810486,
+          "nll_delta": 0.022954246029257774,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000101738",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.011364281177520752,
+          "nll": 0.9076473116874695,
+          "reference_nll": 0.8608155250549316,
+          "nll_delta": 0.046831805258989334,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:001467400",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007723067421466112,
+          "nll": 0.5942007899284363,
+          "reference_nll": 0.5973966121673584,
+          "nll_delta": -0.003195797326043248,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:004757038",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007128885015845299,
+          "nll": 0.7162114381790161,
+          "reference_nll": 0.7124738097190857,
+          "nll_delta": 0.003737623803317547,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava:004938336",
+          "fold": "confirmation",
+          "tokens": 15,
+          "kl": 0.031831275671720505,
+          "nll": 3.548449754714966,
+          "reference_nll": 3.470113754272461,
+          "nll_delta": 0.07833550870418549,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000521982",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005221550352871418,
+          "nll": 0.8897405862808228,
+          "reference_nll": 0.9195857644081116,
+          "nll_delta": -0.029845185577869415,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000149268",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.00013333448441699147,
+          "nll": 0.0028509320691227913,
+          "reference_nll": 0.0020702602341771126,
+          "nll_delta": 0.0007806718349456787,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000396010",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.002766248770058155,
+          "nll": 0.4602370262145996,
+          "reference_nll": 0.4376431703567505,
+          "nll_delta": 0.022593820467591286,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:001054931",
+          "fold": "discovery",
+          "tokens": 13,
+          "kl": 0.010921208187937737,
+          "nll": 3.6176395416259766,
+          "reference_nll": 3.6962130069732666,
+          "nll_delta": -0.07857310026884079,
+          "argmax_agreement": 0.9230769872665405
+        },
+        {
+          "id": "llava_sft:000000334588",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0036259875632822514,
+          "nll": 1.0284473896026611,
+          "reference_nll": 1.0393067598342896,
+          "nll_delta": -0.010859375819563866,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000522856",
+          "fold": "discovery",
+          "tokens": 23,
+          "kl": 0.012346734292805195,
+          "nll": 0.39629098773002625,
+          "reference_nll": 0.3363679051399231,
+          "nll_delta": 0.059923093765974045,
+          "argmax_agreement": 0.95652174949646
+        },
+        {
+          "id": "llava_sft:000000426839",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.009159469045698643,
+          "nll": 1.5469775199890137,
+          "reference_nll": 1.5608341693878174,
+          "nll_delta": -0.013856617733836174,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:004318977",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006285053212195635,
+          "nll": 0.34975433349609375,
+          "reference_nll": 0.37819719314575195,
+          "nll_delta": -0.02844281680881977,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000454755",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007189228665083647,
+          "nll": 0.7932682633399963,
+          "reference_nll": 0.8080745339393616,
+          "nll_delta": -0.014806270599365234,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava:001290910",
+          "fold": "discovery",
+          "tokens": 7,
+          "kl": 0.03410191833972931,
+          "nll": 6.53894567489624,
+          "reference_nll": 6.458024501800537,
+          "nll_delta": 0.0809207335114479,
+          "argmax_agreement": 0.8571429252624512
+        },
+        {
+          "id": "sharegpt4v:003617549",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.009173661470413208,
+          "nll": 0.40265387296676636,
+          "reference_nll": 0.3858378529548645,
+          "nll_delta": 0.016815993934869766,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000514666",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.004991607274860144,
+          "nll": 0.3546924591064453,
+          "reference_nll": 0.3826715350151062,
+          "nll_delta": -0.027979062870144844,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000882315",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006135453935712576,
+          "nll": 0.6549025774002075,
+          "reference_nll": 0.6496096849441528,
+          "nll_delta": 0.005292885005474091,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000830520",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.010479405522346497,
+          "nll": 0.589798092842102,
+          "reference_nll": 0.608142614364624,
+          "nll_delta": -0.018344637006521225,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:001359574",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.008675888180732727,
+          "nll": 0.6713156700134277,
+          "reference_nll": 0.6566019654273987,
+          "nll_delta": 0.014713773503899574,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000863382",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0067399004474282265,
+          "nll": 0.3098601698875427,
+          "reference_nll": 0.3039821982383728,
+          "nll_delta": 0.005877976305782795,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000254861",
+          "fold": "discovery",
+          "tokens": 9,
+          "kl": 0.001582054072059691,
+          "nll": 0.1066950336098671,
+          "reference_nll": 0.0918002799153328,
+          "nll_delta": 0.0148947574198246,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:001431886",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.009187108837068081,
+          "nll": 0.5751855373382568,
+          "reference_nll": 0.5266748666763306,
+          "nll_delta": 0.048510655760765076,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000148815",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0030332780443131924,
+          "nll": 0.6493712067604065,
+          "reference_nll": 0.6362470388412476,
+          "nll_delta": 0.013124109245836735,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:003617684",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005165817216038704,
+          "nll": 0.5662873387336731,
+          "reference_nll": 0.5556376576423645,
+          "nll_delta": 0.010649682953953743,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:004310276",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005656231660395861,
+          "nll": 0.3985956311225891,
+          "reference_nll": 0.3831058740615845,
+          "nll_delta": 0.015489730052649975,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000578131",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.0005217662546783686,
+          "nll": 0.023823831230401993,
+          "reference_nll": 0.026527108624577522,
+          "nll_delta": -0.0027032773941755295,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000141759",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.009394397027790546,
+          "nll": 0.8852716088294983,
+          "reference_nll": 0.8304691314697266,
+          "nll_delta": 0.054802488535642624,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000392458",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.008532663807272911,
+          "nll": 1.9809927940368652,
+          "reference_nll": 1.9655888080596924,
+          "nll_delta": 0.015403928235173225,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava:006474919",
+          "fold": "discovery",
+          "tokens": 16,
+          "kl": 0.006533279083669186,
+          "nll": 1.616889476776123,
+          "reference_nll": 1.6407232284545898,
+          "nll_delta": -0.023833587765693665,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:006232055",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.007698004133999348,
+          "nll": 0.3856660723686218,
+          "reference_nll": 0.39014190435409546,
+          "nll_delta": -0.004475816152989864,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:002320902",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.009242592379450798,
+          "nll": 0.5562445521354675,
+          "reference_nll": 0.4941347539424896,
+          "nll_delta": 0.06210978329181671,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:002020337",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006172650493681431,
+          "nll": 0.512858510017395,
+          "reference_nll": 0.5368734002113342,
+          "nll_delta": -0.024014966562390327,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000331203",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.00986090861260891,
+          "nll": 0.9420960545539856,
+          "reference_nll": 0.9404340982437134,
+          "nll_delta": 0.0016620155656710267,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000578368",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005482587963342667,
+          "nll": 0.5663974285125732,
+          "reference_nll": 0.5440577268600464,
+          "nll_delta": 0.02233968861401081,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000833518",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.004232552833855152,
+          "nll": 0.4547763466835022,
+          "reference_nll": 0.4588690996170044,
+          "nll_delta": -0.004092712886631489,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000019967",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008389560505747795,
+          "nll": 0.8872015476226807,
+          "reference_nll": 0.9103716611862183,
+          "nll_delta": -0.02317015826702118,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000535519",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.006358931306749582,
+          "nll": 0.060770291835069656,
+          "reference_nll": 0.035665057599544525,
+          "nll_delta": 0.02510523423552513,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000394627",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.013639470562338829,
+          "nll": 0.7573400139808655,
+          "reference_nll": 0.7448992729187012,
+          "nll_delta": 0.012440660037100315,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:000420778",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005294150207191706,
+          "nll": 0.3916912078857422,
+          "reference_nll": 0.4147512912750244,
+          "nll_delta": -0.023060090839862823,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000524775",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 0.0452062152326107,
+          "nll": 0.3072716295719147,
+          "reference_nll": 0.5163918137550354,
+          "nll_delta": -0.20912018418312073,
+          "argmax_agreement": 0.5
+        },
+        {
+          "id": "llava_sft:000000251205",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005921481642872095,
+          "nll": 0.7965922951698303,
+          "reference_nll": 0.798757016658783,
+          "nll_delta": -0.002164773875847459,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000080013",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.00045839051017537713,
+          "nll": 0.9082791209220886,
+          "reference_nll": 0.91102534532547,
+          "nll_delta": -0.0027462244033813477,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:005876758",
+          "fold": "discovery",
+          "tokens": 15,
+          "kl": 0.02094443328678608,
+          "nll": 3.7303271293640137,
+          "reference_nll": 3.6268393993377686,
+          "nll_delta": 0.10348744690418243,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000369735",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008724711835384369,
+          "nll": 2.348134994506836,
+          "reference_nll": 2.3301758766174316,
+          "nll_delta": 0.01795901730656624,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000169226",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 0.00017509567260276526,
+          "nll": 0.003318779170513153,
+          "reference_nll": 0.0028307074680924416,
+          "nll_delta": 0.0004880717024207115,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000412764",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0047388505190610886,
+          "nll": 0.40192341804504395,
+          "reference_nll": 0.3983497619628906,
+          "nll_delta": 0.003573637455701828,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000005277",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005178607068955898,
+          "nll": 0.7630796432495117,
+          "reference_nll": 0.7673690319061279,
+          "nll_delta": -0.004289375618100166,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:000103215",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005933022126555443,
+          "nll": 0.6650394797325134,
+          "reference_nll": 0.6533607244491577,
+          "nll_delta": 0.011678831651806831,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:004958414",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.01148572564125061,
+          "nll": 0.986278772354126,
+          "reference_nll": 0.9841833710670471,
+          "nll_delta": 0.0020953696221113205,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000295124",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 5.1586594054242596e-05,
+          "nll": 0.004810436628758907,
+          "reference_nll": 0.004835168831050396,
+          "nll_delta": -2.4732202291488647e-05,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:004262884",
+          "fold": "confirmation",
+          "tokens": 17,
+          "kl": 0.014729654416441917,
+          "nll": 3.158798933029175,
+          "reference_nll": 3.0802509784698486,
+          "nll_delta": 0.07854805886745453,
+          "argmax_agreement": 0.8823529481887817
+        },
+        {
+          "id": "sharegpt4v:001202727",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.011323635466396809,
+          "nll": 0.783627986907959,
+          "reference_nll": 0.784611165523529,
+          "nll_delta": -0.000983132515102625,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:001921135",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.015424794517457485,
+          "nll": 0.5373136401176453,
+          "reference_nll": 0.5112518072128296,
+          "nll_delta": 0.026061847805976868,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:002430209",
+          "fold": "confirmation",
+          "tokens": 30,
+          "kl": 0.004938038066029549,
+          "nll": 1.2776751518249512,
+          "reference_nll": 1.2743605375289917,
+          "nll_delta": 0.003314613364636898,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:003021967",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.008115101605653763,
+          "nll": 0.4690309762954712,
+          "reference_nll": 0.44215965270996094,
+          "nll_delta": 0.026871316134929657,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:004400443",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.00977025181055069,
+          "nll": 0.5349183082580566,
+          "reference_nll": 0.573683500289917,
+          "nll_delta": -0.03876517713069916,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000319126",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.003924236632883549,
+          "nll": 0.6563431024551392,
+          "reference_nll": 0.6757369637489319,
+          "nll_delta": -0.01939389482140541,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:002124573",
+          "fold": "discovery",
+          "tokens": 23,
+          "kl": 0.022129695862531662,
+          "nll": 3.722508430480957,
+          "reference_nll": 3.694775104522705,
+          "nll_delta": 0.02773316577076912,
+          "argmax_agreement": 0.8695652484893799
+        },
+        {
+          "id": "llava:002768986",
+          "fold": "confirmation",
+          "tokens": 7,
+          "kl": 0.013673434033989906,
+          "nll": 3.6339914798736572,
+          "reference_nll": 3.8592045307159424,
+          "nll_delta": -0.22521306574344635,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000247971",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007589342072606087,
+          "nll": 1.0673255920410156,
+          "reference_nll": 1.089185118675232,
+          "nll_delta": -0.02185947075486183,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000308473",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.009341750293970108,
+          "nll": 0.784014105796814,
+          "reference_nll": 0.7381287813186646,
+          "nll_delta": 0.04588533565402031,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:002955464",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005980007816106081,
+          "nll": 0.6250554323196411,
+          "reference_nll": 0.6286801099777222,
+          "nll_delta": -0.003624681383371353,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:003802406",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005050256848335266,
+          "nll": 0.2687634229660034,
+          "reference_nll": 0.28466057777404785,
+          "nll_delta": -0.015897132456302643,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:000887210",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.014851918444037437,
+          "nll": 0.5437188148498535,
+          "reference_nll": 0.4903887212276459,
+          "nll_delta": 0.05333010107278824,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000096101",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0062448871321976185,
+          "nll": 0.9289068579673767,
+          "reference_nll": 0.8833726644515991,
+          "nll_delta": 0.0455341562628746,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000357896",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005931893363595009,
+          "nll": 1.012430191040039,
+          "reference_nll": 0.9825716614723206,
+          "nll_delta": 0.02985842525959015,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000158702",
+          "fold": "confirmation",
+          "tokens": 19,
+          "kl": 0.003754164557904005,
+          "nll": 0.7300090789794922,
+          "reference_nll": 0.7128621935844421,
+          "nll_delta": 0.01714688166975975,
+          "argmax_agreement": 0.9473684430122375
+        },
+        {
+          "id": "sharegpt4v:002441645",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.007246197666972876,
+          "nll": 0.5677538514137268,
+          "reference_nll": 0.5669143199920654,
+          "nll_delta": 0.0008395595941692591,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000269550",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008590508252382278,
+          "nll": 2.2731902599334717,
+          "reference_nll": 2.2675533294677734,
+          "nll_delta": 0.005636928603053093,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:002819210",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005933776497840881,
+          "nll": 0.537047803401947,
+          "reference_nll": 0.5268670320510864,
+          "nll_delta": 0.010180759243667126,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:003325436",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0061844163574278355,
+          "nll": 0.30806443095207214,
+          "reference_nll": 0.2945512533187866,
+          "nll_delta": 0.013513187877833843,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000315111",
+          "fold": "discovery",
+          "tokens": 30,
+          "kl": 0.0013783485628664494,
+          "nll": 0.07358864694833755,
+          "reference_nll": 0.07901383191347122,
+          "nll_delta": -0.005425178445875645,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:001747501",
+          "fold": "confirmation",
+          "tokens": 18,
+          "kl": 0.03220999985933304,
+          "nll": 3.574871063232422,
+          "reference_nll": 3.5386838912963867,
+          "nll_delta": 0.03618740662932396,
+          "argmax_agreement": 0.944444477558136
+        },
+        {
+          "id": "llava_sft:000000480745",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005076040979474783,
+          "nll": 0.8410041332244873,
+          "reference_nll": 0.8395735025405884,
+          "nll_delta": 0.0014306781813502312,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:000088342",
+          "fold": "confirmation",
+          "tokens": 12,
+          "kl": 0.010007167235016823,
+          "nll": 6.523899078369141,
+          "reference_nll": 6.319528579711914,
+          "nll_delta": 0.2043704092502594,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:002657576",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.003779263701289892,
+          "nll": 0.8621865510940552,
+          "reference_nll": 0.9118388891220093,
+          "nll_delta": -0.04965227097272873,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000212671",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.002667058492079377,
+          "nll": 0.3460918962955475,
+          "reference_nll": 0.3429226577281952,
+          "nll_delta": 0.0031692595221102238,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000397034",
+          "fold": "discovery",
+          "tokens": 22,
+          "kl": 0.0003409676719456911,
+          "nll": 0.0700836181640625,
+          "reference_nll": 0.06870440393686295,
+          "nll_delta": 0.001379216555505991,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000276597",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.013497896492481232,
+          "nll": 1.5841164588928223,
+          "reference_nll": 1.5970278978347778,
+          "nll_delta": -0.012911488302052021,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:001377835",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006198307499289513,
+          "nll": 0.2998019754886627,
+          "reference_nll": 0.27960386872291565,
+          "nll_delta": 0.020198095589876175,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:005085086",
+          "fold": "confirmation",
+          "tokens": 27,
+          "kl": 0.06265182048082352,
+          "nll": 3.7361552715301514,
+          "reference_nll": 3.5915348529815674,
+          "nll_delta": 0.1446206122636795,
+          "argmax_agreement": 0.8888888955116272
+        },
+        {
+          "id": "llava:005817268",
+          "fold": "discovery",
+          "tokens": 10,
+          "kl": 0.011420301161706448,
+          "nll": 3.2177350521087646,
+          "reference_nll": 3.2375760078430176,
+          "nll_delta": -0.01984073780477047,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:002772434",
+          "fold": "discovery",
+          "tokens": 14,
+          "kl": 0.018940705806016922,
+          "nll": 3.5987014770507812,
+          "reference_nll": 3.781273126602173,
+          "nll_delta": -0.18257182836532593,
+          "argmax_agreement": 0.8571429252624512
+        },
+        {
+          "id": "llava_sft:000000269738",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006299521774053574,
+          "nll": 0.6703064441680908,
+          "reference_nll": 0.6767202615737915,
+          "nll_delta": -0.006413804832845926,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava:003084745",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.011458137072622776,
+          "nll": 1.5459338426589966,
+          "reference_nll": 1.6317718029022217,
+          "nll_delta": -0.08583790063858032,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000019226",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 2.221548857050948e-05,
+          "nll": 0.0008224043995141983,
+          "reference_nll": 0.0010032724821940064,
+          "nll_delta": -0.00018086808267980814,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:001217462",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007951739244163036,
+          "nll": 0.4705182611942291,
+          "reference_nll": 0.4503026008605957,
+          "nll_delta": 0.020215680822730064,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000027674",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0024441564455628395,
+          "nll": 0.39713406562805176,
+          "reference_nll": 0.39466023445129395,
+          "nll_delta": 0.002473836299031973,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:001712297",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.004554627928882837,
+          "nll": 0.22855326533317566,
+          "reference_nll": 0.21984955668449402,
+          "nll_delta": 0.008703691884875298,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000267224",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.01927529089152813,
+          "nll": 0.12864749133586884,
+          "reference_nll": 0.06436822563409805,
+          "nll_delta": 0.06427926570177078,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000344920",
+          "fold": "discovery",
+          "tokens": 13,
+          "kl": 0.0010067496914416552,
+          "nll": 0.0458131767809391,
+          "reference_nll": 0.05020739510655403,
+          "nll_delta": -0.004394221119582653,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000312800",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007238744758069515,
+          "nll": 1.50909423828125,
+          "reference_nll": 1.4966281652450562,
+          "nll_delta": 0.012465953826904297,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:001289731",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005731197539716959,
+          "nll": 0.6542766094207764,
+          "reference_nll": 0.6683338284492493,
+          "nll_delta": -0.014057228341698647,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000085144",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 4.941236056765774e-06,
+          "nll": 0.0009719818481244147,
+          "reference_nll": 0.0009045762126334012,
+          "nll_delta": 6.740563549101353e-05,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:001353345",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005414776969701052,
+          "nll": 0.6455199718475342,
+          "reference_nll": 0.6526023149490356,
+          "nll_delta": -0.0070824166759848595,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000440401",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007175868842750788,
+          "nll": 1.358356237411499,
+          "reference_nll": 1.3674918413162231,
+          "nll_delta": -0.009135700762271881,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava:004499734",
+          "fold": "confirmation",
+          "tokens": 12,
+          "kl": 0.031895145773887634,
+          "nll": 3.662689208984375,
+          "reference_nll": 3.6418094635009766,
+          "nll_delta": 0.020880063995718956,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:000414854",
+          "fold": "discovery",
+          "tokens": 16,
+          "kl": 0.03165780007839203,
+          "nll": 3.4389381408691406,
+          "reference_nll": 3.5249080657958984,
+          "nll_delta": -0.08596974611282349,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:003056104",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.004292124416679144,
+          "nll": 1.0925461053848267,
+          "reference_nll": 1.1218831539154053,
+          "nll_delta": -0.029336944222450256,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000227248",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.010585080832242966,
+          "nll": 0.9590176343917847,
+          "reference_nll": 0.9485370516777039,
+          "nll_delta": 0.010480554774403572,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000158087",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.006710839457809925,
+          "nll": 0.4106998145580292,
+          "reference_nll": 0.38958415389060974,
+          "nll_delta": 0.021115651354193687,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000359115",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 0.00017159963317681104,
+          "nll": 0.021339811384677887,
+          "reference_nll": 0.021090779453516006,
+          "nll_delta": 0.0002490319311618805,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:002243301",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.009579567238688469,
+          "nll": 0.4690578579902649,
+          "reference_nll": 0.4627760052680969,
+          "nll_delta": 0.006281855516135693,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:003000287",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.009728711098432541,
+          "nll": 0.5372073650360107,
+          "reference_nll": 0.5293172597885132,
+          "nll_delta": 0.007890040054917336,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000363336",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0035170703195035458,
+          "nll": 0.3626529276371002,
+          "reference_nll": 0.35190311074256897,
+          "nll_delta": 0.010749803856015205,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:002545221",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005249604117125273,
+          "nll": 0.3032093048095703,
+          "reference_nll": 0.285179078578949,
+          "nll_delta": 0.01803024858236313,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000428881",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.0057587153278291225,
+          "nll": 0.0181079413741827,
+          "reference_nll": 0.005758968647569418,
+          "nll_delta": 0.012348972260951996,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000043099",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0060946159064769745,
+          "nll": 0.6110720634460449,
+          "reference_nll": 0.5869688987731934,
+          "nll_delta": 0.024103224277496338,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:000960480",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.00515233539044857,
+          "nll": 0.40047013759613037,
+          "reference_nll": 0.40041202306747437,
+          "nll_delta": 5.809124559164047e-05,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000550448",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.01075507327914238,
+          "nll": 1.0260919332504272,
+          "reference_nll": 1.004960060119629,
+          "nll_delta": 0.021131867542862892,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000350585",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.015010545961558819,
+          "nll": 1.1211650371551514,
+          "reference_nll": 1.1308873891830444,
+          "nll_delta": -0.009722423739731312,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000059024",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0048373667523264885,
+          "nll": 0.6820821762084961,
+          "reference_nll": 0.6951949596405029,
+          "nll_delta": -0.01311287097632885,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:002967384",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.008430920541286469,
+          "nll": 1.0132662057876587,
+          "reference_nll": 0.9985189437866211,
+          "nll_delta": 0.01474732719361782,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000059142",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006584247574210167,
+          "nll": 0.9165210723876953,
+          "reference_nll": 0.9475815296173096,
+          "nll_delta": -0.0310604739934206,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:002589639",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.009635329246520996,
+          "nll": 0.38822296261787415,
+          "reference_nll": 0.3722589313983917,
+          "nll_delta": 0.015964018180966377,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:000686533",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005327174440026283,
+          "nll": 0.5013419389724731,
+          "reference_nll": 0.4775570034980774,
+          "nll_delta": 0.023784974589943886,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:003703867",
+          "fold": "confirmation",
+          "tokens": 11,
+          "kl": 0.024493077769875526,
+          "nll": 4.895665168762207,
+          "reference_nll": 4.8969621658325195,
+          "nll_delta": -0.001297174603678286,
+          "argmax_agreement": 0.9090909361839294
+        },
+        {
+          "id": "sharegpt4v:000759048",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008234301581978798,
+          "nll": 0.39439719915390015,
+          "reference_nll": 0.3928425908088684,
+          "nll_delta": 0.0015546290669590235,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000336991",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.003930032253265381,
+          "nll": 1.1386175155639648,
+          "reference_nll": 1.1357707977294922,
+          "nll_delta": 0.00284666009247303,
+          "argmax_agreement": 1.0
+        }
+      ],
+      "minimum_unclamped_token_kl": -9.54905203798262e-08
+    },
+    {
+      "name": "model.layers.21.mlp.down_proj",
+      "qdq_metrics": {
+        "all": {
+          "examples": 128,
+          "tokens": 3369,
+          "kl": 0.0061784333163004135,
+          "nll": 1.082049951072804,
+          "reference_nll": 1.074272907291288,
+          "nll_delta": 0.0077770401973324965,
+          "argmax_agreement": 0.9656986924819648
+        },
+        "discovery": {
+          "examples": 64,
+          "tokens": 1683,
+          "kl": 0.006128717108325077,
+          "nll": 1.072727828650386,
+          "reference_nll": 1.063966970036745,
+          "nll_delta": 0.008760851598069053,
+          "argmax_agreement": 0.9697038503363729
+        },
+        "confirmation": {
+          "examples": 64,
+          "tokens": 1686,
+          "kl": 0.00622814952427575,
+          "nll": 1.0913720734952221,
+          "reference_nll": 1.084578844545831,
+          "nll_delta": 0.00679322879659594,
+          "argmax_agreement": 0.9616935346275568
+        }
+      },
+      "native_metrics": {
+        "all": {
+          "examples": 128,
+          "tokens": 3369,
+          "kl": 0.006179060025182537,
+          "nll": 1.0820557124543484,
+          "reference_nll": 1.074272907291288,
+          "nll_delta": 0.00778277648651482,
+          "argmax_agreement": 0.9656986924819648
+        },
+        "discovery": {
+          "examples": 64,
+          "tokens": 1683,
+          "kl": 0.006127896161515878,
+          "nll": 1.0727153363004618,
+          "reference_nll": 1.063966970036745,
+          "nll_delta": 0.008748347769696352,
+          "argmax_agreement": 0.9697038503363729
+        },
+        "confirmation": {
+          "examples": 64,
+          "tokens": 1686,
+          "kl": 0.006230223888849196,
+          "nll": 1.091396088608235,
+          "reference_nll": 1.084578844545831,
+          "nll_delta": 0.0068172052033332875,
+          "argmax_agreement": 0.9616935346275568
+        }
+      },
+      "native_calls": 16,
+      "examples": [
+        {
+          "id": "sharegpt4v:000628429",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.009226766414940357,
+          "nll": 0.7790776491165161,
+          "reference_nll": 0.7618227005004883,
+          "nll_delta": 0.017254963517189026,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:003346072",
+          "fold": "discovery",
+          "tokens": 22,
+          "kl": 0.005356904119253159,
+          "nll": 1.8333232402801514,
+          "reference_nll": 1.8224408626556396,
+          "nll_delta": 0.010882383212447166,
+          "argmax_agreement": 0.9545454978942871
+        },
+        {
+          "id": "llava_sft:000000140067",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008170884102582932,
+          "nll": 1.8766365051269531,
+          "reference_nll": 1.8216581344604492,
+          "nll_delta": 0.05497836321592331,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:002607643",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.002969458233565092,
+          "nll": 0.18160545825958252,
+          "reference_nll": 0.17515045404434204,
+          "nll_delta": 0.006454999092966318,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000227587",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.003553142538294196,
+          "nll": 0.47949862480163574,
+          "reference_nll": 0.4778323173522949,
+          "nll_delta": 0.0016662981361150742,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000221313",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0044099451042711735,
+          "nll": 1.0318586826324463,
+          "reference_nll": 1.00337553024292,
+          "nll_delta": 0.028483174741268158,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000326092",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.006866256706416607,
+          "nll": 1.1498903036117554,
+          "reference_nll": 1.1602956056594849,
+          "nll_delta": -0.010405263863503933,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000111636",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0043128496035933495,
+          "nll": 1.4565317630767822,
+          "reference_nll": 1.4301074743270874,
+          "nll_delta": 0.0264242235571146,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:001153707",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007126073352992535,
+          "nll": 0.5384148359298706,
+          "reference_nll": 0.5226377844810486,
+          "nll_delta": 0.015777038410305977,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000101738",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.009512638673186302,
+          "nll": 0.910072922706604,
+          "reference_nll": 0.8608155250549316,
+          "nll_delta": 0.04925738275051117,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:001467400",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005311271175742149,
+          "nll": 0.6178339123725891,
+          "reference_nll": 0.5973966121673584,
+          "nll_delta": 0.020437365397810936,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:004757038",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005864941980689764,
+          "nll": 0.7255822420120239,
+          "reference_nll": 0.7124738097190857,
+          "nll_delta": 0.013108481653034687,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:004938336",
+          "fold": "confirmation",
+          "tokens": 15,
+          "kl": 0.00726910587400198,
+          "nll": 3.4915101528167725,
+          "reference_nll": 3.470113754272461,
+          "nll_delta": 0.021396035328507423,
+          "argmax_agreement": 0.9333333969116211
+        },
+        {
+          "id": "llava_sft:000000521982",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005713911727070808,
+          "nll": 0.9103051424026489,
+          "reference_nll": 0.9195857644081116,
+          "nll_delta": -0.009280672296881676,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000149268",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 6.027852577972226e-05,
+          "nll": 0.0025954931043088436,
+          "reference_nll": 0.0020702602341771126,
+          "nll_delta": 0.000525232870131731,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000396010",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005569073837250471,
+          "nll": 0.4377637803554535,
+          "reference_nll": 0.4376431703567505,
+          "nll_delta": 0.00012056040577590466,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:001054931",
+          "fold": "discovery",
+          "tokens": 13,
+          "kl": 0.007827428169548512,
+          "nll": 3.758068323135376,
+          "reference_nll": 3.6962130069732666,
+          "nll_delta": 0.06185556948184967,
+          "argmax_agreement": 0.9230769872665405
+        },
+        {
+          "id": "llava_sft:000000334588",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.010006054304540157,
+          "nll": 1.0369846820831299,
+          "reference_nll": 1.0393067598342896,
+          "nll_delta": -0.002322108019143343,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000522856",
+          "fold": "discovery",
+          "tokens": 23,
+          "kl": 0.005544186569750309,
+          "nll": 0.33521413803100586,
+          "reference_nll": 0.3363679051399231,
+          "nll_delta": -0.0011537836398929358,
+          "argmax_agreement": 0.9130434989929199
+        },
+        {
+          "id": "llava_sft:000000426839",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007866788655519485,
+          "nll": 1.558717966079712,
+          "reference_nll": 1.5608341693878174,
+          "nll_delta": -0.0021163420751690865,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "sharegpt4v:004318977",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006689436733722687,
+          "nll": 0.3959723711013794,
+          "reference_nll": 0.37819719314575195,
+          "nll_delta": 0.017775215208530426,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000454755",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.006934074684977531,
+          "nll": 0.8332604765892029,
+          "reference_nll": 0.8080745339393616,
+          "nll_delta": 0.02518598362803459,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:001290910",
+          "fold": "discovery",
+          "tokens": 7,
+          "kl": 0.008089091628789902,
+          "nll": 6.4848313331604,
+          "reference_nll": 6.458024501800537,
+          "nll_delta": 0.026806356385350227,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:003617549",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007008208893239498,
+          "nll": 0.40947356820106506,
+          "reference_nll": 0.3858378529548645,
+          "nll_delta": 0.023635704070329666,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000514666",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.00397578114643693,
+          "nll": 0.35415083169937134,
+          "reference_nll": 0.3826715350151062,
+          "nll_delta": -0.02852068468928337,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000882315",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.007698966655880213,
+          "nll": 0.664304256439209,
+          "reference_nll": 0.6496096849441528,
+          "nll_delta": 0.014694592915475368,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:000830520",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007170427590608597,
+          "nll": 0.5979628562927246,
+          "reference_nll": 0.608142614364624,
+          "nll_delta": -0.010179896838963032,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:001359574",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.011647145263850689,
+          "nll": 0.7041553258895874,
+          "reference_nll": 0.6566019654273987,
+          "nll_delta": 0.04755336418747902,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:000863382",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.004431018605828285,
+          "nll": 0.3203241527080536,
+          "reference_nll": 0.3039821982383728,
+          "nll_delta": 0.01634197309613228,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000254861",
+          "fold": "discovery",
+          "tokens": 9,
+          "kl": 0.001918621128425002,
+          "nll": 0.08944619446992874,
+          "reference_nll": 0.0918002799153328,
+          "nll_delta": -0.0023540817201137543,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:001431886",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008051034063100815,
+          "nll": 0.566973090171814,
+          "reference_nll": 0.5266748666763306,
+          "nll_delta": 0.04029819369316101,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000148815",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0036695129238069057,
+          "nll": 0.6125133037567139,
+          "reference_nll": 0.6362470388412476,
+          "nll_delta": -0.02373378723859787,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:003617684",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005059378687292337,
+          "nll": 0.5376151204109192,
+          "reference_nll": 0.5556376576423645,
+          "nll_delta": -0.01802252046763897,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:004310276",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.006826737895607948,
+          "nll": 0.4051954448223114,
+          "reference_nll": 0.3831058740615845,
+          "nll_delta": 0.02208954468369484,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000578131",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.0013689612969756126,
+          "nll": 0.019284609705209732,
+          "reference_nll": 0.026527108624577522,
+          "nll_delta": -0.00724249891936779,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000141759",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005645922385156155,
+          "nll": 0.8205537796020508,
+          "reference_nll": 0.8304691314697266,
+          "nll_delta": -0.009915350005030632,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000392458",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.01134551502764225,
+          "nll": 1.999100685119629,
+          "reference_nll": 1.9655888080596924,
+          "nll_delta": 0.033511798828840256,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava:006474919",
+          "fold": "discovery",
+          "tokens": 16,
+          "kl": 0.006140683777630329,
+          "nll": 1.6788207292556763,
+          "reference_nll": 1.6407232284545898,
+          "nll_delta": 0.038097530603408813,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:006232055",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.004822920076549053,
+          "nll": 0.4090122580528259,
+          "reference_nll": 0.39014190435409546,
+          "nll_delta": 0.01887032762169838,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:002320902",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.009459499269723892,
+          "nll": 0.4965582489967346,
+          "reference_nll": 0.4941347539424896,
+          "nll_delta": 0.0024235108867287636,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:002020337",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.007090546656399965,
+          "nll": 0.5491969585418701,
+          "reference_nll": 0.5368734002113342,
+          "nll_delta": 0.01232349406927824,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000331203",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0024596103467047215,
+          "nll": 0.9700446128845215,
+          "reference_nll": 0.9404340982437134,
+          "nll_delta": 0.029610535129904747,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000578368",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.002878229832276702,
+          "nll": 0.5457144975662231,
+          "reference_nll": 0.5440577268600464,
+          "nll_delta": 0.0016567446291446686,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000833518",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.01021451223641634,
+          "nll": 0.4789133667945862,
+          "reference_nll": 0.4588690996170044,
+          "nll_delta": 0.02004430815577507,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000019967",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006710291374474764,
+          "nll": 0.9151018261909485,
+          "reference_nll": 0.9103716611862183,
+          "nll_delta": 0.00473014498129487,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000535519",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 3.207573899999261e-05,
+          "nll": 0.03432001546025276,
+          "reference_nll": 0.035665057599544525,
+          "nll_delta": -0.0013450421392917633,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000394627",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.00562850758433342,
+          "nll": 0.7475677132606506,
+          "reference_nll": 0.7448992729187012,
+          "nll_delta": 0.0026683746837079525,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:000420778",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005685042589902878,
+          "nll": 0.4380697011947632,
+          "reference_nll": 0.4147512912750244,
+          "nll_delta": 0.023318395018577576,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000524775",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 0.0005286880186758935,
+          "nll": 0.5257583260536194,
+          "reference_nll": 0.5163918137550354,
+          "nll_delta": 0.009366512298583984,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000251205",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005764661356806755,
+          "nll": 0.8016151785850525,
+          "reference_nll": 0.798757016658783,
+          "nll_delta": 0.002858132589608431,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000080013",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 7.652225758647546e-05,
+          "nll": 0.8920760154724121,
+          "reference_nll": 0.91102534532547,
+          "nll_delta": -0.01894932985305786,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:005876758",
+          "fold": "discovery",
+          "tokens": 15,
+          "kl": 0.010259601287543774,
+          "nll": 3.627781391143799,
+          "reference_nll": 3.6268393993377686,
+          "nll_delta": 0.000941913400311023,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000369735",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.009257517755031586,
+          "nll": 2.320507764816284,
+          "reference_nll": 2.3301758766174316,
+          "nll_delta": -0.00966816395521164,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000169226",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 6.603460860787891e-06,
+          "nll": 0.0030078927520662546,
+          "reference_nll": 0.0028307074680924416,
+          "nll_delta": 0.00017718528397381306,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000412764",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007746555842459202,
+          "nll": 0.4027116298675537,
+          "reference_nll": 0.3983497619628906,
+          "nll_delta": 0.0043618567287921906,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000005277",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.004405513405799866,
+          "nll": 0.7666469216346741,
+          "reference_nll": 0.7673690319061279,
+          "nll_delta": -0.0007220786064863205,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:000103215",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006621443200856447,
+          "nll": 0.6590583324432373,
+          "reference_nll": 0.6533607244491577,
+          "nll_delta": 0.005697694141417742,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "sharegpt4v:004958414",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.009139030240476131,
+          "nll": 0.976679801940918,
+          "reference_nll": 0.9841833710670471,
+          "nll_delta": -0.00750354677438736,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000295124",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 7.722561713308096e-05,
+          "nll": 0.004147456493228674,
+          "reference_nll": 0.004835168831050396,
+          "nll_delta": -0.000687712337821722,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:004262884",
+          "fold": "confirmation",
+          "tokens": 17,
+          "kl": 0.009006036445498466,
+          "nll": 3.1349849700927734,
+          "reference_nll": 3.0802509784698486,
+          "nll_delta": 0.05473414435982704,
+          "argmax_agreement": 0.8823529481887817
+        },
+        {
+          "id": "sharegpt4v:001202727",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.010838579386472702,
+          "nll": 0.7901239991188049,
+          "reference_nll": 0.784611165523529,
+          "nll_delta": 0.005512772127985954,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:001921135",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.00757319713011384,
+          "nll": 0.5588773488998413,
+          "reference_nll": 0.5112518072128296,
+          "nll_delta": 0.047625571489334106,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:002430209",
+          "fold": "confirmation",
+          "tokens": 30,
+          "kl": 0.0030220430344343185,
+          "nll": 1.2517169713974,
+          "reference_nll": 1.2743605375289917,
+          "nll_delta": -0.022643696516752243,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:003021967",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007651831489056349,
+          "nll": 0.4657331705093384,
+          "reference_nll": 0.44215965270996094,
+          "nll_delta": 0.023573538288474083,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:004400443",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0043701366521418095,
+          "nll": 0.569599449634552,
+          "reference_nll": 0.573683500289917,
+          "nll_delta": -0.00408402644097805,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000319126",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.004952958784997463,
+          "nll": 0.6351798176765442,
+          "reference_nll": 0.6757369637489319,
+          "nll_delta": -0.040557146072387695,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:002124573",
+          "fold": "discovery",
+          "tokens": 23,
+          "kl": 0.017248932272195816,
+          "nll": 3.639521837234497,
+          "reference_nll": 3.694775104522705,
+          "nll_delta": -0.05525356903672218,
+          "argmax_agreement": 0.739130437374115
+        },
+        {
+          "id": "llava:002768986",
+          "fold": "confirmation",
+          "tokens": 7,
+          "kl": 0.004375339485704899,
+          "nll": 3.841326951980591,
+          "reference_nll": 3.8592045307159424,
+          "nll_delta": -0.017877541482448578,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000247971",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.006506632082164288,
+          "nll": 1.0630288124084473,
+          "reference_nll": 1.089185118675232,
+          "nll_delta": -0.02615635097026825,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000308473",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.004671340808272362,
+          "nll": 0.7161771059036255,
+          "reference_nll": 0.7381287813186646,
+          "nll_delta": -0.021951686590909958,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "sharegpt4v:002955464",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.00885632261633873,
+          "nll": 0.6553530693054199,
+          "reference_nll": 0.6286801099777222,
+          "nll_delta": 0.026672981679439545,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:003802406",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.004884648136794567,
+          "nll": 0.28828585147857666,
+          "reference_nll": 0.28466057777404785,
+          "nll_delta": 0.0036252662539482117,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000887210",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005332445725798607,
+          "nll": 0.5192825794219971,
+          "reference_nll": 0.4903887212276459,
+          "nll_delta": 0.02889389544725418,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000096101",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.006342715583741665,
+          "nll": 0.9125469923019409,
+          "reference_nll": 0.8833726644515991,
+          "nll_delta": 0.029174264520406723,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000357896",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0055924588814377785,
+          "nll": 0.9677913188934326,
+          "reference_nll": 0.9825716614723206,
+          "nll_delta": -0.014780325815081596,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000158702",
+          "fold": "confirmation",
+          "tokens": 19,
+          "kl": 0.007450304459780455,
+          "nll": 0.7318142652511597,
+          "reference_nll": 0.7128621935844421,
+          "nll_delta": 0.01895204558968544,
+          "argmax_agreement": 0.8947368264198303
+        },
+        {
+          "id": "sharegpt4v:002441645",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.00802116934210062,
+          "nll": 0.5883193016052246,
+          "reference_nll": 0.5669143199920654,
+          "nll_delta": 0.021404972299933434,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000269550",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.011235028505325317,
+          "nll": 2.233826160430908,
+          "reference_nll": 2.2675533294677734,
+          "nll_delta": -0.033727239817380905,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:002819210",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005615901201963425,
+          "nll": 0.5224395990371704,
+          "reference_nll": 0.5268670320510864,
+          "nll_delta": -0.004427445121109486,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:003325436",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.004626904614269733,
+          "nll": 0.3004888892173767,
+          "reference_nll": 0.2945512533187866,
+          "nll_delta": 0.005937633104622364,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000315111",
+          "fold": "discovery",
+          "tokens": 30,
+          "kl": 0.0033257370814681053,
+          "nll": 0.09224380552768707,
+          "reference_nll": 0.07901383191347122,
+          "nll_delta": 0.013229971751570702,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:001747501",
+          "fold": "confirmation",
+          "tokens": 18,
+          "kl": 0.015466311015188694,
+          "nll": 3.480881690979004,
+          "reference_nll": 3.5386838912963867,
+          "nll_delta": -0.05780234560370445,
+          "argmax_agreement": 0.944444477558136
+        },
+        {
+          "id": "llava_sft:000000480745",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005456963554024696,
+          "nll": 0.8581904172897339,
+          "reference_nll": 0.8395735025405884,
+          "nll_delta": 0.01861685700714588,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava:000088342",
+          "fold": "confirmation",
+          "tokens": 12,
+          "kl": 0.01562441885471344,
+          "nll": 6.386931419372559,
+          "reference_nll": 6.319528579711914,
+          "nll_delta": 0.0674019455909729,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:002657576",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0023662406019866467,
+          "nll": 0.9099741578102112,
+          "reference_nll": 0.9118388891220093,
+          "nll_delta": -0.0018646937096491456,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000212671",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0021748028229922056,
+          "nll": 0.3462018370628357,
+          "reference_nll": 0.3429226577281952,
+          "nll_delta": 0.003279156982898712,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000397034",
+          "fold": "discovery",
+          "tokens": 22,
+          "kl": 0.002215726301074028,
+          "nll": 0.08215035498142242,
+          "reference_nll": 0.06870440393686295,
+          "nll_delta": 0.013445964083075523,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000276597",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.00992416962981224,
+          "nll": 1.6321580410003662,
+          "reference_nll": 1.5970278978347778,
+          "nll_delta": 0.035130150616168976,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:001377835",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006142112892121077,
+          "nll": 0.2928376793861389,
+          "reference_nll": 0.27960386872291565,
+          "nll_delta": 0.013233788311481476,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava:005085086",
+          "fold": "confirmation",
+          "tokens": 27,
+          "kl": 0.01914714276790619,
+          "nll": 3.5615978240966797,
+          "reference_nll": 3.5915348529815674,
+          "nll_delta": -0.02993703819811344,
+          "argmax_agreement": 0.8518518805503845
+        },
+        {
+          "id": "llava:005817268",
+          "fold": "discovery",
+          "tokens": 10,
+          "kl": 0.00813835859298706,
+          "nll": 3.208423614501953,
+          "reference_nll": 3.2375760078430176,
+          "nll_delta": -0.029152164235711098,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:002772434",
+          "fold": "discovery",
+          "tokens": 14,
+          "kl": 0.005651451181620359,
+          "nll": 3.838639259338379,
+          "reference_nll": 3.781273126602173,
+          "nll_delta": 0.057365965098142624,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000269738",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.004345616325736046,
+          "nll": 0.7014842629432678,
+          "reference_nll": 0.6767202615737915,
+          "nll_delta": 0.02476401999592781,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:003084745",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.00566745363175869,
+          "nll": 1.67893385887146,
+          "reference_nll": 1.6317718029022217,
+          "nll_delta": 0.047162141650915146,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000019226",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 2.8489150281529874e-05,
+          "nll": 0.000824249698780477,
+          "reference_nll": 0.0010032724821940064,
+          "nll_delta": -0.0001790227834135294,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:001217462",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.009832140989601612,
+          "nll": 0.4738313555717468,
+          "reference_nll": 0.4503026008605957,
+          "nll_delta": 0.02352878823876381,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000027674",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0036073841620236635,
+          "nll": 0.4085448980331421,
+          "reference_nll": 0.39466023445129395,
+          "nll_delta": 0.01388466451317072,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:001712297",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0033493321388959885,
+          "nll": 0.22796012461185455,
+          "reference_nll": 0.21984955668449402,
+          "nll_delta": 0.008110561408102512,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000267224",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.0004762912867590785,
+          "nll": 0.06484434753656387,
+          "reference_nll": 0.06436822563409805,
+          "nll_delta": 0.0004761219024658203,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000344920",
+          "fold": "discovery",
+          "tokens": 13,
+          "kl": 0.001174841308966279,
+          "nll": 0.05019526183605194,
+          "reference_nll": 0.05020739510655403,
+          "nll_delta": -1.2134632015659008e-05,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000312800",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.008202886208891869,
+          "nll": 1.5048900842666626,
+          "reference_nll": 1.4966281652450562,
+          "nll_delta": 0.008261900395154953,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:001289731",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.009783157147467136,
+          "nll": 0.6774319410324097,
+          "reference_nll": 0.6683338284492493,
+          "nll_delta": 0.009098062291741371,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000085144",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 1.0203674719377887e-05,
+          "nll": 0.0010414603166282177,
+          "reference_nll": 0.0009045762126334012,
+          "nll_delta": 0.00013688410399481654,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:001353345",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.010056259110569954,
+          "nll": 0.6683524250984192,
+          "reference_nll": 0.6526023149490356,
+          "nll_delta": 0.015750093385577202,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000440401",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007244552951306105,
+          "nll": 1.3357901573181152,
+          "reference_nll": 1.3674918413162231,
+          "nll_delta": -0.03170180320739746,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:004499734",
+          "fold": "confirmation",
+          "tokens": 12,
+          "kl": 0.008603925816714764,
+          "nll": 3.6504745483398438,
+          "reference_nll": 3.6418094635009766,
+          "nll_delta": 0.008665110915899277,
+          "argmax_agreement": 0.9166666865348816
+        },
+        {
+          "id": "llava:000414854",
+          "fold": "discovery",
+          "tokens": 16,
+          "kl": 0.011027012020349503,
+          "nll": 3.5325961112976074,
+          "reference_nll": 3.5249080657958984,
+          "nll_delta": 0.007687888108193874,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava:003056104",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.0012326746946200728,
+          "nll": 1.1131535768508911,
+          "reference_nll": 1.1218831539154053,
+          "nll_delta": -0.00872953049838543,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000227248",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.009203462861478329,
+          "nll": 0.9547199010848999,
+          "reference_nll": 0.9485370516777039,
+          "nll_delta": 0.006182851269841194,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "llava_sft:000000158087",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.006656950805336237,
+          "nll": 0.4103233218193054,
+          "reference_nll": 0.38958415389060974,
+          "nll_delta": 0.020739177241921425,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000359115",
+          "fold": "discovery",
+          "tokens": 2,
+          "kl": 0.0007653890643268824,
+          "nll": 0.02624114230275154,
+          "reference_nll": 0.021090779453516006,
+          "nll_delta": 0.005150362849235535,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:002243301",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008428402245044708,
+          "nll": 0.46664151549339294,
+          "reference_nll": 0.4627760052680969,
+          "nll_delta": 0.0038655144162476063,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:003000287",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006753342226147652,
+          "nll": 0.5275694131851196,
+          "reference_nll": 0.5293172597885132,
+          "nll_delta": -0.0017478871159255505,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000363336",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.003335887100547552,
+          "nll": 0.35079240798950195,
+          "reference_nll": 0.35190311074256897,
+          "nll_delta": -0.0011107241734862328,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:002545221",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.004755608271807432,
+          "nll": 0.2988826632499695,
+          "reference_nll": 0.285179078578949,
+          "nll_delta": 0.013703603297472,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000428881",
+          "fold": "confirmation",
+          "tokens": 2,
+          "kl": 0.00027693266747519374,
+          "nll": 0.007403723895549774,
+          "reference_nll": 0.005758968647569418,
+          "nll_delta": 0.0016447552479803562,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000043099",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.005167094990611076,
+          "nll": 0.6040132641792297,
+          "reference_nll": 0.5869688987731934,
+          "nll_delta": 0.01704435795545578,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:000960480",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0051366719417274,
+          "nll": 0.4119317829608917,
+          "reference_nll": 0.40041202306747437,
+          "nll_delta": 0.01151973009109497,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000550448",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.010382281616330147,
+          "nll": 0.9460065364837646,
+          "reference_nll": 1.004960060119629,
+          "nll_delta": -0.05895359069108963,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava_sft:000000350585",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008728120476007462,
+          "nll": 1.0854778289794922,
+          "reference_nll": 1.1308873891830444,
+          "nll_delta": -0.04540963098406792,
+          "argmax_agreement": 0.875
+        },
+        {
+          "id": "llava_sft:000000059024",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.004079528618603945,
+          "nll": 0.6900248527526855,
+          "reference_nll": 0.6951949596405029,
+          "nll_delta": -0.005170147866010666,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:002967384",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.007622419856488705,
+          "nll": 1.0255768299102783,
+          "reference_nll": 0.9985189437866211,
+          "nll_delta": 0.027057863771915436,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000059142",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.006599023472517729,
+          "nll": 0.9042564034461975,
+          "reference_nll": 0.9475815296173096,
+          "nll_delta": -0.04332512244582176,
+          "argmax_agreement": 0.9375
+        },
+        {
+          "id": "sharegpt4v:002589639",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.008071227930486202,
+          "nll": 0.38767215609550476,
+          "reference_nll": 0.3722589313983917,
+          "nll_delta": 0.015413269400596619,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000686533",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005544568412005901,
+          "nll": 0.4952291250228882,
+          "reference_nll": 0.4775570034980774,
+          "nll_delta": 0.01767214573919773,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:003703867",
+          "fold": "confirmation",
+          "tokens": 11,
+          "kl": 0.00653205718845129,
+          "nll": 4.993297576904297,
+          "reference_nll": 4.8969621658325195,
+          "nll_delta": 0.09633471816778183,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000759048",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.0037814141251146793,
+          "nll": 0.4210028648376465,
+          "reference_nll": 0.3928425908088684,
+          "nll_delta": 0.02816026471555233,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000336991",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.005575640592724085,
+          "nll": 1.1591567993164062,
+          "reference_nll": 1.1357707977294922,
+          "nll_delta": 0.023385923355817795,
+          "argmax_agreement": 1.0
+        }
+      ],
+      "minimum_unclamped_token_kl": -1.1289331780517387e-07
+    }
+  ]
+}

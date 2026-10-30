@@ -1,0 +1,47 @@
+{
+  "time": "2026-10-29T17:54:14.857247+00:00",
+  "metrics": {
+    "all": {
+      "examples": 8,
+      "tokens": 211,
+      "kl": 0.0,
+      "nll": 1.051186604425311,
+      "reference_nll": 1.051186604425311,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    "discovery": {
+      "examples": 4,
+      "tokens": 96,
+      "kl": 0.0,
+      "nll": 1.3301197402179241,
+      "reference_nll": 1.3301197402179241,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    "confirmation": {
+      "examples": 4,
+      "tokens": 115,
+      "kl": 0.0,
+      "nll": 0.7722534686326981,
+      "reference_nll": 0.7722534686326981,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    }
+  },
+  "public_forward_control": {
+    "public_forward_mean_kl": 3.437309487708262e-06,
+    "public_forward_max_abs_log_probability_difference": 0.0385589599609375,
+    "checked_examples": 8,
+    "prefix_replay_checks": {
+      "4": "bit_exact_log_probabilities",
+      "8": "bit_exact_log_probabilities",
+      "12": "bit_exact_log_probabilities",
+      "16": "bit_exact_log_probabilities",
+      "20": "bit_exact_log_probabilities",
+      "22": "bit_exact_log_probabilities"
+    },
+    "cached_lm_head_input": "bit_exact_log_probabilities"
+  },
+  "llm_parameter_sha256": "a9d772f4b1019b2f91077e03f0531e577bc1e86513fc4cf19e77589b2d05033a"
+}

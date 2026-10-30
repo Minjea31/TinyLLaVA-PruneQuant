@@ -1,0 +1,28 @@
+{
+  "time": "2026-10-30T06:27:14.930405+00:00",
+  "status": "complete",
+  "finetuning_steps": 0,
+  "full_verified_predictions_this_variant": 11017,
+  "full_verified_predictions_all_four_modes": 44068,
+  "holdout_examples": 64,
+  "holdout_overlap_with_selection_ids_and_image_hashes": 0,
+  "policy_sha256": "15647cfbceeca42e405b4347dd0fe0ff63e1c56c6adfdb033f4ec9a823d52529",
+  "benchmarks": {
+    "pope": {
+      "delta_vs_w4a4_pp": 4.327156594580195,
+      "extra_allocated_MiB": 106.98388671875,
+      "allocated_reduction_vs_fp16_percent": 45.7729440472998,
+      "mean_time_change_vs_w4a4_percent": 2.7851836244419115
+    },
+    "scienceqa": {
+      "delta_vs_w4a4_pp": 4.263758056519585,
+      "extra_allocated_MiB": 114.65234375,
+      "allocated_reduction_vs_fp16_percent": 37.83319558692562,
+      "mean_time_change_vs_w4a4_percent": 0.18267770571156472,
+      "wrong_to_correct": 367,
+      "correct_to_wrong": 281
+    }
+  },
+  "packed_checkpoint_sha256_after": "0a1040b0823731c793a84e78e6fd95ba7ff172d50936e82357c8b0e9523addf4",
+  "original_fp16_weight_hashes_verified_against_public_safetensors": true
+}

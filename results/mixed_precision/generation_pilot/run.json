@@ -1,0 +1,64 @@
+{
+  "benchmark": "scienceqa",
+  "source_sha256": "a69b77e77eac324f3977a2df1cb2f168bdf435f3745fb4ec9d3cf89cf720910c",
+  "count": 9,
+  "limit": 9,
+  "seed": 2026,
+  "model_revisions": {
+    "TinyLLaVA-1.5B": "e1fe174363732086223af5ca9dab6f4309f66278",
+    "TinyLLaVA-1.5B-SigLIP": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081"
+  },
+  "dtype": "mixed_int4_fp16",
+  "do_sample": false,
+  "num_beams": 1,
+  "conv_mode": "v1",
+  "max_new_tokens": 32,
+  "warmup": 1,
+  "batch_size": 8,
+  "padding_side": "left",
+  "reuse_identical_inputs": false,
+  "torch": "2.1.2+cu121",
+  "cuda": "12.1",
+  "activation_dtype": "int4_except_policy_FP16_Linear_inputs",
+  "quantization_format": "mixed_WA_from_W4A4",
+  "quantization_method": "RTN",
+  "quantization_version": "uniform_symmetric_int4_rtn_all_parameters_v1",
+  "quant_group_size": 128,
+  "quant_backend": "triton",
+  "quantization_scope": "all_model_parameters_except_policy_FP16_weights",
+  "finetuning_steps": 0,
+  "native_quantization_version": "rtn_original_weights_dynamic_group_a4_native_wmma_v2",
+  "activation_scaling": "dynamic_per_row_and_original_scale_aligned_K_segment_absmax",
+  "gemm_backend": "cuda_wmma_s4",
+  "multiply_dtype": "int4_native_W4A4_and_FP16_exceptions",
+  "accumulator_dtype": "int32_native_W4A4_and_original_FP16_operator_exceptions",
+  "native_compute_scope": "remaining_W4A4_Linear_Conv2d",
+  "attention_matmul_dtype": "original_fp16",
+  "non_gemm_dtype": "original_fp16_fp32",
+  "native_implementation_sha256": {
+    "kernels/int4_gemm.cu": "22a9ea81003b108d3d137bafab9d491fc762f176727e701c5ed92e6790234155",
+    "scripts/int4_cuda.py": "bd0d71880f27ea22f743b97ec7edf0f28b6e33872730210f9e82d8fd2b526d95",
+    "scripts/w4a4.py": "e8cda58a52aeb3a16a9608ca60df1d081a1a2c7104b9b8ee8ab4f744a602bb54"
+  },
+  "mixed_precision_version": "kl_separate_weight_activation_fp16_exceptions_v1",
+  "mixed_variant": "both",
+  "mixed_policy_sha256": "15647cfbceeca42e405b4347dd0fe0ff63e1c56c6adfdb033f4ec9a823d52529",
+  "mixed_rules": {
+    "weight": {
+      "metric_mode": "w4a16",
+      "threshold": 0.001,
+      "applies_to": "all measured weight leaves"
+    },
+    "activation": {
+      "metric_mode": "w16a4",
+      "threshold": 0.002,
+      "applies_to": "measured Linear inputs only"
+    }
+  },
+  "exception_compute": "W16A4_A_QDQ_then_FP16_GEMM;W4A16_W_DQ_then_FP16_GEMM;W16A16_FP16_GEMM",
+  "mixed_implementation_sha256": {
+    "scripts/mixed_precision.py": "4e100287a6a48042162fb0782472f769f8e55d5ea4ae7f6f4c48e103f7f2927c",
+    "scripts/analyze_llm_sensitivity.py": "e484d4eaba488ae95f47862a991f3a4252c1ef58ad26d28201f592f005ef4962",
+    "scripts/int4.py": "453b9b7f9770d3df830b72817880a1dfee989c974bda362e3b79b2c2fc49053e"
+  }
+}

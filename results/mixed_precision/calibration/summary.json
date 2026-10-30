@@ -1,0 +1,59 @@
+{
+  "time": "2026-10-30T04:38:20.828557+00:00",
+  "status": "complete",
+  "examples": 64,
+  "overlap_with_sensitivity": 0,
+  "finetuning_steps": 0,
+  "source_counts": {
+    "llava_sft": 32,
+    "sharegpt4v": 24,
+    "llava": 8
+  },
+  "metrics": {
+    "fp16": {
+      "examples": 64,
+      "tokens": 1689,
+      "kl": 0.0,
+      "nll": 1.0885568793491984,
+      "reference_nll": 1.0885568793491984,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    "none": {
+      "examples": 64,
+      "tokens": 1689,
+      "kl": 0.5076390015892684,
+      "nll": 1.6179215786978602,
+      "reference_nll": 1.0885568793491984,
+      "nll_delta": 0.5293646730715409,
+      "argmax_agreement": 0.7267304137349129
+    },
+    "weights": {
+      "examples": 64,
+      "tokens": 1689,
+      "kl": 0.45571422565262765,
+      "nll": 1.5517697134055197,
+      "reference_nll": 1.0885568793491984,
+      "nll_delta": 0.4632127867080271,
+      "argmax_agreement": 0.7546097952872515
+    },
+    "activations": {
+      "examples": 64,
+      "tokens": 1689,
+      "kl": 0.46711781341582537,
+      "nll": 1.575689123943448,
+      "reference_nll": 1.0885568793491984,
+      "nll_delta": 0.48713222186779603,
+      "argmax_agreement": 0.7380979019217193
+    },
+    "both": {
+      "examples": 64,
+      "tokens": 1689,
+      "kl": 0.4078864863840863,
+      "nll": 1.518523563630879,
+      "reference_nll": 1.0885568793491984,
+      "nll_delta": 0.42996666781255044,
+      "argmax_agreement": 0.7741778437048197
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "time": "2026-10-30T04:16:45.294351+00:00",
+  "status": "proposed_not_evaluated",
+  "measurements_sha256": "d08e6dbc75ea36194b03c8b6494314c8b3ab997f75969a8171bb0525a89776c3",
+  "selection": "leaf targets; both discovery and confirmation KL >= threshold",
+  "selection_examples": 128,
+  "independent_combination_validation": "pending; use unused calibration examples",
+  "finetuning_steps": 0,
+  "rules": {
+    "weight": {
+      "metric_mode": "w4a16",
+      "threshold": 0.001,
+      "applies_to": "all measured weight leaves"
+    },
+    "activation": {
+      "metric_mode": "w16a4",
+      "threshold": 0.002,
+      "applies_to": "measured Linear inputs only"
+    }
+  },
+  "candidate_layers": {
+    "weight": [
+      {
+        "name": "model.layers.2.mlp.down_proj",
+        "kind": "linear",
+        "parameters": 11534336,
+        "discovery_kl": 0.009037303226563154,
+        "confirmation_kl": 0.009672130908938925,
+        "fp16_weight_extra_bytes": 17121280
+      },
+      {
+        "name": "model.layers.6.input_layernorm",
+        "kind": "rmsnorm",
+        "parameters": 2048,
+        "discovery_kl": 0.0018898237222457759,
+        "confirmation_kl": 0.0021557538779575225,
+        "fp16_weight_extra_bytes": 3040
+      },
+      {
+        "name": "model.layers.8.input_layernorm",
+        "kind": "rmsnorm",
+        "parameters": 2048,
+        "discovery_kl": 0.003343828287395212,
+        "confirmation_kl": 0.003191576699848042,
+        "fp16_weight_extra_bytes": 3040
+      },
+      {
+        "name": "model.layers.21.mlp.down_proj",
+        "kind": "linear",
+        "parameters": 11534336,
+        "discovery_kl": 0.0014492489977193657,
+        "confirmation_kl": 0.0014095851268507431,
+        "fp16_weight_extra_bytes": 17121280
+      },
+      {
+        "name": "model.layers.21.input_layernorm",
+        "kind": "rmsnorm",
+        "parameters": 2048,
+        "discovery_kl": 0.001982202978588532,
+        "confirmation_kl": 0.0019416328053694087,
+        "fp16_weight_extra_bytes": 3040
+      },
+      {
+        "name": "model.norm",
+        "kind": "rmsnorm",
+        "parameters": 2048,
+        "discovery_kl": 0.0013730496333614894,
+        "confirmation_kl": 0.0012699507888811468,
+        "fp16_weight_extra_bytes": 3040
+      },
+      {
+        "name": "lm_head",
+        "kind": "linear",
+        "parameters": 65536000,
+        "discovery_kl": 0.007059192658260827,
+        "confirmation_kl": 0.00710268320420937,
+        "fp16_weight_extra_bytes": 97280000
+      }
+    ],
+    "activation": [
+      {
+        "name": "model.layers.20.mlp.down_proj",
+        "kind": "linear",
+        "parameters": 11534336,
+        "discovery_kl": 0.002407385168467613,
+        "confirmation_kl": 0.0024875603048499784
+      },
+      {
+        "name": "model.layers.21.mlp.down_proj",
+        "kind": "linear",
+        "parameters": 11534336,
+        "discovery_kl": 0.0046343121386343,
+        "confirmation_kl": 0.005014227554681838
+      },
+      {
+        "name": "lm_head",
+        "kind": "linear",
+        "parameters": 65536000,
+        "discovery_kl": 0.01641317443909429,
+        "confirmation_kl": 0.016406887748019017
+      }
+    ]
+  },
+  "unstable_candidates": {
+    "weight": [
+      {
+        "name": "model.layers.7.mlp.down_proj",
+        "kind": "linear",
+        "parameters": 11534336,
+        "discovery_kl": 0.0014169346048582554,
+        "confirmation_kl": 0.0005049804682215608,
+        "fp16_weight_extra_bytes": 17121280
+      }
+    ],
+    "activation": []
+  },
+  "threshold_sweep": {
+    "weight": [
+      {
+        "threshold": 0.0005,
+        "selected_count": 16,
+        "fp16_weight_extra_MiB": 207.093505859375
+      },
+      {
+        "threshold": 0.001,
+        "selected_count": 7,
+        "fp16_weight_extra_MiB": 125.4412841796875
+      },
+      {
+        "threshold": 0.002,
+        "selected_count": 3,
+        "fp16_weight_extra_MiB": 109.10446166992188
+      },
+      {
+        "threshold": 0.005,
+        "selected_count": 2,
+        "fp16_weight_extra_MiB": 109.1015625
+      }
+    ],
+    "activation": [
+      {
+        "threshold": 0.0005,
+        "selected_count": 52
+      },
+      {
+        "threshold": 0.001,
+        "selected_count": 13
+      },
+      {
+        "threshold": 0.002,
+        "selected_count": 3
+      },
+      {
+        "threshold": 0.005,
+        "selected_count": 1
+      }
+    ]
+  },
+  "estimated_extra_fp16_weight_MiB": 125.4412841796875,
+  "storage_estimate_scope": "parameter storage only; excludes layout padding, allocator, temporary buffers; activation peak VRAM requires measurement",
+  "execution_note": "Only W4A4 qualifies for the current S4xS4 weighted GEMM; W16A4 and W4A16 require separate execution paths"
+}

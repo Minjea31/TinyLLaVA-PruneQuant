@@ -1,4 +1,4 @@
-"""Official greedy inference: FP16 or all-parameter packed INT4, fixed splits."""
+"""Official greedy inference: FP16, W4A16, or native INT4 Linear/Conv W4A4."""
 
 import argparse
 import json
@@ -83,7 +83,10 @@ def main():
     p.add_argument("--warmup", type=int, default=1)
     p.add_argument("--batch-size", type=int, default=8)
     p.add_argument("--output", type=Path)
-    p.add_argument("--precision", choices=["fp16", "int4-all"], default="fp16")
+    p.add_argument("--precision", choices=["fp16", "int4-all", "int4-w4a4", "int4-mixed"], default="fp16")
+    p.add_argument("--mixed-variant", choices=["weights", "activations", "both"], default="both")
+    p.add_argument("--mixed-policy", type=Path,
+                   default=ROOT / "results/sensitivity_llm/fp16_threshold_candidates.json")
     p.add_argument("--quant-group-size", type=int, default=128)
     p.add_argument("--quant-backend", choices=["triton", "torch"], default="triton")
     p.add_argument("--quant-checkpoint", type=Path,
@@ -95,7 +98,9 @@ def main():
         p.error("Invalid group size, limit, generation length or warmup")
     if args.validate_load and args.precision != "fp16":
         p.error("--validate-load is the original FP16 CPU load check")
-    result_root = "results/baseline" if args.precision == "fp16" else "results/int4_all_w4a16"
+    result_root = {"fp16": "results/baseline", "int4-all": "results/int4_all_w4a16",
+                   "int4-w4a4": "results/int4_all_w4a4",
+                   "int4-mixed": f"results/mixed_precision/{args.mixed_variant}"}[args.precision]
     out = args.output or ROOT / result_root / args.benchmark
     out.mkdir(parents=True, exist_ok=True)
     if args.validate_load:
@@ -146,7 +151,7 @@ def main():
         report = dict(
             time=now(),
             status="blocked_gpu",
-            reason="GPU evaluation requires healthy nvidia-smi and CUDA; see docs/environment.json and docs/system.md",
+            reason="GPU evaluation requires healthy nvidia-smi and CUDA; run python scripts/check_environment.py and see docs/environment.json",
             nvidia_smi=nvml_detail,
             cuda_available=torch.cuda.is_available(),
             fp16_baseline_completed=False,
@@ -209,12 +214,37 @@ def main():
         torch=torch.__version__,
         cuda=torch.version.cuda,
     )
-    if args.precision == "int4-all":
+    if args.precision != "fp16":
         from int4 import FORMAT
         spec.update(dtype="int4", activation_dtype="float16", quantization_format="W4A16",
                     quantization_method="RTN", quantization_version=FORMAT,
                     quant_group_size=args.quant_group_size, quant_backend=args.quant_backend,
                     quantization_scope="all_model_parameters", finetuning_steps=0)
+    if args.precision in ("int4-w4a4", "int4-mixed"):
+        from w4a4 import FORMAT as NATIVE_FORMAT
+        spec.update(quantization_format="W4A4_linear_conv", native_quantization_version=NATIVE_FORMAT,
+                    activation_dtype="int4_at_weighted_gemm_inputs", activation_scaling="dynamic_per_row_and_original_scale_aligned_K_segment_absmax",
+                    gemm_backend="cuda_wmma_s4", multiply_dtype="int4", accumulator_dtype="int32",
+                    native_compute_scope="all_Linear_and_Conv2d", attention_matmul_dtype="original_fp16",
+                    non_gemm_dtype="original_fp16_fp32",
+                    native_implementation_sha256={str(path): sha256(ROOT / path) for path in (
+                        Path("kernels/int4_gemm.cu"), Path("scripts/int4_cuda.py"), Path("scripts/w4a4.py"))})
+    mixed_policy = None
+    if args.precision == "int4-mixed":
+        from mixed_precision import FORMAT as MIXED_FORMAT, read_policy
+        mixed_policy = read_policy(args.mixed_policy)
+        spec.update(dtype="mixed_int4_fp16", quantization_format="mixed_WA_from_W4A4",
+                    mixed_precision_version=MIXED_FORMAT, mixed_variant=args.mixed_variant,
+                    mixed_policy_sha256=sha256(args.mixed_policy), mixed_rules=mixed_policy["rules"],
+                    quantization_scope="all_model_parameters_except_policy_FP16_weights",
+                    activation_dtype="int4_except_policy_FP16_Linear_inputs",
+                    native_compute_scope="remaining_W4A4_Linear_Conv2d",
+                    multiply_dtype="int4_native_W4A4_and_FP16_exceptions",
+                    accumulator_dtype="int32_native_W4A4_and_original_FP16_operator_exceptions",
+                    exception_compute="W16A4_A_QDQ_then_FP16_GEMM;W4A16_W_DQ_then_FP16_GEMM;W16A16_FP16_GEMM",
+                    mixed_implementation_sha256={str(path): sha256(ROOT / path) for path in (
+                        Path("scripts/mixed_precision.py"), Path("scripts/analyze_llm_sensitivity.py"),
+                        Path("scripts/int4.py"))})
     if args.reuse_identical_inputs:
         spec["reuse_identical_inputs"] = True
     old = out / "run.json"
@@ -232,13 +262,38 @@ def main():
         if answers.exists()
         else {}
     )
+    summary_path = out / "summary.json"
+    if summary_path.exists() and set(done) == {row["question_id"] for row in rows}:
+        previous = json.loads(summary_path.read_text())
+        if previous.get("status") == "complete" and previous.get("conditions") == spec:
+            print(f"Already complete: {out}; preserved original measurements and execution counts", flush=True)
+            return
     tokenizer, model, processor, context = load("cuda")
     model.config.tokenizer_padding_side = "left"
-    if args.precision == "int4-all":
+    if mixed_policy is not None:
+        from mixed_precision import capture_fp16
+        fp16_originals = capture_fp16(model, mixed_policy, args.mixed_variant)
+    if args.precision != "fp16":
         from int4 import prepare_checkpoint
         print("Preparing packed INT4 weights for Vision / Projector / LLM...", flush=True)
         audit = prepare_checkpoint(model, args.quant_checkpoint, args.quant_group_size,
                                    args.quant_backend, snapshots)
+        if args.precision == "int4-w4a4":
+            from w4a4 import enable_w4a4
+            audit["integer_compute"] = enable_w4a4(model)
+            audit["compute"] = "native_s4_s4_s32_Linear_Conv2d_original_FP16_FP32_other_operations"
+            audit["activation_dtype"] = "int4_at_weighted_gemm_inputs"
+            print("Native INT4 Tensor Core weighted GEMM enabled: "
+                  f"{audit['integer_compute']['linear_layers']} Linear, "
+                  f"{audit['integer_compute']['conv2d_layers']} Conv2d; no FP16 operand GEMM fallback", flush=True)
+        elif mixed_policy is not None:
+            from mixed_precision import enable_mixed_precision
+            audit["mixed_precision"] = enable_mixed_precision(model, mixed_policy, args.mixed_variant, fp16_originals)
+            del fp16_originals
+            audit["compute"] = "native_W4A4_except_explicit_policy_FP16_GEMM_exceptions"
+            audit["mixed_policy_sha256"] = sha256(args.mixed_policy)
+            print("Mixed precision enabled: " + json.dumps(
+                audit["mixed_precision"]["weighted_layer_precision_counts"]), flush=True)
         write_json(out / "quantization.json", audit)
         print(json.dumps({k: audit[k] for k in ("total_parameters", "total_packed_bytes", "components")}),
               flush=True)
@@ -320,6 +375,13 @@ def main():
     completed = [done[x["question_id"]] for x in rows]
     batches = {row["batch_id"]: row["batch_seconds"] for row in completed}
     fresh_count = sum(not row.get("reused_from_question_id") for row in completed)
+    native_execution = {}
+    if args.precision == "int4-w4a4":
+        from w4a4 import execution_counts
+        native_execution["native_execution"] = execution_counts(model)
+    elif args.precision == "int4-mixed":
+        from mixed_precision import mixed_execution_counts
+        native_execution["mixed_execution"] = mixed_execution_counts(model)
     write_json(
         out / "summary.json",
         dict(
@@ -343,6 +405,7 @@ def main():
                 "fresh_generation_count": fresh_count,
                 "reused_prediction_count": sum(bool(row.get("reused_from_question_id")) for row in completed),
             },
+            **native_execution,
         ),
     )
 

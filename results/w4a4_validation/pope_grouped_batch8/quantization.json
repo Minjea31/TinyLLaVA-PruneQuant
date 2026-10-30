@@ -1,0 +1,6379 @@
+{
+  "format": "uniform_symmetric_int4_rtn_all_parameters_v1",
+  "quantization": "RTN",
+  "group_size": 128,
+  "integer_range": [
+    -7,
+    7
+  ],
+  "nibble_encoding": "signed_value_plus_8",
+  "scale_dtype": "float16",
+  "weight_bits": 4,
+  "activation_dtype": "int4_at_weighted_gemm_inputs",
+  "coverage": "all_model_parameters_including_embeddings_conv_norm_and_bias",
+  "unquantized_parameter_tensors": [],
+  "finetuning_steps": 0,
+  "calibration": "none; weight-only absolute-maximum RTN",
+  "backend": "triton",
+  "compute": "native_s4_s4_s32_Linear_Conv2d_original_FP16_FP32_other_operations",
+  "optimized_integer_matmul": false,
+  "layers": {
+    "embedding": 2,
+    "linear": 313,
+    "rmsnorm": 45,
+    "conv2d": 1,
+    "layernorm": 53
+  },
+  "components": {
+    "vision": {
+      "parameters": 397747744,
+      "parameter_tensors": 421,
+      "packed_bytes": 205088700
+    },
+    "projector": {
+      "parameters": 6557696,
+      "parameter_tensors": 4,
+      "packed_bytes": 3381312
+    },
+    "llm": {
+      "parameters": 1100048384,
+      "parameter_tensors": 201,
+      "packed_bytes": 567212448
+    }
+  },
+  "tensors": [
+    {
+      "name": "lm_head.weight",
+      "shape": [
+        32000,
+        2048
+      ],
+      "numel": 65536000,
+      "component": "llm",
+      "packed_bytes": 33792000
+    },
+    {
+      "name": "model.embed_tokens.weight",
+      "shape": [
+        32000,
+        2048
+      ],
+      "numel": 65536000,
+      "component": "llm",
+      "packed_bytes": 33792000
+    },
+    {
+      "name": "model.layers.0.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.0.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.0.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.0.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.0.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.0.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.0.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.0.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.0.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.1.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.1.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.1.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.1.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.1.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.1.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.1.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.1.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.1.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.10.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.10.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.10.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.10.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.10.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.10.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.10.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.10.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.10.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.11.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.11.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.11.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.11.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.11.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.11.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.11.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.11.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.11.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.12.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.12.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.12.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.12.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.12.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.12.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.12.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.12.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.12.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.13.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.13.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.13.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.13.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.13.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.13.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.13.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.13.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.13.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.14.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.14.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.14.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.14.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.14.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.14.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.14.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.14.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.14.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.15.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.15.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.15.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.15.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.15.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.15.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.15.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.15.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.15.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.16.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.16.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.16.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.16.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.16.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.16.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.16.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.16.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.16.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.17.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.17.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.17.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.17.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.17.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.17.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.17.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.17.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.17.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.18.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.18.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.18.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.18.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.18.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.18.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.18.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.18.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.18.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.19.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.19.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.19.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.19.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.19.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.19.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.19.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.19.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.19.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.2.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.2.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.2.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.2.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.2.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.2.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.2.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.2.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.2.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.20.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.20.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.20.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.20.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.20.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.20.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.20.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.20.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.20.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.21.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.21.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.21.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.21.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.21.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.21.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.21.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.21.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.21.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.3.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.3.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.3.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.3.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.3.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.3.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.3.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.3.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.3.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.4.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.4.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.4.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.4.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.4.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.4.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.4.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.4.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.4.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.5.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.5.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.5.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.5.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.5.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.5.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.5.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.5.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.5.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.6.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.6.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.6.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.6.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.6.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.6.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.6.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.6.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.6.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.7.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.7.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.7.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.7.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.7.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.7.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.7.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.7.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.7.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.8.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.8.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.8.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.8.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.8.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.8.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.8.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.8.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.8.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.9.input_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.9.mlp.down_proj.weight",
+      "shape": [
+        2048,
+        5632
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.9.mlp.gate_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.9.mlp.up_proj.weight",
+      "shape": [
+        5632,
+        2048
+      ],
+      "numel": 11534336,
+      "component": "llm",
+      "packed_bytes": 5947392
+    },
+    {
+      "name": "model.layers.9.post_attention_layernorm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.layers.9.self_attn.k_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.layers.9.self_attn.o_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.9.self_attn.q_proj.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "llm",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.layers.9.self_attn.v_proj.weight",
+      "shape": [
+        256,
+        2048
+      ],
+      "numel": 524288,
+      "component": "llm",
+      "packed_bytes": 270336
+    },
+    {
+      "name": "model.mm_projector.0.bias",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "projector",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.mm_projector.0.weight",
+      "shape": [
+        2048,
+        1152
+      ],
+      "numel": 2359296,
+      "component": "projector",
+      "packed_bytes": 1216512
+    },
+    {
+      "name": "model.mm_projector.2.bias",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "projector",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.mm_projector.2.weight",
+      "shape": [
+        2048,
+        2048
+      ],
+      "numel": 4194304,
+      "component": "projector",
+      "packed_bytes": 2162688
+    },
+    {
+      "name": "model.norm.weight",
+      "shape": [
+        2048
+      ],
+      "numel": 2048,
+      "component": "llm",
+      "packed_bytes": 1056
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.embeddings.patch_embedding.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.embeddings.patch_embedding.weight",
+      "shape": [
+        1152,
+        3,
+        14,
+        14
+      ],
+      "numel": 677376,
+      "component": "vision",
+      "packed_bytes": 349272
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.embeddings.position_embedding.weight",
+      "shape": [
+        729,
+        1152
+      ],
+      "numel": 839808,
+      "component": "vision",
+      "packed_bytes": 433026
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.layer_norm1.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.layer_norm1.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.layer_norm2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.layer_norm2.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc1.bias",
+      "shape": [
+        4304
+      ],
+      "numel": 4304,
+      "component": "vision",
+      "packed_bytes": 2220
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc1.weight",
+      "shape": [
+        4304,
+        1152
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc2.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc2.weight",
+      "shape": [
+        1152,
+        4304
+      ],
+      "numel": 4958208,
+      "component": "vision",
+      "packed_bytes": 2556576
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.k_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.k_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.out_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.out_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.q_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.q_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.v_proj.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.v_proj.weight",
+      "shape": [
+        1152,
+        1152
+      ],
+      "numel": 1327104,
+      "component": "vision",
+      "packed_bytes": 684288
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.post_layernorm.bias",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    },
+    {
+      "name": "model.vision_tower.vision_tower.vision_model.post_layernorm.weight",
+      "shape": [
+        1152
+      ],
+      "numel": 1152,
+      "component": "vision",
+      "packed_bytes": 594
+    }
+  ],
+  "total_parameters": 1504353824,
+  "total_packed_bytes": 775682460,
+  "time": "2026-10-28T04:20:36.497818+00:00",
+  "model_revisions": {
+    "TinyLLaVA-1.5B": "e1fe174363732086223af5ca9dab6f4309f66278",
+    "TinyLLaVA-1.5B-SigLIP": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081"
+  },
+  "checkpoint_sha256": "0a1040b0823731c793a84e78e6fd95ba7ff172d50936e82357c8b0e9523addf4",
+  "checkpoint_file_bytes": 775918724,
+  "integer_compute": {
+    "format": "rtn_original_weights_dynamic_group_a4_native_wmma_v2",
+    "kernel": {
+      "cubin": "/home/a/TinyLLaVA-PruneQuant/model/.cache/int4_cuda/039b410c2201d919e89a/int4_gemm.cubin",
+      "architecture": "sm_86",
+      "source_sha256": "22a9ea81003b108d3d137bafab9d491fc762f176727e701c5ed92e6790234155",
+      "backend": "cuda_wmma_s4",
+      "multiply": "signed_int4",
+      "accumulator": "int32",
+      "dequantized_operand_gemm": false,
+      "performance_tuned": false,
+      "imma_instructions": [
+        "/*09b0*/                   IMMA.8832.S4.S4 R24, R24.ROW, R29.COL, R26 ;           /* 0x0000001d18187237 */",
+        "/*0a70*/                   IMMA.8832.S4.S4 R2, R28.ROW, R31.COL, R2 ;           /* 0x0000001f1c027237 */",
+        "/*0a80*/                   IMMA.8832.S4.S4 R2, R29.ROW, R30.COL, R2 ;           /* 0x0000001e1d027237 */",
+        "/*0a90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+        "/*0aa0*/                   IMMA.8832.S4.S4 R2, R8.ROW, R11.COL, R2 ;            /* 0x0000000b08027237 */",
+        "/*0d20*/                   IMMA.8832.S4.S4 R24, R34.ROW, R35.COL, R24 ;           /* 0x0000002322187237 */",
+        "/*0d30*/                   IMMA.8832.S4.S4 R24, R26.ROW, R37.COL, R24 ;           /* 0x000000251a187237 */",
+        "/*0d40*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R24 ;           /* 0x0000001f1c1a7237 */",
+        "/*0d90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+        "/*0f80*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+        "/*1130*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+        "/*12d0*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */"
+      ],
+      "imma_by_kernel": {
+        "raw_int4_gemm": [
+          "/*0a70*/                   IMMA.8832.S4.S4 R2, R28.ROW, R31.COL, R2 ;           /* 0x0000001f1c027237 */",
+          "/*0a80*/                   IMMA.8832.S4.S4 R2, R29.ROW, R30.COL, R2 ;           /* 0x0000001e1d027237 */",
+          "/*0a90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+          "/*0aa0*/                   IMMA.8832.S4.S4 R2, R8.ROW, R11.COL, R2 ;            /* 0x0000000b08027237 */",
+          "/*0d90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */"
+        ],
+        "scaled_int4_gemm": [
+          "/*09b0*/                   IMMA.8832.S4.S4 R24, R24.ROW, R29.COL, R26 ;           /* 0x0000001d18187237 */",
+          "/*0d20*/                   IMMA.8832.S4.S4 R24, R34.ROW, R35.COL, R24 ;           /* 0x0000002322187237 */",
+          "/*0d30*/                   IMMA.8832.S4.S4 R24, R26.ROW, R37.COL, R24 ;           /* 0x000000251a187237 */",
+          "/*0d40*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R24 ;           /* 0x0000001f1c1a7237 */",
+          "/*0f80*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+          "/*1130*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+          "/*12d0*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */"
+        ]
+      }
+    },
+    "finetuning_steps": 0,
+    "weight_values_preserved_from_w4a16": true,
+    "activation_quantization": "dynamic_per_row_and_K_segment_absmax_symmetric_-7_to_7_fp16_scale",
+    "activation_segment_size": "gcd(in_features, original_weight_group_size); <=128 at g128",
+    "activation_quantization_scope": "all_linear_inputs_and_unfolded_conv_patches",
+    "weighted_gemm_compute": "signed_int4_times_signed_int4_accumulate_int32",
+    "remaining_operations": "original_FP16_FP32_attention_QK_PV_softmax_norm_RoPE_embedding",
+    "linear_layers": 313,
+    "conv2d_layers": 1,
+    "native_packed_weight_bytes": 808036824,
+    "tile_padding_extra_bytes": 66827520,
+    "layer_names": [
+      "model.layers.0.self_attn.q_proj",
+      "model.layers.0.self_attn.k_proj",
+      "model.layers.0.self_attn.v_proj",
+      "model.layers.0.self_attn.o_proj",
+      "model.layers.0.mlp.gate_proj",
+      "model.layers.0.mlp.up_proj",
+      "model.layers.0.mlp.down_proj",
+      "model.layers.1.self_attn.q_proj",
+      "model.layers.1.self_attn.k_proj",
+      "model.layers.1.self_attn.v_proj",
+      "model.layers.1.self_attn.o_proj",
+      "model.layers.1.mlp.gate_proj",
+      "model.layers.1.mlp.up_proj",
+      "model.layers.1.mlp.down_proj",
+      "model.layers.2.self_attn.q_proj",
+      "model.layers.2.self_attn.k_proj",
+      "model.layers.2.self_attn.v_proj",
+      "model.layers.2.self_attn.o_proj",
+      "model.layers.2.mlp.gate_proj",
+      "model.layers.2.mlp.up_proj",
+      "model.layers.2.mlp.down_proj",
+      "model.layers.3.self_attn.q_proj",
+      "model.layers.3.self_attn.k_proj",
+      "model.layers.3.self_attn.v_proj",
+      "model.layers.3.self_attn.o_proj",
+      "model.layers.3.mlp.gate_proj",
+      "model.layers.3.mlp.up_proj",
+      "model.layers.3.mlp.down_proj",
+      "model.layers.4.self_attn.q_proj",
+      "model.layers.4.self_attn.k_proj",
+      "model.layers.4.self_attn.v_proj",
+      "model.layers.4.self_attn.o_proj",
+      "model.layers.4.mlp.gate_proj",
+      "model.layers.4.mlp.up_proj",
+      "model.layers.4.mlp.down_proj",
+      "model.layers.5.self_attn.q_proj",
+      "model.layers.5.self_attn.k_proj",
+      "model.layers.5.self_attn.v_proj",
+      "model.layers.5.self_attn.o_proj",
+      "model.layers.5.mlp.gate_proj",
+      "model.layers.5.mlp.up_proj",
+      "model.layers.5.mlp.down_proj",
+      "model.layers.6.self_attn.q_proj",
+      "model.layers.6.self_attn.k_proj",
+      "model.layers.6.self_attn.v_proj",
+      "model.layers.6.self_attn.o_proj",
+      "model.layers.6.mlp.gate_proj",
+      "model.layers.6.mlp.up_proj",
+      "model.layers.6.mlp.down_proj",
+      "model.layers.7.self_attn.q_proj",
+      "model.layers.7.self_attn.k_proj",
+      "model.layers.7.self_attn.v_proj",
+      "model.layers.7.self_attn.o_proj",
+      "model.layers.7.mlp.gate_proj",
+      "model.layers.7.mlp.up_proj",
+      "model.layers.7.mlp.down_proj",
+      "model.layers.8.self_attn.q_proj",
+      "model.layers.8.self_attn.k_proj",
+      "model.layers.8.self_attn.v_proj",
+      "model.layers.8.self_attn.o_proj",
+      "model.layers.8.mlp.gate_proj",
+      "model.layers.8.mlp.up_proj",
+      "model.layers.8.mlp.down_proj",
+      "model.layers.9.self_attn.q_proj",
+      "model.layers.9.self_attn.k_proj",
+      "model.layers.9.self_attn.v_proj",
+      "model.layers.9.self_attn.o_proj",
+      "model.layers.9.mlp.gate_proj",
+      "model.layers.9.mlp.up_proj",
+      "model.layers.9.mlp.down_proj",
+      "model.layers.10.self_attn.q_proj",
+      "model.layers.10.self_attn.k_proj",
+      "model.layers.10.self_attn.v_proj",
+      "model.layers.10.self_attn.o_proj",
+      "model.layers.10.mlp.gate_proj",
+      "model.layers.10.mlp.up_proj",
+      "model.layers.10.mlp.down_proj",
+      "model.layers.11.self_attn.q_proj",
+      "model.layers.11.self_attn.k_proj",
+      "model.layers.11.self_attn.v_proj",
+      "model.layers.11.self_attn.o_proj",
+      "model.layers.11.mlp.gate_proj",
+      "model.layers.11.mlp.up_proj",
+      "model.layers.11.mlp.down_proj",
+      "model.layers.12.self_attn.q_proj",
+      "model.layers.12.self_attn.k_proj",
+      "model.layers.12.self_attn.v_proj",
+      "model.layers.12.self_attn.o_proj",
+      "model.layers.12.mlp.gate_proj",
+      "model.layers.12.mlp.up_proj",
+      "model.layers.12.mlp.down_proj",
+      "model.layers.13.self_attn.q_proj",
+      "model.layers.13.self_attn.k_proj",
+      "model.layers.13.self_attn.v_proj",
+      "model.layers.13.self_attn.o_proj",
+      "model.layers.13.mlp.gate_proj",
+      "model.layers.13.mlp.up_proj",
+      "model.layers.13.mlp.down_proj",
+      "model.layers.14.self_attn.q_proj",
+      "model.layers.14.self_attn.k_proj",
+      "model.layers.14.self_attn.v_proj",
+      "model.layers.14.self_attn.o_proj",
+      "model.layers.14.mlp.gate_proj",
+      "model.layers.14.mlp.up_proj",
+      "model.layers.14.mlp.down_proj",
+      "model.layers.15.self_attn.q_proj",
+      "model.layers.15.self_attn.k_proj",
+      "model.layers.15.self_attn.v_proj",
+      "model.layers.15.self_attn.o_proj",
+      "model.layers.15.mlp.gate_proj",
+      "model.layers.15.mlp.up_proj",
+      "model.layers.15.mlp.down_proj",
+      "model.layers.16.self_attn.q_proj",
+      "model.layers.16.self_attn.k_proj",
+      "model.layers.16.self_attn.v_proj",
+      "model.layers.16.self_attn.o_proj",
+      "model.layers.16.mlp.gate_proj",
+      "model.layers.16.mlp.up_proj",
+      "model.layers.16.mlp.down_proj",
+      "model.layers.17.self_attn.q_proj",
+      "model.layers.17.self_attn.k_proj",
+      "model.layers.17.self_attn.v_proj",
+      "model.layers.17.self_attn.o_proj",
+      "model.layers.17.mlp.gate_proj",
+      "model.layers.17.mlp.up_proj",
+      "model.layers.17.mlp.down_proj",
+      "model.layers.18.self_attn.q_proj",
+      "model.layers.18.self_attn.k_proj",
+      "model.layers.18.self_attn.v_proj",
+      "model.layers.18.self_attn.o_proj",
+      "model.layers.18.mlp.gate_proj",
+      "model.layers.18.mlp.up_proj",
+      "model.layers.18.mlp.down_proj",
+      "model.layers.19.self_attn.q_proj",
+      "model.layers.19.self_attn.k_proj",
+      "model.layers.19.self_attn.v_proj",
+      "model.layers.19.self_attn.o_proj",
+      "model.layers.19.mlp.gate_proj",
+      "model.layers.19.mlp.up_proj",
+      "model.layers.19.mlp.down_proj",
+      "model.layers.20.self_attn.q_proj",
+      "model.layers.20.self_attn.k_proj",
+      "model.layers.20.self_attn.v_proj",
+      "model.layers.20.self_attn.o_proj",
+      "model.layers.20.mlp.gate_proj",
+      "model.layers.20.mlp.up_proj",
+      "model.layers.20.mlp.down_proj",
+      "model.layers.21.self_attn.q_proj",
+      "model.layers.21.self_attn.k_proj",
+      "model.layers.21.self_attn.v_proj",
+      "model.layers.21.self_attn.o_proj",
+      "model.layers.21.mlp.gate_proj",
+      "model.layers.21.mlp.up_proj",
+      "model.layers.21.mlp.down_proj",
+      "model.vision_tower.vision_tower.vision_model.embeddings.patch_embedding",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.0.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.0.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.1.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.1.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.2.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.2.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.3.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.3.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.4.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.4.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.5.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.5.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.6.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.6.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.7.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.7.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.8.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.8.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.9.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.9.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.10.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.10.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.11.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.11.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.12.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.12.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.13.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.13.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.14.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.14.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.15.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.15.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.16.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.16.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.17.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.17.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.18.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.18.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.19.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.19.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.20.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.20.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.21.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.21.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.22.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.22.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.23.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.23.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.24.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.24.mlp.fc2",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.k_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.v_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.q_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.25.self_attn.out_proj",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc1",
+      "model.vision_tower.vision_tower.vision_model.encoder.layers.25.mlp.fc2",
+      "model.mm_projector.0",
+      "model.mm_projector.2",
+      "lm_head"
+    ]
+  }
+}

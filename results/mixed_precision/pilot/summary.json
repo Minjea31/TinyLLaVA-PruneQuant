@@ -1,0 +1,59 @@
+{
+  "time": "2026-10-30T04:30:26.672434+00:00",
+  "status": "complete",
+  "examples": 8,
+  "overlap_with_sensitivity": 0,
+  "finetuning_steps": 0,
+  "source_counts": {
+    "llava_sft": 4,
+    "sharegpt4v": 3,
+    "llava": 1
+  },
+  "metrics": {
+    "fp16": {
+      "examples": 8,
+      "tokens": 209,
+      "kl": 0.0,
+      "nll": 0.9512049516779371,
+      "reference_nll": 0.9512049516779371,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    "none": {
+      "examples": 8,
+      "tokens": 209,
+      "kl": 0.4846628326922655,
+      "nll": 1.440532609820366,
+      "reference_nll": 0.9512049516779371,
+      "nll_delta": 0.4893276281654835,
+      "argmax_agreement": 0.7596354186534882
+    },
+    "weights": {
+      "examples": 8,
+      "tokens": 209,
+      "kl": 0.44294292852282524,
+      "nll": 1.3703342378139496,
+      "reference_nll": 0.9512049516779371,
+      "nll_delta": 0.4191292468458414,
+      "argmax_agreement": 0.7406250089406967
+    },
+    "activations": {
+      "examples": 8,
+      "tokens": 209,
+      "kl": 0.43163298070430756,
+      "nll": 1.3766018599271774,
+      "reference_nll": 0.9512049516779371,
+      "nll_delta": 0.4253969369456172,
+      "argmax_agreement": 0.7713541686534882
+    },
+    "both": {
+      "examples": 8,
+      "tokens": 209,
+      "kl": 0.40322690177708864,
+      "nll": 1.355994127690792,
+      "reference_nll": 0.9512049516779371,
+      "nll_delta": 0.40478920470923185,
+      "argmax_agreement": 0.7606770917773247
+    }
+  }
+}

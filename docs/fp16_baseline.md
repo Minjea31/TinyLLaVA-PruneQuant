@@ -70,8 +70,6 @@ batch_seconds·batch_size·batch_id를 함께 기록한다. summary에는 genera
 처리량(fresh_samples_per_second), CUDA peak allocated/reserved memory를 저장한다.
 이후 INT4도 같은 batch 8·입력·generation 조건으로 비교한다.
 
-배치별 별도 메모리 실측은 [배치 메모리 기록](batch_memory.md)을 참고한다.
-
 ## 실행 전 GPU 검증
 
 POPE와 ScienceQA 각각 16문항의 batch 8 실행을 통과했다.

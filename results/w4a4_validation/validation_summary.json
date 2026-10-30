@@ -1,0 +1,48 @@
+{
+  "time": "2026-10-29T07:28:17.229779+00:00",
+  "status": "implementation_verified",
+  "full_benchmark_completed": false,
+  "finetuning_steps": 0,
+  "implementation_sha256": {
+    "kernels/int4_gemm.cu": "22a9ea81003b108d3d137bafab9d491fc762f176727e701c5ed92e6790234155",
+    "scripts/int4_cuda.py": "bd0d71880f27ea22f743b97ec7edf0f28b6e33872730210f9e82d8fd2b526d95",
+    "scripts/w4a4.py": "e8cda58a52aeb3a16a9608ca60df1d081a1a2c7104b9b8ee8ab4f744a602bb54"
+  },
+  "unit_tests": {
+    "passed": 15,
+    "new_native_cuda_tests": 5
+  },
+  "full_model_finite_validation": "results/w4a4_validation/full_model_grouped.json",
+  "subset_checks": {
+    "pope": {
+      "complete_subset": true,
+      "spec": true,
+      "implementation": true,
+      "original_question_ids": true,
+      "metrics": true,
+      "scope": true,
+      "all_native_layers_called": true,
+      "int4_instruction": true,
+      "same_source_weights": true,
+      "no_fine_tuning": true,
+      "batch8": true,
+      "max_new_tokens32": true
+    },
+    "scienceqa": {
+      "complete_subset": true,
+      "spec": true,
+      "implementation": true,
+      "original_question_ids": true,
+      "metrics": true,
+      "scope": true,
+      "all_native_layers_called": true,
+      "int4_instruction": true,
+      "same_source_weights": true,
+      "no_fine_tuning": true,
+      "batch8": true,
+      "max_new_tokens32": true
+    }
+  },
+  "compute_scope": "all_313_Linear_and_1_patch_Conv2d; original_attention_QK_PV_and_non_GEMM",
+  "full_evaluation_command": "bash scripts/eval_w4a4_all.sh"
+}

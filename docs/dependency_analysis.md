@@ -15,11 +15,10 @@ Factory main의 일괄 설치는 Transformers 4.40.1 등으로 바꾸므로 실�
 사용하지 않지만 환경의 실제 import 호환성을 확보하기 위해 이 패키지만 조정한다.
 torch / torchvision / transformers / accelerate는 변경하지 않는다.
 
-MegaTrain main `requirements.txt`의 `transformers>=5.0.0`은 이 환경과 충돌한다.
-`setup.py`의 느슨한 `>=4.30.0`과도 불일치한다. 현재 목표 모델에 대한 추가 코드 문제가 있어
-MegaTrain 및 CUDA 확장/DeepSpeed/FlashAttention은 설치하지 않는다. 저장소와 정적 검사만 제공한다.
-시스템 nvcc 11.5는 torch 내장 CUDA runtime 12.1과 다르다. 사전 빌드 torch 추론은
-nvcc가 필요 없으나 향후 CUDA 확장을 컴파일할 때 이 차이를 해결해야 한다.
+현재 평가는 추가 CUDA 확장·DeepSpeed·FlashAttention을 사용하지 않는다.
+초기 점검에서 시스템 nvcc 11.5와 torch 내장 CUDA runtime 12.1을 확인했다.
+사전 빌드 torch 추론은 nvcc가 필요 없으며, 실제 INT4 연산용 CUDA 확장을 추가할 때는
+당시의 compiler·PyTorch CUDA·커널 지원 버전을 다시 확인한다.
 
 다운로드 성능을 위해 HF 공식 optional transport `hf-transfer==0.1.9`를 추가한다.
 ML runtime 의존성을 변경하지 않는 전송 모듈이며 `--no-deps`로 설치한다.

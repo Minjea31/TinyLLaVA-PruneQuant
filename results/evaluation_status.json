@@ -1,6 +1,6 @@
 {
-  "time": "2026-10-28T06:12:30.451318+00:00",
-  "status": "fp16_batch8_verified",
+  "time": "2026-10-30T06:27:15.450914+00:00",
+  "status": "fp16_w4a16_w4a4_mixed_batch8_verified",
   "batch_size": 8,
   "old_batch1_evaluation_results_removed": true,
   "finetuning_steps": 0,
@@ -10,6 +10,51 @@
     "verified_predictions": 11017,
     "verification": "results/baseline/verification.json"
   },
-  "int4_batch8": "pending",
-  "baseline_command": "bash scripts/eval_fp16_all.sh"
+  "int4_batch8": "complete",
+  "baseline_command": "bash scripts/eval_fp16_all.sh",
+  "summary": "docs/experiment_summary.md",
+  "comparison": "results/int4_all_w4a16/comparison.json",
+  "verified_predictions": 44068,
+  "w4a4_implementation": "verified",
+  "w4a4_full_benchmarks": "complete",
+  "w4a4_validation": "results/w4a4_validation/validation_summary.json",
+  "w4a4_command": "bash scripts/eval_w4a4_all.sh",
+  "w4a4_results": "results/int4_all_w4a4",
+  "w4a4_progress": {
+    "scienceqa": "complete",
+    "pope": "complete"
+  },
+  "w4a4_verified_predictions": 11017,
+  "w4a4_comparison": "results/int4_all_w4a4/comparison.json",
+  "w4a4_verification": "results/int4_all_w4a4/verification.json",
+  "llm_sensitivity": {
+    "status": "complete",
+    "examples": 128,
+    "discovery": 64,
+    "confirmation": 64,
+    "leaf_targets": 201,
+    "group_targets": 44,
+    "conditions": 643,
+    "finetuning_steps": 0,
+    "native_verified_layers": 3,
+    "report": "results/sensitivity_llm/report.md",
+    "verification": "results/sensitivity_llm/verification.json"
+  },
+  "mixed_precision": {
+    "status": "complete",
+    "finetuning_steps": 0,
+    "weight_threshold": 0.001,
+    "activation_threshold": 0.002,
+    "weight_fp16_layers": 7,
+    "activation_fp16_layers": 3,
+    "independent_calibration_examples": 64,
+    "full_benchmark_variant": "both",
+    "batch_size": 8,
+    "command": "bash scripts/eval_mixed_precision.sh",
+    "full_verified_predictions": 11017,
+    "calibration_comparison": "results/mixed_precision/calibration/report.md",
+    "comparison": "results/mixed_precision/both/comparison.json",
+    "verification": "results/mixed_precision/both/verification.json",
+    "report": "results/mixed_precision/both/report.md"
+  }
 }

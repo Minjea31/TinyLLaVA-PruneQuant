@@ -1,6 +1,11 @@
 # Datasets
 /data/
 
+# Generated Python and lint caches
+__pycache__/
+*.py[cod]
+.ruff_cache/
+
 # Original, quantized and training checkpoints
 /model/*
 !/model/README.md

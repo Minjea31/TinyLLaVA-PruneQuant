@@ -1,0 +1,71 @@
+{
+  "time": "2026-10-29T07:08:50.841077+00:00",
+  "status": "complete",
+  "conditions": {
+    "benchmark": "scienceqa",
+    "source_sha256": "a69b77e77eac324f3977a2df1cb2f168bdf435f3745fb4ec9d3cf89cf720910c",
+    "count": 1,
+    "limit": 1,
+    "seed": 2026,
+    "model_revisions": {
+      "TinyLLaVA-1.5B": "e1fe174363732086223af5ca9dab6f4309f66278",
+      "TinyLLaVA-1.5B-SigLIP": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081"
+    },
+    "dtype": "int4",
+    "do_sample": false,
+    "num_beams": 1,
+    "conv_mode": "v1",
+    "max_new_tokens": 1,
+    "warmup": 1,
+    "batch_size": 1,
+    "padding_side": "left",
+    "reuse_identical_inputs": false,
+    "torch": "2.1.2+cu121",
+    "cuda": "12.1",
+    "activation_dtype": "int4_at_weighted_gemm_inputs",
+    "quantization_format": "W4A4_linear_conv",
+    "quantization_method": "RTN",
+    "quantization_version": "uniform_symmetric_int4_rtn_all_parameters_v1",
+    "quant_group_size": 128,
+    "quant_backend": "triton",
+    "quantization_scope": "all_model_parameters",
+    "finetuning_steps": 0,
+    "native_quantization_version": "rtn_original_weights_dynamic_row_a4_native_wmma_v1",
+    "activation_scaling": "dynamic_per_row_absmax",
+    "gemm_backend": "cuda_wmma_s4",
+    "multiply_dtype": "int4",
+    "accumulator_dtype": "int32",
+    "native_compute_scope": "all_Linear_and_Conv2d",
+    "attention_matmul_dtype": "original_fp16",
+    "non_gemm_dtype": "original_fp16_fp32",
+    "native_implementation_sha256": {
+      "kernels/int4_gemm.cu": "fcfe8c34e6dd5124b887b08a07520f34ccc19e1bb78c1d163f249f5b9e8791d5",
+      "scripts/int4_cuda.py": "75ec85242c093acdeafed4728ba9201471a99256f4a54b481a2cd41c11a6a385",
+      "scripts/w4a4.py": "0ec9a66f2e18da377aaca5f2f529c56f04f8d36ccb70a26300723b2e0b176291"
+    }
+  },
+  "metrics": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "count": 1,
+    "invalid": 0
+  },
+  "mean_seconds": 0.49292225200042594,
+  "median_seconds": 0.49292225200042594,
+  "peak_allocated_bytes": 1137208320,
+  "peak_reserved_bytes": 1361051648,
+  "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU",
+  "generation_seconds": 0.49292225200042594,
+  "fresh_samples_per_second": 2.0287175024898976,
+  "measurement": "per-item seconds = batch generation seconds / actual batch size; includes vision/projector/prefill/decode; preprocessing, model load and warmup excluded",
+  "execution": {
+    "unique_input_count": 1,
+    "fresh_generation_count": 1,
+    "reused_prediction_count": 0
+  },
+  "native_execution": {
+    "current_process_total_calls": 628,
+    "current_process_called_layers": 314,
+    "native_layer_count": 314
+  }
+}

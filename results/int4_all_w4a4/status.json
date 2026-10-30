@@ -1,0 +1,7 @@
+{
+  "time": "2026-10-29T09:53:36.124200+00:00",
+  "status": "complete",
+  "finetuning_steps": 0,
+  "comparison": "/home/a/TinyLLaVA-PruneQuant/results/int4_all_w4a4/comparison.json",
+  "scope": "all Linear and Conv2d; original attention QK/PV and non-GEMM precision"
+}

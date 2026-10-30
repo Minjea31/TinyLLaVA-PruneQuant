@@ -1,0 +1,338 @@
+{
+  "status": "complete",
+  "selection": "top W4A4 leaf targets by discovery KL",
+  "kernel": {
+    "cubin": "/home/a/TinyLLaVA-PruneQuant/model/.cache/int4_cuda/039b410c2201d919e89a/int4_gemm.cubin",
+    "architecture": "sm_86",
+    "source_sha256": "22a9ea81003b108d3d137bafab9d491fc762f176727e701c5ed92e6790234155",
+    "backend": "cuda_wmma_s4",
+    "multiply": "signed_int4",
+    "accumulator": "int32",
+    "dequantized_operand_gemm": false,
+    "performance_tuned": false,
+    "imma_instructions": [
+      "/*09b0*/                   IMMA.8832.S4.S4 R24, R24.ROW, R29.COL, R26 ;           /* 0x0000001d18187237 */",
+      "/*0a70*/                   IMMA.8832.S4.S4 R2, R28.ROW, R31.COL, R2 ;           /* 0x0000001f1c027237 */",
+      "/*0a80*/                   IMMA.8832.S4.S4 R2, R29.ROW, R30.COL, R2 ;           /* 0x0000001e1d027237 */",
+      "/*0a90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+      "/*0aa0*/                   IMMA.8832.S4.S4 R2, R8.ROW, R11.COL, R2 ;            /* 0x0000000b08027237 */",
+      "/*0d20*/                   IMMA.8832.S4.S4 R24, R34.ROW, R35.COL, R24 ;           /* 0x0000002322187237 */",
+      "/*0d30*/                   IMMA.8832.S4.S4 R24, R26.ROW, R37.COL, R24 ;           /* 0x000000251a187237 */",
+      "/*0d40*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R24 ;           /* 0x0000001f1c1a7237 */",
+      "/*0d90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+      "/*0f80*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+      "/*1130*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+      "/*12d0*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */"
+    ],
+    "imma_by_kernel": {
+      "raw_int4_gemm": [
+        "/*0a70*/                   IMMA.8832.S4.S4 R2, R28.ROW, R31.COL, R2 ;           /* 0x0000001f1c027237 */",
+        "/*0a80*/                   IMMA.8832.S4.S4 R2, R29.ROW, R30.COL, R2 ;           /* 0x0000001e1d027237 */",
+        "/*0a90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */",
+        "/*0aa0*/                   IMMA.8832.S4.S4 R2, R8.ROW, R11.COL, R2 ;            /* 0x0000000b08027237 */",
+        "/*0d90*/                   IMMA.8832.S4.S4 R2, R4.ROW, R7.COL, R2 ;             /* 0x0000000704027237 */"
+      ],
+      "scaled_int4_gemm": [
+        "/*09b0*/                   IMMA.8832.S4.S4 R24, R24.ROW, R29.COL, R26 ;           /* 0x0000001d18187237 */",
+        "/*0d20*/                   IMMA.8832.S4.S4 R24, R34.ROW, R35.COL, R24 ;           /* 0x0000002322187237 */",
+        "/*0d30*/                   IMMA.8832.S4.S4 R24, R26.ROW, R37.COL, R24 ;           /* 0x000000251a187237 */",
+        "/*0d40*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R24 ;           /* 0x0000001f1c1a7237 */",
+        "/*0f80*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+        "/*1130*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */",
+        "/*12d0*/                   IMMA.8832.S4.S4 R26, R28.ROW, R31.COL, R26 ;           /* 0x0000001f1c1a7237 */"
+      ]
+    }
+  },
+  "results": [
+    {
+      "name": "lm_head",
+      "qdq_metrics": {
+        "all": {
+          "examples": 8,
+          "tokens": 211,
+          "kl": 0.02584747300716117,
+          "nll": 1.0661004483699799,
+          "reference_nll": 1.051186604425311,
+          "nll_delta": 0.014913872291799635,
+          "argmax_agreement": 0.9323244392871857
+        },
+        "discovery": {
+          "examples": 4,
+          "tokens": 96,
+          "kl": 0.03435349196661264,
+          "nll": 1.3695288300514221,
+          "reference_nll": 1.3301197402179241,
+          "nll_delta": 0.03940913628321141,
+          "argmax_agreement": 0.9222146719694138
+        },
+        "confirmation": {
+          "examples": 4,
+          "tokens": 115,
+          "kl": 0.017341454047709703,
+          "nll": 0.7626720666885376,
+          "reference_nll": 0.7722534686326981,
+          "nll_delta": -0.00958139169961214,
+          "argmax_agreement": 0.9424342066049576
+        }
+      },
+      "native_metrics": {
+        "all": {
+          "examples": 8,
+          "tokens": 211,
+          "kl": 0.025847251585219055,
+          "nll": 1.066106895916164,
+          "reference_nll": 1.051186604425311,
+          "nll_delta": 0.01492032513488084,
+          "argmax_agreement": 0.9323244392871857
+        },
+        "discovery": {
+          "examples": 4,
+          "tokens": 96,
+          "kl": 0.03434645349625498,
+          "nll": 1.3695542868226767,
+          "reference_nll": 1.3301197402179241,
+          "nll_delta": 0.03943462041206658,
+          "argmax_agreement": 0.9222146719694138
+        },
+        "confirmation": {
+          "examples": 4,
+          "tokens": 115,
+          "kl": 0.01734804967418313,
+          "nll": 0.7626595050096512,
+          "reference_nll": 0.7722534686326981,
+          "nll_delta": -0.009593970142304897,
+          "argmax_agreement": 0.9424342066049576
+        }
+      },
+      "native_calls": 1,
+      "examples": [
+        {
+          "id": "llava_sft:000000550448",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.02625872567296028,
+          "nll": 0.9833884835243225,
+          "reference_nll": 1.0049606561660767,
+          "nll_delta": -0.021572180092334747,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "sharegpt4v:000833518",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.025751465931534767,
+          "nll": 0.5379582643508911,
+          "reference_nll": 0.4589430093765259,
+          "nll_delta": 0.07901525497436523,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "llava_sft:000000158702",
+          "fold": "confirmation",
+          "tokens": 19,
+          "kl": 0.009075796231627464,
+          "nll": 0.6546348333358765,
+          "reference_nll": 0.7130689024925232,
+          "nll_delta": -0.05843402072787285,
+          "argmax_agreement": 0.8947368264198303
+        },
+        {
+          "id": "llava_sft:000000254861",
+          "fold": "discovery",
+          "tokens": 9,
+          "kl": 0.006296854931861162,
+          "nll": 0.10951416939496994,
+          "reference_nll": 0.09180448949337006,
+          "nll_delta": 0.017709683626890182,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000412764",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.013517467305064201,
+          "nll": 0.4000936448574066,
+          "reference_nll": 0.39810997247695923,
+          "nll_delta": 0.001983671449124813,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:002657576",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 0.008306210860610008,
+          "nll": 0.8746564388275146,
+          "reference_nll": 0.9120413064956665,
+          "nll_delta": -0.03738493472337723,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000336991",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 0.03973172977566719,
+          "nll": 1.1406288146972656,
+          "reference_nll": 1.135786533355713,
+          "nll_delta": 0.004842275753617287,
+          "argmax_agreement": 0.90625
+        },
+        {
+          "id": "llava:002124573",
+          "fold": "discovery",
+          "tokens": 23,
+          "kl": 0.07783976197242737,
+          "nll": 3.8279805183410645,
+          "reference_nll": 3.6947779655456543,
+          "nll_delta": 0.13320285081863403,
+          "argmax_agreement": 0.782608687877655
+        }
+      ],
+      "minimum_unclamped_token_kl": -1.0589219279211193e-08
+    },
+    {
+      "name": "model.layers.0.self_attn.q_proj",
+      "qdq_metrics": {
+        "all": {
+          "examples": 8,
+          "tokens": 211,
+          "kl": 2.4209169367850336e-05,
+          "nll": 1.0499746557325125,
+          "reference_nll": 1.051186604425311,
+          "nll_delta": -0.0012119167895434657,
+          "argmax_agreement": 0.99609375
+        },
+        "discovery": {
+          "examples": 4,
+          "tokens": 96,
+          "kl": 3.756369068241838e-05,
+          "nll": 1.3279886655509472,
+          "reference_nll": 1.3301197402179241,
+          "nll_delta": -0.0021310165648174006,
+          "argmax_agreement": 1.0
+        },
+        "confirmation": {
+          "examples": 4,
+          "tokens": 115,
+          "kl": 1.085464805328229e-05,
+          "nll": 0.7719606459140778,
+          "reference_nll": 0.7722534686326981,
+          "nll_delta": -0.0002928170142695308,
+          "argmax_agreement": 0.9921875
+        }
+      },
+      "native_metrics": {
+        "all": {
+          "examples": 8,
+          "tokens": 211,
+          "kl": 2.1252575322705525e-05,
+          "nll": 1.0496728280559182,
+          "reference_nll": 1.051186604425311,
+          "nll_delta": -0.0015137566997509566,
+          "argmax_agreement": 0.99609375
+        },
+        "discovery": {
+          "examples": 4,
+          "tokens": 96,
+          "kl": 3.259792515564186e-05,
+          "nll": 1.3279199916869402,
+          "reference_nll": 1.3301197402179241,
+          "nll_delta": -0.0021996941450197482,
+          "argmax_agreement": 1.0
+        },
+        "confirmation": {
+          "examples": 4,
+          "tokens": 115,
+          "kl": 9.907225489769189e-06,
+          "nll": 0.7714256644248962,
+          "reference_nll": 0.7722534686326981,
+          "nll_delta": -0.000827819254482165,
+          "argmax_agreement": 0.9921875
+        }
+      },
+      "native_calls": 1,
+      "examples": [
+        {
+          "id": "llava_sft:000000550448",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 1.71249957929831e-05,
+          "nll": 1.003509759902954,
+          "reference_nll": 1.0049606561660767,
+          "nll_delta": -0.0014509456232190132,
+          "argmax_agreement": 0.96875
+        },
+        {
+          "id": "sharegpt4v:000833518",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 7.78157300374005e-06,
+          "nll": 0.45809799432754517,
+          "reference_nll": 0.4589430093765259,
+          "nll_delta": -0.000845035130623728,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000158702",
+          "fold": "confirmation",
+          "tokens": 19,
+          "kl": 1.0225105143035762e-05,
+          "nll": 0.7134544253349304,
+          "reference_nll": 0.7130689024925232,
+          "nll_delta": 0.00038554304046556354,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000254861",
+          "fold": "discovery",
+          "tokens": 9,
+          "kl": 4.924892891722266e-06,
+          "nll": 0.09169042855501175,
+          "reference_nll": 0.09180448949337006,
+          "nll_delta": -0.00011405602708691731,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "sharegpt4v:000412764",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 1.0128243957296945e-05,
+          "nll": 0.3978081941604614,
+          "reference_nll": 0.39810997247695923,
+          "nll_delta": -0.0003017577691935003,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:002657576",
+          "fold": "confirmation",
+          "tokens": 32,
+          "kl": 4.497228019317845e-06,
+          "nll": 0.9106404781341553,
+          "reference_nll": 0.9120413064956665,
+          "nll_delta": -0.0014008393045514822,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava_sft:000000336991",
+          "fold": "discovery",
+          "tokens": 32,
+          "kl": 1.1194246326340362e-05,
+          "nll": 1.136278510093689,
+          "reference_nll": 1.135786533355713,
+          "nll_delta": 0.0004919425118714571,
+          "argmax_agreement": 1.0
+        },
+        {
+          "id": "llava:002124573",
+          "fold": "discovery",
+          "tokens": 23,
+          "kl": 0.00010414431744720787,
+          "nll": 3.6859028339385986,
+          "reference_nll": 3.6947779655456543,
+          "nll_delta": -0.008874905295670033,
+          "argmax_agreement": 1.0
+        }
+      ],
+      "minimum_unclamped_token_kl": -1.7035358723660465e-07
+    }
+  ]
+}

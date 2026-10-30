@@ -1,0 +1,37 @@
+{
+  "top10_stability": {
+    "w4a16": {
+      "topk": 5,
+      "discovery_confirmation_overlap": 5
+    },
+    "w16a4": {
+      "topk": 2,
+      "discovery_confirmation_overlap": 2
+    },
+    "w4a4": {
+      "topk": 2,
+      "discovery_confirmation_overlap": 2
+    }
+  },
+  "groups": [],
+  "bands": [
+    {
+      "mode": "w4a16",
+      "band": "앞",
+      "median_kl": 4.651106038977559e-06,
+      "count": 1
+    },
+    {
+      "mode": "w16a4",
+      "band": "앞",
+      "median_kl": 2.0094443016205332e-05,
+      "count": 1
+    },
+    {
+      "mode": "w4a4",
+      "band": "앞",
+      "median_kl": 2.4209169367850336e-05,
+      "count": 1
+    }
+  ]
+}

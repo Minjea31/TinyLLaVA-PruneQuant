@@ -1,0 +1,678 @@
+{
+  "samples": [
+    {
+      "id": "llava_sft:000000372428",
+      "image": "data/train/llava/coco/train2017/000000372428.jpg",
+      "image_sha256": "4fd9cf8592e842a7241d24e61b69f72aaa5bf9a28b45cd7af9a517d5f2936246",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000290265",
+      "image": "data/train/llava/coco/train2017/000000290265.jpg",
+      "image_sha256": "598c66241fbd74197eaea5768b483855da2b2440fe1d6a3cf0c6c0deb15f6cb4",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:002292544",
+      "image": "data/train/llava/llava_pretrain/images/00229/002292544.jpg",
+      "image_sha256": "30f7beece2d537be9885693e4d23cf6e863689f7440c63ed3cc6bfe2e26e1752",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000492710",
+      "image": "data/train/llava/coco/train2017/000000492710.jpg",
+      "image_sha256": "f570f2d26385cff8529ecafedb59a70864afe652e7740c882de0f3713c6b34a8",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000243292",
+      "image": "data/train/llava/coco/train2017/000000243292.jpg",
+      "image_sha256": "f2fd808d6c412437c7788d3bafe8c8033b640cd25e5befc8295391a879c6cfa2",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:005621459",
+      "image": "data/train/llava/llava_pretrain/images/00562/005621459.jpg",
+      "image_sha256": "ea5dd7eb156ef2b0555f6ae0dbd75da1135e79f96d00ca5b08ce7000373a075b",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000304587",
+      "image": "data/train/llava/coco/train2017/000000304587.jpg",
+      "image_sha256": "c29bf10c61b183082c2cba34bd706a30701326a41f5108ab128a9ce43ade4519",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000097431",
+      "image": "data/train/llava/coco/train2017/000000097431.jpg",
+      "image_sha256": "56ad852882dd45724a1c4dd75a435ce293cf3fed394c0b86f4d7ad19f06e5da5",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000360231",
+      "image": "data/train/llava/coco/train2017/000000360231.jpg",
+      "image_sha256": "32349a5b44481a350142e6be3b02add939b43ee36b12b8f9edb6559abdfa637a",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000140919",
+      "image": "data/train/llava/coco/train2017/000000140919.jpg",
+      "image_sha256": "14d8cf26da75a2af766c04cbda43b9eb3de3eaddaca9946960902b7639462a60",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:002127548",
+      "image": "data/train/llava/llava_pretrain/images/00212/002127548.jpg",
+      "image_sha256": "d34f5ebc7bdd3360e70b6ff142cca2bd3e75312ead028716c1b52a34f46382bb",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000176587",
+      "image": "data/train/llava/coco/train2017/000000176587.jpg",
+      "image_sha256": "2cd4011cd47d4d379f77055627b42b2a578cbf3f4bac179782c040b80a204ae4",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000090331",
+      "image": "data/train/llava/coco/train2017/000000090331.jpg",
+      "image_sha256": "2abd95b09a66ac5071bc707d182de70c5cf13711f2aa57e8e8ff81bca39b58fa",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:002164023",
+      "image": "data/train/llava/llava_pretrain/images/00216/002164023.jpg",
+      "image_sha256": "dc2c5b5b55d6b7c6ee63ada72ea939cae29a657cb9fe584ce7bfcc6e461bdd3b",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000168643",
+      "image": "data/train/llava/coco/train2017/000000168643.jpg",
+      "image_sha256": "aa71253a8ac39648de4ac9364e42240d133cde0bfbe987578f2bd4eb01a01064",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava:000223769",
+      "image": "data/train/llava/llava_pretrain/images/00022/000223769.jpg",
+      "image_sha256": "8dec40788fc0dfe0e7ab525302c82ac44e26550aad3a51c8ca8f1eb9219c6d20",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava:004095607",
+      "image": "data/train/llava/llava_pretrain/images/00409/004095607.jpg",
+      "image_sha256": "0572b6bdcfde8d1747e3feaa48793f05dc9b149f47e41214be6d3438d0665bec",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000457342",
+      "image": "data/train/llava/coco/train2017/000000457342.jpg",
+      "image_sha256": "96c959b3202e5984f71e02f2f58cde69d75f7ae1d8282e55dc4aef46554823dd",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000025241",
+      "image": "data/train/llava/coco/train2017/000000025241.jpg",
+      "image_sha256": "e84db75b2bb8b4ccf0628168c42f60cd52dd9dcf64c7d8bec4d8575a61c93d3e",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000340139",
+      "image": "data/train/llava/coco/train2017/000000340139.jpg",
+      "image_sha256": "bfe6ad966fe174980b0a2ebe845146ffa6db1a480566c28b4a9302cfa9fd3298",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000349438",
+      "image": "data/train/llava/coco/train2017/000000349438.jpg",
+      "image_sha256": "1c8b67d13a26b345110c967f47107db42ec71c2df521f92dbac5dcd80fa8747b",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000531423",
+      "image": "data/train/llava/coco/train2017/000000531423.jpg",
+      "image_sha256": "98710cf393a813d0412ad7833cbf60069697751c640946979e0a4213e0e3e0be",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000146963",
+      "image": "data/train/llava/coco/train2017/000000146963.jpg",
+      "image_sha256": "61bead87590ef2663290f57ab8283c13df3967e6874456e5477e68bb2c19e329",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:001883980",
+      "image": "data/train/llava/llava_pretrain/images/00188/001883980.jpg",
+      "image_sha256": "96ad94e88861a15825fce7a677ca01b09c82d0b064c8967d3204a7f6bf44ea10",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:001209743",
+      "image": "data/train/llava/llava_pretrain/images/00120/001209743.jpg",
+      "image_sha256": "515118e99e82aca8158e7cdb5b55d5785f9d1b6f3e59cdd9d49a1654c1c6adbb",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000128201",
+      "image": "data/train/llava/coco/train2017/000000128201.jpg",
+      "image_sha256": "4bfc081ef63d279b272270066d675b1bc1f6fe30b0df232ebdef43f20a3cf215",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000426803",
+      "image": "data/train/llava/coco/train2017/000000426803.jpg",
+      "image_sha256": "1dda0eb7fc08c7132522763d0d49d494969f9c222b8452ba3976cbe8bfc019fb",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000247006",
+      "image": "data/train/llava/coco/train2017/000000247006.jpg",
+      "image_sha256": "06ea4756ed7f735b0dcf6424994e0a0cc29648c0be5d0351fbf56a87f6afe9bf",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000068300",
+      "image": "data/train/llava/coco/train2017/000000068300.jpg",
+      "image_sha256": "4f2be57082c4266d652b518fde5ec35352609f18194e6c90fdd3a6c88ab850c7",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000502495",
+      "image": "data/train/llava/coco/train2017/000000502495.jpg",
+      "image_sha256": "05802e8d18cc7c63c7c190dcf7bf12d2d3abc1794320b320833a2ecfafe93c99",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000237964",
+      "image": "data/train/llava/coco/train2017/000000237964.jpg",
+      "image_sha256": "ba39ac0f206f51faab9ada9a8fc03cc69e06c743a41714bf883972d546fdeebe",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava:002471561",
+      "image": "data/train/llava/llava_pretrain/images/00247/002471561.jpg",
+      "image_sha256": "cd8db3425174d976a751977e75962d7ae4834f66618d44a35f7a5319b28ad383",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000150082",
+      "image": "data/train/llava/coco/train2017/000000150082.jpg",
+      "image_sha256": "e610892de4c0919bd0daed309d1442455cf1d5fcbaaaf61da8c346edec27c81c",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava:002990677",
+      "image": "data/train/llava/llava_pretrain/images/00299/002990677.jpg",
+      "image_sha256": "38cf6e1223785b43e9fbfe60a749007e1f7c50618cc7bb0f8ef8bd155eb6bbfe",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000461673",
+      "image": "data/train/llava/coco/train2017/000000461673.jpg",
+      "image_sha256": "e926eccce3a202a9ebc93f5dfe052a4e328bde8887acad5319f000fe123c3154",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:001520865",
+      "image": "data/train/llava/llava_pretrain/images/00152/001520865.jpg",
+      "image_sha256": "3aef24b7f4e0d24eeb20bb85621b9a8f93f975b83781ef7cc662e6b4e086b4a0",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:004852598",
+      "image": "data/train/llava/llava_pretrain/images/00485/004852598.jpg",
+      "image_sha256": "5ad04991e4e7ca4576a5eb882b566f7f9c8d639a47a2291cf24caddfde82b782",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:002049774",
+      "image": "data/train/llava/llava_pretrain/images/00204/002049774.jpg",
+      "image_sha256": "8a31fd3b747e3916309e09e83b991e6b1b8b9a839ed506af30725fed07d5ac0f",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:004840376",
+      "image": "data/train/llava/llava_pretrain/images/00484/004840376.jpg",
+      "image_sha256": "fe490065f948e64135bf5ced65aa44790ae4425ed04a390a46eab49f07ef16c9",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:002680754",
+      "image": "data/train/llava/llava_pretrain/images/00268/002680754.jpg",
+      "image_sha256": "ac3ef056c615562e5b4e56b44b673dbe3067f6586d77bdb59ba964e5c19246c0",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:001649046",
+      "image": "data/train/llava/llava_pretrain/images/00164/001649046.jpg",
+      "image_sha256": "f2901705ae5082264abe7f0abb7eafbef9cb0dce6405198553eacf4eca5ecacc",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000520451",
+      "image": "data/train/llava/coco/train2017/000000520451.jpg",
+      "image_sha256": "f8f9a57b13509a0d0e8c41b8970b44135752a6ee16d0fc093c9be4321ce24e47",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava:000986204",
+      "image": "data/train/llava/llava_pretrain/images/00098/000986204.jpg",
+      "image_sha256": "ea5b2dd0c589432e3bea4b667566f80a473d82fb319974aa378a23b7cf6bdf1b",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:001612463",
+      "image": "data/train/llava/llava_pretrain/images/00161/001612463.jpg",
+      "image_sha256": "43e4ce800e79faa5c574f0d468ae78a1e3c8fac3145189661e225cdce6275576",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:001779354",
+      "image": "data/train/llava/llava_pretrain/images/00177/001779354.jpg",
+      "image_sha256": "23df31406e01ccabafd329bda01e16c7e19657ae4da79c80372a19a31fae169c",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:002042770",
+      "image": "data/train/llava/llava_pretrain/images/00204/002042770.jpg",
+      "image_sha256": "8eb26141e88f7b7d8fee238c56a2cd15fc4f464d6a075a208d89631db3223e7a",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000487559",
+      "image": "data/train/llava/coco/train2017/000000487559.jpg",
+      "image_sha256": "51cb6a15535f267aaeb2799f8a79abb4c58cd560721bdefc40aea69bf229c6f4",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:000766861",
+      "image": "data/train/llava/llava_pretrain/images/00076/000766861.jpg",
+      "image_sha256": "49a1cc65c34313b7a22a53330ae6189ad30bbee5b4024360fd91c3e5e925fe03",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava:000058281",
+      "image": "data/train/llava/llava_pretrain/images/00005/000058281.jpg",
+      "image_sha256": "a09f96004d942f2c8b7f605402ce4f78463796ff27e1035319cff0e381ca0fb1",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000092288",
+      "image": "data/train/llava/coco/train2017/000000092288.jpg",
+      "image_sha256": "c5d97d5d32925fb84fcf80f36069bea07bbf0e1b98abe0fc15e594625b3c2b5c",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava:001570321",
+      "image": "data/train/llava/llava_pretrain/images/00157/001570321.jpg",
+      "image_sha256": "508066ee94a7035b6f84570e7e223fae17b3b4339e5f71ba91bec57c3e6fe679",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:002586122",
+      "image": "data/train/llava/llava_pretrain/images/00258/002586122.jpg",
+      "image_sha256": "1b5493395238db5cb8f2608ddcd1884a14c213133ca9695f8240193db1010465",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:000656882",
+      "image": "data/train/llava/llava_pretrain/images/00065/000656882.jpg",
+      "image_sha256": "a6480673fc2cdb7a221fba4832ecdb2675bb2fe33a01a8fc993d9d5c221ae661",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000467180",
+      "image": "data/train/llava/coco/train2017/000000467180.jpg",
+      "image_sha256": "040a61c820c1c0a325c5314e9bda8c96aeaf80cce7c346ed3baa0cad2a8a07f4",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:000662717",
+      "image": "data/train/llava/llava_pretrain/images/00066/000662717.jpg",
+      "image_sha256": "8892e0d72b5a46c32071a5e01438d8936fd10f2a58c3b2e4ca47dd42a166913e",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:001832591",
+      "image": "data/train/llava/llava_pretrain/images/00183/001832591.jpg",
+      "image_sha256": "c41f600d01905d5a7a549e4a1dc4c55f7d41424cf6267019a37fe5bec9e7631e",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000157815",
+      "image": "data/train/llava/coco/train2017/000000157815.jpg",
+      "image_sha256": "58c8ed46be8c5351ea9fe79397f799ef13ef65934e7359b9f722351b5e39fa85",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:004995080",
+      "image": "data/train/llava/llava_pretrain/images/00499/004995080.jpg",
+      "image_sha256": "7848afdac90e8f66b50d8a3caab27a1b7f9488c4871bfd219a3d2a2ed6c315a8",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:004111233",
+      "image": "data/train/llava/llava_pretrain/images/00411/004111233.jpg",
+      "image_sha256": "532ab0a6d1d59f81fba9b41326b443c18865046e8199f23a4c064cec4209d58c",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000517068",
+      "image": "data/train/llava/coco/train2017/000000517068.jpg",
+      "image_sha256": "58e9e81c1c5c591e78a07df75ea7a9bf10f3cbd6f08fa4a7fa4eb80e8598fd3d",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:000101210",
+      "image": "data/train/llava/llava_pretrain/images/00010/000101210.jpg",
+      "image_sha256": "c81cab21e45ef269275b45fd66551eb37ff8508c13dfb665583e3aa6410bd02e",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava:004529986",
+      "image": "data/train/llava/llava_pretrain/images/00452/004529986.jpg",
+      "image_sha256": "a243eae566323522c7eaf3725c335dad5f77d2989243eb527e469cebfcbc03e3",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "holdout"
+    },
+    {
+      "id": "sharegpt4v:003876203",
+      "image": "data/train/llava/llava_pretrain/images/00387/003876203.jpg",
+      "image_sha256": "4629e0e505bb6fa98f759e5a1d091ea0e5400dfd2d4baaa0a49704259d325a45",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "holdout"
+    },
+    {
+      "id": "llava_sft:000000538637",
+      "image": "data/train/llava/coco/train2017/000000538637.jpg",
+      "image_sha256": "c4951f524d8ba2b032273899b6f1037a8ce46834fe66c91ac47eb7051c5d7184",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "holdout"
+    }
+  ],
+  "excluded_sensitivity_ids": [
+    "llava:000088342",
+    "llava:000414854",
+    "llava:001054931",
+    "llava:001290910",
+    "llava:001747501",
+    "llava:002124573",
+    "llava:002430209",
+    "llava:002657576",
+    "llava:002768986",
+    "llava:002772434",
+    "llava:003056104",
+    "llava:003084745",
+    "llava:003346072",
+    "llava:003703867",
+    "llava:004262884",
+    "llava:004499734",
+    "llava:004938336",
+    "llava:005085086",
+    "llava:005817268",
+    "llava:005876758",
+    "llava:006474919",
+    "llava_sft:000000005277",
+    "llava_sft:000000019226",
+    "llava_sft:000000019967",
+    "llava_sft:000000027674",
+    "llava_sft:000000043099",
+    "llava_sft:000000059024",
+    "llava_sft:000000059142",
+    "llava_sft:000000080013",
+    "llava_sft:000000085144",
+    "llava_sft:000000096101",
+    "llava_sft:000000101738",
+    "llava_sft:000000111636",
+    "llava_sft:000000140067",
+    "llava_sft:000000141759",
+    "llava_sft:000000148815",
+    "llava_sft:000000149268",
+    "llava_sft:000000158087",
+    "llava_sft:000000158702",
+    "llava_sft:000000169226",
+    "llava_sft:000000212671",
+    "llava_sft:000000221313",
+    "llava_sft:000000227248",
+    "llava_sft:000000227587",
+    "llava_sft:000000247971",
+    "llava_sft:000000251205",
+    "llava_sft:000000254861",
+    "llava_sft:000000267224",
+    "llava_sft:000000269550",
+    "llava_sft:000000269738",
+    "llava_sft:000000276597",
+    "llava_sft:000000295124",
+    "llava_sft:000000308473",
+    "llava_sft:000000312800",
+    "llava_sft:000000315111",
+    "llava_sft:000000319126",
+    "llava_sft:000000326092",
+    "llava_sft:000000331203",
+    "llava_sft:000000334588",
+    "llava_sft:000000336991",
+    "llava_sft:000000344920",
+    "llava_sft:000000350585",
+    "llava_sft:000000357896",
+    "llava_sft:000000359115",
+    "llava_sft:000000363336",
+    "llava_sft:000000369735",
+    "llava_sft:000000392458",
+    "llava_sft:000000394627",
+    "llava_sft:000000396010",
+    "llava_sft:000000397034",
+    "llava_sft:000000426839",
+    "llava_sft:000000428881",
+    "llava_sft:000000440401",
+    "llava_sft:000000454755",
+    "llava_sft:000000480745",
+    "llava_sft:000000514666",
+    "llava_sft:000000521982",
+    "llava_sft:000000522856",
+    "llava_sft:000000524775",
+    "llava_sft:000000535519",
+    "llava_sft:000000550448",
+    "llava_sft:000000578131",
+    "llava_sft:000000578368",
+    "sharegpt4v:000103215",
+    "sharegpt4v:000412764",
+    "sharegpt4v:000420778",
+    "sharegpt4v:000628429",
+    "sharegpt4v:000686533",
+    "sharegpt4v:000759048",
+    "sharegpt4v:000830520",
+    "sharegpt4v:000833518",
+    "sharegpt4v:000863382",
+    "sharegpt4v:000882315",
+    "sharegpt4v:000887210",
+    "sharegpt4v:000960480",
+    "sharegpt4v:001153707",
+    "sharegpt4v:001202727",
+    "sharegpt4v:001217462",
+    "sharegpt4v:001289731",
+    "sharegpt4v:001353345",
+    "sharegpt4v:001359574",
+    "sharegpt4v:001377835",
+    "sharegpt4v:001431886",
+    "sharegpt4v:001467400",
+    "sharegpt4v:001712297",
+    "sharegpt4v:001921135",
+    "sharegpt4v:002020337",
+    "sharegpt4v:002243301",
+    "sharegpt4v:002320902",
+    "sharegpt4v:002441645",
+    "sharegpt4v:002545221",
+    "sharegpt4v:002589639",
+    "sharegpt4v:002607643",
+    "sharegpt4v:002819210",
+    "sharegpt4v:002955464",
+    "sharegpt4v:002967384",
+    "sharegpt4v:003000287",
+    "sharegpt4v:003021967",
+    "sharegpt4v:003325436",
+    "sharegpt4v:003617549",
+    "sharegpt4v:003617684",
+    "sharegpt4v:003802406",
+    "sharegpt4v:004310276",
+    "sharegpt4v:004318977",
+    "sharegpt4v:004400443",
+    "sharegpt4v:004757038",
+    "sharegpt4v:004958414",
+    "sharegpt4v:006232055"
+  ],
+  "prior_sensitivity_spec_sha256": "f0a62df2f08a0ae3c23195d23952c778f0744d1ebcce7b060b50e6a57ba36a6e",
+  "policy_sha256": "15647cfbceeca42e405b4347dd0fe0ff63e1c56c6adfdb033f4ec9a823d52529",
+  "policy_rules": {
+    "weight": {
+      "metric_mode": "w4a16",
+      "threshold": 0.001,
+      "applies_to": "all measured weight leaves"
+    },
+    "activation": {
+      "metric_mode": "w16a4",
+      "threshold": 0.002,
+      "applies_to": "measured Linear inputs only"
+    }
+  },
+  "calibration_sha256": "e2dc858532f91b72cbb7e011ca90b914c9c8dc19d6b51d18a703e5055a190c8e",
+  "seed": 2026,
+  "batch_size": 8,
+  "max_length": 1536,
+  "target_tokens": 32,
+  "finetuning_steps": 0,
+  "source_hashes": {
+    "/home/a/TinyLLaVA-PruneQuant/scripts/validate_mixed_precision.py": "f9cac8907580e0ce5e3e463e3b07aa66edc1f15b961c7a7442094a001f10fdad",
+    "/home/a/TinyLLaVA-PruneQuant/scripts/mixed_precision.py": "4e100287a6a48042162fb0782472f769f8e55d5ea4ae7f6f4c48e103f7f2927c",
+    "/home/a/TinyLLaVA-PruneQuant/scripts/analyze_llm_sensitivity.py": "e484d4eaba488ae95f47862a991f3a4252c1ef58ad26d28201f592f005ef4962",
+    "/home/a/TinyLLaVA-PruneQuant/scripts/int4.py": "453b9b7f9770d3df830b72817880a1dfee989c974bda362e3b79b2c2fc49053e",
+    "/home/a/TinyLLaVA-PruneQuant/scripts/w4a4.py": "e8cda58a52aeb3a16a9608ca60df1d081a1a2c7104b9b8ee8ab4f744a602bb54",
+    "/home/a/TinyLLaVA-PruneQuant/scripts/int4_cuda.py": "bd0d71880f27ea22f743b97ec7edf0f28b6e33872730210f9e82d8fd2b526d95",
+    "/home/a/TinyLLaVA-PruneQuant/kernels/int4_gemm.cu": "22a9ea81003b108d3d137bafab9d491fc762f176727e701c5ed92e6790234155"
+  },
+  "skipped": {},
+  "arithmetic": "native S4 GEMM for remaining W4A4; explicit FP16 GEMM exceptions",
+  "attention_mask_policy": "same causal right-padding diagnostic as sensitivity; scored valid assistant positions only"
+}

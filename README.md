@@ -1,16 +1,11 @@
 # TinyLLaVA Quantization 연구 환경
 
-TinyLLaVA의 Vision Encoder / Projector / LLM을 분석하고 FP16을 기준으로 향후 INT8·INT4,
-layer-wise·channel-wise PTQ의 정확도, Peak VRAM, 추론 시간을 비교하는 워크스페이스다.
-초기 환경 구축 후 드라이버 복구와 실제 이미지 LoRA+Projector 학습 smoke test까지 확인했다.
-FP16 배치 8의 전체 기준 평가를 완료했고, 같은 조건의 전체 가중치 INT4 RTN 비교를 준비한다. 전체 모델 fine-tuning 코드는
-추가했으며, 실제 이미지 4개로 2-step 업데이트를 확인했다. 장기 재학습은 아직 실행하지 않았다.
+공개 TinyLLaVA-1.5B에 추가 학습 없이 양자화를 적용해 정확도·Peak VRAM·처리 시간을
+비교하는 워크스페이스다. FP16·전체 가중치 W4A16·실제 INT4 곱셈 W4A4·KL 기준 혼합 정밀도의
+배치 8 전체 평가를 완료했다. [전체 실험 요약](docs/experiment_summary.md)에 조건과 결과를 정리했다.
 
-**기존 Conda `LLAVA`만 사용한다. 2026-10-27 드라이버 595.99.02에서 GPU 추론과 4-step 학습을 통과했다.**
-검증 범위와 실측값은 [학습 확인 결과](docs/training_smoke.md)에 기록했다.
-모델·데이터의 실제 완료 여부, 다운로드 바이트와 최종 여유 공간은
-[완료 보고서](docs/completion_report.md)와 [데이터 검사](docs/data_inventory.json)에서 확인한다.
-원본 Annotation만 받은 데이터와 실제 이미지가 연결된 데이터를 구분한다.
+기존 Conda `LLAVA`를 사용한다. 모델 구성과 코드 탐색은
+[모델 구조](docs/model_architecture.md), 데이터 준비 상태는 [데이터 검사](docs/data_inventory.json)를 참고한다.
 
 ## 시작
 
@@ -28,7 +23,7 @@ torchvision 0.16.2+cu121, Transformers 4.37.2, accelerate 0.21.0을 재사용한
 실제 import 충돌이 있던 PEFT만 공식 legacy 요구 버전 0.4.0으로 맞췄다.
 추가한 `hf-transfer==0.1.9`는 공식 모델 다운로드의 선택 전송 모듈이다.
 [패키지 분석](docs/dependency_analysis.md), [pip freeze](docs/environment_requirements.txt),
-[Conda 명시 목록](docs/conda_packages.txt), [GPU 진단](docs/system.md)을 참고한다.
+[Conda 명시 목록](docs/conda_packages.txt), [환경 검사 결과](docs/environment.json)를 참고한다.
 
 `pip freeze`에는 기존 ROS 및 다른 프로젝트의 editable `llava` 경로도 포함되므로 다른 기기에
 그대로 일괄 설치하는 명령으로 사용하지 않는다. 이 프로젝트의 핵심 버전은
@@ -40,7 +35,7 @@ PyTorch를 일괄 업그레이드하지 않는다. `third_party` 소스는 PYTHO
 - [bczhou/TinyLLaVA-1.5B](https://huggingface.co/bczhou/TinyLLaVA-1.5B): TinyLlama 1.1B,
   22 decoder layers, hidden 2048, GQA heads 32/4.
 - [bczhou/TinyLLaVA-1.5B-SigLIP](https://huggingface.co/bczhou/TinyLLaVA-1.5B-SigLIP):
-  384×384 SigLIP, 729 patches, hidden 1152, 27 layers.
+  384×384 SigLIP, 729 patches, hidden 1152, 설정 27 layers / 실제 legacy encoder 26 layers.
 - Projector: Linear(1152,2048) → GELU → Linear(2048,2048).
 - 전체 1,504,353,824 parameters. 원본 safetensors는 FP32이며 baseline 로더에서 FP16으로 변환한다.
 
@@ -115,29 +110,76 @@ Vision·Projector·LLM의 embedding·convolution·normalization·bias를 포함�
 INT4 RTN을 적용하는 W4A16 평가를 추가했다. activation은 원래 정밀도를 유지하며
 파인튜닝은 하지 않는다. 실행은 `bash scripts/eval_int4_all.sh`이다.
 
-이전 배치 1의 INT4 평가 결과는 삭제했다. FP16 배치 8 기준 평가가 완료됐으며,
-같은 조건의 INT4 전체 평가는 대기 중이다. [현재 상태](docs/int4_all_w4a16_results.md)와
+FP16과 같은 배치 8로 두 전체 평가를 완료하고 재검증했다. POPE macro F1은
+**86.93% → 60.13%**, ScienceQA accuracy는 **59.20% → 51.07%**다.
+Peak allocated VRAM은 POPE 49.89%, ScienceQA 41.29% 줄었다.
+[전체 실험 요약](docs/experiment_summary.md), [상세 결과](docs/int4_all_w4a16_results.md)와
 [구현·이어 실행 안내](docs/int4_implementation.md)를 참고한다.
-FP16·INT4의 배치 1·4·8 메모리와 처리량은 별도 [배치 실측 기록](docs/batch_memory.md)에 정리했다.
 
-## 짧은 학습 확인
+## 실제 INT4 곱셈 — W4A4 Linear·Conv2d
+
+`--precision int4-w4a4`로 313개 Linear와 SigLIP patch Conv2d 1개를 실제
+INT4×INT4 Tensor Core 곱셈·INT32 누산 경로로 실행한다. activation은 입력 행의 K 그룹마다
+동적 INT4 양자화하고 원래 INT4 weight·scale은 그대로 사용한다. 추가 학습은 없다.
+Attention QK/PV·Softmax·Norm·RoPE·embedding은 기존 정밀도를 유지한다.
 
 ```bash
-source scripts/env.sh
-python scripts/test_training.py --steps 4
+bash scripts/eval_w4a4_all.sh
 ```
 
-실제 COCO SFT 이미지 2개와 공식 legacy 전처리를 사용한다. FP16 base에 LLM LoRA(r=8)와
-FP32 Projector를 학습하고 Vision은 고정한다. batch 1, 이미지 729 patches, 총 sequence ≤1024,
-gradient checkpointing 조건이다. loss, 유한한 nonzero gradient, 두 학습 영역의 실제 parameter
-변경을 검사한다. 출력은 새 `results/training_smoke/<실행시각>/` 아래에 저장한다.
-샌드박스에서 GPU가 숨겨진 환경이라면 GPU 접근이 가능한 호스트 터미널에서 실행한다.
+2026-10-29 POPE 9,000문항과 ScienceQA image-test 2,017문항을 모두 완료하고 재검증했다.
+POPE macro F1은 **54.50%**, ScienceQA accuracy는 **41.30%**다.
+Peak allocated는 각각 **2.14 GiB / 3.00 GiB**, 문항당 처리 시간은 **545.51 ms / 538.78 ms**다.
+기존 W4A16 결과와 별도로 `results/int4_all_w4a4/`에 저장했다.
+[세 정밀도 비교 보고서](docs/int4_all_w4a4_results.md)에 전체 점수·메모리·처리 시간을 정리했다.
+GPU 정수 기준값 일치·native INT4 명령·공개 전체 모델의 finite logits와 batch 8 실행을
+확인했다. 커널 성능 튜닝은 미완료이며, [구현·검증 범위](docs/int4_implementation.md)를 참고한다.
 
-검증 실행은 4 step 모두 통과했고 최대 allocated VRAM은 3.33 GiB였다. 전체 모델 fine-tuning,
-Vision 학습, MegaTrain 호환성 또는 장기 수렴을 확인한 결과는 아니다.
+## LLM 레이어별 민감도
 
-## 전체 모델 학습
+2026-10-30 추가 학습 없이 LLM 개별 레이어 201개와 블록별 Attention·FFN 묶음 44개를
+128개 calibration 예제에서 비교했다. W4A16·W16A4·W4A4의 643개 조건을 측정했고,
+나머지 모델은 FP16으로 고정했다. 출력 KL·정답 토큰 NLL을 사용한 단일 대상 분석이다.
+가중치·activation 영향을 분리하기 위해 같은 FP16 연산에서 양자화·복원을 시뮬레이션하고,
+상위 W4A4 레이어 3개는 실제 INT4 커널로 다시 확인했다.
 
+가중치는 `layers.2.mlp.down_proj`, activation은 `lm_head`와 마지막 FFN의 `down_proj`가
+주요 민감 후보였다. [분석 보고서](results/sensitivity_llm/report.md),
+[레이어 히트맵](results/sensitivity_llm/layers.png), [원자료](results/sensitivity_llm/ranking.csv)를 참고한다.
+POPE·ScienceQA 정확도는 이 분석으로 다시 측정하지 않았다.
+
+```bash
+bash scripts/eval_llm_sensitivity.sh
+# 완료한 원자료의 검증·표·그림만 다시 생성:
+python scripts/report_llm_sensitivity.py
+```
+
+## KL 기준 weight·activation FP16 유지
+
+2026-10-30 weight KL ≥ 0.001, activation KL ≥ 0.002를 두 선정 집합에서 모두 넘은
+weight 7개 레이어·activation 3개 Linear 입력을 FP16으로 유지해 평가했다. 추가 학습은 없다.
+나머지 310개 Linear·Conv는 실제 INT4 곱셈을 사용한다. W16A4·W4A16·W16A16 예외는
+FP16 GEMM 경로이며, FP16 weight는 공개 원본에서 양자화 전에 보관한 값이다.
+
+선정에 사용하지 않은 calibration 64개에서 weight만 유지·activation만 유지·둘 다 유지를
+분리 비교했다. 결합 설정의 전체 batch 8 평가에서는 POPE F1 **54.50% → 58.82%**,
+ScienceQA accuracy **41.30% → 45.56%**로 W4A4 대비 회복했다.
+Peak allocated는 각각 **2.24 GiB / 3.11 GiB**다. 최종 설정의 전체 평가는 11,017문항이다.
+
+```bash
+bash scripts/eval_mixed_precision.sh
+# 완료된 전체 평가의 비교·검증 보고서만 다시 생성:
+python scripts/report_mixed_precision.py
+```
+
+[전체 평가 보고서](results/mixed_precision/both/report.md),
+[독립 calibration 분리 비교](results/mixed_precision/calibration/report.md),
+[고정한 기준과 후보](results/sensitivity_llm/fp16_threshold_candidates.json)를 참고한다.
+Weight-only·activation-only의 비교는 calibration에서 수행했고, 전체 벤치마크는 결합 설정을 평가했다.
+
+## 별도 전체 모델 학습 도구
+
+이전에 요청한 전체 모델 학습 도구는 별도로 보존한다. 위 FP16·INT4 평가에는 사용하지 않았다.
 Vision Encoder·Projector·LLM 전체를 학습하려면 다음을 실행한다.
 기존 LLAVA 환경에서 FP16 GPU 계산과 CPU FP32 master/gradient/Adafactor offload를 사용한다.
 
@@ -151,34 +193,19 @@ bash scripts/train_full.sh --max-steps 2 --max-samples 4 --gradient-accumulation
 길이·assistant label 조건에 맞는 항목만 사용한다. 실행 설정, 이어 학습, 체크포인트와
 검증 범위는 [전체 학습 가이드](docs/full_training.md)에 정리했다.
 
-## MegaTrain
-
-공식 [MegaTrain](https://github.com/DLYuanGod/MegaTrain)을 third_party에 보관했다.
-CPU parameter/optimizer offload, layer streaming, double buffering, checkpointing을 검토했지만
-현재 TinyLLaVA에 직접 호환되지 않는다. image sentinel 확장과 component adapter,
-Vision/Projector gradient 경로 및 Transformers 버전 충돌이 남아 있다.
-
-```bash
-python scripts/check_megatrain.py
-```
-
-[코드 수준 검토](docs/megatrain.md)에 수정 필요 사항과 RAM 한계를 정리했다.
-MegaTrain은 학습 후보 backend로만 분리하며 일반 추론·평가 경로에는 적용하지 않는다.
-이번 작업에서 MegaTrain 학습/전체 backward를 실행하지 않았다.
-
 ## 폴더
 
 ```text
-model/        TinyLLaVA-1.5B/, TinyLLaVA-1.5B-SigLIP/, quantized/, checkpoints/
+model/        TinyLLaVA-1.5B/, TinyLLaVA-1.5B-SigLIP/, quantized/, checkpoints/, model_study/
 data/         train/{llava,sharegpt4v,annotations}/
               eval/{pope,scienceqa,textvqa,gqa,vqav2,mme,mmvet,mmmu}/
               calibration/, manifests/
 third_party/  TinyLLaVA_Factory/, TinyLLaVA_Factory_legacy/, MegaTrain/
 configs/      핵심 버전과 연구 조건
 scripts/      환경 검사·다운로드·구조 분석·baseline·검증
-results/      baseline/ 및 향후 실험 결과
+results/      baseline/, int4_all_w4a16/, int4_all_w4a4/, sensitivity_llm/, mixed_precision/
 logs/         다운로드 로그
-docs/         환경·모델·데이터·호환성·완료 보고서
+docs/         모델 구조·데이터·평가 실행법·실험 결과
 ```
 
 `.gitignore`는 데이터셋(`data/`), 모델(`model/`), 학습 체크포인트와 가중치·학습 상태 파일을
@@ -190,7 +217,7 @@ HF 모델 cache는 model 아래, datasets cache는 data 아래로 고정한다. 
 
 ## 다음 연구 단계
 
-배치 8 FP16 baseline 검증 완료 → 같은 배치의 전체 INT4 평가 → Calibration manifest 고정 → LLM/Projector/Vision 단위
-INT8·INT4 실험 → layer-wise·channel-wise 정밀도 배분 → 동일 Split 정확도·VRAM·시간 비교.
-메모리 부족 시 batch/생성 길이·context 조정, 학습용 checkpointing과 검증된 CPU offload를
-단계적으로 검토한다. 전체 INT4 RTN은 구현됐으며 복구 학습은 후속 단계다.
+FP16·W4A16·W4A4 Linear/Conv의 전체 평가를 기준으로 구성요소별 양자화 민감도를 분석하고,
+그룹·클리핑·calibration을 이용한 PTQ 개선과 정수 커널 최적화를 진행한다.
+현재 W4A16 구현은 packed INT4 가중치를 레이어별로 FP16 복원해 계산한다.
+실제 INT4 곱셈은 별도 `int4-w4a4` 경로의 CUDA WMMA 커널로 실행한다.

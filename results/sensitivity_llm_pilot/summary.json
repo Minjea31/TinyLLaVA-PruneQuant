@@ -1,0 +1,50 @@
+{
+  "time": "2026-10-29T16:01:21.255609+00:00",
+  "status": "complete",
+  "targets": 5,
+  "cases": 9,
+  "examples": 8,
+  "fold_counts": {
+    "confirmation": 4,
+    "discovery": 4
+  },
+  "baseline": {
+    "all": {
+      "examples": 8,
+      "tokens": 211,
+      "kl": 0.0,
+      "nll": 1.0509051773697138,
+      "reference_nll": 1.0509051773697138,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    "discovery": {
+      "examples": 4,
+      "tokens": 96,
+      "kl": 0.0,
+      "nll": 1.3301159776747227,
+      "reference_nll": 1.3301159776747227,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    "confirmation": {
+      "examples": 4,
+      "tokens": 115,
+      "kl": 0.0,
+      "nll": 0.7716943770647049,
+      "reference_nll": 0.7716943770647049,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    }
+  },
+  "model_parameters_restored": true,
+  "fp16_control_repeated_exactly": true,
+  "llm_parameter_sha256": "a9d772f4b1019b2f91077e03f0531e577bc1e86513fc4cf19e77589b2d05033a",
+  "finetuning_steps": 0,
+  "native": {
+    "status": "complete",
+    "layers": 2,
+    "checks": "native_checks.json"
+  },
+  "diagnostic_elapsed_seconds_this_process": 13.672385587007739
+}

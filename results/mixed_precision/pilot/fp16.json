@@ -1,0 +1,110 @@
+{
+  "metrics": {
+    "all": {
+      "examples": 8,
+      "tokens": 209,
+      "kl": 0.0,
+      "nll": 0.9512049516779371,
+      "reference_nll": 0.9512049516779371,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    }
+  },
+  "examples": [
+    {
+      "id": "llava_sft:000000025241",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.6753731966018677,
+      "reference_nll": 0.6753731966018677,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000068300",
+      "fold": "holdout",
+      "tokens": 2,
+      "kl": 0.0,
+      "nll": 0.0068125114776194096,
+      "reference_nll": 0.0068125114776194096,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:004111233",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.37300390005111694,
+      "reference_nll": 0.37300390005111694,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:001832591",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.4527808129787445,
+      "reference_nll": 0.4527808129787445,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000304587",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.007419228553772,
+      "reference_nll": 1.007419228553772,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava:002471561",
+      "fold": "holdout",
+      "tokens": 15,
+      "kl": 0.0,
+      "nll": 3.3492345809936523,
+      "reference_nll": 3.3492345809936523,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000340139",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.0694820880889893,
+      "reference_nll": 1.0694820880889893,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:001612463",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.6755332946777344,
+      "reference_nll": 0.6755332946777344,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    }
+  ],
+  "minimum_unclamped_token_kl": 0.0,
+  "public_forward_control": {
+    "public_forward_mean_kl": 4.284285751054995e-06,
+    "public_forward_max_abs_log_probability_difference": 0.0390625,
+    "checked_examples": 8,
+    "prefix_replay_checks": {
+      "4": "bit_exact_log_probabilities",
+      "8": "bit_exact_log_probabilities",
+      "12": "bit_exact_log_probabilities",
+      "16": "bit_exact_log_probabilities",
+      "20": "bit_exact_log_probabilities",
+      "22": "bit_exact_log_probabilities"
+    },
+    "cached_lm_head_input": "bit_exact_log_probabilities"
+  }
+}

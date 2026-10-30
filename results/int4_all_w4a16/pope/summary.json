@@ -1,0 +1,85 @@
+{
+  "time": "2026-10-28T07:13:05.430757+00:00",
+  "status": "complete",
+  "conditions": {
+    "benchmark": "pope",
+    "source_sha256": "9a1f5ae9b2f980e2d1b7228fd72d3080c1f4c40e22180f074018566d1c786861",
+    "count": 9000,
+    "limit": 0,
+    "seed": 2026,
+    "model_revisions": {
+      "TinyLLaVA-1.5B": "e1fe174363732086223af5ca9dab6f4309f66278",
+      "TinyLLaVA-1.5B-SigLIP": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081"
+    },
+    "dtype": "int4",
+    "do_sample": false,
+    "num_beams": 1,
+    "conv_mode": "v1",
+    "max_new_tokens": 32,
+    "warmup": 1,
+    "batch_size": 8,
+    "padding_side": "left",
+    "reuse_identical_inputs": false,
+    "torch": "2.1.2+cu121",
+    "cuda": "12.1",
+    "activation_dtype": "float16",
+    "quantization_format": "W4A16",
+    "quantization_method": "RTN",
+    "quantization_version": "uniform_symmetric_int4_rtn_all_parameters_v1",
+    "quant_group_size": 128,
+    "quant_backend": "triton",
+    "quantization_scope": "all_model_parameters",
+    "finetuning_steps": 0
+  },
+  "metrics": {
+    "adversarial": {
+      "count": 3000,
+      "accuracy": 0.687,
+      "precision": 0.8600770218228498,
+      "recall": 0.44666666666666666,
+      "f1": 0.587977182974989,
+      "yes_ratio": 0.25966666666666666,
+      "tp": 670,
+      "tn": 1391,
+      "fp": 109,
+      "fn": 830
+    },
+    "popular": {
+      "count": 3000,
+      "accuracy": 0.711,
+      "precision": 0.9476661951909476,
+      "recall": 0.44666666666666666,
+      "f1": 0.6071590394200271,
+      "yes_ratio": 0.23566666666666666,
+      "tp": 670,
+      "tn": 1463,
+      "fp": 37,
+      "fn": 830
+    },
+    "random": {
+      "count": 3000,
+      "accuracy": 0.713,
+      "precision": 0.9557774607703281,
+      "recall": 0.44666666666666666,
+      "f1": 0.6088141753748296,
+      "yes_ratio": 0.23366666666666666,
+      "tp": 670,
+      "tn": 1469,
+      "fp": 31,
+      "fn": 830
+    }
+  },
+  "mean_seconds": 0.3080897884126708,
+  "median_seconds": 0.2807425791249898,
+  "peak_allocated_bytes": 2225171968,
+  "peak_reserved_bytes": 4332716032,
+  "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU",
+  "generation_seconds": 2772.8080957140373,
+  "fresh_samples_per_second": 3.2458070264261734,
+  "measurement": "per-item seconds = batch generation seconds / actual batch size; includes vision/projector/prefill/decode; preprocessing, model load and warmup excluded",
+  "execution": {
+    "unique_input_count": 5127,
+    "fresh_generation_count": 9000,
+    "reused_prediction_count": 0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "time": "2026-10-28T23:57:21.497527+00:00",
+  "status": "complete",
+  "scienceqa": "complete",
+  "pope": "complete",
+  "finetuning_steps": 0,
+  "comparison": "/home/a/TinyLLaVA-PruneQuant/results/int4_all_w4a16/comparison.json"
+}

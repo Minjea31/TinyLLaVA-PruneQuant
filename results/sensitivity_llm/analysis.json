@@ -1,0 +1,122 @@
+{
+  "top10_stability": {
+    "w4a16": {
+      "topk": 10,
+      "discovery_confirmation_overlap": 9
+    },
+    "w16a4": {
+      "topk": 10,
+      "discovery_confirmation_overlap": 9
+    },
+    "w4a4": {
+      "topk": 10,
+      "discovery_confirmation_overlap": 9
+    }
+  },
+  "groups": [
+    {
+      "mode": "w4a16",
+      "family": "attention",
+      "blocks": 22,
+      "median_kl": 0.0005334650206580971,
+      "median_nll_delta": -0.00026439266969902064,
+      "mean_parameters": 9437184
+    },
+    {
+      "mode": "w4a16",
+      "family": "ffn",
+      "blocks": 22,
+      "median_kl": 0.0008235112668009137,
+      "median_nll_delta": 2.7001299624629382e-05,
+      "mean_parameters": 34603008
+    },
+    {
+      "mode": "w16a4",
+      "family": "attention",
+      "blocks": 22,
+      "median_kl": 0.0018018484384842992,
+      "median_nll_delta": 0.0014628013304900378,
+      "mean_parameters": 9437184
+    },
+    {
+      "mode": "w16a4",
+      "family": "ffn",
+      "blocks": 22,
+      "median_kl": 0.001449177126557899,
+      "median_nll_delta": 0.0017136607484076194,
+      "mean_parameters": 34603008
+    },
+    {
+      "mode": "w4a4",
+      "family": "attention",
+      "blocks": 22,
+      "median_kl": 0.002226012857529547,
+      "median_nll_delta": -0.0002618011867525638,
+      "mean_parameters": 9437184
+    },
+    {
+      "mode": "w4a4",
+      "family": "ffn",
+      "blocks": 22,
+      "median_kl": 0.002600773009477919,
+      "median_nll_delta": 0.0013705066525560028,
+      "mean_parameters": 34603008
+    }
+  ],
+  "bands": [
+    {
+      "mode": "w4a16",
+      "band": "앞",
+      "median_kl": 7.096629502086494e-05,
+      "count": 49
+    },
+    {
+      "mode": "w4a16",
+      "band": "중간",
+      "median_kl": 0.0001984345836281154,
+      "count": 56
+    },
+    {
+      "mode": "w4a16",
+      "band": "뒤",
+      "median_kl": 0.00027477887378291044,
+      "count": 49
+    },
+    {
+      "mode": "w16a4",
+      "band": "앞",
+      "median_kl": 0.00011616614342302434,
+      "count": 49
+    },
+    {
+      "mode": "w16a4",
+      "band": "중간",
+      "median_kl": 0.000402439344095451,
+      "count": 56
+    },
+    {
+      "mode": "w16a4",
+      "band": "뒤",
+      "median_kl": 0.0005465507515478585,
+      "count": 49
+    },
+    {
+      "mode": "w4a4",
+      "band": "앞",
+      "median_kl": 0.00017573555938010799,
+      "count": 49
+    },
+    {
+      "mode": "w4a4",
+      "band": "중간",
+      "median_kl": 0.0005963771436032772,
+      "count": 56
+    },
+    {
+      "mode": "w4a4",
+      "band": "뒤",
+      "median_kl": 0.0008793669254085756,
+      "count": 49
+    }
+  ]
+}

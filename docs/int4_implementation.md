@@ -29,6 +29,79 @@ FP16 평가 결과는 변경하지 않는다. packed payload는 775,682,460 byte
 metadata header를 포함한 safetensors는 775,918,724 bytes다. scale metadata가 있으므로
 실효 저장량은 weight 하나당 약 4.125 bits다.
 
+**실제 INT4 곱셈 — Linear·Conv2d W4A4 구현**
+
+`--precision int4-w4a4`는 `scripts/w4a4.py`, `scripts/int4_cuda.py`,
+`kernels/int4_gemm.cu`를 사용한다. 기존 W4A16 코드와 결과 경로를 분리한다.
+공개 모델의 313개 Linear와 SigLIP patch Conv2d 1개가 INT4×INT4 곱셈·INT32 누산을 수행한다.
+가중치를 FP16으로 복원한 뒤 GEMM을 호출하는 fallback은 없다. bias·scale 처리는 FP16/FP32다.
+
+- 원래 RTN 체크포인트의 정수 weight와 FP16 scale을 그대로 사용하며 재학습·재양자화하지 않는다.
+- Native weight는 `q+8` encoding을 signed INT4 two's-complement로 바꿔 저장한다.
+- 각 입력 행의 K 그룹마다 absmax/7을 FP16으로 저장하고, 그 scale을 사용해 activation을
+  [-7,7] INT4로 round-to-nearest-even 양자화한다. 영점 그룹 scale은 1이다.
+- 그룹 길이는 `gcd(in_features, original_weight_group_size)`다. group size 128 기준으로
+  주요 LLM·Projector·Vision Linear는 128, Vision fc2(K=4304)는 16, patch Conv(K=588)는 4다.
+- 원래 flat weight scale 경계를 보존하기 위해 작은 그룹을 Tensor Core의 K=32 타일로
+  zero padding한다. 각 정수 부분합에 해당 weight·activation scale을 곱하고 FP32로 합산한다.
+- 마지막 출력은 FP16으로 돌려준다. Residual·Attention QK/PV·Softmax·Norm·RoPE·embedding은
+  기존 정밀도를 유지한다. 따라서 모델의 모든 연산을 INT4로 수행하는 구현은 아니다.
+- Conv2d는 FP16 unfold로 patch를 배열한 후 실제 INT4 GEMM을 수행한다. 현재 groups=1,
+  zero/valid padding을 지원한다. 공개 SigLIP patch convolution이 이 범위에 해당한다.
+
+Tensor Core의 정수 곱셈에는 `nvcuda::wmma::experimental::precision::s4`를 사용한다.
+현재 RTX 3070 Laptop(SM86)과 nvcc 11.5에서 device-only cubin을 만들고 CUDA Driver API로
+PyTorch의 현재 stream에 올린다. PyTorch C++ 확장이나 별도의 CUDA runtime을 링크하지
+않으므로 기존 torch 2.1.2+cu121/Conda 환경은 변경하지 않았다.
+
+컴파일 결과에서 raw·scaled GEMM 모두 `IMMA.8832.S4.S4` 명령을 확인했다.
+빌드 산출물·compiler 기록은 `model/.cache/int4_cuda/<source+compiler+SM hash>/`에 둔다.
+backend는 SM75/SM8x를 대상으로 작성됐고 실제 검증 기기는 SM86이다. 다른 기기는 맞는
+nvcc 지원과 별도 검증이 필요하다. 현재 커널은 정확성을 먼저 확인한 구현이며 성능 튜닝은 미완료다.
+CUDA 실행 오류 시 FP16 GEMM으로 자동 전환하지 않는다.
+
+```bash
+# 두 전체 평가: batch 8, ScienceQA → POPE; 완료 후 세 모드 비교 보고서 생성
+bash scripts/eval_w4a4_all.sh
+
+# 작은 별도 확인; 정식 전체 점수와 구분
+source scripts/env.sh
+python scripts/test_inference.py --precision int4-w4a4 --benchmark scienceqa \
+  --batch-size 8 --limit 8 --output results/w4a4_check/scienceqa
+```
+
+전체 결과는 `results/int4_all_w4a4/{scienceqa,pope}/`에 저장한다. 원본 packed checkpoint는
+기존 `model/quantized/TinyLLaVA-1.5B-W4A16-all-RTN-g128/`을 재사용한다.
+`quantization.json`에는 native 적용 범위·패딩 저장량·CUDA 명령 증거를, summary에는 현재
+프로세스의 native 호출 수를 기록한다. run에는 구현 파일의 SHA256도 포함해 버전이 다른
+실행이 같은 예측 파일에 섞이지 않도록 한다. 끝난 작업을 재실행해 모두 건너뛴 경우 현재
+프로세스 호출 수는 0일 수 있다.
+`report_w4a4.py`는 두 전체 평가가 완료된 후 FP16·W4A16과 동일 조건인지 검증하고
+`results/int4_all_w4a4/comparison.json`, `docs/int4_all_w4a4_results.md`를 생성한다.
+
+2026-10-29 검증:
+
+- GPU의 exact INT32 결과가 독립적인 CPU 정수 행렬곱과 일치했다. -8·7 경계와 tail tile 포함.
+- 그룹 경계·bias·영점·비연속 입력·Conv2d·현재 CUDA stream·실제 multimodal forward를 검사했다.
+- FP16 weight dequantize API를 강제로 실패시키는 테스트에서도 native Linear가 실행됐다.
+- 기존 검사를 포함한 테스트 15개를 통과했다.
+- 공개 1.5B 모델의 가장 긴 ScienceQA 입력 8개(batch 8, 확장 길이 최대 1302)에서 모든
+  `[8,1302,32000]` logits가 유한했고, 전체 314개 native 레이어 호출을 확인했다.
+- ScienceQA·POPE 각각 첫 8문항을 batch 8·max_new_tokens 32로 실행했다.
+  이는 실행 검증용이며 전체 성능 점수는 아니다. 원자료는 `results/w4a4_validation/`이다.
+
+초기 per-row scale 1개(v1)보다 K 그룹별 scale(v2)로 activation 오차를 줄이도록 설계했다.
+최종 구현은 `rtn_original_weights_dynamic_group_a4_native_wmma_v2`다. 초기 실험과 최종 검증은
+서로 다른 output 폴더에 기록했다. 정확도·속도 개선 여부는 전체 평가와 추가 PTQ 실험으로 확인한다.
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /home/a/anaconda3/envs/LLAVA/bin/python \
+  -m unittest discover -s tests -p 'test_w4a4.py' -v
+```
+
+근거: [NVIDIA CUDA 11.5 sub-byte WMMA](https://docs.nvidia.com/cuda/archive/11.5.0/cuda-c-programming-guide/index.html#wmma-subbyte),
+[NVIDIA Ampere Tensor Core 지원](https://docs.nvidia.com/cuda/ampere-tuning-guide/).
+
 **실행**
 
 ```bash
@@ -83,8 +156,8 @@ FP16보다 느릴 수 있으며, 이 수치를 최적화된 INT4 backend의 속�
 
 2026-10-28 호스트 절전 복귀 이후 발생한 CUDA 장애는 사용자의 재부팅으로 복구됐다.
 이후 사용자 요청으로 배치 1 정식 평가 결과를 삭제하고 FP16·INT4 기본값을 배치 8로 변경했다.
-FP16 전체 평가는 사용자가 직접 실행한다. 기존 INT4 평가는 중지했으며,
-새 FP16 기준 평가가 완료된 뒤 같은 배치 8로 새로 수행한다.
+사용자가 FP16과 INT4 전체 평가를 배치 8로 새로 실행했고, 두 정밀도의 전체 평가가 모두 완료됐다.
+결과는 `docs/int4_all_w4a16_results.md`, 전체 실험 요약은 `docs/experiment_summary.md`에 정리했다.
 
 참고 API: [PyTorch 2.1 Linear](https://docs.pytorch.org/docs/2.1/generated/torch.nn.functional.linear.html),
 [Triton vector kernel tutorial](https://triton-lang.org/main/getting-started/tutorials/01-vector-add.html).

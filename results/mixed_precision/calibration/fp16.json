@@ -1,0 +1,670 @@
+{
+  "metrics": {
+    "all": {
+      "examples": 64,
+      "tokens": 1689,
+      "kl": 0.0,
+      "nll": 1.0885568793491984,
+      "reference_nll": 1.0885568793491984,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    }
+  },
+  "examples": [
+    {
+      "id": "llava_sft:000000372428",
+      "fold": "holdout",
+      "tokens": 2,
+      "kl": 0.0,
+      "nll": 0.008452159352600574,
+      "reference_nll": 0.008452159352600574,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000290265",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.0232207775115967,
+      "reference_nll": 1.0232207775115967,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:002292544",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.5465978980064392,
+      "reference_nll": 0.5465978980064392,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000492710",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.0526070594787598,
+      "reference_nll": 1.0526070594787598,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000243292",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.8711819648742676,
+      "reference_nll": 0.8711819648742676,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:005621459",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.5822730660438538,
+      "reference_nll": 0.5822730660438538,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000304587",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.0066478252410889,
+      "reference_nll": 1.0066478252410889,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000097431",
+      "fold": "holdout",
+      "tokens": 6,
+      "kl": 0.0,
+      "nll": 0.014403460547327995,
+      "reference_nll": 0.014403460547327995,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000360231",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.5215528607368469,
+      "reference_nll": 0.5215528607368469,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000140919",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.6807979345321655,
+      "reference_nll": 0.6807979345321655,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:002127548",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.27741897106170654,
+      "reference_nll": 0.27741897106170654,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000176587",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.8764214515686035,
+      "reference_nll": 1.8764214515686035,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000090331",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.34408584237098694,
+      "reference_nll": 0.34408584237098694,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:002164023",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.4044347405433655,
+      "reference_nll": 0.4044347405433655,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000168643",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.9442744851112366,
+      "reference_nll": 0.9442744851112366,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava:000223769",
+      "fold": "holdout",
+      "tokens": 11,
+      "kl": 0.0,
+      "nll": 3.6894543170928955,
+      "reference_nll": 3.6894543170928955,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava:004095607",
+      "fold": "holdout",
+      "tokens": 10,
+      "kl": 0.0,
+      "nll": 5.828220367431641,
+      "reference_nll": 5.828220367431641,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000457342",
+      "fold": "holdout",
+      "tokens": 22,
+      "kl": 0.0,
+      "nll": 1.4033873081207275,
+      "reference_nll": 1.4033873081207275,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000025241",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.6753475666046143,
+      "reference_nll": 0.6753475666046143,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000340139",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.0694798231124878,
+      "reference_nll": 1.0694798231124878,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000349438",
+      "fold": "holdout",
+      "tokens": 2,
+      "kl": 0.0,
+      "nll": 0.17548665404319763,
+      "reference_nll": 0.17548665404319763,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000531423",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.5994007587432861,
+      "reference_nll": 0.5994007587432861,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000146963",
+      "fold": "holdout",
+      "tokens": 2,
+      "kl": 0.0,
+      "nll": 0.004210933111608028,
+      "reference_nll": 0.004210933111608028,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:001883980",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.5199801921844482,
+      "reference_nll": 0.5199801921844482,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:001209743",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.5242279171943665,
+      "reference_nll": 0.5242279171943665,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000128201",
+      "fold": "holdout",
+      "tokens": 2,
+      "kl": 0.0,
+      "nll": 0.3653992712497711,
+      "reference_nll": 0.3653992712497711,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000426803",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.4692141115665436,
+      "reference_nll": 0.4692141115665436,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000247006",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.6513893604278564,
+      "reference_nll": 0.6513893604278564,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000068300",
+      "fold": "holdout",
+      "tokens": 2,
+      "kl": 0.0,
+      "nll": 0.0068125114776194096,
+      "reference_nll": 0.0068125114776194096,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000502495",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.0993220806121826,
+      "reference_nll": 1.0993220806121826,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000237964",
+      "fold": "holdout",
+      "tokens": 2,
+      "kl": 0.0,
+      "nll": 0.001888828119263053,
+      "reference_nll": 0.001888828119263053,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava:002471561",
+      "fold": "holdout",
+      "tokens": 15,
+      "kl": 0.0,
+      "nll": 3.3492329120635986,
+      "reference_nll": 3.3492329120635986,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000150082",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 2.572610378265381,
+      "reference_nll": 2.572610378265381,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava:002990677",
+      "fold": "holdout",
+      "tokens": 11,
+      "kl": 0.0,
+      "nll": 3.8282132148742676,
+      "reference_nll": 3.8282132148742676,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000461673",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.744801640510559,
+      "reference_nll": 1.744801640510559,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:001520865",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.4558325409889221,
+      "reference_nll": 0.4558325409889221,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:004852598",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.4453938603401184,
+      "reference_nll": 0.4453938603401184,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:002049774",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.47064661979675293,
+      "reference_nll": 0.47064661979675293,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:004840376",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.45310384035110474,
+      "reference_nll": 0.45310384035110474,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:002680754",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.40206390619277954,
+      "reference_nll": 0.40206390619277954,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:001649046",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.5040441751480103,
+      "reference_nll": 0.5040441751480103,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000520451",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.2840343713760376,
+      "reference_nll": 1.2840343713760376,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava:000986204",
+      "fold": "holdout",
+      "tokens": 14,
+      "kl": 0.0,
+      "nll": 4.6894049644470215,
+      "reference_nll": 4.6894049644470215,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:001612463",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.6752687096595764,
+      "reference_nll": 0.6752687096595764,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:001779354",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.34733885526657104,
+      "reference_nll": 0.34733885526657104,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:002042770",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.43378615379333496,
+      "reference_nll": 0.43378615379333496,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000487559",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.6468834280967712,
+      "reference_nll": 0.6468834280967712,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:000766861",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.599610447883606,
+      "reference_nll": 0.599610447883606,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava:000058281",
+      "fold": "holdout",
+      "tokens": 10,
+      "kl": 0.0,
+      "nll": 3.5119521617889404,
+      "reference_nll": 3.5119521617889404,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000092288",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.3995592594146729,
+      "reference_nll": 1.3995592594146729,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava:001570321",
+      "fold": "holdout",
+      "tokens": 29,
+      "kl": 0.0,
+      "nll": 3.3883140087127686,
+      "reference_nll": 3.3883140087127686,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:002586122",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.4445282220840454,
+      "reference_nll": 0.4445282220840454,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:000656882",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.4369750916957855,
+      "reference_nll": 0.4369750916957855,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000467180",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.36548301577568054,
+      "reference_nll": 0.36548301577568054,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:000662717",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.6084746718406677,
+      "reference_nll": 0.6084746718406677,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:001832591",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.4527791738510132,
+      "reference_nll": 0.4527791738510132,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000157815",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.0578123331069946,
+      "reference_nll": 1.0578123331069946,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:004995080",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.5358262062072754,
+      "reference_nll": 0.5358262062072754,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:004111233",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.3730129301548004,
+      "reference_nll": 0.3730129301548004,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000517068",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.8548476696014404,
+      "reference_nll": 0.8548476696014404,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:000101210",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.4991028904914856,
+      "reference_nll": 0.4991028904914856,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava:004529986",
+      "fold": "holdout",
+      "tokens": 13,
+      "kl": 0.0,
+      "nll": 3.55629825592041,
+      "reference_nll": 3.55629825592041,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "sharegpt4v:003876203",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 0.8905727863311768,
+      "reference_nll": 0.8905727863311768,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    },
+    {
+      "id": "llava_sft:000000538637",
+      "fold": "holdout",
+      "tokens": 32,
+      "kl": 0.0,
+      "nll": 1.1522390842437744,
+      "reference_nll": 1.1522390842437744,
+      "nll_delta": 0.0,
+      "argmax_agreement": 1.0
+    }
+  ],
+  "minimum_unclamped_token_kl": 0.0,
+  "public_forward_control": {
+    "public_forward_mean_kl": 5.184298515814589e-06,
+    "public_forward_max_abs_log_probability_difference": 0.0390625,
+    "checked_examples": 8,
+    "prefix_replay_checks": {
+      "4": "bit_exact_log_probabilities",
+      "8": "bit_exact_log_probabilities",
+      "12": "bit_exact_log_probabilities",
+      "16": "bit_exact_log_probabilities",
+      "20": "bit_exact_log_probabilities",
+      "22": "bit_exact_log_probabilities"
+    },
+    "cached_lm_head_input": "bit_exact_log_probabilities"
+  }
+}

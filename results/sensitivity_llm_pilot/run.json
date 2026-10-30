@@ -1,0 +1,160 @@
+{
+  "format": "llm_single_target_teacher_forced_sensitivity_v1",
+  "samples": [
+    {
+      "id": "llava_sft:000000550448",
+      "image": "data/train/llava/coco/train2017/000000550448.jpg",
+      "image_sha256": "ecb6e0a71144a1148ac5e7c9a6ae66713b1eb5dd817f8f0907dcee7a9f1a0dfb",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:000833518",
+      "image": "data/train/llava/llava_pretrain/images/00083/000833518.jpg",
+      "image_sha256": "07849baeb5435009c86a7d47f9be531d9462703335affd4bc59faa0dff599110",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000158702",
+      "image": "data/train/llava/coco/train2017/000000158702.jpg",
+      "image_sha256": "0ce6187d2816e9e7c3bfe99e0dbc298773f388743d222d6e5a61f2dff831eba1",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000254861",
+      "image": "data/train/llava/coco/train2017/000000254861.jpg",
+      "image_sha256": "5eddcb4fd36744266a227fc9543808a8dc812465bba79ada443b9cd728109180",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:000412764",
+      "image": "data/train/llava/llava_pretrain/images/00041/000412764.jpg",
+      "image_sha256": "2bf17ce4baafde8d1385ceb7fb3202e9ac5826cebae4c8621e9c6f8846104496",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:002657576",
+      "image": "data/train/llava/llava_pretrain/images/00265/002657576.jpg",
+      "image_sha256": "4f539dd9d17b3fdff25431d93b80c401bd89dda98135bac30adf1685830c1000",
+      "source": "llava",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000336991",
+      "image": "data/train/llava/coco/train2017/000000336991.jpg",
+      "image_sha256": "05bb6a2ad498c7929f5ed13bbd41e835d374f43404b2249c697c22fa533605cc",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:002124573",
+      "image": "data/train/llava/llava_pretrain/images/00212/002124573.jpg",
+      "image_sha256": "74f1c7c2cdc95de1db75df7c6cb43dce51ca71e2c3cf51f672de8cfa3f3fe5de",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "discovery"
+    }
+  ],
+  "skipped": {},
+  "calibration_sha256": "e2dc858532f91b72cbb7e011ca90b914c9c8dc19d6b51d18a703e5055a190c8e",
+  "seed": 2026,
+  "batch_size": 8,
+  "max_length": 1536,
+  "max_target_tokens_per_example": 32,
+  "targets": [
+    {
+      "name": "model.embed_tokens",
+      "modules": [
+        "model.embed_tokens"
+      ],
+      "kind": "embedding",
+      "level": "leaf",
+      "block": null,
+      "family": "embed_tokens",
+      "projection": "embed_tokens",
+      "parameters": 65536000
+    },
+    {
+      "name": "model.layers.0.self_attn.q_proj",
+      "modules": [
+        "model.layers.0.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 0,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.0.input_layernorm",
+      "modules": [
+        "model.layers.0.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 0,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.norm",
+      "modules": [
+        "model.norm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": null,
+      "family": "norm",
+      "projection": "norm",
+      "parameters": 2048
+    },
+    {
+      "name": "lm_head",
+      "modules": [
+        "lm_head"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": null,
+      "family": "lm_head",
+      "projection": "lm_head",
+      "parameters": 65536000
+    }
+  ],
+  "group_size": 128,
+  "activation_group": "gcd(in_features,128)",
+  "checkpoint_sha256": "0a1040b0823731c793a84e78e6fd95ba7ff172d50936e82357c8b0e9523addf4",
+  "model_revisions": {
+    "TinyLLaVA-1.5B": "e1fe174363732086223af5ca9dab6f4309f66278",
+    "TinyLLaVA-1.5B-SigLIP": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081"
+  },
+  "finetuning_steps": 0,
+  "arithmetic": "FP16_QDQ_simulation_with_same_GEMM_path",
+  "context": "all non-target modules FP16; cached unchanged FP16 Vision/Projector and prefixes at stride 4",
+  "temperature": 1,
+  "score": "per-example mean over evenly selected assistant target positions",
+  "torch": "2.1.2+cu121",
+  "cuda": "12.1",
+  "source_hashes": {
+    "/home/a/TinyLLaVA-PruneQuant/scripts/analyze_llm_sensitivity.py": "e091068ecc85c4c25905e4827df986400e8e3f4e2c8be87fbf7f3e4daf7502e5",
+    "/home/a/TinyLLaVA-PruneQuant/scripts/int4.py": "453b9b7f9770d3df830b72817880a1dfee989c974bda362e3b79b2c2fc49053e",
+    "/home/a/TinyLLaVA-PruneQuant/scripts/runtime.py": "15647f69e512236422e8436dbccae32f217ff6d279d01c3331a800f0179da01f",
+    "/home/a/TinyLLaVA-PruneQuant/third_party/TinyLLaVA_Factory_legacy/tinyllava/model/llava_arch.py": "2bab2a4e958a747193b31be58f529b47ca53d973903de1b936d55699e0759022",
+    "/home/a/TinyLLaVA-PruneQuant/third_party/TinyLLaVA_Factory_legacy/tinyllava/model/language_model/llava_llama.py": "f1652466706fe3683ebe5488140512cf3b0f72462d42ff06dfd1b8cdba8b1fb5",
+    "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py": "8523f5601c3f3f73b4cec8653c9235e5bafb43d40d72f804e875369f28da7f56"
+  },
+  "native_topk": 2
+}

@@ -1,0 +1,4111 @@
+{
+  "format": "llm_single_target_teacher_forced_sensitivity_v1",
+  "samples": [
+    {
+      "id": "sharegpt4v:000628429",
+      "image": "data/train/llava/llava_pretrain/images/00062/000628429.jpg",
+      "image_sha256": "808f74f238b40de3555245a4972de04fcff9c4818c8c9a981d881060b1b8a2a0",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:003346072",
+      "image": "data/train/llava/llava_pretrain/images/00334/003346072.jpg",
+      "image_sha256": "101272cdb18b768a9b05e6e0a6fe94f89dfa19035bffff251d27ade1933e7c94",
+      "source": "llava",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000140067",
+      "image": "data/train/llava/coco/train2017/000000140067.jpg",
+      "image_sha256": "819b07fb3ffead13f94418afefd5dbe0cfcb97edafe927f7f71f6c0c39a6c697",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:002607643",
+      "image": "data/train/llava/llava_pretrain/images/00260/002607643.jpg",
+      "image_sha256": "05820b2b9377f51b9fc213e79d1d956a2448431398d95fb98818fa1a0cc7217f",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000227587",
+      "image": "data/train/llava/coco/train2017/000000227587.jpg",
+      "image_sha256": "a4e450c829fa45d1ede2e2cc5079250169e5e669ab2decf0c15fa85919009ea6",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000221313",
+      "image": "data/train/llava/coco/train2017/000000221313.jpg",
+      "image_sha256": "d222c50473ff88fe23b9e96e484b44379c432e02867afec9ea0e856145e3519e",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000326092",
+      "image": "data/train/llava/coco/train2017/000000326092.jpg",
+      "image_sha256": "f3382d9b9ada8028c3baf017af0d500c3709d2342c4e878d714aaddbb29d740e",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000111636",
+      "image": "data/train/llava/coco/train2017/000000111636.jpg",
+      "image_sha256": "89c22622d3b95c7059d0b99dbb467068b758251150d15cb5146d811d5d5675c9",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:001153707",
+      "image": "data/train/llava/llava_pretrain/images/00115/001153707.jpg",
+      "image_sha256": "2d7adcd8380814c2a64b1e8ed56ade333fd68c0ffb356a9dafcc8562ee9b5b78",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000101738",
+      "image": "data/train/llava/coco/train2017/000000101738.jpg",
+      "image_sha256": "9e6179c2f402b31f311d958a1bb6c2022c185ce4feac8665ef35a307e4ddffd3",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:001467400",
+      "image": "data/train/llava/llava_pretrain/images/00146/001467400.jpg",
+      "image_sha256": "32d97e0cd3e724a5329bbe95d1a1cda4e7fbfc834623674fa4f9a64045f2b035",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:004757038",
+      "image": "data/train/llava/llava_pretrain/images/00475/004757038.jpg",
+      "image_sha256": "c75aa55673664bf8d3d0d9de59dbc998265b1903fcb3a422b90f99fc8b039685",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:004938336",
+      "image": "data/train/llava/llava_pretrain/images/00493/004938336.jpg",
+      "image_sha256": "fd52515515c41dfffca17b7457aa71408bd7b1fe7222698c9b918d38ca4e0ccd",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000521982",
+      "image": "data/train/llava/coco/train2017/000000521982.jpg",
+      "image_sha256": "d07dbb94825bb447b5a8bfb27c0041122aaed242a6bab44f00298f9b8e7a5e52",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000149268",
+      "image": "data/train/llava/coco/train2017/000000149268.jpg",
+      "image_sha256": "06c699b22317c8ca8b20c93ecaa388e5021815f7c98fdffe8216a962dc07e1f9",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000396010",
+      "image": "data/train/llava/coco/train2017/000000396010.jpg",
+      "image_sha256": "9fa688c42718f18463daec6335b5aa56066f3b3625ae4787163996bd2776eb95",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava:001054931",
+      "image": "data/train/llava/llava_pretrain/images/00105/001054931.jpg",
+      "image_sha256": "fd976ebbd9447ebce3485be46521ff2775238271791b0908c05c92ff867d5ad3",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000334588",
+      "image": "data/train/llava/coco/train2017/000000334588.jpg",
+      "image_sha256": "5d753d52ef658d5e06648eb33d3a6dc852623996ecc9d8d60c3d7b630f16a94a",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000522856",
+      "image": "data/train/llava/coco/train2017/000000522856.jpg",
+      "image_sha256": "2ddd14e31ae9dd04a94fd254a59249a749975735b7505abc2ab197dfd314b554",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000426839",
+      "image": "data/train/llava/coco/train2017/000000426839.jpg",
+      "image_sha256": "3ad0960b6fa91e4b2d79f086682f4db429367b8acc722fd2d8eacb2837ada151",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:004318977",
+      "image": "data/train/llava/llava_pretrain/images/00431/004318977.jpg",
+      "image_sha256": "e44dc1d87727370c94a3c7fe17e4dedd76fdcd63242ad1a957fdea15ed60421f",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000454755",
+      "image": "data/train/llava/coco/train2017/000000454755.jpg",
+      "image_sha256": "24151fc2f07019f08eeeb044c0ad728bcf2b6b3af7d17a032929b60cbb54ea6e",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:001290910",
+      "image": "data/train/llava/llava_pretrain/images/00129/001290910.jpg",
+      "image_sha256": "f1d6caaef5d8d17139c4bfb3b6ab2f6ae40eca9b7bf5f63531fce95f2d6a8369",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:003617549",
+      "image": "data/train/llava/llava_pretrain/images/00361/003617549.jpg",
+      "image_sha256": "679d0c80fa1e91a69f420a8737918345aa54a1aa9cdd14f91b1c17f843a34222",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000514666",
+      "image": "data/train/llava/coco/train2017/000000514666.jpg",
+      "image_sha256": "506feea56f5f17552c541644204f254b9495b223b7b093031c6291af8cf4d511",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:000882315",
+      "image": "data/train/llava/llava_pretrain/images/00088/000882315.jpg",
+      "image_sha256": "f132b6d398719b34b4c48e0c25a2fcad3d3ea6635531cc1d37a814cc6eca0cb2",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:000830520",
+      "image": "data/train/llava/llava_pretrain/images/00083/000830520.jpg",
+      "image_sha256": "b482df98dd50095f3aac2a16c9338ffecc457a198cb623ed1f387bca554f5c2f",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:001359574",
+      "image": "data/train/llava/llava_pretrain/images/00135/001359574.jpg",
+      "image_sha256": "35395a5d4865b519a34ef54a0b9f6063cad938e7ac2dbd26e766ee91fa84e889",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:000863382",
+      "image": "data/train/llava/llava_pretrain/images/00086/000863382.jpg",
+      "image_sha256": "aa4b3caf0e3b70861361f304413db9d637bed1d6a871275d9869c9bc1da4cc02",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000254861",
+      "image": "data/train/llava/coco/train2017/000000254861.jpg",
+      "image_sha256": "5eddcb4fd36744266a227fc9543808a8dc812465bba79ada443b9cd728109180",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:001431886",
+      "image": "data/train/llava/llava_pretrain/images/00143/001431886.jpg",
+      "image_sha256": "30c93f9cab0a79a768d2fbb2c46ce7c2bacfc80e3e69fadea7533da399753798",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000148815",
+      "image": "data/train/llava/coco/train2017/000000148815.jpg",
+      "image_sha256": "d400ea7cff093ccb3b7703d9e6388538a75c20a028d8de9a6d0592e9b0f76e87",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:003617684",
+      "image": "data/train/llava/llava_pretrain/images/00361/003617684.jpg",
+      "image_sha256": "4f3d391116f2feb888a13542740b6e80a2e5f6fc8fabe85e01e94b7742872d91",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:004310276",
+      "image": "data/train/llava/llava_pretrain/images/00431/004310276.jpg",
+      "image_sha256": "5ad8707b4f057f2a200206768e137b9621948b4c6036413faf206565621f30a3",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000578131",
+      "image": "data/train/llava/coco/train2017/000000578131.jpg",
+      "image_sha256": "989b2f879b3c88282b8d334d89de9870a971461b3ae3ffe3b2dc941f0a3a495e",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000141759",
+      "image": "data/train/llava/coco/train2017/000000141759.jpg",
+      "image_sha256": "d399cf86e69218bb5de2057ae9218ca0ad1d54c0646ff1ae73d7e61a6bd3ae5b",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000392458",
+      "image": "data/train/llava/coco/train2017/000000392458.jpg",
+      "image_sha256": "ab810ff1cbe2ff3f19036447f9b865b018a4e3b5f42f960e3e2ca1da8a4279ee",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:006474919",
+      "image": "data/train/llava/llava_pretrain/images/00647/006474919.jpg",
+      "image_sha256": "3beb1892ad95b9cd12c3ef3b4c84cd394be6066fff80ca0ee48b9ab580dc1cef",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:006232055",
+      "image": "data/train/llava/llava_pretrain/images/00623/006232055.jpg",
+      "image_sha256": "838b23fbb04cd76aa6dc108398edaae6c11e96f01148a5168679c444505982de",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:002320902",
+      "image": "data/train/llava/llava_pretrain/images/00232/002320902.jpg",
+      "image_sha256": "5f00579d3d2a7a1a18bf9965abdfb83ca9cdd165023da901a89347fb095f8e2f",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:002020337",
+      "image": "data/train/llava/llava_pretrain/images/00202/002020337.jpg",
+      "image_sha256": "e86854281a1c7ccf79ecab50d374074c7b21c292f69dfb24cb28dba904c77df1",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000331203",
+      "image": "data/train/llava/coco/train2017/000000331203.jpg",
+      "image_sha256": "a7d282a26c946dfa3615ec9e3a5bdaf1711e0a68671524f1efdae1a076cf2dc3",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000578368",
+      "image": "data/train/llava/coco/train2017/000000578368.jpg",
+      "image_sha256": "74ae351fba9bcc57de97f3e292bc1a08db9ca966360516ce06e2e01e76c06dd1",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:000833518",
+      "image": "data/train/llava/llava_pretrain/images/00083/000833518.jpg",
+      "image_sha256": "07849baeb5435009c86a7d47f9be531d9462703335affd4bc59faa0dff599110",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000019967",
+      "image": "data/train/llava/coco/train2017/000000019967.jpg",
+      "image_sha256": "0e926c1005386fabaaa52b738816ecca4bb03170e69f68164ac22d39565815bf",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000535519",
+      "image": "data/train/llava/coco/train2017/000000535519.jpg",
+      "image_sha256": "c36b606133f116f9837783806a71fef03fadfcedf8fed125bd6022e61177d01f",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000394627",
+      "image": "data/train/llava/coco/train2017/000000394627.jpg",
+      "image_sha256": "34793e9b7ff37d95b3b7f0989efdc154fd6d9181f71f666baef6bdc9640e3d01",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:000420778",
+      "image": "data/train/llava/llava_pretrain/images/00042/000420778.jpg",
+      "image_sha256": "76f43f2dab95b2df9e14bace46bc6df15ab55aa87f407b076db784a378cf991a",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000524775",
+      "image": "data/train/llava/coco/train2017/000000524775.jpg",
+      "image_sha256": "cd7c50003075b47fa5ec44338d706e57b0e9b4098fb1225a8fc6ff52acfac183",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000251205",
+      "image": "data/train/llava/coco/train2017/000000251205.jpg",
+      "image_sha256": "be2ad2824d7e36c040a2932c1c7737b51b8d69f234f12a9efdd8c119dd2530b5",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000080013",
+      "image": "data/train/llava/coco/train2017/000000080013.jpg",
+      "image_sha256": "ce5e60ca33030ed27e711c5b0b2eddfe86ebbd02d8328f5f93da4430c8a5531d",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava:005876758",
+      "image": "data/train/llava/llava_pretrain/images/00587/005876758.jpg",
+      "image_sha256": "865e16d00f5aee0c88acc45d73b5d71b4d7804fc6f204987ebaef00de7673e17",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000369735",
+      "image": "data/train/llava/coco/train2017/000000369735.jpg",
+      "image_sha256": "360e142c94f5ea0ed405289b6f4b5e61c40638cb2fdf9d4bebbb3ab880b73d74",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000169226",
+      "image": "data/train/llava/coco/train2017/000000169226.jpg",
+      "image_sha256": "17b808ddfd607197e18c375d179e637318bd094790406fe24f307f88863b8d0a",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:000412764",
+      "image": "data/train/llava/llava_pretrain/images/00041/000412764.jpg",
+      "image_sha256": "2bf17ce4baafde8d1385ceb7fb3202e9ac5826cebae4c8621e9c6f8846104496",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000005277",
+      "image": "data/train/llava/coco/train2017/000000005277.jpg",
+      "image_sha256": "8b1c393ba7aae19cc8225e8b280530157c6583588922c2de0dd2f970b8831998",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:000103215",
+      "image": "data/train/llava/llava_pretrain/images/00010/000103215.jpg",
+      "image_sha256": "e1368fb371252a87a7270e8c81669c0880017a86bed98e2b9d8408f205bf1f5a",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:004958414",
+      "image": "data/train/llava/llava_pretrain/images/00495/004958414.jpg",
+      "image_sha256": "cf27dc4165318b776de96217e958b5e668ce0e3095838330a228f2ed26562719",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000295124",
+      "image": "data/train/llava/coco/train2017/000000295124.jpg",
+      "image_sha256": "a8b892c8ab11430db05c692481d3d6c703c33ad3da6f2d70cb0cdf9e9f22ac8c",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:004262884",
+      "image": "data/train/llava/llava_pretrain/images/00426/004262884.jpg",
+      "image_sha256": "b03f0cfdac27808703d8b659ab11e7d413d4c59324abf321b6025c3cd72389f2",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:001202727",
+      "image": "data/train/llava/llava_pretrain/images/00120/001202727.jpg",
+      "image_sha256": "1e3dd2304f72e3e98fec090274079ba605086be6b34fc90d278784fcf44ea724",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:001921135",
+      "image": "data/train/llava/llava_pretrain/images/00192/001921135.jpg",
+      "image_sha256": "3150f82b485f9bce68b1c967bb897bb73aa9dabd76e4c8b934bf73c578b8a1c0",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava:002430209",
+      "image": "data/train/llava/llava_pretrain/images/00243/002430209.jpg",
+      "image_sha256": "097f8c2664a80c8fbb330988fbe334918cef4718fcf85d45622cbb9c7f1487b6",
+      "source": "llava",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:003021967",
+      "image": "data/train/llava/llava_pretrain/images/00302/003021967.jpg",
+      "image_sha256": "c904b8153f1b7dea6bf4f9531c0d578fc5717d39693586de8409fc6a748012ab",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:004400443",
+      "image": "data/train/llava/llava_pretrain/images/00440/004400443.jpg",
+      "image_sha256": "5d5cd54d6e752ce2f2549f082f57a551f77e24104ca36f0b1a1d3e6bdbb3a610",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000319126",
+      "image": "data/train/llava/coco/train2017/000000319126.jpg",
+      "image_sha256": "f732f97a2381e70134012ae705358c6a0cb48e70bfa77377983de9b2e3e03a50",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:002124573",
+      "image": "data/train/llava/llava_pretrain/images/00212/002124573.jpg",
+      "image_sha256": "74f1c7c2cdc95de1db75df7c6cb43dce51ca71e2c3cf51f672de8cfa3f3fe5de",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:002768986",
+      "image": "data/train/llava/llava_pretrain/images/00276/002768986.jpg",
+      "image_sha256": "f4be3c334bc1374947f651874432b7b4aac10685dfbbd58de188a349b79db36a",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000247971",
+      "image": "data/train/llava/coco/train2017/000000247971.jpg",
+      "image_sha256": "60f6635f37e6efd74da036c6eadba22967e1ab6166dedd708b02388a19608ee3",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000308473",
+      "image": "data/train/llava/coco/train2017/000000308473.jpg",
+      "image_sha256": "a26dba77e6dc88d1eded9d55e9bbd39bf115264d2e2f53b99bd67c56fb0951b0",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:002955464",
+      "image": "data/train/llava/llava_pretrain/images/00295/002955464.jpg",
+      "image_sha256": "a296faa57a10b058d931b1c5f2642b9cecb86e3f4c4ce625d5b6f196ea80a3e7",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:003802406",
+      "image": "data/train/llava/llava_pretrain/images/00380/003802406.jpg",
+      "image_sha256": "7b88c479cf60bef4457ef8f029005122bc1ba631cc99623db1c77a2ab0ae4494",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:000887210",
+      "image": "data/train/llava/llava_pretrain/images/00088/000887210.jpg",
+      "image_sha256": "128b6b0221baddda07d26f70b1e40bd6a2c8af28e8ff379c7f9eab4779a6fbc6",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000096101",
+      "image": "data/train/llava/coco/train2017/000000096101.jpg",
+      "image_sha256": "61c87d43a7f243449469e354894f0232cbb6869117fb1ddbc64291952580c66f",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000357896",
+      "image": "data/train/llava/coco/train2017/000000357896.jpg",
+      "image_sha256": "6f061a0e0f8e93c1a48d6011cac04fd3946a8973ad9facf3070741b17096a1be",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000158702",
+      "image": "data/train/llava/coco/train2017/000000158702.jpg",
+      "image_sha256": "0ce6187d2816e9e7c3bfe99e0dbc298773f388743d222d6e5a61f2dff831eba1",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:002441645",
+      "image": "data/train/llava/llava_pretrain/images/00244/002441645.jpg",
+      "image_sha256": "875e763977b4c89ca88101e819eb5915490e02ac9acae66e3ca6075cc871f2ed",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000269550",
+      "image": "data/train/llava/coco/train2017/000000269550.jpg",
+      "image_sha256": "05f9af9db3c8f3da847b6618c6cae9891f625e8c212e605c9e94e51156986842",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:002819210",
+      "image": "data/train/llava/llava_pretrain/images/00281/002819210.jpg",
+      "image_sha256": "c8908cfda2a6fd9206f2427c19fc0417b64b72939b5fa8f410f5fa9f3a4eb42c",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:003325436",
+      "image": "data/train/llava/llava_pretrain/images/00332/003325436.jpg",
+      "image_sha256": "2fd00501c1a997a867e77eeb16262fe66b9a688c0e8d1bbf7c463b91f87bd6e0",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000315111",
+      "image": "data/train/llava/coco/train2017/000000315111.jpg",
+      "image_sha256": "e4bc7c9790dbacf91eb766027d3799ce29e8cbafed1a48d4ff5729353c486cad",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:001747501",
+      "image": "data/train/llava/llava_pretrain/images/00174/001747501.jpg",
+      "image_sha256": "87d504a8aaba718fad379761021ac72b3b020adde34bc306d6efe1d4bbe89b82",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000480745",
+      "image": "data/train/llava/coco/train2017/000000480745.jpg",
+      "image_sha256": "8ee078d522d3e5b7a5db09c7ed56871fd18c52449567caca23afe358d3d11dd7",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava:000088342",
+      "image": "data/train/llava/llava_pretrain/images/00008/000088342.jpg",
+      "image_sha256": "fadf64d57259c5139a727e128254cff59075e6400849e95d36da0f12260289fb",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava:002657576",
+      "image": "data/train/llava/llava_pretrain/images/00265/002657576.jpg",
+      "image_sha256": "4f539dd9d17b3fdff25431d93b80c401bd89dda98135bac30adf1685830c1000",
+      "source": "llava",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000212671",
+      "image": "data/train/llava/coco/train2017/000000212671.jpg",
+      "image_sha256": "be7b0937a2e5bc0316a84e3012dbf4f0e548e6a0f718159849f7879ed5ef1efc",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000397034",
+      "image": "data/train/llava/coco/train2017/000000397034.jpg",
+      "image_sha256": "3355ddfcfc73aa57d7054489153dce02340646b337684a7bc0f034b1b4e0aea9",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000276597",
+      "image": "data/train/llava/coco/train2017/000000276597.jpg",
+      "image_sha256": "e98fd732d93e0514502c807acb3d889a83a9962fa20c63996e2f381a7a40c363",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:001377835",
+      "image": "data/train/llava/llava_pretrain/images/00137/001377835.jpg",
+      "image_sha256": "f7782f49ebb7d3aaf617970a7799cf00e4fbf80c3611eb43b32907b15e54071f",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava:005085086",
+      "image": "data/train/llava/llava_pretrain/images/00508/005085086.jpg",
+      "image_sha256": "5583df70075059a43116d2fb51665252a47ddc4daeb78f6143837af5ee3c358b",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava:005817268",
+      "image": "data/train/llava/llava_pretrain/images/00581/005817268.jpg",
+      "image_sha256": "627c374c1411565164d1bdbb2fb9646efebd7c9ca4e8c743f1d457610c216477",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:002772434",
+      "image": "data/train/llava/llava_pretrain/images/00277/002772434.jpg",
+      "image_sha256": "3fcd4a462fed2496778335d7526d1522ee6a56647ee0dca51e304a4e2145d728",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000269738",
+      "image": "data/train/llava/coco/train2017/000000269738.jpg",
+      "image_sha256": "8745ebe4fea4bdbea9b48da8e5a3eb5f4fa55ed818c4ae404a56c70c1036f0cd",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava:003084745",
+      "image": "data/train/llava/llava_pretrain/images/00308/003084745.jpg",
+      "image_sha256": "98a3f6c2e2609a5bc4f8a1a6f37ee6b484f6798ca595dae72516d8a0ddc8ba3e",
+      "source": "llava",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000019226",
+      "image": "data/train/llava/coco/train2017/000000019226.jpg",
+      "image_sha256": "a1b45bea90ba859b813c87ef367f445a589aacf51815e6d879b110bb24444120",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:001217462",
+      "image": "data/train/llava/llava_pretrain/images/00121/001217462.jpg",
+      "image_sha256": "d2be12c4ec94987e1cd52778e9cfad1d40c6b8be330ac07bbab95e3a1e46e4cc",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000027674",
+      "image": "data/train/llava/coco/train2017/000000027674.jpg",
+      "image_sha256": "881bdd6da7773ca8f0ee341a2dd38d8bcbea7dea8db24f810be6843a4386d593",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:001712297",
+      "image": "data/train/llava/llava_pretrain/images/00171/001712297.jpg",
+      "image_sha256": "2ac129f2cc02dd14c41501e02800d0d685b0dd451805e136eb34cf06e7f8d314",
+      "source": "sharegpt4v",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000267224",
+      "image": "data/train/llava/coco/train2017/000000267224.jpg",
+      "image_sha256": "8014a329d18b869db797e0299914a920cb87a34ff9b4b3ca6408b3ad873b882e",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000344920",
+      "image": "data/train/llava/coco/train2017/000000344920.jpg",
+      "image_sha256": "7b7aed9d28a2a6ddc6151efba3dd4b4d6f3c5cfff814cc0ab0ca6520514fea27",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000312800",
+      "image": "data/train/llava/coco/train2017/000000312800.jpg",
+      "image_sha256": "f46aa2f68b34dd0bd1ede712967fb87e0d9af7dd386ce7c8e092405dbb04755d",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:001289731",
+      "image": "data/train/llava/llava_pretrain/images/00128/001289731.jpg",
+      "image_sha256": "fe5b76af69e20e519cb2d25d5ed21f4203ec821e6988ab8d78e34aba77fa4f4c",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000085144",
+      "image": "data/train/llava/coco/train2017/000000085144.jpg",
+      "image_sha256": "7e94f5433837e87a267fba02aedd2ff715ef410016473b7edf1bcb7eeca74322",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:001353345",
+      "image": "data/train/llava/llava_pretrain/images/00135/001353345.jpg",
+      "image_sha256": "7b7020e6d8754d558e1ca883c1e4b3c0a252209ff2fc84dc74a4d8a9b7397bba",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000440401",
+      "image": "data/train/llava/coco/train2017/000000440401.jpg",
+      "image_sha256": "d4a2d79a28cd063d77dc435811f4ba6a979c00c3c5197a7055f2e132c22bb451",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:004499734",
+      "image": "data/train/llava/llava_pretrain/images/00449/004499734.jpg",
+      "image_sha256": "875152dc69476145c7e85bddde42fbdf08318828b1e101702549f7573151489c",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava:000414854",
+      "image": "data/train/llava/llava_pretrain/images/00041/000414854.jpg",
+      "image_sha256": "f967fccc49e801aa82c0f92360f02f15dd05b4cd8594ccdded31d780fca196ed",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:003056104",
+      "image": "data/train/llava/llava_pretrain/images/00305/003056104.jpg",
+      "image_sha256": "3a59cef653a54a7951cfb7ca6375f8605ddff83fe720fb893343e6a5bcfbe2b5",
+      "source": "llava",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000227248",
+      "image": "data/train/llava/coco/train2017/000000227248.jpg",
+      "image_sha256": "a381a6af7f8aa418eb3d837eefe4076cbc2a8c2202bab53141f546c87163de29",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000158087",
+      "image": "data/train/llava/coco/train2017/000000158087.jpg",
+      "image_sha256": "d1b337270ac8a9196a2322c74c87bfe41210139b8ff8b758d4ed2e12299e8db9",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000359115",
+      "image": "data/train/llava/coco/train2017/000000359115.jpg",
+      "image_sha256": "8a8d910aadd1fe5719b5868b99fdced10f92b0a1258736a1797325008ff2a011",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:002243301",
+      "image": "data/train/llava/llava_pretrain/images/00224/002243301.jpg",
+      "image_sha256": "7af991522b91faf6372bc5783b67f43a4c44dc8fd7b4648ae5c7e9098bb7c990",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:003000287",
+      "image": "data/train/llava/llava_pretrain/images/00300/003000287.jpg",
+      "image_sha256": "d8cd9470dcf4f3b536cc9e81caf39490e1ba3e2af1f7b9507f3718901d14b371",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000363336",
+      "image": "data/train/llava/coco/train2017/000000363336.jpg",
+      "image_sha256": "e70fbf6e267bde68b10d8c6621b61369178c641bf6b75d6dc7c50bdbae358899",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:002545221",
+      "image": "data/train/llava/llava_pretrain/images/00254/002545221.jpg",
+      "image_sha256": "8d9df2aed6c16f7f05aeddbfd6559b93c3358b57cf0336a549727a4682ecf6a5",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000428881",
+      "image": "data/train/llava/coco/train2017/000000428881.jpg",
+      "image_sha256": "7684a98407b859f0dec9ea5c55b751dcf85b1f5d24a0831ac46c25ef0de596ec",
+      "source": "llava_sft",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000043099",
+      "image": "data/train/llava/coco/train2017/000000043099.jpg",
+      "image_sha256": "e71f960c9513f3ba81ac7dea517517fd531994f7dbfca8d7d21b60fd6d80c832",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:000960480",
+      "image": "data/train/llava/llava_pretrain/images/00096/000960480.jpg",
+      "image_sha256": "15a7e23cee028f0201270a1e31e443f42094c464ff6996f87c179b9949161983",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000550448",
+      "image": "data/train/llava/coco/train2017/000000550448.jpg",
+      "image_sha256": "ecb6e0a71144a1148ac5e7c9a6ae66713b1eb5dd817f8f0907dcee7a9f1a0dfb",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000350585",
+      "image": "data/train/llava/coco/train2017/000000350585.jpg",
+      "image_sha256": "2b501ac8597889d7a4ad650842415b4d3c78a1910c563619ab1637dd890bd875",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000059024",
+      "image": "data/train/llava/coco/train2017/000000059024.jpg",
+      "image_sha256": "e4d425fc376889ad43049dad447480c96d42e92d0924dfed8ba14c2e4a095f17",
+      "source": "llava_sft",
+      "length_bin": 1,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:002967384",
+      "image": "data/train/llava/llava_pretrain/images/00296/002967384.jpg",
+      "image_sha256": "aab997da22e39bd887e4b752103e9988c8cb2cc721c762edbd9ae030ce48b4e2",
+      "source": "sharegpt4v",
+      "length_bin": 1,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava_sft:000000059142",
+      "image": "data/train/llava/coco/train2017/000000059142.jpg",
+      "image_sha256": "424c4ea0f6ac1584032ee35e1eb85cd26296386c3c59c67a3f205ad2b6c1b95e",
+      "source": "llava_sft",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:002589639",
+      "image": "data/train/llava/llava_pretrain/images/00258/002589639.jpg",
+      "image_sha256": "189bea6df57a53837201bd2f95f6a2d0b684f6714c91d2f48c3d60970f26764a",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "sharegpt4v:000686533",
+      "image": "data/train/llava/llava_pretrain/images/00068/000686533.jpg",
+      "image_sha256": "cdf5417c8774156dabf850294ee345194f66d4417d7284b891c576ceea478b05",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "discovery"
+    },
+    {
+      "id": "llava:003703867",
+      "image": "data/train/llava/llava_pretrain/images/00370/003703867.jpg",
+      "image_sha256": "7d003217ef5210c4cec4fa07ad6c852ecae804593c6cc11c6bb5e4558b7f5e8f",
+      "source": "llava",
+      "length_bin": 0,
+      "fold": "confirmation"
+    },
+    {
+      "id": "sharegpt4v:000759048",
+      "image": "data/train/llava/llava_pretrain/images/00075/000759048.jpg",
+      "image_sha256": "dc0b1d6b73587a5fe71c6511d48f509eaef8c23db149e7814107c5d0549493a0",
+      "source": "sharegpt4v",
+      "length_bin": 3,
+      "fold": "confirmation"
+    },
+    {
+      "id": "llava_sft:000000336991",
+      "image": "data/train/llava/coco/train2017/000000336991.jpg",
+      "image_sha256": "05bb6a2ad498c7929f5ed13bbd41e835d374f43404b2249c697c22fa533605cc",
+      "source": "llava_sft",
+      "length_bin": 2,
+      "fold": "discovery"
+    }
+  ],
+  "skipped": {},
+  "calibration_sha256": "e2dc858532f91b72cbb7e011ca90b914c9c8dc19d6b51d18a703e5055a190c8e",
+  "seed": 2026,
+  "batch_size": 8,
+  "max_length": 1536,
+  "max_target_tokens_per_example": 32,
+  "targets": [
+    {
+      "name": "model.embed_tokens",
+      "modules": [
+        "model.embed_tokens"
+      ],
+      "kind": "embedding",
+      "level": "leaf",
+      "block": null,
+      "family": "embed_tokens",
+      "projection": "embed_tokens",
+      "parameters": 65536000
+    },
+    {
+      "name": "model.layers.0.self_attn.q_proj",
+      "modules": [
+        "model.layers.0.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 0,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.0.self_attn.k_proj",
+      "modules": [
+        "model.layers.0.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 0,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.0.self_attn.v_proj",
+      "modules": [
+        "model.layers.0.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 0,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.0.self_attn.o_proj",
+      "modules": [
+        "model.layers.0.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 0,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.0.mlp.gate_proj",
+      "modules": [
+        "model.layers.0.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 0,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.0.mlp.up_proj",
+      "modules": [
+        "model.layers.0.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 0,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.0.mlp.down_proj",
+      "modules": [
+        "model.layers.0.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 0,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.0.input_layernorm",
+      "modules": [
+        "model.layers.0.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 0,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.0.post_attention_layernorm",
+      "modules": [
+        "model.layers.0.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 0,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.1.self_attn.q_proj",
+      "modules": [
+        "model.layers.1.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 1,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.1.self_attn.k_proj",
+      "modules": [
+        "model.layers.1.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 1,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.1.self_attn.v_proj",
+      "modules": [
+        "model.layers.1.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 1,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.1.self_attn.o_proj",
+      "modules": [
+        "model.layers.1.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 1,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.1.mlp.gate_proj",
+      "modules": [
+        "model.layers.1.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 1,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.1.mlp.up_proj",
+      "modules": [
+        "model.layers.1.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 1,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.1.mlp.down_proj",
+      "modules": [
+        "model.layers.1.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 1,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.1.input_layernorm",
+      "modules": [
+        "model.layers.1.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 1,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.1.post_attention_layernorm",
+      "modules": [
+        "model.layers.1.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 1,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.2.self_attn.q_proj",
+      "modules": [
+        "model.layers.2.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 2,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.2.self_attn.k_proj",
+      "modules": [
+        "model.layers.2.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 2,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.2.self_attn.v_proj",
+      "modules": [
+        "model.layers.2.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 2,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.2.self_attn.o_proj",
+      "modules": [
+        "model.layers.2.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 2,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.2.mlp.gate_proj",
+      "modules": [
+        "model.layers.2.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 2,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.2.mlp.up_proj",
+      "modules": [
+        "model.layers.2.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 2,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.2.mlp.down_proj",
+      "modules": [
+        "model.layers.2.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 2,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.2.input_layernorm",
+      "modules": [
+        "model.layers.2.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 2,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.2.post_attention_layernorm",
+      "modules": [
+        "model.layers.2.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 2,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.3.self_attn.q_proj",
+      "modules": [
+        "model.layers.3.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 3,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.3.self_attn.k_proj",
+      "modules": [
+        "model.layers.3.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 3,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.3.self_attn.v_proj",
+      "modules": [
+        "model.layers.3.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 3,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.3.self_attn.o_proj",
+      "modules": [
+        "model.layers.3.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 3,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.3.mlp.gate_proj",
+      "modules": [
+        "model.layers.3.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 3,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.3.mlp.up_proj",
+      "modules": [
+        "model.layers.3.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 3,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.3.mlp.down_proj",
+      "modules": [
+        "model.layers.3.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 3,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.3.input_layernorm",
+      "modules": [
+        "model.layers.3.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 3,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.3.post_attention_layernorm",
+      "modules": [
+        "model.layers.3.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 3,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.4.self_attn.q_proj",
+      "modules": [
+        "model.layers.4.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 4,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.4.self_attn.k_proj",
+      "modules": [
+        "model.layers.4.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 4,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.4.self_attn.v_proj",
+      "modules": [
+        "model.layers.4.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 4,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.4.self_attn.o_proj",
+      "modules": [
+        "model.layers.4.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 4,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.4.mlp.gate_proj",
+      "modules": [
+        "model.layers.4.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 4,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.4.mlp.up_proj",
+      "modules": [
+        "model.layers.4.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 4,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.4.mlp.down_proj",
+      "modules": [
+        "model.layers.4.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 4,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.4.input_layernorm",
+      "modules": [
+        "model.layers.4.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 4,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.4.post_attention_layernorm",
+      "modules": [
+        "model.layers.4.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 4,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.5.self_attn.q_proj",
+      "modules": [
+        "model.layers.5.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 5,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.5.self_attn.k_proj",
+      "modules": [
+        "model.layers.5.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 5,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.5.self_attn.v_proj",
+      "modules": [
+        "model.layers.5.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 5,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.5.self_attn.o_proj",
+      "modules": [
+        "model.layers.5.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 5,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.5.mlp.gate_proj",
+      "modules": [
+        "model.layers.5.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 5,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.5.mlp.up_proj",
+      "modules": [
+        "model.layers.5.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 5,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.5.mlp.down_proj",
+      "modules": [
+        "model.layers.5.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 5,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.5.input_layernorm",
+      "modules": [
+        "model.layers.5.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 5,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.5.post_attention_layernorm",
+      "modules": [
+        "model.layers.5.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 5,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.6.self_attn.q_proj",
+      "modules": [
+        "model.layers.6.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 6,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.6.self_attn.k_proj",
+      "modules": [
+        "model.layers.6.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 6,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.6.self_attn.v_proj",
+      "modules": [
+        "model.layers.6.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 6,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.6.self_attn.o_proj",
+      "modules": [
+        "model.layers.6.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 6,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.6.mlp.gate_proj",
+      "modules": [
+        "model.layers.6.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 6,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.6.mlp.up_proj",
+      "modules": [
+        "model.layers.6.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 6,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.6.mlp.down_proj",
+      "modules": [
+        "model.layers.6.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 6,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.6.input_layernorm",
+      "modules": [
+        "model.layers.6.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 6,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.6.post_attention_layernorm",
+      "modules": [
+        "model.layers.6.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 6,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.7.self_attn.q_proj",
+      "modules": [
+        "model.layers.7.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 7,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.7.self_attn.k_proj",
+      "modules": [
+        "model.layers.7.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 7,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.7.self_attn.v_proj",
+      "modules": [
+        "model.layers.7.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 7,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.7.self_attn.o_proj",
+      "modules": [
+        "model.layers.7.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 7,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.7.mlp.gate_proj",
+      "modules": [
+        "model.layers.7.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 7,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.7.mlp.up_proj",
+      "modules": [
+        "model.layers.7.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 7,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.7.mlp.down_proj",
+      "modules": [
+        "model.layers.7.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 7,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.7.input_layernorm",
+      "modules": [
+        "model.layers.7.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 7,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.7.post_attention_layernorm",
+      "modules": [
+        "model.layers.7.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 7,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.8.self_attn.q_proj",
+      "modules": [
+        "model.layers.8.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 8,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.8.self_attn.k_proj",
+      "modules": [
+        "model.layers.8.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 8,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.8.self_attn.v_proj",
+      "modules": [
+        "model.layers.8.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 8,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.8.self_attn.o_proj",
+      "modules": [
+        "model.layers.8.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 8,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.8.mlp.gate_proj",
+      "modules": [
+        "model.layers.8.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 8,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.8.mlp.up_proj",
+      "modules": [
+        "model.layers.8.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 8,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.8.mlp.down_proj",
+      "modules": [
+        "model.layers.8.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 8,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.8.input_layernorm",
+      "modules": [
+        "model.layers.8.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 8,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.8.post_attention_layernorm",
+      "modules": [
+        "model.layers.8.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 8,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.9.self_attn.q_proj",
+      "modules": [
+        "model.layers.9.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 9,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.9.self_attn.k_proj",
+      "modules": [
+        "model.layers.9.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 9,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.9.self_attn.v_proj",
+      "modules": [
+        "model.layers.9.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 9,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.9.self_attn.o_proj",
+      "modules": [
+        "model.layers.9.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 9,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.9.mlp.gate_proj",
+      "modules": [
+        "model.layers.9.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 9,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.9.mlp.up_proj",
+      "modules": [
+        "model.layers.9.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 9,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.9.mlp.down_proj",
+      "modules": [
+        "model.layers.9.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 9,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.9.input_layernorm",
+      "modules": [
+        "model.layers.9.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 9,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.9.post_attention_layernorm",
+      "modules": [
+        "model.layers.9.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 9,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.10.self_attn.q_proj",
+      "modules": [
+        "model.layers.10.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 10,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.10.self_attn.k_proj",
+      "modules": [
+        "model.layers.10.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 10,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.10.self_attn.v_proj",
+      "modules": [
+        "model.layers.10.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 10,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.10.self_attn.o_proj",
+      "modules": [
+        "model.layers.10.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 10,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.10.mlp.gate_proj",
+      "modules": [
+        "model.layers.10.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 10,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.10.mlp.up_proj",
+      "modules": [
+        "model.layers.10.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 10,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.10.mlp.down_proj",
+      "modules": [
+        "model.layers.10.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 10,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.10.input_layernorm",
+      "modules": [
+        "model.layers.10.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 10,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.10.post_attention_layernorm",
+      "modules": [
+        "model.layers.10.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 10,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.11.self_attn.q_proj",
+      "modules": [
+        "model.layers.11.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 11,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.11.self_attn.k_proj",
+      "modules": [
+        "model.layers.11.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 11,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.11.self_attn.v_proj",
+      "modules": [
+        "model.layers.11.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 11,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.11.self_attn.o_proj",
+      "modules": [
+        "model.layers.11.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 11,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.11.mlp.gate_proj",
+      "modules": [
+        "model.layers.11.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 11,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.11.mlp.up_proj",
+      "modules": [
+        "model.layers.11.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 11,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.11.mlp.down_proj",
+      "modules": [
+        "model.layers.11.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 11,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.11.input_layernorm",
+      "modules": [
+        "model.layers.11.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 11,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.11.post_attention_layernorm",
+      "modules": [
+        "model.layers.11.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 11,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.12.self_attn.q_proj",
+      "modules": [
+        "model.layers.12.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 12,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.12.self_attn.k_proj",
+      "modules": [
+        "model.layers.12.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 12,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.12.self_attn.v_proj",
+      "modules": [
+        "model.layers.12.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 12,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.12.self_attn.o_proj",
+      "modules": [
+        "model.layers.12.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 12,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.12.mlp.gate_proj",
+      "modules": [
+        "model.layers.12.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 12,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.12.mlp.up_proj",
+      "modules": [
+        "model.layers.12.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 12,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.12.mlp.down_proj",
+      "modules": [
+        "model.layers.12.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 12,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.12.input_layernorm",
+      "modules": [
+        "model.layers.12.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 12,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.12.post_attention_layernorm",
+      "modules": [
+        "model.layers.12.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 12,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.13.self_attn.q_proj",
+      "modules": [
+        "model.layers.13.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 13,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.13.self_attn.k_proj",
+      "modules": [
+        "model.layers.13.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 13,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.13.self_attn.v_proj",
+      "modules": [
+        "model.layers.13.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 13,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.13.self_attn.o_proj",
+      "modules": [
+        "model.layers.13.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 13,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.13.mlp.gate_proj",
+      "modules": [
+        "model.layers.13.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 13,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.13.mlp.up_proj",
+      "modules": [
+        "model.layers.13.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 13,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.13.mlp.down_proj",
+      "modules": [
+        "model.layers.13.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 13,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.13.input_layernorm",
+      "modules": [
+        "model.layers.13.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 13,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.13.post_attention_layernorm",
+      "modules": [
+        "model.layers.13.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 13,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.14.self_attn.q_proj",
+      "modules": [
+        "model.layers.14.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 14,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.14.self_attn.k_proj",
+      "modules": [
+        "model.layers.14.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 14,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.14.self_attn.v_proj",
+      "modules": [
+        "model.layers.14.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 14,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.14.self_attn.o_proj",
+      "modules": [
+        "model.layers.14.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 14,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.14.mlp.gate_proj",
+      "modules": [
+        "model.layers.14.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 14,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.14.mlp.up_proj",
+      "modules": [
+        "model.layers.14.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 14,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.14.mlp.down_proj",
+      "modules": [
+        "model.layers.14.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 14,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.14.input_layernorm",
+      "modules": [
+        "model.layers.14.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 14,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.14.post_attention_layernorm",
+      "modules": [
+        "model.layers.14.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 14,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.15.self_attn.q_proj",
+      "modules": [
+        "model.layers.15.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 15,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.15.self_attn.k_proj",
+      "modules": [
+        "model.layers.15.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 15,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.15.self_attn.v_proj",
+      "modules": [
+        "model.layers.15.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 15,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.15.self_attn.o_proj",
+      "modules": [
+        "model.layers.15.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 15,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.15.mlp.gate_proj",
+      "modules": [
+        "model.layers.15.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 15,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.15.mlp.up_proj",
+      "modules": [
+        "model.layers.15.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 15,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.15.mlp.down_proj",
+      "modules": [
+        "model.layers.15.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 15,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.15.input_layernorm",
+      "modules": [
+        "model.layers.15.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 15,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.15.post_attention_layernorm",
+      "modules": [
+        "model.layers.15.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 15,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.16.self_attn.q_proj",
+      "modules": [
+        "model.layers.16.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 16,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.16.self_attn.k_proj",
+      "modules": [
+        "model.layers.16.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 16,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.16.self_attn.v_proj",
+      "modules": [
+        "model.layers.16.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 16,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.16.self_attn.o_proj",
+      "modules": [
+        "model.layers.16.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 16,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.16.mlp.gate_proj",
+      "modules": [
+        "model.layers.16.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 16,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.16.mlp.up_proj",
+      "modules": [
+        "model.layers.16.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 16,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.16.mlp.down_proj",
+      "modules": [
+        "model.layers.16.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 16,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.16.input_layernorm",
+      "modules": [
+        "model.layers.16.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 16,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.16.post_attention_layernorm",
+      "modules": [
+        "model.layers.16.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 16,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.17.self_attn.q_proj",
+      "modules": [
+        "model.layers.17.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 17,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.17.self_attn.k_proj",
+      "modules": [
+        "model.layers.17.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 17,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.17.self_attn.v_proj",
+      "modules": [
+        "model.layers.17.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 17,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.17.self_attn.o_proj",
+      "modules": [
+        "model.layers.17.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 17,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.17.mlp.gate_proj",
+      "modules": [
+        "model.layers.17.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 17,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.17.mlp.up_proj",
+      "modules": [
+        "model.layers.17.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 17,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.17.mlp.down_proj",
+      "modules": [
+        "model.layers.17.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 17,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.17.input_layernorm",
+      "modules": [
+        "model.layers.17.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 17,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.17.post_attention_layernorm",
+      "modules": [
+        "model.layers.17.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 17,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.18.self_attn.q_proj",
+      "modules": [
+        "model.layers.18.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 18,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.18.self_attn.k_proj",
+      "modules": [
+        "model.layers.18.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 18,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.18.self_attn.v_proj",
+      "modules": [
+        "model.layers.18.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 18,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.18.self_attn.o_proj",
+      "modules": [
+        "model.layers.18.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 18,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.18.mlp.gate_proj",
+      "modules": [
+        "model.layers.18.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 18,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.18.mlp.up_proj",
+      "modules": [
+        "model.layers.18.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 18,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.18.mlp.down_proj",
+      "modules": [
+        "model.layers.18.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 18,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.18.input_layernorm",
+      "modules": [
+        "model.layers.18.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 18,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.18.post_attention_layernorm",
+      "modules": [
+        "model.layers.18.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 18,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.19.self_attn.q_proj",
+      "modules": [
+        "model.layers.19.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 19,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.19.self_attn.k_proj",
+      "modules": [
+        "model.layers.19.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 19,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.19.self_attn.v_proj",
+      "modules": [
+        "model.layers.19.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 19,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.19.self_attn.o_proj",
+      "modules": [
+        "model.layers.19.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 19,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.19.mlp.gate_proj",
+      "modules": [
+        "model.layers.19.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 19,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.19.mlp.up_proj",
+      "modules": [
+        "model.layers.19.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 19,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.19.mlp.down_proj",
+      "modules": [
+        "model.layers.19.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 19,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.19.input_layernorm",
+      "modules": [
+        "model.layers.19.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 19,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.19.post_attention_layernorm",
+      "modules": [
+        "model.layers.19.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 19,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.20.self_attn.q_proj",
+      "modules": [
+        "model.layers.20.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 20,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.20.self_attn.k_proj",
+      "modules": [
+        "model.layers.20.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 20,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.20.self_attn.v_proj",
+      "modules": [
+        "model.layers.20.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 20,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.20.self_attn.o_proj",
+      "modules": [
+        "model.layers.20.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 20,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.20.mlp.gate_proj",
+      "modules": [
+        "model.layers.20.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 20,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.20.mlp.up_proj",
+      "modules": [
+        "model.layers.20.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 20,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.20.mlp.down_proj",
+      "modules": [
+        "model.layers.20.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 20,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.20.input_layernorm",
+      "modules": [
+        "model.layers.20.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 20,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.20.post_attention_layernorm",
+      "modules": [
+        "model.layers.20.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 20,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.21.self_attn.q_proj",
+      "modules": [
+        "model.layers.21.self_attn.q_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 21,
+      "family": "attention",
+      "projection": "q_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.21.self_attn.k_proj",
+      "modules": [
+        "model.layers.21.self_attn.k_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 21,
+      "family": "attention",
+      "projection": "k_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.21.self_attn.v_proj",
+      "modules": [
+        "model.layers.21.self_attn.v_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 21,
+      "family": "attention",
+      "projection": "v_proj",
+      "parameters": 524288
+    },
+    {
+      "name": "model.layers.21.self_attn.o_proj",
+      "modules": [
+        "model.layers.21.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 21,
+      "family": "attention",
+      "projection": "o_proj",
+      "parameters": 4194304
+    },
+    {
+      "name": "model.layers.21.mlp.gate_proj",
+      "modules": [
+        "model.layers.21.mlp.gate_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 21,
+      "family": "ffn",
+      "projection": "gate_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.21.mlp.up_proj",
+      "modules": [
+        "model.layers.21.mlp.up_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 21,
+      "family": "ffn",
+      "projection": "up_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.21.mlp.down_proj",
+      "modules": [
+        "model.layers.21.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": 21,
+      "family": "ffn",
+      "projection": "down_proj",
+      "parameters": 11534336
+    },
+    {
+      "name": "model.layers.21.input_layernorm",
+      "modules": [
+        "model.layers.21.input_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 21,
+      "family": "norm",
+      "projection": "input_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.layers.21.post_attention_layernorm",
+      "modules": [
+        "model.layers.21.post_attention_layernorm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": 21,
+      "family": "norm",
+      "projection": "post_attention_layernorm",
+      "parameters": 2048
+    },
+    {
+      "name": "model.norm",
+      "modules": [
+        "model.norm"
+      ],
+      "kind": "rmsnorm",
+      "level": "leaf",
+      "block": null,
+      "family": "norm",
+      "projection": "norm",
+      "parameters": 2048
+    },
+    {
+      "name": "lm_head",
+      "modules": [
+        "lm_head"
+      ],
+      "kind": "linear",
+      "level": "leaf",
+      "block": null,
+      "family": "lm_head",
+      "projection": "lm_head",
+      "parameters": 65536000
+    },
+    {
+      "name": "model.layers.0.self_attn",
+      "modules": [
+        "model.layers.0.self_attn.q_proj",
+        "model.layers.0.self_attn.k_proj",
+        "model.layers.0.self_attn.v_proj",
+        "model.layers.0.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 0,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.0.mlp",
+      "modules": [
+        "model.layers.0.mlp.gate_proj",
+        "model.layers.0.mlp.up_proj",
+        "model.layers.0.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 0,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.1.self_attn",
+      "modules": [
+        "model.layers.1.self_attn.q_proj",
+        "model.layers.1.self_attn.k_proj",
+        "model.layers.1.self_attn.v_proj",
+        "model.layers.1.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 1,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.1.mlp",
+      "modules": [
+        "model.layers.1.mlp.gate_proj",
+        "model.layers.1.mlp.up_proj",
+        "model.layers.1.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 1,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.2.self_attn",
+      "modules": [
+        "model.layers.2.self_attn.q_proj",
+        "model.layers.2.self_attn.k_proj",
+        "model.layers.2.self_attn.v_proj",
+        "model.layers.2.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 2,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.2.mlp",
+      "modules": [
+        "model.layers.2.mlp.gate_proj",
+        "model.layers.2.mlp.up_proj",
+        "model.layers.2.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 2,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.3.self_attn",
+      "modules": [
+        "model.layers.3.self_attn.q_proj",
+        "model.layers.3.self_attn.k_proj",
+        "model.layers.3.self_attn.v_proj",
+        "model.layers.3.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 3,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.3.mlp",
+      "modules": [
+        "model.layers.3.mlp.gate_proj",
+        "model.layers.3.mlp.up_proj",
+        "model.layers.3.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 3,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.4.self_attn",
+      "modules": [
+        "model.layers.4.self_attn.q_proj",
+        "model.layers.4.self_attn.k_proj",
+        "model.layers.4.self_attn.v_proj",
+        "model.layers.4.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 4,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.4.mlp",
+      "modules": [
+        "model.layers.4.mlp.gate_proj",
+        "model.layers.4.mlp.up_proj",
+        "model.layers.4.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 4,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.5.self_attn",
+      "modules": [
+        "model.layers.5.self_attn.q_proj",
+        "model.layers.5.self_attn.k_proj",
+        "model.layers.5.self_attn.v_proj",
+        "model.layers.5.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 5,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.5.mlp",
+      "modules": [
+        "model.layers.5.mlp.gate_proj",
+        "model.layers.5.mlp.up_proj",
+        "model.layers.5.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 5,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.6.self_attn",
+      "modules": [
+        "model.layers.6.self_attn.q_proj",
+        "model.layers.6.self_attn.k_proj",
+        "model.layers.6.self_attn.v_proj",
+        "model.layers.6.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 6,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.6.mlp",
+      "modules": [
+        "model.layers.6.mlp.gate_proj",
+        "model.layers.6.mlp.up_proj",
+        "model.layers.6.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 6,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.7.self_attn",
+      "modules": [
+        "model.layers.7.self_attn.q_proj",
+        "model.layers.7.self_attn.k_proj",
+        "model.layers.7.self_attn.v_proj",
+        "model.layers.7.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 7,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.7.mlp",
+      "modules": [
+        "model.layers.7.mlp.gate_proj",
+        "model.layers.7.mlp.up_proj",
+        "model.layers.7.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 7,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.8.self_attn",
+      "modules": [
+        "model.layers.8.self_attn.q_proj",
+        "model.layers.8.self_attn.k_proj",
+        "model.layers.8.self_attn.v_proj",
+        "model.layers.8.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 8,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.8.mlp",
+      "modules": [
+        "model.layers.8.mlp.gate_proj",
+        "model.layers.8.mlp.up_proj",
+        "model.layers.8.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 8,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.9.self_attn",
+      "modules": [
+        "model.layers.9.self_attn.q_proj",
+        "model.layers.9.self_attn.k_proj",
+        "model.layers.9.self_attn.v_proj",
+        "model.layers.9.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 9,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.9.mlp",
+      "modules": [
+        "model.layers.9.mlp.gate_proj",
+        "model.layers.9.mlp.up_proj",
+        "model.layers.9.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 9,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.10.self_attn",
+      "modules": [
+        "model.layers.10.self_attn.q_proj",
+        "model.layers.10.self_attn.k_proj",
+        "model.layers.10.self_attn.v_proj",
+        "model.layers.10.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 10,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.10.mlp",
+      "modules": [
+        "model.layers.10.mlp.gate_proj",
+        "model.layers.10.mlp.up_proj",
+        "model.layers.10.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 10,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.11.self_attn",
+      "modules": [
+        "model.layers.11.self_attn.q_proj",
+        "model.layers.11.self_attn.k_proj",
+        "model.layers.11.self_attn.v_proj",
+        "model.layers.11.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 11,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.11.mlp",
+      "modules": [
+        "model.layers.11.mlp.gate_proj",
+        "model.layers.11.mlp.up_proj",
+        "model.layers.11.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 11,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.12.self_attn",
+      "modules": [
+        "model.layers.12.self_attn.q_proj",
+        "model.layers.12.self_attn.k_proj",
+        "model.layers.12.self_attn.v_proj",
+        "model.layers.12.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 12,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.12.mlp",
+      "modules": [
+        "model.layers.12.mlp.gate_proj",
+        "model.layers.12.mlp.up_proj",
+        "model.layers.12.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 12,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.13.self_attn",
+      "modules": [
+        "model.layers.13.self_attn.q_proj",
+        "model.layers.13.self_attn.k_proj",
+        "model.layers.13.self_attn.v_proj",
+        "model.layers.13.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 13,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.13.mlp",
+      "modules": [
+        "model.layers.13.mlp.gate_proj",
+        "model.layers.13.mlp.up_proj",
+        "model.layers.13.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 13,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.14.self_attn",
+      "modules": [
+        "model.layers.14.self_attn.q_proj",
+        "model.layers.14.self_attn.k_proj",
+        "model.layers.14.self_attn.v_proj",
+        "model.layers.14.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 14,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.14.mlp",
+      "modules": [
+        "model.layers.14.mlp.gate_proj",
+        "model.layers.14.mlp.up_proj",
+        "model.layers.14.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 14,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.15.self_attn",
+      "modules": [
+        "model.layers.15.self_attn.q_proj",
+        "model.layers.15.self_attn.k_proj",
+        "model.layers.15.self_attn.v_proj",
+        "model.layers.15.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 15,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.15.mlp",
+      "modules": [
+        "model.layers.15.mlp.gate_proj",
+        "model.layers.15.mlp.up_proj",
+        "model.layers.15.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 15,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.16.self_attn",
+      "modules": [
+        "model.layers.16.self_attn.q_proj",
+        "model.layers.16.self_attn.k_proj",
+        "model.layers.16.self_attn.v_proj",
+        "model.layers.16.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 16,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.16.mlp",
+      "modules": [
+        "model.layers.16.mlp.gate_proj",
+        "model.layers.16.mlp.up_proj",
+        "model.layers.16.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 16,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.17.self_attn",
+      "modules": [
+        "model.layers.17.self_attn.q_proj",
+        "model.layers.17.self_attn.k_proj",
+        "model.layers.17.self_attn.v_proj",
+        "model.layers.17.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 17,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.17.mlp",
+      "modules": [
+        "model.layers.17.mlp.gate_proj",
+        "model.layers.17.mlp.up_proj",
+        "model.layers.17.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 17,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.18.self_attn",
+      "modules": [
+        "model.layers.18.self_attn.q_proj",
+        "model.layers.18.self_attn.k_proj",
+        "model.layers.18.self_attn.v_proj",
+        "model.layers.18.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 18,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.18.mlp",
+      "modules": [
+        "model.layers.18.mlp.gate_proj",
+        "model.layers.18.mlp.up_proj",
+        "model.layers.18.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 18,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.19.self_attn",
+      "modules": [
+        "model.layers.19.self_attn.q_proj",
+        "model.layers.19.self_attn.k_proj",
+        "model.layers.19.self_attn.v_proj",
+        "model.layers.19.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 19,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.19.mlp",
+      "modules": [
+        "model.layers.19.mlp.gate_proj",
+        "model.layers.19.mlp.up_proj",
+        "model.layers.19.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 19,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.20.self_attn",
+      "modules": [
+        "model.layers.20.self_attn.q_proj",
+        "model.layers.20.self_attn.k_proj",
+        "model.layers.20.self_attn.v_proj",
+        "model.layers.20.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 20,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.20.mlp",
+      "modules": [
+        "model.layers.20.mlp.gate_proj",
+        "model.layers.20.mlp.up_proj",
+        "model.layers.20.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 20,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    },
+    {
+      "name": "model.layers.21.self_attn",
+      "modules": [
+        "model.layers.21.self_attn.q_proj",
+        "model.layers.21.self_attn.k_proj",
+        "model.layers.21.self_attn.v_proj",
+        "model.layers.21.self_attn.o_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 21,
+      "family": "attention",
+      "projection": "self_attn",
+      "parameters": 9437184
+    },
+    {
+      "name": "model.layers.21.mlp",
+      "modules": [
+        "model.layers.21.mlp.gate_proj",
+        "model.layers.21.mlp.up_proj",
+        "model.layers.21.mlp.down_proj"
+      ],
+      "kind": "linear",
+      "level": "group",
+      "block": 21,
+      "family": "ffn",
+      "projection": "mlp",
+      "parameters": 34603008
+    }
+  ],
+  "group_size": 128,
+  "activation_group": "gcd(in_features,128)",
+  "checkpoint_sha256": "0a1040b0823731c793a84e78e6fd95ba7ff172d50936e82357c8b0e9523addf4",
+  "model_revisions": {
+    "TinyLLaVA-1.5B": "e1fe174363732086223af5ca9dab6f4309f66278",
+    "TinyLLaVA-1.5B-SigLIP": "0a95c431e2c8636d003f5db08adf9ea7dc3b6081"
+  },
+  "finetuning_steps": 0,
+  "arithmetic": "FP16_QDQ_simulation_with_same_GEMM_path",
+  "context": "all non-target modules FP16; cached unchanged FP16 Vision/Projector and prefixes at stride 4",
+  "attention_mask_policy": "causal; right padding omitted from attention mask; only valid response positions scored",
+  "temperature": 1,
+  "score": "per-example mean over evenly selected assistant target positions",
+  "torch": "2.1.2+cu121",
+  "cuda": "12.1",
+  "source_hashes": {
+    "/home/a/TinyLLaVA-PruneQuant/scripts/analyze_llm_sensitivity.py": "e484d4eaba488ae95f47862a991f3a4252c1ef58ad26d28201f592f005ef4962",
+    "/home/a/TinyLLaVA-PruneQuant/scripts/int4.py": "453b9b7f9770d3df830b72817880a1dfee989c974bda362e3b79b2c2fc49053e",
+    "/home/a/TinyLLaVA-PruneQuant/scripts/runtime.py": "15647f69e512236422e8436dbccae32f217ff6d279d01c3331a800f0179da01f",
+    "/home/a/TinyLLaVA-PruneQuant/third_party/TinyLLaVA_Factory_legacy/tinyllava/model/llava_arch.py": "2bab2a4e958a747193b31be58f529b47ca53d973903de1b936d55699e0759022",
+    "/home/a/TinyLLaVA-PruneQuant/third_party/TinyLLaVA_Factory_legacy/tinyllava/model/language_model/llava_llama.py": "f1652466706fe3683ebe5488140512cf3b0f72462d42ff06dfd1b8cdba8b1fb5",
+    "/home/a/anaconda3/envs/LLAVA/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py": "8523f5601c3f3f73b4cec8653c9235e5bafb43d40d72f804e875369f28da7f56"
+  },
+  "native_topk": 3
+}

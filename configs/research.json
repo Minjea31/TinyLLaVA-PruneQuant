@@ -19,10 +19,5 @@
     "context_length": 2048,
     "seed": 2026,
     "warmup": 1
-  },
-  "megatrain": {
-    "status": "not_directly_compatible",
-    "training_enabled": false,
-    "review": "docs/megatrain.md"
   }
 }
